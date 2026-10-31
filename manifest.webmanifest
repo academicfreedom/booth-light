@@ -1,0 +1,21 @@
+{
+ "name": "Booth Light",
+ "short_name": "Booth Light",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#0B1030",
+ "theme_color": "#0B1030",
+ "icons": [
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  },
+  {
+   "src": "icon-180.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ]
+}
