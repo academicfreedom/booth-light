@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 96 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 97 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2646,5 +2646,22 @@ var m=document.body.innerHTML.match(/BOOTH LIGHT BUILD (\d+)/);var n=m?m[1]:'';
 var d=document.createElement('div');d.className='bl96';
 d.innerHTML='<a href="booth-light.html" download="booth-light-build-'+n+'.html">\u2B07 Download the file version</a><p>Downloading is a visit: GitHub logs your IP address and the time. Using the file afterwards leaves no trace.</p>';
 card.appendChild(d);
+})();</script><style id="bl-97-rec">
+html body #rec .vm-row{display:none !important}
+html body #rec .bl97{display:flex !important;flex-wrap:wrap;justify-content:center;gap:12px;align-items:center;margin:10px 0 6px;width:100%}
+html body #rec .bl97 button.bl97-r{display:inline-block !important;border:0 !important;border-radius:999px !important;padding:16px 24px !important;font:inherit;font-size:1.1em !important;font-weight:800 !important;cursor:pointer;color:#FFFFFF !important;background:#E8362A !important;width:auto !important;height:auto !important}
+html body #rec .bl97 button.bl97-r.c{background:#6A4C93 !important}
+html body #rec .bl97 button.bl97-r.s{background:#14183A !important;box-shadow:0 0 0 2px #C3A6F0 inset !important}
+html body #rec .bl97 button.bl97-i{border:0 !important;background:#E7DFF1 !important;color:#5A3D85 !important;border-radius:50% !important;width:42px !important;height:42px !important;font-weight:800 !important;cursor:pointer}
+html body #rec .stage .transport button.tp-main.bl97-hide,html body #rec .bl97.bl97-hide{display:none !important}
+</style><script id="bl-97-rec-js">(function(){
+var tp=document.getElementById('tp-main');if(!tp)return;var tr=tp.closest('.transport')||tp.parentNode;
+var box=document.createElement('div');box.className='bl97';
+function mk(mode,txt,cls){var b=document.createElement('button');b.type='button';b.className='bl97-r '+cls;b.textContent=txt;b.onclick=function(){window.blMaskMode=mode;tp.click();};box.appendChild(b);}
+mk('off','\u25CF Record real voice','');mk('changed','\uD83C\uDFAD Record changed voice','c');mk('synthetic','\uD83E\uDD16 Record synthetic voice','s');
+var info=document.querySelector('.vm-info');var i=document.createElement('button');i.type='button';i.className='bl97-i';i.textContent='\u24D8';i.setAttribute('aria-label','What the voice options do');
+i.onclick=function(){if(info)info.hidden=!info.hidden;};box.appendChild(i);
+tr.parentNode.insertBefore(box,tr);if(info)box.insertAdjacentElement('afterend',info);
+setInterval(function(){var idle=/Record/.test(tp.textContent)&&!/Resume/.test(tp.textContent);box.classList.toggle('bl97-hide',!idle);tp.classList.toggle('bl97-hide',idle);},300);
 })();</script></body>
 </html>
