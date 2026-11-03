@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 100 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 101 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2759,6 +2759,11 @@ function setup(){var s3=document.querySelector('#rec .bl98 .s3'),ib=document.que
  box.innerHTML=L.map(function(x){return '<div><b>'+x[0]+'</b> '+x[1]+'</div>';}).join('');
  s3.appendChild(box);ib.onclick=function(){box.hidden=!box.hidden;};return true;}
 if(!setup()){var n=0,t=setInterval(function(){if(setup()||++n>20)clearInterval(t);},300);}
+})();</script>
+<style id="bl-101">html body #rec .rc1 .r83-ask,html body #rec .rc1 .r83-why,html body #rec .rc1 #agree-tog,html body #rec .rc1 .r83-ask #agree-rec,html body #rec .rc1 .r83-ask #disagree{display:none !important}</style><script id="bl-101-js">(function(){
+function hide(){document.querySelectorAll('#rec .r83-ask, #rec .r83-why, #rec #agree-tog').forEach(function(x){x.style.setProperty('display','none','important');});
+ document.querySelectorAll('#rec .r83-step').forEach(function(s){if(/While recording/.test(s.textContent)&&!s.dataset.bl101){s.dataset.bl101='1';var n=s.querySelector('.n');if(n)n.textContent='5';}});}
+hide();setInterval(hide,500);
 })();</script>
 </body>
 </html>
