@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 98 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 99 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2715,6 +2715,31 @@ var anchor=null;rc.querySelectorAll('.r83-step').forEach(function(s){if(/Ask/.te
 if(anchor){anchor.style.display='none';anchor.insertAdjacentElement('afterend',box);}else{var ask=rc.querySelector('.r83-ask');if(ask)ask.insertAdjacentElement('beforebegin',box);else rc.appendChild(box);}
 if(info)box.querySelector('.s3').appendChild(info);
 paint();setInterval(paint,300);
+})();</script>
+<style id="bl-99">
+html body .vm-info{background:#F3EEFB !important;border:2px solid #C3A6F0 !important;border-radius:16px !important;padding:12px 16px !important;margin:10px 0 !important;box-shadow:none !important}
+html body .vm-info .bl99-l{margin:0 0 8px;color:#14183A !important;font-family:Helvetica,Arial,sans-serif !important;font-size:15px !important;line-height:1.4 !important;background:none !important}
+html body .vm-info .bl99-l b{color:#5A3D85 !important}
+</style><script id="bl-99-js">(function(){
+var st=null;function mk(sr){var W=Math.round(sr*0.06);return{sr:sr,N:W*4,buf:new Float32Array(W*4),w:0,ph:0,W:W,rp:0};}
+window.blMaskReset=function(){st=null;};
+window.blMask=function(d,sr){var m=window.blMaskMode;if(m!=='changed'&&m!=='synthetic')return d;if(!st||st.sr!==sr)st=mk(sr);
+ var out=new Float32Array(d.length),r=(m==='changed')?0.78:0.7,b=st.buf,N=st.N,W=st.W;
+ for(var i=0;i<d.length;i++){b[st.w]=d[i];var d1=st.ph*W,d2=((st.ph+0.5)%1)*W;
+  var i1=(st.w-Math.floor(d1)-1+N)%N,i2=(st.w-Math.floor(d2)-1+N)%N;
+  var g1=0.5-0.5*Math.cos(2*Math.PI*st.ph),g2=0.5-0.5*Math.cos(2*Math.PI*((st.ph+0.5)%1));
+  var y=b[i1]*g1+b[i2]*g2;st.ph+=(1-r)/W;if(st.ph>=1)st.ph-=1;
+  if(m==='synthetic'){st.rp+=2*Math.PI*50/sr;if(st.rp>2*Math.PI)st.rp-=2*Math.PI;y=y*Math.sin(st.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
+  out[i]=y;st.w=(st.w+1)%N;}return out;};
+var L=[['Voice Masking','changes how voices sound while you record, on this device. Nothing is sent anywhere. The unmasked voice is not saved.'],
+['Real voice:','your own voice.'],
+['Changed voice:','sounds like a different person: the pitch is lowered by about four semitones. Anyone who raises it back by the same amount gets close to the real voice.'],
+['Synthetic voice:','sounds robotic: lower pitch, mixed with a low hum, coarsened. The coarsening throws detail away, so it cannot be put back exactly.'],
+['Re-voiced (strongest):','someone else reads your words from the transcript. Not a button: ask your producer.'],
+['Limits:','masking changes the sound of a voice, not what is said. Names, places, accent and rhythm can still identify you, and voice-recognition software may still match either version. It masks everyone on the recording, the producer included.']];
+function fill(){var info=document.querySelector('.vm-info');if(!info||info.dataset.bl99)return;info.dataset.bl99='1';
+ info.innerHTML=L.map(function(x){return '<div class="bl99-l"><b>'+x[0]+'</b> '+x[1]+'</div>';}).join('');}
+fill();setTimeout(fill,1000);
 })();</script>
 </body>
 </html>
