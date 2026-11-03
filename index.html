@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 97 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 98 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2663,5 +2663,64 @@ var info=document.querySelector('.vm-info');var i=document.createElement('button
 i.onclick=function(){if(info)info.hidden=!info.hidden;};box.appendChild(i);
 tr.parentNode.insertBefore(box,tr);if(info)box.insertAdjacentElement('afterend',info);
 setInterval(function(){var idle=/Record/.test(tp.textContent)&&!/Resume/.test(tp.textContent);box.classList.toggle('bl97-hide',!idle);tp.classList.toggle('bl97-hide',idle);},300);
-})();</script></body>
+})();</script><style id="bl-98">
+html body #rec .r83-ask,html body #rec .bl97,html body #rec .vm-row{display:none !important}
+html body #rec .stage .transport button.tp-main.bl98-idle{display:none !important}
+html body #rec .bl98{display:flex;flex-direction:column;gap:14px;margin:8px 0 14px}
+html body #rec .bl98 .st{border-radius:16px;padding:12px 14px;background:#FFFFFF;border:2px solid #E6DED0}
+html body #rec .bl98 .st.off{opacity:.45}
+html body #rec .bl98 .st h4{margin:0 0 8px;font-size:1em;color:#14183A !important;display:flex;align-items:center;gap:10px}
+html body #rec .bl98 .st h4 .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;background:#E8362A;color:#FFF !important;font-weight:900}
+html body #rec .bl98 .row{display:flex;flex-wrap:wrap;gap:8px}
+html body #rec .bl98 button.p{border:2px solid var(--c);background:#FFF !important;color:var(--c) !important;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}
+html body #rec .bl98 button.p.on{background:var(--c) !important;color:#FFF !important}
+html body #rec .bl98 button.p:disabled{cursor:not-allowed}
+html body #rec .bl98 button.p.i{border-style:dashed;font-weight:600}
+html body #rec .bl98 .hint{margin:8px 0 0;font-size:.9em;color:#5E5951 !important}
+html body #rec .bl98 button.go{border:0;border-radius:999px;padding:16px 26px;font:inherit;font-size:1.15em;font-weight:900;cursor:pointer;background:#E8362A !important;color:#FFF !important}
+html body #rec .bl98 button.go.alt{background:#2F6B3F !important}
+html body #rec .bl98 button.go:disabled{background:#C9C1AF !important;color:#FFF !important;cursor:not-allowed}
+</style><script id="bl-98-js">(function(){
+var rc=document.querySelector('#rec .rc1'),tp=document.getElementById('tp-main');if(!rc||!tp)return;
+var VO=[['off','Real voice','#C4402E'],['changed','\uD83C\uDFAD Changed voice','#6A4C93'],['synthetic','\uD83E\uDD16 Synthetic voice','#14183A']];
+var LAB={off:'real voice',changed:'changed voice',synthetic:'synthetic voice'};
+var consent=null,voice='off',wasRec=false;
+var box=document.createElement('div');box.className='bl98';
+box.innerHTML='<div class="st s2"><h4><span class="n">2</span>Ask the storyteller: do you agree to be recorded?</h4><div class="row"><button type="button" class="p yes" style="--c:#2F6B3F">Yes, they agreed</button><button type="button" class="p no" style="--c:#5E5951">No</button></div><p class="hint h2"></p></div>'
++'<div class="st s3"><h4><span class="n">3</span>Choose the voice</h4><div class="row vrow"></div><p class="hint h3"></p></div>'
++'<div class="st s4"><h4><span class="n">4</span>Record</h4><div class="row grow"></div><p class="hint h4"></p></div>';
+var vrow=box.querySelector('.vrow');
+VO.forEach(function(v){var b=document.createElement('button');b.type='button';b.className='p v';b.dataset.v=v[0];b.style.setProperty('--c',v[2]);b.textContent=v[1];b.onclick=function(){voice=v[0];paint();};vrow.appendChild(b);});
+var info=document.querySelector('.vm-info'),ib=document.createElement('button');ib.type='button';ib.className='p i';ib.style.setProperty('--c','#5A3D85');ib.textContent='\u24D8 What do these do?';ib.onclick=function(){if(info)info.hidden=!info.hidden;};vrow.appendChild(ib);
+box.querySelector('.yes').onclick=function(){consent='yes';paint();};
+box.querySelector('.no').onclick=function(){consent='no';var d=document.getElementById('disagree');if(d)d.click();paint();};
+function hasRec(){try{return !!REC;}catch(e){return null;}}
+function start(kind){window.blMaskMode=voice;var r=hasRec();
+ if(kind==='add'){document.getElementById('tp-add').click();return;}
+ if(r===null){tp.click();return;}
+ if(r&&!confirm('Start a new recording? The one on this device is replaced. Export it in 4 Cut & save first if you need it.'))return;
+ document.getElementById('tp-yes').click();}
+function paint(){var rec=!!(document.getElementById('stopbtn')&&!document.getElementById('stopbtn').disabled);
+ if(wasRec&&!rec){consent=null;}wasRec=rec;
+ var y=box.querySelector('.yes'),n=box.querySelector('.no');
+ y.classList.toggle('on',consent==='yes');n.classList.toggle('on',consent==='no');y.textContent=(consent==='yes'?'\u2713 ':'')+'Yes, they agreed';n.textContent=(consent==='no'?'\u2713 ':'')+'No';
+ y.disabled=n.disabled=rec;
+ box.querySelector('.h2').textContent=consent==='no'?'Don\u2019t record. Thank them; you can still talk without recording.':(rec?'Recording now.':'');
+ var ok=consent==='yes'&&!rec;
+ box.querySelector('.s3').classList.toggle('off',consent!=='yes'&&!rec);box.querySelector('.s4').classList.toggle('off',consent!=='yes'&&!rec);
+ vrow.querySelectorAll('.v').forEach(function(b){var on=b.dataset.v===voice;b.classList.toggle('on',on);b.textContent=(on?'\u2713 ':'')+VO.filter(function(v){return v[0]===b.dataset.v;})[0][1];b.disabled=!ok;});
+ box.querySelector('.h3').textContent=consent==='yes'||rec?'':'Answer step 2 first.';
+ var g=box.querySelector('.grow');var r=hasRec();var key=(rec?'rec':ok?(r?'two':'one'):'wait')+voice;
+ if(g.dataset.k!==key){g.dataset.k=key;g.innerHTML='';
+  if(rec){var s=document.createElement('button');s.className='go';s.disabled=true;s.textContent='\u25CF Recording \u00b7 '+LAB[window.blMaskMode||'off'];g.appendChild(s);}
+  else{var a=document.createElement('button');a.type='button';a.className='go';a.disabled=!ok;a.textContent='\u25CF Record \u00b7 '+LAB[voice]+(r?' (new recording)':'');a.onclick=function(){start('new');};g.appendChild(a);
+   if(r&&ok){var b2=document.createElement('button');b2.type='button';b2.className='go alt';b2.textContent='\u2795 Add to this recording \u00b7 '+LAB[voice];b2.onclick=function(){start('add');};g.appendChild(b2);}}}
+ box.querySelector('.h4').textContent=rec?'Use Pause and Stop beside the timer.':(ok?'':'Answer step 2 first.');
+ tp.classList.toggle('bl98-idle',!rec);}
+var anchor=null;rc.querySelectorAll('.r83-step').forEach(function(s){if(/Ask/.test(s.textContent))anchor=s;});
+if(anchor){anchor.style.display='none';anchor.insertAdjacentElement('afterend',box);}else{var ask=rc.querySelector('.r83-ask');if(ask)ask.insertAdjacentElement('beforebegin',box);else rc.appendChild(box);}
+if(info)box.querySelector('.s3').appendChild(info);
+paint();setInterval(paint,300);
+})();</script>
+</body>
 </html>
