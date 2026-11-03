@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 102 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 103 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2799,7 +2799,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 102 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 103 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -2858,5 +2858,40 @@ if(cs){var p=document.createElement('div');p.className='bl102-cut';
   var x=new Float32Array(b.length);for(var c=0;c<b.numberOfChannels;c++){var ch=b.getChannelData(c);for(var i=0;i<b.length;i++)x[i]+=ch[i]/b.numberOfChannels;}
   var blob=wav(mask(x,b.sampleRate,m),b.sampleRate),name=f.name.replace(/\.[^.]+$/,'')+'-'+m+'.wav';save(blob,name);openHere(blob,name,null);msg.textContent='Saved '+name+' to your Downloads and opened it here.';ac.close();}catch(err){msg.textContent='Could not read '+f.name+': '+(err&&err.message||err);}}
 }})();</script>
+<style id="bl-103">html body .bl103-ch{margin-top:6px}html body .bl102-cut select.p{appearance:auto;padding:8px 12px}</style><script id="bl-103-js">(function(){
+function $(i){return document.getElementById(i);}
+var NM={deeper:'deeper voice',higher:'higher voice',androgynous:'androgynous voice',synthetic:'synthetic voice'};
+var tp=$('tp-main'),vrow=document.querySelector('#rec .bl102 .vrow');
+/* Record: a voice button starts recording; the app's own question decides new or add */
+if(tp&&vrow){var ch=document.createElement('div');ch.className='row bl103-ch';ch.hidden=true;vrow.insertAdjacentElement('afterend',ch);
+ function row(m){ch.innerHTML='';[['New recording (replaces the one on this device)','tp-yes','#C4402E'],['Add to the end of it','tp-add','#2F6B3F'],['Cancel','','#5E5951']].forEach(function(c){var b=document.createElement('button');b.type='button';b.className='p on';b.style.setProperty('--c',c[2]);b.textContent=c[0];
+  b.onclick=function(){ch.hidden=true;if(c[1]){window.blMaskMode=m;$(c[1]).click();}else{var a=$('tp-ask');if(a)a.classList.add('hide');}};ch.appendChild(b);});ch.hidden=false;}
+ vrow.querySelectorAll('.v').forEach(function(b){b.onclick=function(){var m=b.dataset.v;window.blMaskMode=m;tp.click();var add=$('tp-add');
+  if(add&&!add.classList.contains('hide'))row(m);else{var y=$('tp-yes');if(y)y.click();}};});}
+/* Cut: change the voice of the recording or of a file */
+var cut=document.querySelector('#cut .bl102-cut');
+if(cut){cut.style.display='none';var p=document.createElement('div');p.className='bl102-cut bl103';
+ p.innerHTML='<h4>Change the voice of a recording</h4><div class="row"><select class="p vsel" style="--c:#5A3D85"><option value="androgynous">Androgynous voice</option><option value="deeper">Deeper voice</option><option value="higher">Higher voice</option><option value="synthetic">Synthetic voice</option></select></div><div class="row"><button type="button" class="p cur" style="--c:#C4402E">Change the recording in this app</button><label class="p" style="--c:#14183A" for="bl103-file">Change an audio file\u2026</label><input type="file" id="bl103-file" accept="audio/*" hidden></div><div class="row res"></div><div class="hint m">Makes a masked copy and saves it to your Downloads. Your original stays as it is until you choose to open the masked copy here.</div>';
+ cut.insertAdjacentElement('afterend',p);var msg=p.querySelector('.m'),res=p.querySelector('.res'),sel=p.querySelector('.vsel');
+ function mask(x,sr,m){var v=new VM(sr),out=new Float32Array(x.length),B=4096;for(var i=0;i<x.length;i+=B)out.set(v.run(x.subarray(i,Math.min(x.length,i+B)),m),i);return out;}
+ function wav(f,sr){var n=f.length,ab=new ArrayBuffer(44+n*2),d=new DataView(ab),q=0;function s(t){for(var i=0;i<t.length;i++)d.setUint8(q++,t.charCodeAt(i));}function u32(x){d.setUint32(q,x,true);q+=4;}function u16(x){d.setUint16(q,x,true);q+=2;}
+  s('RIFF');u32(36+n*2);s('WAVE');s('fmt ');u32(16);u16(1);u16(1);u32(sr);u32(sr*2);u16(2);u16(16);s('data');u32(n*2);for(var i=0;i<n;i++){var y=Math.max(-1,Math.min(1,f[i]));d.setInt16(q,y<0?y*32768:y*32767,true);q+=2;}return new Blob([ab],{type:'audio/wav'});}
+ function save(blob,name){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();}
+ function offer(blob,name){res.innerHTML='';var b=document.createElement('button');b.type='button';b.className='p on';b.style.setProperty('--c','#2F6B3F');b.textContent='Open the masked copy here';
+  b.onclick=function(){if(!confirm('Open '+name+' here? It replaces the recording in this app and starts fresh notes. Export your notes first if you need them.'))return;var af=$('afile');if(!af||typeof DataTransfer==='undefined'){msg.textContent='This browser cannot do it here: use \ud83d\udcc2 Open an audio file to edit and choose '+name+'.';return;}var dt=new DataTransfer();dt.items.add(new File([blob],name,{type:'audio/wav'}));af.files=dt.files;af.dispatchEvent(new Event('change'));res.innerHTML='';msg.textContent='Opened '+name+'.';};res.appendChild(b);}
+ async function fromFile(f,m){msg.textContent='Changing the voice in '+f.name+'\u2026';var ac=new (window.AudioContext||window.webkitAudioContext)();try{var b=await ac.decodeAudioData(await f.arrayBuffer());
+  if(b.duration>3600){msg.textContent='Over one hour: split it first.';return;}var x=new Float32Array(b.length);for(var c=0;c<b.numberOfChannels;c++){var cd=b.getChannelData(c);for(var i=0;i<b.length;i++)x[i]+=cd[i]/b.numberOfChannels;}
+  var out=wav(mask(x,b.sampleRate,m),b.sampleRate),name=f.name.replace(/\.[^.]+$/,'').replace(/-original-.*/,'')+'-'+m+'.wav';save(out,name);msg.textContent='Saved '+name+' to your Downloads ('+NM[m]+').';offer(out,name);}
+  catch(err){msg.textContent='Could not read '+f.name+': '+(err&&err.message||err);}finally{try{ac.close();}catch(e){}}}
+ p.querySelector('#bl103-file').onchange=function(e){var f=e.target.files[0];e.target.value='';if(f)fromFile(f,sel.value);};
+ p.querySelector('.cur').onclick=function(){var x=$('x-orig');if(!x){msg.textContent='Save the recording first, then use Change an audio file.';return;}
+  var got=null,oc=URL.createObjectURL,ak=HTMLAnchorElement.prototype.click;
+  URL.createObjectURL=function(b){if(!got&&b&&b.type==='audio/wav')got=b;return oc.call(URL,b);};
+  HTMLAnchorElement.prototype.click=function(){if(got&&this.download&&/\.wav$/i.test(this.download)&&!this.dataset.bl103)return;return ak.call(this);};
+  function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;}
+  msg.textContent='Reading the recording\u2026';x.click();var t0=Date.now(),iv=setInterval(function(){if(got||Date.now()-t0>60000){clearInterval(iv);setTimeout(restore,50);
+   if(!got){msg.textContent='No recording here yet. Record or open one first.';return;}fromFile(new File([got],'booth-light-recording-'+new Date().toISOString().slice(0,10)+'.wav',{type:'audio/wav'}),sel.value);}},200);};
+}})();
+</script>
 </body>
 </html>
