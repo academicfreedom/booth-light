@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 99 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 100 · 2026-11-02 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2746,6 +2746,25 @@ var L=[['Voice Masking','changes how voices sound while you record, on this devi
 function fill(){var info=document.querySelector('.vm-info');if(!info||info.dataset.bl99)return;info.dataset.bl99='1';
  info.innerHTML=L.map(function(x){return '<div class="bl99-l"><b>'+x[0]+'</b> '+x[1]+'</div>';}).join('');}
 fill();setTimeout(fill,1000);
+})();</script>
+<style id="bl-100">
+html body .vm-info{display:none !important}
+html body #rec .bl100-info{background:#F6F2FC !important;border:2px solid #C3A6F0 !important;border-radius:14px !important;padding:12px 14px !important;margin:10px 0 0 !important}
+html body #rec .bl100-info[hidden]{display:none !important}
+html body #rec .bl100-info div{margin:0 0 6px !important;color:#14183A !important;font-family:Helvetica,Arial,sans-serif !important;font-size:15px !important;line-height:1.4 !important;background:none !important;padding:0 !important}
+html body #rec .bl100-info b{color:#5A3D85 !important}
+</style><script id="bl-100-js">(function(){
+var L=[['Real voice:','your own voice.'],
+['Changed voice:','lowers the pitch about four semitones. Sounds like a different person, but anyone who raises it back gets close to the real voice.'],
+['Synthetic voice:','robotic: lower pitch, a low hum, coarsened sound. Much harder to undo.'],
+['Strongest:','someone else reads your words from the transcript (ask your producer).'],
+['Limits:','masking changes how a voice sounds, not what is said. Names, places, accent and rhythm can still identify you. It masks everyone on the recording.'],
+['Where:','all on this device. Nothing is sent anywhere, and the unmasked voice is not saved.']];
+function setup(){var s3=document.querySelector('#rec .bl98 .s3'),ib=document.querySelector('#rec .bl98 button.p.i');if(!s3||!ib||s3.querySelector('.bl100-info'))return !!(s3&&s3.querySelector('.bl100-info'));
+ var box=document.createElement('section');box.className='bl100-info';box.hidden=true;
+ box.innerHTML=L.map(function(x){return '<div><b>'+x[0]+'</b> '+x[1]+'</div>';}).join('');
+ s3.appendChild(box);ib.onclick=function(){box.hidden=!box.hidden;};return true;}
+if(!setup()){var n=0,t=setInterval(function(){if(setup()||++n>20)clearInterval(t);},300);}
 })();</script>
 </body>
 </html>
