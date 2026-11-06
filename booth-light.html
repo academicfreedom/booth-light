@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 107 · 2026-11-05 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 108 · 2026-11-05 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2865,7 +2865,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 107 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 108 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3083,6 +3083,25 @@ if(p0){var cs=p0.querySelector('.vsel');if(cs){cs.innerHTML='';opts(cs,true);}
   HTMLAnchorElement.prototype.click=function(){if(got&&this.download&&/\.wav$/i.test(this.download))return;return ak.call(this);};
   function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;}
   msg.textContent='Reading the recording\u2026';x.click();var t0=Date.now(),iv=setInterval(function(){if(got||Date.now()-t0>60000){clearInterval(iv);restore();if(!got){msg.textContent='No recording here yet. Record or open one first.';return;}fromFile(new File([got],'booth-light-recording-'+new Date().toISOString().slice(0,10)+'.wav',{type:'audio/wav'}),cs.value);}},200);};}
+})();</script>
+<script id="bl-switches" type="application/json">{"app": true, "download": true, "sovereign": true, "bl-two": true, "dev": true, "rec": true, "notes-band": true, "cut": true, "who": true, "more": true, "listen": true, "voices": true}</script>
+<script id="bl-108-js">(function(){
+var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
+var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
+var off=function(k){return S[k]===false;};
+var LAB={app:'The whole app',download:'Download the file version',sovereign:'Sovereign Tech page','bl-two':'Two ways card',dev:'1 Your device',rec:'2 Record','notes-band':'3 Notes',cut:'4 Cut and save',who:'5 Who can hear',more:'6 Useful tools',listen:'Listen room',voices:'Voice skins'};
+var NAV={'notes-band':'notes'};
+if(off('app')&&!mine){document.body.innerHTML='<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F6F0E2;color:#2A1A3E;font-family:Georgia,serif;padding:24px"><div style="max-width:560px;background:#FBF0C9;border-left:10px solid #E8A33D;border-radius:24px;padding:32px;font-size:19px"><h1 style="margin:0 0 10px;font-size:34px">Booth Light is closed right now</h1><p>Your instructor has switched it off for the class. Recordings already on this device are still here and come back when it opens again.</p></div></div>';return;}
+function hide(el){if(!el)return;if(mine){el.style.opacity='.45';el.style.outline='3px dashed #F87171';}else el.style.display='none';}
+function apply(){
+ ['bl-two','dev','rec','notes-band','cut','who','more','listen'].forEach(function(id){if(!off(id))return;hide(document.getElementById(id));
+  document.querySelectorAll('a[href="#'+(NAV[id]||id)+'"]').forEach(function(a){if(!mine)a.style.display='none';});});
+ if(off('download'))document.querySelectorAll('.bl96').forEach(hide);
+ if(off('sovereign'))document.querySelectorAll('.st-navpill,[data-st-open]').forEach(hide);
+ if(off('voices')){var v=document.querySelector('.bl105 .vs');if(v&&!mine&&v.value!=='off'){v.value='off';v.dispatchEvent(new Event('change'));}document.querySelectorAll('.bl105 .vs,.bl105 .try').forEach(hide);}
+}
+apply();setInterval(apply,1000);
+if(mine){var offs=Object.keys(LAB).filter(off);if(offs.length){var b=document.createElement('div');b.style.cssText='position:fixed;left:12px;bottom:12px;z-index:99999;background:#2A1A3E;color:#F6F0E2;border-radius:16px;padding:10px 14px;font:600 14px Helvetica,Arial,sans-serif;max-width:420px';b.textContent='Off for students: '+offs.map(function(k){return LAB[k];}).join(' \u00b7 ')+'. You see everything here because this is your own Mac copy.';document.body.appendChild(b);}}
 })();</script>
 </body>
 </html>
