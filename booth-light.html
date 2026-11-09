@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 109 · 2026-11-09 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 110 · 2026-11-09 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2865,7 +2865,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 109 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 110 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3126,6 +3126,16 @@ box.querySelector('button').onclick=function(){var o=document.createElement('div
  function close(){o.remove();document.removeEventListener('keydown',k);} function k(e){if(e.key==='Escape')close();}
  o.querySelector('button').onclick=close;document.addEventListener('keydown',k);document.body.appendChild(o);};
 if(S.qr===false&&mine)box.style.outline='3px dashed #F87171';
+})();</script>
+<script id="bl-110-js">(function(){
+var SIL='data:audio/wav;base64,UklGRsQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+var el=null;
+function forPlay(){try{if(navigator.audioSession)navigator.audioSession.type='playback';}catch(e){}
+ try{if(!el){el=document.createElement('audio');el.src=SIL;el.loop=true;el.setAttribute('playsinline','');el.volume=0.01;}var p=el.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
+function forRecord(){try{if(navigator.audioSession)navigator.audioSession.type='play-and-record';}catch(e){}try{if(el)el.pause();}catch(e){}}
+var pb=document.getElementById('play');if(pb)pb.addEventListener('click',forPlay,true);
+window.addEventListener('keydown',function(e){if(e.code==='Space'){var tg=(e.target&&e.target.tagName)||'';if(tg!=='INPUT'&&tg!=='TEXTAREA'&&tg!=='SELECT')forPlay();}},true);
+document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.bl105 .rec,.bl105 .try,#recbtn,#agree-rec,#tp-main');if(t)forRecord();},true);
 })();</script>
 </body>
 </html>
