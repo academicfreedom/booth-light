@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booth Light · BUILD 96</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 108 · 2026-11-05 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 109 · 2026-11-09 · one file · opens no network connection while it runs · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -2865,7 +2865,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 108 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 109 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3084,7 +3084,7 @@ if(p0){var cs=p0.querySelector('.vsel');if(cs){cs.innerHTML='';opts(cs,true);}
   function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;}
   msg.textContent='Reading the recording\u2026';x.click();var t0=Date.now(),iv=setInterval(function(){if(got||Date.now()-t0>60000){clearInterval(iv);restore();if(!got){msg.textContent='No recording here yet. Record or open one first.';return;}fromFile(new File([got],'booth-light-recording-'+new Date().toISOString().slice(0,10)+'.wav',{type:'audio/wav'}),cs.value);}},200);};}
 })();</script>
-<script id="bl-switches" type="application/json">{"app": true, "download": true, "sovereign": true, "bl-two": true, "dev": true, "rec": true, "notes-band": true, "cut": true, "who": true, "more": true, "listen": true, "voices": true}</script>
+<script id="bl-switches" type="application/json">{"app": true, "download": true, "sovereign": true, "bl-two": true, "dev": true, "rec": true, "notes-band": true, "cut": true, "who": true, "more": true, "listen": true, "voices": true, "qr": true}</script>
 <script id="bl-108-js">(function(){
 var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
 var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
@@ -3102,6 +3102,30 @@ function apply(){
 }
 apply();setInterval(apply,1000);
 if(mine){var offs=Object.keys(LAB).filter(off);if(offs.length){var b=document.createElement('div');b.style.cssText='position:fixed;left:12px;bottom:12px;z-index:99999;background:#2A1A3E;color:#F6F0E2;border-radius:16px;padding:10px 14px;font:600 14px Helvetica,Arial,sans-serif;max-width:420px';b.textContent='Off for students: '+offs.map(function(k){return LAB[k];}).join(' \u00b7 ')+'. You see everything here because this is your own Mac copy.';document.body.appendChild(b);}}
+})();</script>
+<style id="bl-109">
+.bl109{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:14px;background:#FFFFFF;border-radius:18px;padding:12px 16px;color:#14183A}
+.bl109 .q svg{width:150px;height:150px;display:block}
+.bl109 b{font-size:18px}.bl109 .a{font-family:Menlo,monospace;font-size:14px;word-break:break-all}
+.bl109 button{border:0;border-radius:999px;padding:10px 18px;font:700 16px Helvetica,Arial,sans-serif;background:#FFD166;color:#14183A;cursor:pointer;margin-top:8px}
+.bl109-big{position:fixed;inset:0;z-index:99998;background:#F6F0E2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:#14183A;font-family:Georgia,serif;text-align:center;padding:20px}
+.bl109-big .q svg{width:min(68vh,86vw);height:min(68vh,86vw);display:block}
+.bl109-big h2{margin:0;font-size:clamp(26px,4vw,48px)}.bl109-big .a{font-family:Menlo,monospace;font-size:clamp(16px,2.2vw,28px)}
+.bl109-big button{border:2px solid #14183A;border-radius:999px;padding:10px 22px;font:700 18px Helvetica,Arial,sans-serif;background:#FFFFFF;cursor:pointer}
+</style><script id="bl-109-js">(function(){
+var SVG="<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 37 37\" class=\"segno\"><path fill=\"#fff\" d=\"M0 0h37v37h-37z\"/><path class=\"qrline\" stroke=\"#14183a\" d=\"M2 2.5h7m1 0h1m6 0h2m1 0h3m2 0h1m2 0h7m-33 1h1m5 0h1m2 0h1m3 0h2m7 0h1m3 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h3m3 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m4 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h4m1 0h2m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h3m2 0h2m1 0h2m3 0h2m3 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h1m1 0h2m1 0h2m5 0h3m-23 1h7m1 0h1m1 0h2m2 0h3m1 0h1m2 0h3m2 0h2m3 0h1m-33 1h3m4 0h1m2 0h1m1 0h2m3 0h5m1 0h1m2 0h2m1 0h2m1 0h1m-32 1h3m2 0h1m6 0h3m1 0h1m2 0h3m1 0h3m1 0h1m1 0h2m-32 1h3m1 0h1m3 0h1m4 0h3m4 0h2m4 0h1m1 0h5m-30 1h1m1 0h5m1 0h1m3 0h2m1 0h1m3 0h1m1 0h2m1 0h3m1 0h1m-32 1h4m4 0h1m4 0h2m2 0h4m2 0h1m2 0h2m3 0h2m-33 1h8m1 0h3m1 0h1m3 0h1m2 0h2m2 0h8m-31 1h2m1 0h1m3 0h2m1 0h1m2 0h3m2 0h9m1 0h2m-31 1h2m1 0h4m1 0h2m2 0h3m3 0h1m3 0h1m1 0h2m1 0h3m2 0h1m-31 1h1m5 0h2m2 0h2m1 0h2m1 0h3m2 0h1m2 0h2m1 0h2m1 0h1m-33 1h5m1 0h6m2 0h2m1 0h2m1 0h2m4 0h3m1 0h2m-31 1h4m2 0h1m2 0h2m1 0h1m2 0h1m3 0h2m2 0h2m1 0h4m1 0h1m-33 1h3m3 0h1m1 0h1m2 0h1m4 0h1m7 0h2m1 0h3m1 0h2m-33 1h3m7 0h5m3 0h4m1 0h1m2 0h1m2 0h2m1 0h1m-33 1h1m2 0h2m1 0h1m1 0h2m6 0h2m2 0h1m9 0h2m-32 1h1m2 0h1m1 0h1m2 0h2m1 0h3m1 0h1m1 0h1m3 0h3m1 0h1m3 0h2m1 0h1m-33 1h1m1 0h1m2 0h4m4 0h1m3 0h3m2 0h7m2 0h2m-25 1h1m1 0h1m1 0h2m1 0h6m3 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m2 0h4m1 0h1m1 0h1m1 0h1m-31 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h4m3 0h4m-32 1h1m1 0h3m1 0h1m1 0h2m1 0h1m4 0h3m3 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h3m1 0h1m1 0h1m2 0h1m3 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m2 0h2m3 0h1m1 0h1m1 0h2m2 0h1m-31 1h1m5 0h1m1 0h1m2 0h1m2 0h2m1 0h1m2 0h2m3 0h2m1 0h3m-31 1h7m6 0h2m1 0h5m1 0h1m1 0h4m1 0h1m1 0h1\"/></svg>", URL_='https://academicfreedom.github.io/booth-light/';
+var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
+var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
+if(S.qr===false&&!mine)return;
+var card=document.getElementById('bl-two');if(!card)return;
+var box=document.createElement('div');box.className='bl109';
+box.innerHTML='<div class="q">'+SVG+'</div><div><b>Scan to open Booth Light on a phone</b><div class="a">academicfreedom.github.io/booth-light</div><button type="button">\u26F6 Show it big</button></div>';
+card.appendChild(box);
+box.querySelector('button').onclick=function(){var o=document.createElement('div');o.className='bl109-big';
+ o.innerHTML='<h2>Booth Light</h2><div class="q">'+SVG+'</div><div class="a">academicfreedom.github.io/booth-light</div><button type="button">Close (Esc)</button>';
+ function close(){o.remove();document.removeEventListener('keydown',k);} function k(e){if(e.key==='Escape')close();}
+ o.querySelector('button').onclick=close;document.addEventListener('keydown',k);document.body.appendChild(o);};
+if(S.qr===false&&mine)box.style.outline='3px dashed #F87171';
 })();</script>
 </body>
 </html>
