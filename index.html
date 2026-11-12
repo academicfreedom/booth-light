@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 115</title>
+<title>Booth Light · BUILD 117</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 115 · 2026-11-12 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 117 · 2026-11-12 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 115</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 117</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1913,7 +1913,7 @@ async function storytellerPage(i){ensureVoices();const v=S.voices[i];if(!v)retur
  +'</body></html>';
  const name=base()+'-storyteller-page-'+(v.code||('voice-'+(i+1))).replace(/[^0-9A-Za-z-]/g,'')+'-'+today()+'.html';dl(new Blob([h],{type:'text/html'}),name);
  $('v-sum').insertAdjacentText('afterend','');say('Saved '+name+'. Give it to '+(v.code||v.role)+', then delete your copy of the file. It holds their two erase codes; this app keeps only their fingerprints.');}
-function consentText(){ensureVoices();const s=voiceLevel();let o='CONSENT RECORD\nListening Room interview '+num()+'\nWritten '+ltime(Date.now())+' (local time on the device that wrote it)'+'\nRecording fingerprint (SHA-256): '+(S.fp||'no recording')+'\nConsent to be recorded: '+(S.consent.answer==='yes'?'yes'+(S.consent.when?', '+ltime(S.consent.when):''):S.consent.answer==='no'?'no':'not recorded')+'\n'+stepsTxt()+'\nWHO MAY HEAR IT\n';
+function consentText(){ensureVoices();const s=voiceLevel();let o='CONSENT RECORD\nListening Room interview '+num()+'\nWritten '+ltime(Date.now())+' (local time on the device that wrote it)'+'\nRecording fingerprint (SHA-256): '+(S.fp||'no recording')+'\nConsent to be recorded: '+(S.consent.answer==='yes'?'yes'+(S.consent.when?', '+ltime(S.consent.when):''):S.consent.answer==='no'?'no':'not recorded')+((S.steps&&S.steps[2]&&S.steps[2].out)?' (reported afterwards)':'')+'\n'+stepsTxt()+'\nWHO MAY HEAR IT\n';
 S.voices.forEach(v=>{o+='- '+v.role+(v.code?' ('+v.code+')':'')+(v.codeHash?' [erase code fingerprints: '+v.codeHash+' / '+v.backupHash+']':'')+': '+(v.level?'level '+v.level+', '+rl(v.level)+(v.when?' Chosen '+ldate(v.when)+'.':'')+(v.until?' Listen until '+v.until+'.':''):'not chosen')+(v.withdrawn?' WITHDREW CONSENT '+ldate(v.withdrawn)+'.':'')+'\n';});
 o+='\nRESULT\n'+(s.kind==='withdrawn'?'Consent withdrawn. Do not share. Delete every copy.':s.kind==='open'?'Not every voice has chosen. The recording stays on the device that made it (level 1).':'No further than level '+s.n+': '+rl(s.n))+'\n\nThe levels\n'+SLINES.map((l,i)=>(i+1)+'. '+rl(i+1)).join('\n')+'\n';return o;}
 /* ---------- LINER NOTES v48: the facts that travel with an episode, no real names ---------- */
@@ -2877,7 +2877,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 115 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 117 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3164,6 +3164,12 @@ document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&
 #cs8 .cs-btns{display:flex;flex-wrap:wrap;gap:8px}
 #who .w5-grid{scroll-margin-top:84px}
 #who .w5-grid.cs-flash{outline:5px solid #F5A742;outline-offset:8px;border-radius:14px}
+/* BUILD 116: the two opening cards sit side by side. The Read this aloud button was taking the second place in the row and pushing the second card under the first; it now has its own row above them. On a phone-width screen the cards stack. */
+html body #who .w5-two{grid-template-columns:1fr 1fr !important;align-items:stretch}
+#who .w5-two > button{grid-column:1 / -1;grid-row:1;justify-self:start;margin:0 !important}
+#who .w5-two > .who-risk{grid-column:1;grid-row:2}
+#who .w5-two > .who-lead{grid-column:2;grid-row:2}
+@media (max-width:560px){html body #who .w5-two{grid-template-columns:1fr !important}#who .w5-two > .who-lead{grid-column:1;grid-row:3}}
 #cs8 .cs-btns button,#cs8 .cs-btns a{font:800 .98em Helvetica,Arial,sans-serif !important;border:0 !important;cursor:pointer;border-radius:999px !important;padding:11px 16px !important;background:#F6F0E2 !important;color:#14183A !important;text-decoration:none;box-shadow:none !important;min-height:0}
 #cs8 .cs-btns button.on{background:#8FD6A0 !important;color:#070C22 !important}
 #cs8 .cs-btns button.on.neg{background:#E8362A !important;color:#FFFFFF !important}
@@ -3200,17 +3206,19 @@ var A={'1yes':['Yes','yes',''],'1no':['No','no','Do not record.'],'3yes':['Yes',
 '8deleted':['Deleted','yes',''],'8returned':['Handed back','yes','']};
 function steps(){var S=B.S;return S.steps||{};}
 function edited(){var S=B.S,e=(S.exports||[]).filter(function(x){return /-edited-/.test(x.name||'');}).pop();return {file:e?e.name:'',fp:S.editedFp||(e?e.sha:'')||''};}
-function two2(){var c=B.S.consent||{};if(c.answer==='yes')return ['Yes · '+at(c.when)+(c.asked?' · asked on the recording at '+c.asked:''),'yes'];
- if(c.answer==='no')return ['No · '+at(c.when)+' · '+(B.S.rec?'Do not edit or share this recording until the storyteller agrees.':'No sound was recorded.'),'no'];
+function outs(n){var st=steps()[n]||{};return st.out?' · '+(st.on?'on '+st.on:'date not given')+' · reported afterwards on '+at(st.out):'';}   /* BUILD 117: a step done outside Booth Light and marked later. st.on is the date the student gives; st.out is when they marked it. */
+function two2(){var c=B.S.consent||{},o=outs(2);if(c.answer==='yes')return [o?'Yes'+o:'Yes · '+at(c.when)+(c.asked?' · asked on the recording at '+c.asked:''),'yes'];
+ if(c.answer==='no')return [o?'No'+o:'No · '+at(c.when)+' · '+(B.S.rec?'Do not edit or share this recording until the storyteller agrees.':'No sound was recorded.'),'no'];
  return ['Not asked yet. In 2 Record, the Record button stays locked until the storyteller says yes.',''];}
 function six(){var s=B.sum(),nm=function(v){return v.code||v.role;};
  if(s.kind==='withdrawn')return [nm(s.v)+' withdrew consent · '+at(s.v.withdrawn)+' · Do not share this recording.','no'];
  if(s.kind==='open')return ['Not chosen yet: '+s.list.map(nm).join(', ')+'. Until everyone chooses, the recording stays at level 1.',''];
  return ['No further than level '+s.n+'.','yes'];}
 function state(n){var st=steps()[n]||{},a=A[n+(st.a||'')];
- if(n===2)return two2();if(n===6)return six();
- var t='',k='';if(n===4&&st.sent)t='Sent · '+at(st.sent)+(st.file?' · '+st.file:'')+(st.fp?' · fingerprint '+st.fp.slice(0,16)+'…':' · no edited audio exported on this device yet')+'. ';
- if(a){t+=a[0]+' · noted '+at(st.when)+(n===5&&st.fp?' · fingerprint '+st.fp.slice(0,16)+'…':'')+(a[2]?' · '+a[2]:'');k=a[1]==='mid'?'':a[1];}
+ if(n===2)return two2();if(n===6){var r6=six(),o6=outs(6);return [r6[0]+(o6?' Chosen outside Booth Light'+o6+'.':''),r6[1]];}
+ var t='',k='',o=outs(n);if(n===4&&st.sent)t=o?'Sent. ':'Sent · '+at(st.sent)+(st.file?' · '+st.file:'')+(st.fp?' · fingerprint '+st.fp.slice(0,16)+'…':' · no edited audio exported on this device yet')+'. ';
+ if(a){t+=a[0]+(o||' · noted '+at(st.when)+(n===5&&st.fp?' · fingerprint '+st.fp.slice(0,16)+'…':''))+(a[2]?' · '+a[2]:'');k=a[1]==='mid'?'':a[1];}
+ else if(o&&t)t='Sent'+o+'. ';
  return [t||'Not recorded yet.',k];}
 var last='';
 function draw(){var sig;try{sig=JSON.stringify([steps(),B.S.consent,!!B.S.rec,six(),B.S.editedFp||'']);}catch(e){return;}if(sig===last)return;last=sig;
@@ -3235,14 +3243,14 @@ box.addEventListener('click',function(e){var j=e.target.closest&&e.target.closes
 /* BUILD 112: the path (bl-112-js) reads and records the same answers through this */
 window.blConsent={steps:steps,state:state,answer:answer};
 /* the same answers as text, for the consent record (.txt) */
-window.blStepsText=function(){var s=steps(),c=B.S.consent||{},ln=function(n){var st=s[n]||{},a=A[n+(st.a||'')];return a?a[0].toLowerCase()+', noted '+at(st.when):'not recorded';};
+window.blStepsText=function(){var s=steps(),c=B.S.consent||{},ot=function(n){var st=s[n]||{};return st.out?', '+(st.on?'on '+st.on:'date not given')+', reported afterwards on '+at(st.out):'';},ln=function(n){var st=s[n]||{},a=A[n+(st.a||'')];return a?a[0].toLowerCase()+(ot(n)||', noted '+at(st.when)):'not recorded';};
  var f=s[4]||{},g=s[5]||{};
  return '\nCONSENT STEPS\n1. Asked for the interview, with its purpose and topics: '+ln(1)
- +'\n2. Asked on the recording, do you agree to be recorded: '+(c.answer==='yes'?'yes, '+at(c.when)+(c.asked?', asked on the recording at '+c.asked:''):c.answer==='no'?'no, '+at(c.when):'not recorded')
+ +'\n2. Asked on the recording, do you agree to be recorded: '+(c.answer==='yes'?'yes'+(ot(2)||', '+at(c.when)+(c.asked?', asked on the recording at '+c.asked:'')):c.answer==='no'?'no'+(ot(2)||', '+at(c.when)):'not recorded')
  +'\n3. Asked, may I edit the raw recording: '+ln(3)
- +'\n4. Edited interview sent for feedback: '+(f.sent?'sent '+at(f.sent)+(f.file?', file '+f.file:'')+(f.fp?', SHA-256 '+f.fp:', no edited audio exported on that device yet'):'not sent')+'; answer: '+ln(4)
+ +'\n4. Edited interview sent for feedback: '+(f.sent?(f.out?'sent'+ot(4):'sent '+at(f.sent)+(f.file?', file '+f.file:'')+(f.fp?', SHA-256 '+f.fp:', no edited audio exported on that device yet')):'not sent')+'; answer: '+ln(4)
  +'\n5. Changes shown to the storyteller: '+ln(5)+(g.a&&g.fp?', SHA-256 '+g.fp:'')
- +'\n6. Final cut, who may hear it: listed under WHO MAY HEAR IT'
+ +'\n6. Final cut, who may hear it: listed under WHO MAY HEAR IT'+(ot(6)?', chosen outside Booth Light'+ot(6):'')
  +'\n7. Asked before listening, does your choice still stand: '+ln(7)
  +'\n8. End of quarter: '+ln(8)+'\n';};
 draw();setInterval(draw,1000);
@@ -3259,7 +3267,7 @@ draw();setInterval(draw,1000);
 #bl-path .pt-d.done{background:var(--k);color:#070C22}
 #bl-path .pt-d.now{background:var(--k);color:#070C22;width:2.6em;height:2.6em;font-size:1.05em;box-shadow:0 0 0 3px #070C22,0 0 0 6px var(--k)}
 #bl-path .pt-d:disabled{cursor:default}
-#bl-path .pt-where{text-align:center;margin:8px 0 0;color:#9AA0C8;font:700 .78em Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+#bl-path .pt-where{text-align:center;margin:8px 0 0;color:#FFD60A;font:800 .9em Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}   /* BUILD 117: no grey or cream writing in the path or the sheet. Small writing is yellow, 13.7 to 1 on this ground, and a size larger. */
 #bl-path .pt-name{text-align:center;margin:-6px 0 0;font:700 2.2em Georgia,"Times New Roman",serif;color:var(--c);outline:none}
 #bl-path .pt-cols{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:860px){#bl-path .pt-cols{grid-template-columns:1fr 1fr;align-items:start;gap:18px}}
@@ -3300,17 +3308,78 @@ draw();setInterval(draw,1000);
 #bl-path .pt-sub{display:flex;justify-content:space-between;align-items:center}
 #bl-path .pt-next{display:block;width:100%;border:0;border-radius:999px;padding:.85em 1em;min-height:52px;text-align:center;font-weight:900;font-size:1.05em;background:var(--n);color:#0B1030}
 #bl-path .pt-next:disabled{background:none;box-shadow:inset 0 0 0 3px var(--n);color:var(--n);cursor:not-allowed}
-#bl-path .pt-s{border:0;background:none;color:#9AA0C8;font-weight:800;font-size:.9em;padding:.4em .4em;min-height:44px;text-decoration:underline}
+#bl-path .pt-s{border:0;background:none;color:#FFD60A;font-weight:800;font-size:1em;padding:.4em .4em;min-height:44px;text-decoration:underline}
 #bl-path [class^="pt-"]:focus-visible,#bl-path [class*=" pt-"]:focus-visible{outline:3px solid #F6F0E2 !important;outline-offset:3px}
 #bl-path-back{position:fixed;left:14px;bottom:14px;z-index:8999;border:0;border-radius:999px;padding:.8em 1.2em;min-height:48px;font:900 1em Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;display:none}
 html.bl-tools #bl-path-back{display:block}
 html.bl-pathon,html.bl-pathon body{overflow:hidden !important}
+/* BUILD 116: the sheet. All eight steps on one screen, each with its answer and its date and time, or "To do". It shows answers and does not take them: answers are given in the steps. It prints. It is shown in two places from one piece of code: over the path, and where the eight boxes were. */
+#bl-path .pt-allsteps{align-self:center;border:0;background:none;box-shadow:inset 0 0 0 3px #FFD60A;color:#FFD60A;border-radius:999px;padding:.45em 1.1em;min-height:40px;font:800 .85em Helvetica,Arial,sans-serif}
+#bl-path .pt-sheetbox{position:fixed;inset:0;z-index:6;background:#070C22;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center}
+#bl-path .pt-sheetbox[hidden]{display:none}
+.bls{box-sizing:border-box;width:100%;max-width:1040px;display:flex;flex-direction:column;gap:10px;font-family:Helvetica,Arial,sans-serif !important;text-align:left}
+.bls *{box-sizing:border-box}
+#bl-path .pt-sheetbox .bls{min-height:100%;padding:18px 16px 0}
+.bls-old{background:#070C22 !important;border-radius:22px;padding:18px 16px 16px;margin:0 0 14px}
+.bls .bls-h{font:700 2em Georgia,"Times New Roman",serif !important;color:#FFD60A !important;margin:4px 0 0 !important;padding:0 !important;text-align:center !important;outline:none;background:none !important;letter-spacing:normal !important;text-transform:none !important}
+.bls .bls-sub{margin:0 !important;text-align:center !important;color:#FFD60A !important;font:800 1.05em/1.4 Helvetica,Arial,sans-serif !important}
+.bls .bls-rows{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:860px){.bls .bls-rows{grid-template-columns:1fr 1fr}}
+.bls .bls-row{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:10px;border-radius:18px;padding:10px 12px;min-height:60px;cursor:pointer;font-family:Helvetica,Arial,sans-serif;text-align:left}
+.bls .bls-row.done{background:var(--k) !important;color:#0B1030 !important}
+.bls .bls-row.todo{background:none !important;box-shadow:inset 0 0 0 3px var(--k) !important;color:var(--k) !important}
+.bls .bls-row.next{box-shadow:inset 0 0 0 3px var(--k),0 0 0 3px #070C22,0 0 0 6px var(--k) !important}
+.bls .bls-row[aria-disabled="true"]{cursor:default}
+.bls .bls-row:focus-visible,.bls .bls-go:focus-visible,.bls .bls-print:focus-visible,.bls .bls-back:focus-visible{outline:3px solid #F6F0E2;outline-offset:3px}
+.bls .bls-n{flex:0 0 1.9em;width:1.9em;height:1.9em;border-radius:50%;display:grid;place-items:center;font:900 .9em Helvetica,Arial,sans-serif}
+.bls .bls-row.done .bls-n{background:#0B1030 !important;color:var(--k) !important}
+.bls .bls-row.todo .bls-n{background:none !important;color:var(--k) !important;box-shadow:inset 0 0 0 3px var(--k)}
+.bls .bls-row.done .bls-w,.bls .bls-row.done .bls-nm,.bls .bls-row.done .bls-s{color:#0B1030 !important}
+.bls .bls-row.todo .bls-w,.bls .bls-row.todo .bls-nm,.bls .bls-row.todo .bls-s{color:var(--k) !important}   /* the old page colours every word inside a panel; these lines keep the sheet's own colours there */
+.bls .bls-w{flex:1;min-width:0}
+.bls .bls-nm{display:block;font:700 1.15em/1.2 Georgia,"Times New Roman",serif}
+.bls .bls-s{display:block;font:800 .85em/1.3 Helvetica,Arial,sans-serif;margin-top:2px;overflow-wrap:anywhere}
+.bls .bls-acts{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+#bl-path .pt-sheetbox .bls-acts{padding:4px 0 10px}
+/* BUILD 117: steps done outside Booth Light. The sheet opens answer buttons and a date box on each row. Those answers are worded "reported afterwards". */
+.bls .bls-out{all:unset;box-sizing:border-box;display:block;width:100%;border-radius:999px;padding:.7em 1em;min-height:48px;text-align:center;font:800 .95em Helvetica,Arial,sans-serif;background:none !important;box-shadow:inset 0 0 0 3px #FFD60A !important;color:#FFD60A !important;cursor:pointer}
+.bls .bls-out.on{background:#FFD60A !important;box-shadow:none !important;color:#0B1030 !important}
+.bls .bls-row.fill{display:block;cursor:default}
+.bls .bls-aud{grid-column:1 / -1;border-radius:18px;padding:12px 14px;box-shadow:inset 0 0 0 3px #FFD60A;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.bls .bls-audh{font:700 1.15em/1.2 Georgia,"Times New Roman",serif;color:#FFD60A !important}
+.bls .bls-audt{font:700 .95em/1.4 Helvetica,Arial,sans-serif;color:#FFD60A !important}
+.bls .bls-file{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;border-radius:999px;padding:.55em 1.1em;min-height:44px;font:800 .95em Helvetica,Arial,sans-serif;background:none !important;box-shadow:inset 0 0 0 3px #FFD60A !important;color:#FFD60A !important;cursor:pointer}
+.bls .bls-file:focus-visible{outline:3px solid #F6F0E2;outline-offset:3px}
+#bl-path .pt-outside{display:block;margin:12px 0 0;border:0;background:none;padding:.3em 0;min-height:40px;color:#0B1030;font:800 .88em Helvetica,Arial,sans-serif;text-decoration:underline;text-align:left}
+.bls .bls-top{display:flex;align-items:center;gap:10px}
+.bls .bls-f{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.bls .bls-lab{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;font:800 .85em/1.3 Helvetica,Arial,sans-serif}
+.bls .bls-row.todo .bls-lab{color:var(--k) !important}
+.bls .bls-row.done .bls-lab{color:#0B1030 !important}
+.bls input.bls-d{box-sizing:border-box;min-height:44px;max-width:100%;margin:0;border-radius:999px;border:3px solid var(--k) !important;background:#0B1030 !important;color:var(--k) !important;font:800 1em Helvetica,Arial,sans-serif !important;padding:.3em .8em;color-scheme:dark}
+.bls .bls-row.done input.bls-d{border-color:#0B1030 !important}
+.bls .bls-a{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;border-radius:999px;padding:.5em 1em;min-height:44px;font:800 .9em Helvetica,Arial,sans-serif;cursor:pointer}
+.bls .bls-row.todo .bls-a{background:none !important;box-shadow:inset 0 0 0 3px var(--k) !important;color:var(--k) !important}
+.bls .bls-row.todo .bls-a.on{background:var(--k) !important;color:#0B1030 !important}
+.bls .bls-row.done .bls-a{background:none !important;box-shadow:inset 0 0 0 3px #0B1030 !important;color:#0B1030 !important}
+.bls .bls-row.done .bls-a.on{background:#0B1030 !important;color:var(--k) !important}
+.bls .bls-a.on::before{content:"\2713\00a0"}
+.bls .bls-a:disabled{cursor:not-allowed;text-decoration:line-through}
+.bls .bls-a:focus-visible,.bls .bls-out:focus-visible,.bls input.bls-d:focus-visible{outline:3px solid #F6F0E2;outline-offset:3px}
+.bls .bls-go{all:unset;box-sizing:border-box;display:block;width:100%;border-radius:999px;padding:.85em 1em;min-height:52px;text-align:center;font:900 1.05em Helvetica,Arial,sans-serif;background:var(--k) !important;color:#0B1030 !important;cursor:pointer}
+.bls .bls-print{all:unset;box-sizing:border-box;display:block;width:100%;border-radius:999px;padding:.8em 1em;min-height:50px;text-align:center;font:900 1em Helvetica,Arial,sans-serif;background:none !important;box-shadow:inset 0 0 0 3px #FFD60A !important;color:#FFD60A !important;cursor:pointer}
+.bls .bls-note{margin:0 !important;text-align:center !important;color:#FFD60A !important;font:700 .95em/1.4 Helvetica,Arial,sans-serif !important}
+.bls .bls-back{all:unset;align-self:flex-start;color:#FFD60A !important;font:800 1em Helvetica,Arial,sans-serif;text-decoration:underline;padding:.3em .4em .6em;cursor:pointer}
+#cs8 .cs-grid{display:none !important}
+#bl-path .pt-tool #who .bls-old{display:none !important}
+#bl-print{display:none}
+@media print{html,body{overflow:visible !important;height:auto !important;background:#fff !important}body > *:not(#bl-print){display:none !important}#bl-print{display:block !important;color:#111 !important;font:12pt/1.35 Helvetica,Arial,sans-serif;letter-spacing:normal;word-spacing:normal}#bl-print h1{font:700 20pt Georgia,"Times New Roman",serif;margin:0 0 4pt;color:#111}#bl-print p{margin:2pt 0;color:#111;max-width:none}#bl-print table{border-collapse:collapse;width:100%;margin:12pt 0 10pt}#bl-print th{text-align:left;border-bottom:1.5pt solid #111;padding:4pt 5pt;font-size:9pt;letter-spacing:.04em;text-transform:uppercase;color:#111}#bl-print td{border-bottom:.75pt solid #999;padding:5pt;vertical-align:top;color:#111}#bl-print .bp-k{font:700 10pt Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:10pt 0 3pt}}
 /* BUILD 114: a place that lists what is still being built, one tap from every step */
 #bl-path .pt-wipbox{position:fixed;inset:0;z-index:6;background:#070C22;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center;font-family:Helvetica,Arial,sans-serif}
 #bl-path .pt-wipbox[hidden]{display:none}
 #bl-path .pt-wipin{width:100%;max-width:1040px;min-height:100%;padding:18px 16px 0;display:flex;flex-direction:column;gap:12px}
 #bl-path .pt-wiph{font:700 2em Georgia,"Times New Roman",serif;color:#FFD60A;margin:6px 0 0;text-align:center;outline:none}
-#bl-path .pt-wiplead{margin:0;text-align:center;color:#9AA0C8;font:700 1em/1.4 Helvetica,Arial,sans-serif}
+#bl-path .pt-wiplead{margin:0;text-align:center;color:#FFD60A;font:700 1em/1.4 Helvetica,Arial,sans-serif}
 #bl-path .pt-wipgrid{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:860px){#bl-path .pt-wipgrid{grid-template-columns:1fr 1fr}}
 #bl-path .pt-wipc{border-radius:22px;padding:14px 16px;background:var(--k);color:#0B1030;display:flex;flex-direction:column;gap:8px}
@@ -3319,7 +3388,7 @@ html.bl-pathon,html.bl-pathon body{overflow:hidden !important}
 #bl-path .pt-wipp{font:700 .95em/1.4 Helvetica,Arial,sans-serif;color:#0B1030}
 #bl-path .pt-wipu{margin-top:auto;padding:10px 12px;border-radius:14px;background:#0B1030;color:var(--k);font:800 .95em/1.4 Helvetica,Arial,sans-serif}
 #bl-path .pt-wipk{display:block;font:900 .72em Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 3px}
-#bl-path .pt-wipfoot{text-align:center;color:#9AA0C8;font:700 .78em Menlo,Consolas,monospace}
+#bl-path .pt-wipfoot{text-align:center;color:#FFD60A;font:700 .9em Menlo,Consolas,monospace}
 #bl-path .pt-wipnav{position:sticky;bottom:0;margin-top:auto;background:#070C22;padding:10px 0 12px;box-shadow:0 -10px 14px -6px #070C22}
 #bl-path .pt-wipclose{display:block;width:100%;border:0;border-radius:999px;padding:.85em 1em;min-height:52px;font:900 1.05em Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030}
 /* BUILD 113: a step's tool is shown inside the path, under its question. The section is moved in whole, and moved back when the student leaves the step. */
@@ -3353,10 +3422,10 @@ var R={yes:function(){return $('#rec .bl102 .st .yes');},no:function(){return $(
  main:function(){return $('#tp-main');},stop:function(){return $('#tp-stop');},state:function(){return ($('#tp-state')||{}).textContent||'';},time:function(){return ($('#rectime')||{}).textContent||'00:00';}};
 function recording(){var s=R.stop();return !!s&&!s.disabled;}
 function sa(n){return (C.steps()[n]||{});}
-function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return !!B.S.rec&&!recording();if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
+function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return (B.S.consent||{}).answer==='yes'&&((!!B.S.rec&&!recording())||!!sa(2).out);   /* done needs the yes; audio opened from a file does not count as a yes */if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
 function reach(){for(var n=1;n<9;n++)if(!done(n))return n;return 8;}
 var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','The path: eight steps');
-el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
+el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><button type="button" class="pt-allsteps">See all 8 steps</button><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
 document.body.appendChild(el);
 var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to the path';document.body.appendChild(back);
 var q=function(s){return el.querySelector(s);},ask=q('.pt-ask'),doc=q('.pt-do'),sky=q('.pt-sky'),tool=q('.pt-tool'),slot=q('.pt-slot'),home={};
@@ -3365,13 +3434,60 @@ function unembed(){var id=tool.dataset.id;if(id){var b=document.getElementById(i
 function embed(id){var b=document.getElementById(id);if(!b)return false;if(tool.dataset.id!==id){unembed();if(!home[id]){home[id]=document.createComment('bl-path '+id);b.parentNode.insertBefore(home[id],b);}
   var cs=getComputedStyle(document.body);tool.style.setProperty('--bl-ink',cs.color);tool.style.setProperty('--bl-font',cs.fontFamily);b.dataset.blShut=b.classList.contains('shut')?'1':'0';b.classList.remove('shut');slot.appendChild(b);tool.dataset.id=id;setTimeout(function(){window.dispatchEvent(new Event('resize'));},80);}
  tool.classList.add('on');q('.pt-cols').classList.add('tooly');doc.hidden=true;sky.style.display='none';return true;}
+/* BUILD 116: the sheet. One piece of code draws it in both places. It reads the same record the steps write. */
+var HINT=['ask for the interview','ask on the recording, then record','ask before you edit','send the edited interview','show the changes','ask who may hear it','ask before the episode is heard','ask at the end of the quarter'];
+function epn(){var i=document.getElementById('inum');return String((i&&i.value)||B.S.interview||'').trim();}
+function fmt(iso){var d=new Date(iso);if(isNaN(d))return String(iso);function z(x){return (x<10?'0':'')+x;}return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate())+' '+z(d.getHours())+':'+z(d.getMinutes());}
+function srow(n){var d=done(n),a=sa(n),some=!!(a.a||a.sent)||(n===2&&!!(B.S.consent||{}).answer)||(n===6&&(B.S.voices||[]).some(function(v){return v.level||v.withdrawn;}));
+ return {done:d,next:!d&&n===reach(),some:some,text:d?'\u2713 '+C.state(n)[0]:some?C.state(n)[0]:(n===reach()?'To do next: '+HINT[n-1]:'To do \u00b7 after step '+(n-1))};}
+var fill=false,pend={},OUTA={2:[['yes','They agreed on the recording'],['no','They did not agree']]};
+function inapp(n){var a=sa(n);if(a.out)return false;return !!(a.a||a.sent)||(n===2&&!!(B.S.consent||{}).answer);}   /* answered in the app as it happened: the sheet does not overwrite it */
+function frow(n,x){var a=sa(n),was=n===2?(B.S.consent||{}).answer:a.a,h='<div class="bls-row fill '+(x.done?'done':'todo')+'" style="--k:'+COL[n-1]+'"><div class="bls-top"><span class="bls-n">'+n+'</span><span class="bls-w"><span class="bls-nm">'+ST[n-1].name+'</span><span class="bls-s">'+esc(x.done||x.some?x.text:'To do')+'</span></span></div><div class="bls-f">';
+ if(inapp(n))return h+'<span class="bls-lab">Recorded in the app. To change it, open the step.</span></div></div>';
+ h+='<label class="bls-lab">When did this happen? <input type="date" class="bls-d" data-n="'+n+'" max="'+today()+'" value="'+esc(a.on||pend[n]||'')+'"></label>';
+ if(n===6)h+='<button type="button" class="bls-a" data-step="6"'+(reach()<6?' disabled':'')+'>Choose their level</button><button type="button" class="bls-a'+(a.out?' on':'')+'" data-n="6" data-a="out">They chose outside Booth Light</button>';
+ else (OUTA[n]||ST[n-1].ans||[]).forEach(function(b){var on=b[0]==='sent'?!!a.sent:was===b[0];h+='<button type="button" class="bls-a'+(on&&a.out?' on':'')+'" data-n="'+n+'" data-a="'+b[0]+'">'+esc(b[1])+'</button>';});
+ return h+'</div></div>';}
+function fillAnswer(n,a){var S=B.S,d=pend[n]||sa(n).on||'',now=new Date().toISOString();if(!S.steps)S.steps={};
+ if(n===6){var s6=S.steps[6]||(S.steps[6]={});if(s6.out){delete s6.out;delete s6.on;}else{s6.out=now;s6.on=d;}}
+ else if(n===2){var c=S.consent||(S.consent={asked:null,answer:null,when:null}),s2=S.steps[2]||(S.steps[2]={});
+  if(c.answer===a&&s2.out){c.answer=null;c.when=null;delete s2.out;delete s2.on;}
+  else{var cb=document.getElementById(a==='yes'?'c-yes':'c-no');if(cb)cb.click();else{c.answer=a;c.when=now;}s2.out=now;s2.on=d;}}
+ else{C.answer(n,a);var st=S.steps[n]||{};if(st.a||st.sent){st.out=now;st.on=d;}else{delete st.out;delete st.on;}}
+ B.touch();drawSheets(true);}
+function today(){return fmt(new Date().toISOString()).slice(0,10);}
+function audHTML(){var m=((document.getElementById('file-msg')||{}).textContent||'').split('. ')[0];return '<div class="bls-aud"><div class="bls-audh">Audio made outside Booth Light</div><div class="bls-audt">'+esc(B.S.rec?'Booth Light holds audio now'+(/^Opened /.test(m)?': '+m.replace(/^Opened /,''):'')+'.':'Booth Light holds no audio yet.')+'</div><button type="button" class="bls-file">Open an audio file</button><div class="bls-audt">This is optional. Open the raw interview, a rough cut or the final cut when the storyteller agrees to share that version. A file you open replaces the audio Booth Light holds.</div></div>';}
+function openFile(){if(B.S.rec&&!confirm('Booth Light already holds audio. A file you open now replaces it. Your file on disk is not changed. Go on?'))return;var f=document.getElementById('afile');if(f)f.click();}
+function fillDate(n,v){if(v&&v>today())v='';   /* a step marked afterwards cannot have happened on a later day */
+ pend[n]=v;var st=(B.S.steps||{})[n];if(st&&st.out){st.on=v;B.touch();}drawSheets(true);}
+function sheetHTML(){var k=0,h='',r=reach(),e=epn();for(var n=1;n<9;n++){var x=srow(n);if(x.done)k++;
+  h+=fill?frow(n,x):'<button type="button" class="bls-row '+(x.done?'done':'todo')+(x.next?' next':'')+'" data-step="'+n+'" style="--k:'+COL[n-1]+'"'+(n>r?' aria-disabled="true"':'')+' aria-label="Step '+n+', '+ST[n-1].name+'. '+esc(x.text)+'"><span class="bls-n">'+n+'</span><span class="bls-w"><span class="bls-nm">'+ST[n-1].name+'</span><span class="bls-s">'+esc(x.text)+'</span></span></button>';}
+ return '<h1 class="bls-h" tabindex="-1">Process Consent</h1><div class="bls-sub">'+(e?'Episode '+esc(e)+' \u00b7 ':'')+k+' of 8 done</div>'+(fill?'<div class="bls-note">Mark only the steps you did outside Booth Light. Each one is recorded as reported afterwards, with the date you give.</div>':'')+'<div class="bls-rows">'+(fill?audHTML():'')+h+'</div><div class="bls-acts"><button type="button" class="bls-go" data-step="'+r+'" style="--k:'+COL[r-1]+'">'+(k===8?'Open step 8, Close':'Continue: '+r+' '+ST[r-1].sign+' '+ST[r-1].name)+'</button><button type="button" class="bls-print">Print the sheet</button><button type="button" class="bls-out'+(fill?' on':'')+'">'+(fill?'Done marking':'I did steps outside Booth Light')+'</button><div class="bls-note">The sheet prints the codenames you typed. Check that they are not real names. In the print window, \u201cSave as PDF\u201d makes a file.</div></div>';}
+var sheet=document.createElement('div');sheet.className='pt-sheetbox';sheet.hidden=true;sheet.setAttribute('role','dialog');sheet.setAttribute('aria-modal','true');sheet.setAttribute('aria-label','Process Consent, all eight steps');sheet.innerHTML='<div class="bls"></div>';el.appendChild(sheet);
+var oldS=null,c8=document.getElementById('cs8');if(c8){oldS=document.createElement('div');oldS.className='bls bls-old';c8.parentNode.insertBefore(oldS,c8);}
+var sheetSig='';
+function drawSheets(force){var sig;try{sig=JSON.stringify([C.steps(),B.S.consent||0,!!B.S.rec,recording(),(B.S.voices||[]).map(function(v){return [v.level,v.until,v.withdrawn,v.code,v.when];}),epn(),sheet.hidden,cur,fill,B.S.fp||'']);}catch(e){return;}
+ if(!force&&sig===sheetSig)return;sheetSig=sig;var h=sheetHTML();if(oldS)oldS.innerHTML=h;
+ if(!sheet.hidden)sheet.firstChild.innerHTML=h+'<button type="button" class="bls-back">\u2190 Back to step '+cur+', '+ST[cur-1].name+'</button>';}
+function sheetOpen(){sheet.hidden=false;drawSheets(true);sheet.scrollTop=0;var h=sheet.querySelector('.bls-h');if(h)h.focus();}
+function sheetClose(){sheet.hidden=true;var a=q('.pt-allsteps');if(a)a.focus();}
+function lvname(n){var b=document.querySelector('.w5-lv[data-n="'+n+'"]');return b?b.textContent.replace(/^\s*\d+\s*/,'').trim():'';}
+function printSheet(){var p=document.getElementById('bl-print');if(!p){p=document.createElement('div');p.id='bl-print';document.body.appendChild(p);}
+ var e=epn(),rows='',who='';
+ for(var n=1;n<9;n++){var x=srow(n);rows+='<tr><td><b>'+n+' '+ST[n-1].name+'</b></td><td>'+esc(n===2?'Do you agree to be recorded?':ST[n-1].say.replace(/[\u201c\u201d]/g,''))+'</td><td>'+esc(x.done||x.some?C.state(n)[0]:'To do')+'</td></tr>';}
+ (B.S.voices||[]).forEach(function(v){who+='<p>'+esc(v.code?v.code+' ('+v.role+')':v.role+' (no codename typed)')+': '+esc(v.withdrawn?'withdrew consent '+fmt(v.withdrawn):v.level?'level '+v.level+', '+lvname(v.level)+(v.when?' \u00b7 '+(sa(6).out?'entered ':'chosen ')+fmt(v.when):'')+(v.until?' \u00b7 listen until '+v.until:''):'not chosen yet')+'</p>';});
+ p.innerHTML='<h1>Process Consent sheet</h1><p>A class podcast season of <b>The Listening Room</b>'+(e?' \u00b7 <b>Episode '+esc(e)+'</b>':'')+'</p><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table><div class="bp-k">Who may hear it</div>'+(who||'<p>No one is listed yet.</p>');
+ window.print();}
+if(oldS)oldS.addEventListener('change',function(e){if(e.target.classList&&e.target.classList.contains('bls-d'))fillDate(Number(e.target.dataset.n),e.target.value);});
+el.addEventListener('change',function(e){if(e.target.classList&&e.target.classList.contains('bls-d'))fillDate(Number(e.target.dataset.n),e.target.value);});
+if(oldS)oldS.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button');if(!b||b.disabled)return;if(b.classList.contains('bls-print')){printSheet();return;}if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}if(b.classList.contains('bls-file')){openFile();return;}if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}if(b.dataset.step&&b.getAttribute('aria-disabled')!=='true'){var n=Number(b.dataset.step);path();show(Math.min(n,reach()),true);}});
 /* BUILD 114: what is still being built. One list, kept here, shown from every step. */
 var WIP=[
  ['A storyteller cannot withdraw from their own phone yet.','Their storyteller page holds an erase code. The code works only in the class archive, which runs on the computer of the podcast producer (your instructor).','They tell you or the podcast producer, in any way they choose. The withdrawal is applied within 72 hours.'],
  ['\u201cErase everything kept\u201d leaves some things on your device.','It erases your recording, cuts, notes and consent answers. It leaves the class episodes in the New Season room, your settings and your podcast list. It never touches files you exported.','Delete class episodes one at a time in the New Season room, with \u201cDelete from this device\u201d. Delete exported files by hand.'],
  ['A listen-until date is optional.','A class episode with a date is removed from a device the next time Booth Light opens there after that date. An episode with no date stays until someone deletes it.','At step 6, ask your storyteller for a date. Type it in the \u201cuntil\u201d box beside their level.'],
  ['\u201cAll tools\u201d does not wait for a yes.','The path opens each tool only after the storyteller agrees. The All tools page opens every tool at any time.','Use the path for your interview.'],
- ['Three tools are not in the path.','Open an audio file to edit. Add more recordings to the end. Change the voice of a recording.','They are under All tools, in the section \u201cCut and save\u201d.'],
+ ['Two tools are not in the path.','Add more recordings to the end. Change the voice of a recording.','They are under All tools, in the section \u201cCut and save\u201d.'],
  ['The path has one look.','The path is always dark. Larger text and Easy read change it. Cream, High contrast, Low glare and Colour-safe do not change it yet.','Those looks work under All tools.'],
  ['The path is not tested with a screen reader on a real phone.','Each step is labelled for VoiceOver and TalkBack. That was checked on a computer only.','If a step is not read aloud, tell the podcast producer.']];
 var wip=document.createElement('div');wip.className='pt-wipbox';wip.hidden=true;wip.setAttribute('role','dialog');wip.setAttribute('aria-modal','true');wip.setAttribute('aria-label','Still being built');
@@ -3397,7 +3513,7 @@ function show(n,focus){cur=n;var s=ST[n-1];el.style.setProperty('--c',COL[n-1]);
  var h='<div class="pt-tag">'+esc(s.tag)+'</div><div class="pt-say"></div><div class="pt-btns">';
  if(n===2)h+='<button type="button" class="pt-b" data-r="yes">Yes, they agreed</button><button type="button" class="pt-b" data-r="no">No</button>';
  else (s.ans||[]).forEach(function(a){h+='<button type="button" class="pt-b" data-a="'+a[0]+'">'+esc(a[1])+'</button>';});
- ask.innerHTML=h+'</div><div class="pt-st" aria-live="polite"></div>';
+ ask.innerHTML=h+'</div><div class="pt-st" aria-live="polite"></div><button type="button" class="pt-outside">I did this step outside Booth Light</button>';
  var d='<div class="pt-tag"></div>';
  if(n===1)d+='<textarea class="pt-ta" placeholder="Write your questions here." aria-label="Your questions"></textarea>';
  else if(n===2)d+='<div class="pt-idle"><select class="pt-sel" aria-label="Voice"></select><button type="button" class="pt-t" data-r="rec">\u25cf Record</button></div><div class="pt-live" hidden><div class="pt-time" aria-label="Recording time"></div><div class="pt-line"></div><div class="pt-two"><button type="button" class="pt-o" data-r="main">Pause</button><button type="button" class="pt-t" data-r="stop">\u25a0 Stop</button></div><div class="pt-note"><input class="pt-in1" type="text" placeholder="A note, saved with the time" aria-label="A note, saved with the time"><button type="button" class="pt-plus" data-r="note" aria-label="Save the note">+</button></div></div><div class="pt-got" hidden><div class="pt-line"></div><button type="button" class="pt-o" data-r="again">Record more, or again</button></div>';
@@ -3418,7 +3534,7 @@ function tick(){if(el.classList.contains('off'))return;
   var y=R.yes(),no=R.no(),c=B.S.consent||{},yon=!!y&&y.classList.contains('on'),non=!!no&&no.classList.contains('on'),live=recording(),got=!!B.S.rec&&!live;
   var by=ask.querySelector('[data-r="yes"]'),bn=ask.querySelector('[data-r="no"]'),isyes=(c.answer==='yes'&&!non)||yon,isno=!isyes&&(non||c.answer==='no');
   by.classList.toggle('on',isyes);bn.classList.toggle('on',isno);by.disabled=!y||y.disabled;bn.disabled=!no||no.disabled;
-  txt=live?'Ask again now, so their answer is on the recording.':isno?(B.S.rec?'They said no. Do not edit or share this recording until they agree.':'They said no. No sound is recorded.'):got&&c.answer==='yes'?C.state(2)[0]:yon?'Now press Record, and ask again so their answer is on the recording.':'';
+  txt=live?'Ask again now, so their answer is on the recording.':isno?(B.S.rec?'They said no. Do not edit or share this recording until they agree.':'They said no. No sound is recorded.'):got&&c.answer==='yes'?C.state(2)[0]:sa(2).out&&c.answer?C.state(2)[0]:yon?'Now press Record, and ask again so their answer is on the recording.':'';
   var idle=doc.querySelector('.pt-idle'),lv=doc.querySelector('.pt-live'),gt=doc.querySelector('.pt-got'),rb=R.rec();
   var showgot=got&&!again&&!yon;idle.hidden=live||showgot;lv.hidden=!live;gt.hidden=!showgot;open=live||showgot||(!!rb&&!rb.disabled);
   if(rb){var pb=doc.querySelector('[data-r="rec"]');pb.disabled=rb.disabled;var lab=rb.textContent.trim();if(pb.textContent!==lab)pb.textContent=lab;}
@@ -3444,6 +3560,14 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('pt-all')){tools('');return;}
  if(b.classList.contains('pt-wip')){wipOpen();return;}
  if(b.classList.contains('pt-wipclose')){wipClose();return;}
+ if(b.classList.contains('pt-allsteps')){sheetOpen();return;}
+ if(b.classList.contains('bls-back')){sheetClose();return;}
+ if(b.classList.contains('bls-print')){printSheet();return;}
+ if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}
+ if(b.classList.contains('bls-file')){openFile();return;}
+ if(b.classList.contains('pt-outside')){fill=true;sheetOpen();var rw=sheet.querySelectorAll('.bls-row')[cur-1];if(rw&&rw.scrollIntoView)rw.scrollIntoView({block:'center'});return;}
+ if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}
+ if(b.dataset.step){if(b.getAttribute('aria-disabled')==='true')return;sheet.hidden=true;show(Math.min(Number(b.dataset.step),reach()),true);return;}
  if(b.dataset.tool){tools(b.dataset.tool);return;}
  if(b.dataset.press){var pr=document.getElementById(b.dataset.press);if(pr)pr.click();return;}
  if(b.dataset.a){C.answer(cur,b.dataset.a);tick();return;}
@@ -3455,10 +3579,10 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  else if(r==='note'){var i=doc.querySelector('.pt-in1'),di=document.getElementById('dur-in'),da=document.getElementById('dur-add');if(i&&di&&da&&i.value.trim()){di.value=i.value;da.click();i.value='';i.focus();}}
  else if(r==='again'){again=true;}
  tick();});
-el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
+el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!sheet.hidden){sheetClose();return;}if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
 back.addEventListener('click',path);
 var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(!el.classList.contains('off'))paintSky();},150);});
-document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);
+document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);drawSheets(true);setInterval(drawSheets,500);
 })();</script>
 </body>
 </html>
