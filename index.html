@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 113</title>
+<title>Booth Light · BUILD 115</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 113 · 2026-11-12 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 115 · 2026-11-12 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 113</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 115</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1713,7 +1713,7 @@ $('dev-yes').onclick=()=>{setKeep(true);$('labwarn').classList.add('hide');$('de
 $('dev-no').onclick=()=>{setKeep(false);$('labwarn').classList.remove('hide');$('where').classList.remove('hide');$('where-btn').textContent='Close';$('dev-msg').textContent='Keep my work is OFF. Before you leave: export your files to a USB stick, then press Erase everything kept.';};
 let autoT=null;
 function touch(){dirty=true;clearTimeout(autoT);autoT=setTimeout(()=>kvPut('state',JSON.parse(JSON.stringify(S))),1200);status();}
-$('erase').onclick=async()=>{if(!confirm('Erase everything this page keeps on this device: the recording, notes and consent answer? Files you exported are not touched. This cannot be undone.'))return;stopPlay();await clearAll();S=fresh();REC=null;markA=markB=null;history=[];dirty=false;renderAll();$('save-state').textContent='Erased. Nothing is kept on this device now.';};
+$('erase').onclick=async()=>{if(!confirm('Erase your recording, cuts, notes and consent answers from your device? Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported. This cannot be undone.'))return;stopPlay();await clearAll();S=fresh();REC=null;markA=markB=null;history=[];dirty=false;renderAll();$('save-state').textContent='Erased: your recording, cuts, notes and consent answers. Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported.';};
 
 /* ---------- recording: sound to disk as it arrives ---------- */
 let stream=null,ctx=null,proc=null,acc=null,accN=0,rec=null,queue=Promise.resolve(),recTimer=null;
@@ -2460,7 +2460,7 @@ paint();})();</script>
  let notes=[];
  async function render(){const eps=(await all()).sort((a,b)=>(b.added||'').localeCompare(a.added||''));
   $('lr-count').textContent=(eps.length?eps.length+' episode'+(eps.length===1?'':'s')+' on this device.':'Nothing here yet.')+(notes.length?' '+notes.join(' '):'');
-  $('lr-list').innerHTML=eps.map(e=>'<div class="lr-ep" data-id="'+esc(e.id)+'"><div class="t">'+esc(e.title)+'</div><div class="m">'+(minUntil(e)?'Plays until '+esc(minUntil(e))+' \u00b7 ':'')+'added '+esc((e.added||'').slice(0,10))+(e.fp?' \u00b7 fingerprint '+esc(String(e.fp).slice(0,16))+'\u2026':'')+'</div><div>'+(e.voices||[]).map(v=>'<span class="lr-pill">'+esc(v.code||v.role)+' \u00b7 line '+esc(v.level)+(v.until?' until '+esc(v.until):'')+'</span>').join('')+'</div><audio controls preload="none"></audio><div><button class="btn light small lr-del">Delete from this device</button></div></div>').join('');
+  $('lr-list').innerHTML=eps.map(e=>'<div class="lr-ep" data-id="'+esc(e.id)+'"><div class="t">'+esc(e.title)+'</div><div class="m">'+(minUntil(e)?'Plays until '+esc(minUntil(e))+' \u00b7 ':'')+'added '+esc((e.added||'').slice(0,10))+(e.fp?' \u00b7 fingerprint '+esc(String(e.fp).slice(0,16))+'\u2026':'')+'</div><div>'+(e.voices||[]).map(v=>'<span class="lr-pill">'+esc(v.code||v.role)+' \u00b7 level '+esc(v.level)+(v.until?' until '+esc(v.until):'')+'</span>').join('')+'</div><audio controls preload="none"></audio><div><button class="btn light small lr-del">Delete from this device</button></div></div>').join('');
   $('lr-list').querySelectorAll('.lr-ep').forEach(row=>{const e=eps.find(x=>x.id===row.dataset.id);const au=row.querySelector('audio');au.onplay=()=>{if(!au.src)au.src=URL.createObjectURL(e.audio);};au.addEventListener('loadstart',()=>{},{once:true});
    au.onclick=()=>{if(!au.src){au.src=URL.createObjectURL(e.audio);}};row.querySelector('.lr-del').onclick=async()=>{if(!confirm('Delete this episode from this device?'))return;await del(e.id);render();};});
  }
@@ -2877,7 +2877,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 113 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 115 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3162,6 +3162,8 @@ document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&
 #cs8 .cs-b.no .cs-n{background:#E8362A;color:#FFFFFF !important}
 #cs8 .cs-q{margin:0;font-size:1.02em !important;line-height:1.4;color:#F6F0E2 !important}
 #cs8 .cs-btns{display:flex;flex-wrap:wrap;gap:8px}
+#who .w5-grid{scroll-margin-top:84px}
+#who .w5-grid.cs-flash{outline:5px solid #F5A742;outline-offset:8px;border-radius:14px}
 #cs8 .cs-btns button,#cs8 .cs-btns a{font:800 .98em Helvetica,Arial,sans-serif !important;border:0 !important;cursor:pointer;border-radius:999px !important;padding:11px 16px !important;background:#F6F0E2 !important;color:#14183A !important;text-decoration:none;box-shadow:none !important;min-height:0}
 #cs8 .cs-btns button.on{background:#8FD6A0 !important;color:#070C22 !important}
 #cs8 .cs-btns button.on.neg{background:#E8362A !important;color:#FFFFFF !important}
@@ -3215,6 +3217,7 @@ function draw(){var sig;try{sig=JSON.stringify([steps(),B.S.consent,!!B.S.rec,si
  var h='<div class="cs-grid">';for(var n=1;n<9;n++){var st=steps()[n]||{},r=state(n),t=T[n];
   h+='<div class="cs-b '+r[1]+'"><p class="cs-h"><span class="cs-n">'+n+'</span>'+t[0]+'</p><p class="cs-q">'+t[1]+'</p><div class="cs-btns">';
   if(n===2)h+='<a href="#rec">Open 2 Record</a>';
+  if(n===6)h+='<button type="button" data-jump="levels">Choose their level \u2193</button>';   /* BUILD 115: a shortcut from box 6 to the level buttons lower on the page */
   if(n===4)h+='<button type="button" data-s="4" data-a="sent" aria-pressed="'+!!st.sent+'" class="'+(st.sent?'on mid':'')+'">I sent it</button>';
   (t[2]||[]).forEach(function(b){var a=A[n+b[0]];h+='<button type="button" data-s="'+n+'" data-a="'+b[0]+'" aria-pressed="'+(st.a===b[0])+'" class="'+(st.a===b[0]?'on '+(a[1]==='no'?'neg':a[1]==='mid'?'mid':''):'')+'">'+b[1]+'</button>';});
   h+='</div>'+(n===6?'<p class="cs-q">Each person chooses a level and a listen-until date, below. The episode producer can’t go further than the lowest level.</p>':'')+'<p class="cs-s">'+esc(r[0])+'</p></div>';}
@@ -3226,7 +3229,9 @@ function answer(n,a){var S=B.S,now=new Date().toISOString();
  else if(st.a===a){delete st.a;delete st.when;if(n===5)delete st.fp;}
  else{st.a=a;st.when=now;if(n===5)st.fp=ed.fp;}
  B.touch();draw();}
-box.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button[data-s]');if(!b)return;answer(Number(b.dataset.s),b.dataset.a);});
+box.addEventListener('click',function(e){var j=e.target.closest&&e.target.closest('button[data-jump]');
+ if(j){var g=document.querySelector('#who .w5-grid');if(g){var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;g.scrollIntoView({behavior:calm?'auto':'smooth',block:'start'});g.classList.add('cs-flash');setTimeout(function(){g.classList.remove('cs-flash');},1800);var f=document.getElementById('w5-hint');if(f){f.setAttribute('tabindex','-1');f.focus({preventScroll:true});}   /* focus goes to the instruction, not to a text box, so a phone does not open its keyboard */}return;}
+ var b=e.target.closest&&e.target.closest('button[data-s]');if(!b)return;answer(Number(b.dataset.s),b.dataset.a);});
 /* BUILD 112: the path (bl-112-js) reads and records the same answers through this */
 window.blConsent={steps:steps,state:state,answer:answer};
 /* the same answers as text, for the consent record (.txt) */
@@ -3300,6 +3305,23 @@ draw();setInterval(draw,1000);
 #bl-path-back{position:fixed;left:14px;bottom:14px;z-index:8999;border:0;border-radius:999px;padding:.8em 1.2em;min-height:48px;font:900 1em Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;display:none}
 html.bl-tools #bl-path-back{display:block}
 html.bl-pathon,html.bl-pathon body{overflow:hidden !important}
+/* BUILD 114: a place that lists what is still being built, one tap from every step */
+#bl-path .pt-wipbox{position:fixed;inset:0;z-index:6;background:#070C22;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center;font-family:Helvetica,Arial,sans-serif}
+#bl-path .pt-wipbox[hidden]{display:none}
+#bl-path .pt-wipin{width:100%;max-width:1040px;min-height:100%;padding:18px 16px 0;display:flex;flex-direction:column;gap:12px}
+#bl-path .pt-wiph{font:700 2em Georgia,"Times New Roman",serif;color:#FFD60A;margin:6px 0 0;text-align:center;outline:none}
+#bl-path .pt-wiplead{margin:0;text-align:center;color:#9AA0C8;font:700 1em/1.4 Helvetica,Arial,sans-serif}
+#bl-path .pt-wipgrid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:860px){#bl-path .pt-wipgrid{grid-template-columns:1fr 1fr}}
+#bl-path .pt-wipc{border-radius:22px;padding:14px 16px;background:var(--k);color:#0B1030;display:flex;flex-direction:column;gap:8px}
+#bl-path .pt-wipn{display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:#0B1030;color:var(--k);font:900 .9em Helvetica,Arial,sans-serif}
+#bl-path .pt-wipt{font:700 1.18em/1.3 Georgia,"Times New Roman",serif;color:#0B1030}
+#bl-path .pt-wipp{font:700 .95em/1.4 Helvetica,Arial,sans-serif;color:#0B1030}
+#bl-path .pt-wipu{margin-top:auto;padding:10px 12px;border-radius:14px;background:#0B1030;color:var(--k);font:800 .95em/1.4 Helvetica,Arial,sans-serif}
+#bl-path .pt-wipk{display:block;font:900 .72em Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 3px}
+#bl-path .pt-wipfoot{text-align:center;color:#9AA0C8;font:700 .78em Menlo,Consolas,monospace}
+#bl-path .pt-wipnav{position:sticky;bottom:0;margin-top:auto;background:#070C22;padding:10px 0 12px;box-shadow:0 -10px 14px -6px #070C22}
+#bl-path .pt-wipclose{display:block;width:100%;border:0;border-radius:999px;padding:.85em 1em;min-height:52px;font:900 1.05em Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030}
 /* BUILD 113: a step's tool is shown inside the path, under its question. The section is moved in whole, and moved back when the student leaves the step. */
 #bl-path .pt-cols.tooly{grid-template-columns:1fr !important}
 #bl-path .pt-tool{display:none;color:var(--bl-ink,#14183A);font-family:var(--bl-font,inherit)}
@@ -3334,7 +3356,7 @@ function sa(n){return (C.steps()[n]||{});}
 function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return !!B.S.rec&&!recording();if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
 function reach(){for(var n=1;n<9;n++)if(!done(n))return n;return 8;}
 var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','The path: eight steps');
-el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
+el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
 document.body.appendChild(el);
 var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to the path';document.body.appendChild(back);
 var q=function(s){return el.querySelector(s);},ask=q('.pt-ask'),doc=q('.pt-do'),sky=q('.pt-sky'),tool=q('.pt-tool'),slot=q('.pt-slot'),home={};
@@ -3343,6 +3365,20 @@ function unembed(){var id=tool.dataset.id;if(id){var b=document.getElementById(i
 function embed(id){var b=document.getElementById(id);if(!b)return false;if(tool.dataset.id!==id){unembed();if(!home[id]){home[id]=document.createComment('bl-path '+id);b.parentNode.insertBefore(home[id],b);}
   var cs=getComputedStyle(document.body);tool.style.setProperty('--bl-ink',cs.color);tool.style.setProperty('--bl-font',cs.fontFamily);b.dataset.blShut=b.classList.contains('shut')?'1':'0';b.classList.remove('shut');slot.appendChild(b);tool.dataset.id=id;setTimeout(function(){window.dispatchEvent(new Event('resize'));},80);}
  tool.classList.add('on');q('.pt-cols').classList.add('tooly');doc.hidden=true;sky.style.display='none';return true;}
+/* BUILD 114: what is still being built. One list, kept here, shown from every step. */
+var WIP=[
+ ['A storyteller cannot withdraw from their own phone yet.','Their storyteller page holds an erase code. The code works only in the class archive, which runs on the computer of the podcast producer (your instructor).','They tell you or the podcast producer, in any way they choose. The withdrawal is applied within 72 hours.'],
+ ['\u201cErase everything kept\u201d leaves some things on your device.','It erases your recording, cuts, notes and consent answers. It leaves the class episodes in the New Season room, your settings and your podcast list. It never touches files you exported.','Delete class episodes one at a time in the New Season room, with \u201cDelete from this device\u201d. Delete exported files by hand.'],
+ ['A listen-until date is optional.','A class episode with a date is removed from a device the next time Booth Light opens there after that date. An episode with no date stays until someone deletes it.','At step 6, ask your storyteller for a date. Type it in the \u201cuntil\u201d box beside their level.'],
+ ['\u201cAll tools\u201d does not wait for a yes.','The path opens each tool only after the storyteller agrees. The All tools page opens every tool at any time.','Use the path for your interview.'],
+ ['Three tools are not in the path.','Open an audio file to edit. Add more recordings to the end. Change the voice of a recording.','They are under All tools, in the section \u201cCut and save\u201d.'],
+ ['The path has one look.','The path is always dark. Larger text and Easy read change it. Cream, High contrast, Low glare and Colour-safe do not change it yet.','Those looks work under All tools.'],
+ ['The path is not tested with a screen reader on a real phone.','Each step is labelled for VoiceOver and TalkBack. That was checked on a computer only.','If a step is not read aloud, tell the podcast producer.']];
+var wip=document.createElement('div');wip.className='pt-wipbox';wip.hidden=true;wip.setAttribute('role','dialog');wip.setAttribute('aria-modal','true');wip.setAttribute('aria-label','Still being built');
+wip.innerHTML='<div class="pt-wipin"><h1 class="pt-wiph" tabindex="-1">Still being built</h1><div class="pt-wiplead">Booth Light is not finished. Each box names one part that is not ready, and says what to do until it is.</div><div class="pt-wipgrid">'+WIP.map(function(w,i){return '<section class="pt-wipc" style="--k:'+COL[i%8]+'"><div class="pt-wipn" aria-hidden="true">'+(i+1)+'</div><div class="pt-wipt" role="heading" aria-level="2">'+esc(w[0])+'</div><div class="pt-wipp"><span class="pt-wipk">What happens today?</span>'+esc(w[1])+'</div><div class="pt-wipu"><span class="pt-wipk">What to do until then?</span>'+esc(w[2])+'</div></section>';}).join('')+'</div><div class="pt-wipfoot"></div><div class="pt-wipnav"><button type="button" class="pt-wipclose"></button></div></div>';
+el.appendChild(wip);
+function wipOpen(){wip.querySelector('.pt-wipfoot').textContent='BOOTH LIGHT BUILD '+((document.title.split('BUILD ')[1]||'').trim())+' \u00b7 this list was last changed on 2026-11-12';wip.querySelector('.pt-wipclose').textContent='\u2190 Back to step '+cur+', '+ST[cur-1].name;wip.hidden=false;wip.scrollTop=0;wip.querySelector('.pt-wiph').focus();}
+function wipClose(){wip.hidden=true;var w=q('.pt-wip');if(w)w.focus();}
 function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
 function city(i,col,W,H){var r=rng(1000+i*77),GAP=28,o='',top=GAP+18,room=H-top;if(room<40||W<50)return '';   /* nothing is drawn in the top 28 px, so the skyline never touches the cards */
  for(var s=0;s<Math.round(W/22);s++)o+='<circle cx="'+(r()*W).toFixed(0)+'" cy="'+(GAP+r()*Math.max(10,room*0.5)).toFixed(0)+'" r="'+(r()<.2?1.6:1)+'" fill="#C9CCE6" opacity="'+(0.35+r()*0.5).toFixed(2)+'"/>';
@@ -3406,6 +3442,8 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('pt-next')){if(cur<8&&done(cur))show(cur+1,true);return;}
  if(b.classList.contains('pt-back')){if(cur>1)show(cur-1,true);return;}
  if(b.classList.contains('pt-all')){tools('');return;}
+ if(b.classList.contains('pt-wip')){wipOpen();return;}
+ if(b.classList.contains('pt-wipclose')){wipClose();return;}
  if(b.dataset.tool){tools(b.dataset.tool);return;}
  if(b.dataset.press){var pr=document.getElementById(b.dataset.press);if(pr)pr.click();return;}
  if(b.dataset.a){C.answer(cur,b.dataset.a);tick();return;}
@@ -3417,7 +3455,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  else if(r==='note'){var i=doc.querySelector('.pt-in1'),di=document.getElementById('dur-in'),da=document.getElementById('dur-add');if(i&&di&&da&&i.value.trim()){di.value=i.value;da.click();i.value='';i.focus();}}
  else if(r==='again'){again=true;}
  tick();});
-el.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
+el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
 back.addEventListener('click',path);
 var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(!el.classList.contains('off'))paintSky();},150);});
 document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);
