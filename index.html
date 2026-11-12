@@ -3090,7 +3090,7 @@ if(p0){var cs=p0.querySelector('.vsel');if(cs){cs.innerHTML='';opts(cs,true);}
   function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;}
   msg.textContent='Reading the recording\u2026';x.click();var t0=Date.now(),iv=setInterval(function(){if(got||Date.now()-t0>60000){clearInterval(iv);restore();if(!got){msg.textContent='No recording here yet. Record or open one first.';return;}fromFile(new File([got],'booth-light-recording-'+new Date().toISOString().slice(0,10)+'.wav',{type:'audio/wav'}),cs.value);}},200);};}
 })();</script>
-<script id="bl-switches" type="application/json">{"app": true, "download": false, "sovereign": true, "bl-two": true, "dev": true, "rec": true, "notes-band": true, "cut": true, "who": true, "more": true, "listen": true, "voices": true, "qr": true}</script>
+<script id="bl-switches" type="application/json">{"app": true, "download": true, "sovereign": true, "bl-two": true, "dev": true, "rec": true, "notes-band": true, "cut": true, "who": true, "more": true, "listen": true, "voices": true, "qr": true}</script>
 <script id="bl-108-js">(function(){
 var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
 var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
