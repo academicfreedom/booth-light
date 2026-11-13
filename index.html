@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 118</title>
+<title>Booth Light · BUILD 119</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 118 · 2026-11-12 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 119 · 2026-11-13 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 118</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 119</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1713,7 +1713,7 @@ $('dev-yes').onclick=()=>{setKeep(true);$('labwarn').classList.add('hide');$('de
 $('dev-no').onclick=()=>{setKeep(false);$('labwarn').classList.remove('hide');$('where').classList.remove('hide');$('where-btn').textContent='Close';$('dev-msg').textContent='Keep my work is OFF. Before you leave: export your files to a USB stick, then press Erase everything kept.';};
 let autoT=null;
 function touch(){dirty=true;clearTimeout(autoT);autoT=setTimeout(()=>kvPut('state',JSON.parse(JSON.stringify(S))),1200);status();}
-$('erase').onclick=async()=>{if(!confirm('Erase your recording, cuts, notes and consent answers from your device? Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported. This cannot be undone.'))return;stopPlay();await clearAll();S=fresh();REC=null;markA=markB=null;history=[];dirty=false;renderAll();$('save-state').textContent='Erased: your recording, cuts, notes and consent answers. Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported.';};
+$('erase').onclick=async()=>{if(!confirm('Erase your recording, cuts, notes and consent answers from your device? Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported. This cannot be undone.'))return;stopPlay();await clearAll();try{localStorage.removeItem('bl-listen-notes-v1');}catch(e){}S=fresh();REC=null;markA=markB=null;history=[];dirty=false;renderAll();$('save-state').textContent='Erased: your recording, cuts, notes and consent answers. Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported.';};
 
 /* ---------- recording: sound to disk as it arrives ---------- */
 let stream=null,ctx=null,proc=null,acc=null,accN=0,rec=null,queue=Promise.resolve(),recTimer=null;
@@ -2877,7 +2877,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 118 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 119 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3313,6 +3313,29 @@ draw();setInterval(draw,1000);
 #bl-path-back{position:fixed;left:14px;bottom:14px;z-index:8999;border:0;border-radius:999px;padding:.8em 1.2em;min-height:48px;font:900 1em Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;display:none}
 html.bl-tools #bl-path-back{display:block}
 html.bl-pathon,html.bl-pathon body{overflow:hidden !important}
+/* BUILD 119: listening notes. A third button at the top opens them. Each note gets the time on a clock the listener starts when the audio starts. */
+#bl-path .pt-lnbox{position:fixed;inset:0;z-index:7;background:#070C22;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center}
+#bl-path .pt-lnbox[hidden]{display:none}
+#bl-path .pt-lnbox .bls{min-height:100%;padding:18px 16px 12px}
+.bls .ln-clock{display:flex;flex-direction:column;gap:10px;align-items:stretch;border:3px solid #B6F23C;border-radius:22px;padding:12px 14px}
+.bls .ln-time{font:900 3.2em/1 Helvetica,Arial,sans-serif;color:#B6F23C;text-align:center;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.bls .ln-adj{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bls .ln-adj .bls-a{--k:#B6F23C}
+.bls textarea.ln-text{box-sizing:border-box;width:100%;min-height:76px;margin:0;border-radius:18px;border:3px solid #FFD60A !important;background:#0B1030 !important;color:#FFD60A !important;font:800 1.05em/1.35 Helvetica,Arial,sans-serif !important;padding:.6em .9em;resize:vertical}
+.bls textarea.ln-text::placeholder{color:#FFD60A;opacity:.8}
+.bls textarea.ln-text:focus-visible{outline:3px solid #F6F0E2;outline-offset:3px}
+.bls .ln-row .bls-top{align-items:flex-start}
+.bls .ln-t{flex:none;min-width:3.4em;font:900 1.05em/1.35 Helvetica,Arial,sans-serif;color:var(--k);font-variant-numeric:tabular-nums}
+.bls .ln-s{font:800 1.02em/1.35 Helvetica,Arial,sans-serif;color:var(--k);white-space:pre-wrap;overflow-wrap:anywhere}
+.bls .ln-x{flex:none;width:2.1em;height:2.1em;border-radius:50%;border:3px solid var(--k);background:none;color:var(--k);font:900 1em/1 Helvetica,Arial,sans-serif;cursor:pointer;padding:0}
+.bls .ln-x:focus-visible{outline:3px solid #F6F0E2;outline-offset:2px}
+.bls .bls-desc{white-space:pre-line;color:var(--k);font:700 .95em/1.4 Helvetica,Arial,sans-serif;overflow-wrap:anywhere}
+.bls input.ln-in{box-sizing:border-box;width:100%;min-height:50px;margin:4px 0 0;border-radius:999px;border:3px solid #FFD60A !important;background:#0B1030 !important;color:#FFD60A !important;font:800 1.02em Helvetica,Arial,sans-serif !important;padding:.45em 1.1em}
+.bls input.ln-in::placeholder{color:#FFD60A;opacity:.8}
+.bls input.ln-in:focus-visible{outline:3px solid #F6F0E2;outline-offset:3px}
+.bls .ln-adj .bls-a{border:3px solid #B6F23C;border-radius:999px;background:none;color:#B6F23C;font:900 1em Helvetica,Arial,sans-serif;padding:.45em .95em;min-height:44px;cursor:pointer;text-decoration:none}
+.bls .ln-adj .bls-a:focus-visible{outline:3px solid #F6F0E2;outline-offset:2px}
+#bl-path .pt-lnbox .bls-lab{color:#FFD60A;font:800 1em/1.3 Helvetica,Arial,sans-serif;display:block}
 /* BUILD 118: the Earlier seasons shelf. A second button beside "See all 8 steps" opens it. */
 #bl-path .pt-tops{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 #bl-path .pt-shelfbox{position:fixed;inset:0;z-index:6;background:#070C22;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center}
@@ -3436,7 +3459,7 @@ function sa(n){return (C.steps()[n]||{});}
 function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return (B.S.consent||{}).answer==='yes'&&((!!B.S.rec&&!recording())||!!sa(2).out);   /* done needs the yes; audio opened from a file does not count as a yes */if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
 function reach(){for(var n=1;n<9;n++)if(!done(n))return n;return 8;}
 var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','The path: eight steps');
-el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-shelf">\u266a Earlier seasons</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
+el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-shelf">\u266a Earlier seasons</button><button type="button" class="pt-allsteps pt-notes">\u270e Listening notes</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div></div></div>';
 document.body.appendChild(el);
 var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to the path';document.body.appendChild(back);
 var q=function(s){return el.querySelector(s);},ask=q('.pt-ask'),doc=q('.pt-do'),sky=q('.pt-sky'),tool=q('.pt-tool'),slot=q('.pt-slot'),home={};
@@ -3445,6 +3468,42 @@ function unembed(){var id=tool.dataset.id;if(id){var b=document.getElementById(i
 function embed(id){var b=document.getElementById(id);if(!b)return false;if(tool.dataset.id!==id){unembed();if(!home[id]){home[id]=document.createComment('bl-path '+id);b.parentNode.insertBefore(home[id],b);}
   var cs=getComputedStyle(document.body);tool.style.setProperty('--bl-ink',cs.color);tool.style.setProperty('--bl-font',cs.fontFamily);b.dataset.blShut=b.classList.contains('shut')?'1':'0';b.classList.remove('shut');slot.appendChild(b);tool.dataset.id=id;setTimeout(function(){window.dispatchEvent(new Event('resize'));},80);}
  tool.classList.add('on');q('.pt-cols').classList.add('tooly');doc.hidden=true;sky.style.display='none';return true;}
+/* BUILD 119: listening notes. A listener starts a clock when the audio starts, and each note gets the time on that clock. The notes are kept in the browser on the device (localStorage, key bl-listen-notes-v1) until the listener erases them. "Erase everything kept" erases them too. Nothing is sent. */
+var LNK='bl-listen-notes-v1',LN={ep:'',from:'',notes:[],base:0,t0:0,run:false},lnAt=null,lnTimer=0;
+function lnLoad(){LN={ep:'',from:'',notes:[],base:0,t0:0,run:false};try{var s=JSON.parse(localStorage.getItem(LNK)||'null');if(s&&Array.isArray(s.notes))LN={ep:String(s.ep||''),from:String(s.from||''),notes:s.notes.filter(function(n){return n&&typeof n.t==='number'&&typeof n.s==='string';}),base:Number(s.base)||0,t0:Number(s.t0)||0,run:!!s.run};}catch(e){}}
+function lnKeep(){try{localStorage.setItem(LNK,JSON.stringify(LN));}catch(e){}}
+function lnNow(){return Math.max(0,LN.base+(LN.run?(Date.now()-LN.t0)/1000:0));}
+function lnFmt(s){s=Math.floor(s);var h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return (h?h+':':'')+(m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+var ln=document.createElement('div');ln.className='pt-lnbox';ln.hidden=true;ln.setAttribute('role','dialog');ln.setAttribute('aria-modal','true');ln.setAttribute('aria-label','Listening notes');ln.innerHTML='<div class="bls"></div>';el.appendChild(ln);
+function lnGoText(){return LN.run?'Pause the clock':(lnNow()>=1?'Go on from '+lnFmt(lnNow()):'Start the clock when the audio starts');}
+function lnLabel(){var t=ln.querySelector('.ln-time'),a=ln.querySelector('.ln-add'),g=ln.querySelector('.ln-go');if(t)t.textContent=lnFmt(lnNow());if(a)a.textContent='Add note at '+lnFmt(lnAt===null?lnNow():lnAt);if(g&&g.textContent!==lnGoText())g.textContent=lnGoText();}
+function lnDraw(keep){var old=ln.querySelector('.ln-text'),typed=keep&&old?old.value:'';
+ var h='<h1 class="bls-h" tabindex="-1">Listening notes</h1><div class="bls-note">Feedback for the episode producer. Each note gets the time on the clock.</div>'
+ +'<label class="bls-lab">Which episode? <input type="text" class="ln-in ln-ep" autocomplete="off" placeholder="Episode number or codename" value="'+esc(LN.ep)+'"></label>'
+ +'<div class="ln-clock"><div class="ln-time" role="timer" aria-label="Clock">'+lnFmt(lnNow())+'</div><button type="button" class="bls-go ln-go" style="--k:#B6F23C">'+lnGoText()+'</button><div class="ln-adj"><button type="button" class="bls-a" data-lnj="-5">\u2212 5 s</button><button type="button" class="bls-a" data-lnj="5">+ 5 s</button><button type="button" class="bls-a ln-zero">Back to 00:00</button></div></div>'
+ +'<textarea class="ln-text" rows="2" placeholder="Type a note, then press Enter." aria-label="Your note"></textarea><button type="button" class="bls-go ln-add" style="--k:#FFD60A">Add note at '+lnFmt(lnAt===null?lnNow():lnAt)+'</button><div class="bls-rows ln-list">';
+ if(!LN.notes.length)h+='<div class="bls-note">No notes yet.</div>';
+ LN.notes.forEach(function(n,i){h+='<div class="bls-row fill todo ln-row" style="--k:'+COL[i%8]+'"><div class="bls-top"><span class="ln-t">'+lnFmt(n.t)+'</span><span class="bls-w"><span class="ln-s">'+esc(n.s)+'</span></span><button type="button" class="ln-x" data-lnx="'+i+'" aria-label="Remove the note at '+lnFmt(n.t)+'">\u00d7</button></div></div>';});
+ h+='</div><div class="bls-acts"><label class="bls-lab">From (your codename, optional) <input type="text" class="ln-in ln-from" autocomplete="off" placeholder="Codename, not a real name" value="'+esc(LN.from)+'"></label><button type="button" class="bls-out ln-copy">Copy my notes</button><button type="button" class="bls-out ln-save">Save my notes as a text file</button><button type="button" class="bls-out ln-erase">Erase these notes</button><div class="bls-note ln-msg" role="status"></div></div>'
+ +'<div class="bls-aud"><div class="bls-audh">Where these notes are</div><div class="bls-audt">They are kept in the browser on your device until you erase them. Booth Light sends them nowhere. To give them to the episode producer, copy them or save them as a file, and hand that over yourself.</div><div class="bls-audt">A copy you paste or save stays where you put it. \u201cErase everything kept\u201d at step 8 erases these notes too. This comes from the app\u2019s own code. It has not been independently audited.</div></div>'
+ +'<button type="button" class="bls-back ln-back">\u2190 Back to step '+cur+', '+ST[cur-1].name+'</button>';
+ ln.firstChild.innerHTML=h;var nt=ln.querySelector('.ln-text');if(nt&&typed)nt.value=typed;}
+function lnSay(m){var x=ln.querySelector('.ln-msg');if(x)x.textContent=m;}
+function lnOpen(){lnLoad();lnAt=null;ln.hidden=false;lnDraw(false);ln.scrollTop=0;var f=ln.querySelector('.bls-h');if(f)f.focus();clearInterval(lnTimer);lnTimer=setInterval(lnLabel,250);}
+function lnClose(){clearInterval(lnTimer);lnTimer=0;ln.hidden=true;var a=q('.pt-notes');if(a)a.focus();}
+function lnToggle(){if(LN.run){LN.base=lnNow();LN.run=false;}else{LN.t0=Date.now();LN.run=true;}lnKeep();lnLabel();}
+function lnJump(d){LN.base=Math.max(0,lnNow()+d);LN.t0=Date.now();lnKeep();lnLabel();}
+function lnZero(){LN.base=0;LN.t0=Date.now();LN.run=false;lnKeep();lnLabel();}
+function lnAdd(){var nt=ln.querySelector('.ln-text'),s=nt?nt.value.trim():'';if(!s){if(nt)nt.focus();return;}LN.notes.push({t:Math.floor(lnAt===null?lnNow():lnAt),s:s});LN.notes.sort(function(a,b){return a.t-b.t;});lnAt=null;lnKeep();lnDraw(false);var f=ln.querySelector('.ln-text');if(f)f.focus();}
+function lnDel(i){LN.notes.splice(i,1);lnKeep();lnDraw(true);}
+function lnText(){var d=new Date(),z=function(x){return (x<10?'0':'')+x;},out=['Listening notes','Episode: '+(LN.ep.trim()||'not named')];if(LN.from.trim())out.push('From: '+LN.from.trim());out.push('Written: '+d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate()),'');LN.notes.forEach(function(n){out.push(lnFmt(n.t)+'  '+n.s);});return out.join('\n')+'\n';}
+function lnCopy(){if(!LN.notes.length){lnSay('There are no notes to copy yet.');return;}var t=lnText(),ok=function(){lnSay('Copied. Paste it where the episode producer will read it.');},old=function(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var done=false;try{done=document.execCommand('copy');}catch(e){}a.remove();if(done)ok();else lnSay('This browser did not allow the copy. Use \u201cSave my notes as a text file\u201d.');};
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,old);else old();}
+function lnSave(){if(!LN.notes.length){lnSay('There are no notes to save yet.');return;}var d=new Date(),z=function(x){return (x<10?'0':'')+x;},slug=(LN.ep.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'episode').slice(0,40),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lnText()],{type:'text/plain;charset=utf-8'}));a.download='listening-notes-'+slug+'-'+d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate())+'.txt';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},800);lnSay('Saved as a text file where your browser keeps downloads.');}
+function lnErase(){if(!LN.notes.length&&!LN.ep&&!LN.from&&!lnNow()){lnSay('There is nothing to erase.');return;}if(!confirm('Erase these listening notes from your device? A copy you pasted or saved elsewhere stays where it is.'))return;try{localStorage.removeItem(LNK);}catch(e){}lnLoad();lnAt=null;lnDraw(false);lnSay('Erased from your device.');}
+ln.addEventListener('input',function(e){var c=e.target.classList;if(!c)return;if(c.contains('ln-ep')){LN.ep=e.target.value;lnKeep();}else if(c.contains('ln-from')){LN.from=e.target.value;lnKeep();}else if(c.contains('ln-text')){if(e.target.value.trim()){if(lnAt===null)lnAt=lnNow();}else lnAt=null;lnLabel();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ln.hidden&&!el.contains(e.target))lnClose();});
+function slen(x){var p=String(x).split(':').map(Number);if(p.length<2||p.some(isNaN))return String(x);var s=p.length===3?p[0]*3600+p[1]*60+p[2]:p[0]*60+p[1];return Math.max(1,Math.round(s/60))+' min';}
 /* BUILD 118: the Earlier seasons shelf. Scrambled episode files sit beside the app on GitHub. Booth Light downloads one when the student presses Play and unscrambles it on the device with the class password (PBKDF2-SHA256, 600,000 rounds; AES-256-CBC; HMAC-SHA256). Nothing is fetched before the student presses Unlock. No episode and no password is saved in the browser. */
 var SHELF=((window.BL_PHONE_URL||'').trim()||'https://academicfreedom.github.io/booth-light/').replace(/\/?$/,'/')+'shelf/',SK=null,SIDX=null,SURL={},SMSG='',SBUSY=false;
 var shelf=document.createElement('div');shelf.className='pt-shelfbox';shelf.hidden=true;shelf.setAttribute('role','dialog');shelf.setAttribute('aria-modal','true');shelf.setAttribute('aria-label','Earlier seasons');shelf.innerHTML='<div class="bls"></div>';el.appendChild(shelf);
@@ -3468,7 +3527,7 @@ function splay(i,b){var ep=SIDX&&SIDX.episodes[i],rw=b.closest('.bls-row');if(!e
   .catch(function(e){delete b.dataset.busy;st.textContent=e.message==='missing'?'This episode is no longer on the shelf.':e.message==='password'?'This file does not open with the password.':'The download did not finish. Check the connection and press Play again.';});}
 function sdraw(){var h='<h1 class="bls-h" tabindex="-1">Earlier seasons</h1>';
  if(!SIDX)h+='<div class="bls-note">Episodes from earlier seasons of The Listening Room. They open with the class password.</div><div class="bls-aud"><div class="bls-audh">What opening the shelf does</div><div class="bls-audt">It connects to GitHub. GitHub sees your IP address, the time, and which scrambled file you download. It does not get the password or the sound.</div><div class="bls-audt">Booth Light unscrambles an episode on your device and holds it only while this page is open. It saves no episode and no password in the browser. Your browser history still shows that you opened Booth Light, and the sound can stay in your device\u2019s memory until you close the page.</div><div class="bls-audt">Nothing is sent until you press Unlock. This comes from the app\u2019s own code. It has not been independently audited.</div></div><input type="password" class="bls-pw" autocomplete="off" placeholder="Class password" aria-label="Class password"><button type="button" class="bls-go bls-unlock" style="--k:#FFD60A"'+(SBUSY?' disabled':'')+'>Unlock the shelf</button>'+(SMSG?'<div class="bls-note" role="status">'+esc(SMSG)+'</div>':'');
- else{h+='<div class="bls-sub">'+SIDX.episodes.length+' episode'+(SIDX.episodes.length===1?'':'s')+'</div><div class="bls-rows">';SIDX.episodes.forEach(function(ep,i){h+='<div class="bls-row fill todo" style="--k:'+COL[i%8]+'"><div class="bls-top"><span class="bls-n">'+(i+1)+'</span><span class="bls-w"><span class="bls-nm">'+esc(ep.t)+'</span><span class="bls-s">'+smb(ep.n)+'</span></span></div><div class="bls-f">'+(SURL[i]?'<audio controls src="'+SURL[i]+'"></audio>':'<button type="button" class="bls-a bls-play" data-i="'+i+'">\u25b6 Play</button>')+'</div></div>';});
+ else{h+='<div class="bls-sub">'+SIDX.episodes.length+' episode'+(SIDX.episodes.length===1?'':'s')+'</div><div class="bls-rows">';SIDX.episodes.forEach(function(ep,i){h+='<div class="bls-row fill todo" style="--k:'+COL[i%8]+'"><div class="bls-top"><span class="bls-n">'+(i+1)+'</span><span class="bls-w"><span class="bls-nm">'+esc(ep.t)+'</span><span class="bls-s">'+smb(ep.n)+(ep.day?' \u00b7 '+esc(ep.day):'')+(ep.len?' \u00b7 '+esc(slen(ep.len)):'')+'</span></span></div>'+(ep.d?'<div class="bls-desc">'+esc(ep.d)+'</div>':'')+'<div class="bls-f">'+(SURL[i]?'<audio controls src="'+SURL[i]+'"></audio>':'<button type="button" class="bls-a bls-play" data-i="'+i+'">\u25b6 Play</button>')+'</div></div>';});
   h+='</div><div class="bls-acts"><button type="button" class="bls-out bls-lock">Lock the shelf</button><div class="bls-note">Each Play downloads that episode from GitHub. On a shared computer, lock the shelf when you finish.</div></div>';}
  shelf.firstChild.innerHTML=h+'<button type="button" class="bls-back bls-shelfback">\u2190 Back to step '+cur+', '+ST[cur-1].name+'</button>';}
 function shelfOpen(){shelf.hidden=false;sdraw();shelf.scrollTop=0;var f=shelf.querySelector('.bls-h');if(f)f.focus();}
@@ -3479,13 +3538,13 @@ var HINT=['ask for the interview','ask on the recording, then record','ask befor
 function epn(){var i=document.getElementById('inum');return String((i&&i.value)||B.S.interview||'').trim();}
 function fmt(iso){var d=new Date(iso);if(isNaN(d))return String(iso);function z(x){return (x<10?'0':'')+x;}return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate())+' '+z(d.getHours())+':'+z(d.getMinutes());}
 function srow(n){var d=done(n),a=sa(n),some=!!(a.a||a.sent)||(n===2&&!!(B.S.consent||{}).answer)||(n===6&&(B.S.voices||[]).some(function(v){return v.level||v.withdrawn;}));
- return {done:d,next:!d&&n===reach(),some:some,text:d?'\u2713 '+C.state(n)[0]:some?C.state(n)[0]:(n===reach()?'To do next: '+HINT[n-1]:'To do \u00b7 after step '+(n-1))};}
+ return {done:d,next:!d&&n===reach(),some:some,text:d?'\u2713 '+C.state(n)[0]:some?C.state(n)[0]:(n===reach()?'To do next: '+HINT[n-1]:'To do: '+HINT[n-1])};}
 var fill=false,pend={},OUTA={2:[['yes','They agreed on the recording'],['no','They did not agree']]};
 function inapp(n){var a=sa(n);if(a.out)return false;return !!(a.a||a.sent)||(n===2&&!!(B.S.consent||{}).answer);}   /* answered in the app as it happened: the sheet does not overwrite it */
 function frow(n,x){var a=sa(n),was=n===2?(B.S.consent||{}).answer:a.a,h='<div class="bls-row fill '+(x.done?'done':'todo')+'" style="--k:'+COL[n-1]+'"><div class="bls-top"><span class="bls-n">'+n+'</span><span class="bls-w"><span class="bls-nm">'+ST[n-1].name+'</span><span class="bls-s">'+esc(x.done||x.some?x.text:'To do')+'</span></span></div><div class="bls-f">';
  if(inapp(n))return h+'<span class="bls-lab">Recorded in the app. To change it, open the step.</span></div></div>';
  h+='<label class="bls-lab">When did this happen? <input type="date" class="bls-d" data-n="'+n+'" max="'+today()+'" value="'+esc(a.on||pend[n]||'')+'"></label>';
- if(n===6)h+='<button type="button" class="bls-a" data-step="6"'+(reach()<6?' disabled':'')+'>Choose their level</button><button type="button" class="bls-a'+(a.out?' on':'')+'" data-n="6" data-a="out">They chose outside Booth Light</button>';
+ if(n===6)h+='<button type="button" class="bls-a" data-step="6"'+'>Choose their level</button><button type="button" class="bls-a'+(a.out?' on':'')+'" data-n="6" data-a="out">They chose outside Booth Light</button>';
  else (OUTA[n]||ST[n-1].ans||[]).forEach(function(b){var on=b[0]==='sent'?!!a.sent:was===b[0];h+='<button type="button" class="bls-a'+(on&&a.out?' on':'')+'" data-n="'+n+'" data-a="'+b[0]+'">'+esc(b[1])+'</button>';});
  return h+'</div></div>';}
 function fillAnswer(n,a){var S=B.S,d=pend[n]||sa(n).on||'',now=new Date().toISOString();if(!S.steps)S.steps={};
@@ -3501,7 +3560,7 @@ function openFile(){if(B.S.rec&&!confirm('Booth Light already holds audio. A fil
 function fillDate(n,v){if(v&&v>today())v='';   /* a step marked afterwards cannot have happened on a later day */
  pend[n]=v;var st=(B.S.steps||{})[n];if(st&&st.out){st.on=v;B.touch();}drawSheets(true);}
 function sheetHTML(){var k=0,h='',r=reach(),e=epn();for(var n=1;n<9;n++){var x=srow(n);if(x.done)k++;
-  h+=fill?frow(n,x):'<button type="button" class="bls-row '+(x.done?'done':'todo')+(x.next?' next':'')+'" data-step="'+n+'" style="--k:'+COL[n-1]+'"'+(n>r?' aria-disabled="true"':'')+' aria-label="Step '+n+', '+ST[n-1].name+'. '+esc(x.text)+'"><span class="bls-n">'+n+'</span><span class="bls-w"><span class="bls-nm">'+ST[n-1].name+'</span><span class="bls-s">'+esc(x.text)+'</span></span></button>';}
+  h+=fill?frow(n,x):'<button type="button" class="bls-row '+(x.done?'done':'todo')+(x.next?' next':'')+'" data-step="'+n+'" style="--k:'+COL[n-1]+'"'+' aria-label="Step '+n+', '+ST[n-1].name+'. '+esc(x.text)+'"><span class="bls-n">'+n+'</span><span class="bls-w"><span class="bls-nm">'+ST[n-1].name+'</span><span class="bls-s">'+esc(x.text)+'</span></span></button>';}
  return '<h1 class="bls-h" tabindex="-1">Process Consent</h1><div class="bls-sub">'+(e?'Episode '+esc(e)+' \u00b7 ':'')+k+' of 8 done</div>'+(fill?'<div class="bls-note">Mark only the steps you did outside Booth Light. Each one is recorded as reported afterwards, with the date you give.</div>':'')+'<div class="bls-rows">'+(fill?audHTML():'')+h+'</div><div class="bls-acts"><button type="button" class="bls-go" data-step="'+r+'" style="--k:'+COL[r-1]+'">'+(k===8?'Open step 8, Close':'Continue: '+r+' '+ST[r-1].sign+' '+ST[r-1].name)+'</button><button type="button" class="bls-print">Print the sheet</button><button type="button" class="bls-out'+(fill?' on':'')+'">'+(fill?'Done marking':'I did steps outside Booth Light')+'</button><div class="bls-note">The sheet prints the codenames you typed. Check that they are not real names. In the print window, \u201cSave as PDF\u201d makes a file.</div></div>';}
 var sheet=document.createElement('div');sheet.className='pt-sheetbox';sheet.hidden=true;sheet.setAttribute('role','dialog');sheet.setAttribute('aria-modal','true');sheet.setAttribute('aria-label','Process Consent, all eight steps');sheet.innerHTML='<div class="bls"></div>';el.appendChild(sheet);
 var oldS=null,c8=document.getElementById('cs8');if(c8){oldS=document.createElement('div');oldS.className='bls bls-old';c8.parentNode.insertBefore(oldS,c8);}
@@ -3520,7 +3579,7 @@ function printSheet(){var p=document.getElementById('bl-print');if(!p){p=documen
  window.print();}
 if(oldS)oldS.addEventListener('change',function(e){if(e.target.classList&&e.target.classList.contains('bls-d'))fillDate(Number(e.target.dataset.n),e.target.value);});
 el.addEventListener('change',function(e){if(e.target.classList&&e.target.classList.contains('bls-d'))fillDate(Number(e.target.dataset.n),e.target.value);});
-if(oldS)oldS.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button');if(!b||b.disabled)return;if(b.classList.contains('bls-print')){printSheet();return;}if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}if(b.classList.contains('bls-file')){openFile();return;}if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}if(b.dataset.step&&b.getAttribute('aria-disabled')!=='true'){var n=Number(b.dataset.step);path();show(Math.min(n,reach()),true);}});
+if(oldS)oldS.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button');if(!b||b.disabled)return;if(b.classList.contains('bls-print')){printSheet();return;}if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}if(b.classList.contains('bls-file')){openFile();return;}if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}if(b.dataset.step&&b.getAttribute('aria-disabled')!=='true'){var n=Number(b.dataset.step);path();show(n,true);}});
 /* BUILD 114: what is still being built. One list, kept here, shown from every step. */
 var WIP=[
  ['A storyteller cannot withdraw from their own phone yet.','Their storyteller page holds an erase code. The code works only in the class archive, which runs on the computer of the podcast producer (your instructor).','They tell you or the podcast producer, in any way they choose. The withdrawal is applied within 72 hours.'],
@@ -3568,7 +3627,7 @@ var again=false,touched=false;
 function tick(){if(el.classList.contains('off'))return;
  if(!touched){var r0=reach();if(r0!==cur){show(r0,false);return;}}   /* a saved interview can come back a moment after the page opens: until the student touches the path, it follows the first step not done */
  var n=cur,s=ST[n-1],st=sa(n),r=reach();
- el.querySelectorAll('.pt-d').forEach(function(b){var i=Number(b.dataset.go),dn=done(i)&&i!==n;b.className='pt-d'+(i===n?' now':dn?' done':'');b.textContent=dn?'\u2713':i;b.disabled=i>r;if(i===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+ el.querySelectorAll('.pt-d').forEach(function(b){var i=Number(b.dataset.go),dn=done(i)&&i!==n;b.className='pt-d'+(i===n?' now':dn?' done':'');b.textContent=dn?'\u2713':i;b.disabled=false;if(i===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
  var say=q('.pt-say'),stl=q('.pt-st'),tag=doc.querySelector('.pt-tag'),open=true,txt='';
  if(n===2){var scr=($('#rec .rq')||{}).textContent||'';if(say.textContent!==scr)say.textContent=scr;say.classList.add('long');
   var y=R.yes(),no=R.no(),c=B.S.consent||{},yon=!!y&&y.classList.contains('on'),non=!!no&&no.classList.contains('on'),live=recording(),got=!!B.S.rec&&!live;
@@ -3592,14 +3651,24 @@ function tick(){if(el.classList.contains('off'))return;
  q('.pt-back').style.visibility=n===1?'hidden':'visible';}
 function tools(hash){unembed();el.classList.add('off');document.documentElement.classList.remove('bl-pathon');document.documentElement.classList.add('bl-tools');
  if(hash){var a=document.querySelector('a[href="'+hash+'"]');if(a)a.click();else{var t=document.querySelector(hash);if(t)t.scrollIntoView();}}}
-function path(){touched=true;document.documentElement.classList.remove('bl-tools');document.documentElement.classList.add('bl-pathon');el.classList.remove('off');show(Math.min(cur,reach()),true);}
+function path(){touched=true;document.documentElement.classList.remove('bl-tools');document.documentElement.classList.add('bl-pathon');el.classList.remove('off');show(cur,true);}
 el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.target.closest('.pt-tool .pt-slot'))return;var b=e.target.closest&&e.target.closest('button');if(!b||b.disabled)return;
- if(b.dataset.go){var g=Number(b.dataset.go);if(g<=reach())show(g,true);return;}
+ if(b.dataset.go){show(Number(b.dataset.go),true);return;}
  if(b.classList.contains('pt-next')){if(cur<8&&done(cur))show(cur+1,true);return;}
  if(b.classList.contains('pt-back')){if(cur>1)show(cur-1,true);return;}
  if(b.classList.contains('pt-all')){tools('');return;}
  if(b.classList.contains('pt-wip')){wipOpen();return;}
  if(b.classList.contains('pt-wipclose')){wipClose();return;}
+ if(b.classList.contains('pt-notes')){lnOpen();return;}
+ if(b.classList.contains('ln-back')){lnClose();return;}
+ if(b.classList.contains('ln-go')){lnToggle();return;}
+ if(b.dataset.lnj){lnJump(Number(b.dataset.lnj));return;}
+ if(b.classList.contains('ln-zero')){lnZero();return;}
+ if(b.classList.contains('ln-add')){lnAdd();return;}
+ if(b.dataset.lnx){lnDel(Number(b.dataset.lnx));return;}
+ if(b.classList.contains('ln-copy')){lnCopy();return;}
+ if(b.classList.contains('ln-save')){lnSave();return;}
+ if(b.classList.contains('ln-erase')){lnErase();return;}
  if(b.classList.contains('pt-shelf')){shelfOpen();return;}
  if(b.classList.contains('bls-shelfback')){shelfClose();return;}
  if(b.classList.contains('bls-unlock')){var pwi=shelf.querySelector('.bls-pw');sunlock(pwi?pwi.value:'');return;}
@@ -3612,7 +3681,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('bls-file')){openFile();return;}
  if(b.classList.contains('pt-outside')){fill=true;sheetOpen();var rw=sheet.querySelectorAll('.bls-row')[cur-1];if(rw&&rw.scrollIntoView)rw.scrollIntoView({block:'center'});return;}
  if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}
- if(b.dataset.step){if(b.getAttribute('aria-disabled')==='true')return;sheet.hidden=true;show(Math.min(Number(b.dataset.step),reach()),true);return;}
+ if(b.dataset.step){sheet.hidden=true;show(Number(b.dataset.step),true);return;}
  if(b.dataset.tool){tools(b.dataset.tool);return;}
  if(b.dataset.press){var pr=document.getElementById(b.dataset.press);if(pr)pr.click();return;}
  if(b.dataset.a){C.answer(cur,b.dataset.a);tick();return;}
@@ -3624,7 +3693,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  else if(r==='note'){var i=doc.querySelector('.pt-in1'),di=document.getElementById('dur-in'),da=document.getElementById('dur-add');if(i&&di&&da&&i.value.trim()){di.value=i.value;da.click();i.value='';i.focus();}}
  else if(r==='again'){again=true;}
  tick();});
-el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!shelf.hidden){shelfClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('bls-pw')){e.preventDefault();sunlock(e.target.value);return;}if(e.key==='Escape'&&!sheet.hidden){sheetClose();return;}if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
+el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ln.hidden){lnClose();return;}if(e.key==='Enter'&&!e.shiftKey&&e.target.classList&&e.target.classList.contains('ln-text')){e.preventDefault();lnAdd();return;}if(e.key==='Escape'&&!shelf.hidden){shelfClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('bls-pw')){e.preventDefault();sunlock(e.target.value);return;}if(e.key==='Escape'&&!sheet.hidden){sheetClose();return;}if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
 back.addEventListener('click',path);
 var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(!el.classList.contains('off'))paintSky();},150);});
 document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);drawSheets(true);setInterval(drawSheets,500);
