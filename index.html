@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 126</title>
+<title>Booth Light · BUILD 127</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 126 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 127 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 126</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 127</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2877,7 +2877,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 126 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 127 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3528,12 +3528,18 @@ html.bl126 #bl-path-back,html.bl126 body > .nav a[href^="#"]{display:none !impor
 html.bl126 body > #rec,html.bl126 body > #notes-band,html.bl126 body > #cut,html.bl126 body > #who,html.bl126 #who .w5-btns,html.bl126 #who .w5-pan,html.bl126 #who .w5-left,html.bl126 #who #w5-hint,html.bl126 #who .v-pick{display:none !important}
 html.bl126 #who .w5-grid{display:block !important}
 html:not(.bl-mine) #bl-path .pt-wip{display:none !important}
-.bo-buttons.bl126-pills{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:5% 5%}
-.bo-buttons .bl126-p{all:unset;box-sizing:border-box;display:grid;place-items:center;text-align:center;border-radius:999px;background:var(--k);color:#14183A;font:900 clamp(13px,1.35vw,19px)/1.12 Helvetica,Arial,sans-serif;padding:0 7%;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.3)}
-.bo-buttons .bl126-p.wide{grid-column:1 / -1}
-.bo-buttons .bl126-p.on{box-shadow:0 0 0 4px #FFF4C2,0 0 0 8px #14183A}
-.bo-buttons .bl126-p:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
-@media (max-width:760px){.bl-nightlogo .bo-buttons.bl126-pills{position:static !important;width:auto !important;height:auto !important;margin:0;padding:14px 16px 18px;background:#070C22;grid-auto-rows:auto;gap:10px}.bo-buttons .bl126-p{min-height:54px;font-size:17px;padding:8px 12px}}
+/* the eight steps sit on the booth; the six section pills sit under the title */
+.bl-nightlogo .bo-buttons.bl126-steps{display:grid !important;grid-template-columns:repeat(4,1fr) !important;grid-auto-rows:auto !important;gap:10% 6% !important;align-content:center !important;justify-items:center}
+.bo-buttons.bl126-steps .bl126-stt{grid-column:1 / -1;font:900 clamp(11px,1.15vw,16px)/1.1 Helvetica,Arial,sans-serif;color:#FFF4C2;text-align:center;letter-spacing:.04em}
+.bo-buttons.bl126-steps .bl126-st{all:unset;box-sizing:border-box;width:min(100%,3em);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:900 clamp(13px,1.35vw,20px) Helvetica,Arial,sans-serif;background:#070C22;color:var(--k);box-shadow:inset 0 0 0 3px var(--k);cursor:pointer}
+.bo-buttons.bl126-steps .bl126-st.done{background:var(--k);color:#070C22}
+.bo-buttons.bl126-steps .bl126-st.now{background:var(--k);color:#070C22;box-shadow:0 0 0 3px #FFF4C2,0 0 0 6px #070C22}
+.bo-buttons.bl126-steps .bl126-st:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+#bl126-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:18px 16px 20px;background:#070C22}
+#bl126-nav .bl126-p{all:unset;box-sizing:border-box;border-radius:999px;padding:.75em 1.4em;min-height:54px;display:inline-flex;align-items:center;justify-content:center;font:900 clamp(16px,1.3vw,20px) Helvetica,Arial,sans-serif;background:none;color:var(--k);box-shadow:inset 0 0 0 3px var(--k);cursor:pointer}
+#bl126-nav .bl126-p.on{background:var(--k);color:#070C22}
+#bl126-nav .bl126-p:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+@media (max-width:760px){.bo-buttons.bl126-steps .bl126-st{font-size:13px;box-shadow:inset 0 0 0 2px var(--k)}.bo-buttons.bl126-steps .bl126-stt{display:none}#bl126-nav .bl126-p{flex:1 1 calc(50% - 12px);font-size:16px;padding:.6em .8em}}
 #bl126-host{display:block;background:#070C22}
 .bl126-sec{max-width:1100px;margin:0 auto;padding:22px 16px 30px;display:flex;flex-direction:column;gap:14px;color:#FFF4C2;font-family:Helvetica,Arial,sans-serif}
 .bl126-sec[hidden]{display:none}
@@ -3586,6 +3592,10 @@ html body #bl126-lv .b6-s{font:700 16px/1.4 Helvetica,Arial,sans-serif !importan
 @media (min-width:1000px){html body #bl126-lv .b6-cards{grid-template-columns:repeat(5,1fr)}}
 html body #bl126-start .bl-two-h,html body #bl126-start .bl-two-n{color:#FFD60A !important}
 html body #bl126-seasons .lr-card label.btn.light{color:#FFFFFF !important}
+
+/* the eight step circles now live on the booth, so the row of dots inside Process Consent is hidden (it stays in the page so the booth can copy its state) */
+html.bl126 #bl-path .pt-dots{display:none !important}
+html.bl126 #bl-path .pt-qrside{display:none !important}
 </style>
 <script id="bl-126-early">/* BUILD 126: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
 (function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
@@ -3594,7 +3604,9 @@ html body #bl126-seasons .lr-card label.btn.light{color:#FFFFFF !important}
  function take(s,id){var b=document.getElementById(id);if(!b)return null;b.classList.remove('shut');s.appendChild(b);return b;}
  var st=sec('bl126-start','#F2C66A','Before you start','Choose the device you record on, and how you open Booth Light.');take(st,'bl-two');take(st,'dev');
  var cs=document.createElement('div');cs.id='bl126-consent-slot';host.appendChild(cs);
- var se=sec('bl126-seasons','#5CE8F5','Seasons','The Listening Room: earlier seasons, the new season, and other podcasts.');
+ var se=sec('bl126-seasons','#5CE8F5','The Listening Room','What Booth Light does, earlier seasons, the new season, and other podcasts.');
+ var f=document.querySelector('.mast > .f75');if(f){var sb=f.nextElementSibling;se.appendChild(f);if(sb&&sb.classList.contains('say-btn'))se.appendChild(sb);}
+ var lr=document.querySelector('.bl-lr');lr=lr&&lr.closest('.band');if(lr)se.appendChild(lr);
  var row=document.createElement('div');row.className='bl126-row';row.innerHTML='<button type="button" class="bl126-b" data-bl126="shelf" style="--k:#5CE8F5">♪ Earlier seasons</button><button type="button" class="bl126-b bl126-o" data-bl126="other" style="--k:#5CE8F5">Other podcasts</button>';se.appendChild(row);
  var p=document.createElement('p');p.className='bl126-sub';p.textContent='Earlier seasons open with the class password. The new season is below.';se.appendChild(p);take(se,'listen');
  var to=sec('bl126-tools','#C9B3F5','Tools','Send a packet to a storyteller, write together, edit audio, keep records private.');take(to,'more');
@@ -14400,7 +14412,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
 el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!cn.hidden){cnClose();return;}if(e.key==='Escape'&&!qr.hidden){qrClose();return;}if(e.key==='Escape'&&!ln.hidden){lnClose();return;}if(e.key==='Enter'&&!e.shiftKey&&e.target.classList&&e.target.classList.contains('ln-text')){e.preventDefault();lnAdd();return;}if(e.key==='Escape'&&!shelf.hidden){shelfClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('bls-pw')){e.preventDefault();sunlock(e.target.value);return;}if(e.key==='Escape'&&!sheet.hidden){sheetClose();return;}if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
 back.addEventListener('click',path);
 var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(!el.classList.contains('off'))paintSky();},150);});
-window.blPath={show:show,unembed:unembed,cur:function(){return cur;},lnOpen:lnOpen,shelfOpen:shelfOpen,wipOpen:wipOpen};
+window.blPath={go:function(n){touched=true;show(n,false);},show:show,unembed:unembed,cur:function(){return cur;},lnOpen:lnOpen,shelfOpen:shelfOpen,wipOpen:wipOpen};
 document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);drawSheets(true);setInterval(drawSheets,500);
 })();</script>
 <script id="bl-126-late">/* BUILD 126: the six pills on the red booth open one section at a time under the title. Process Consent (the eight steps) is open when the page opens. */
@@ -14408,11 +14420,14 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  var H=document.documentElement;H.classList.add('bl126');H.classList.remove('bl-pathon');
  if(location.protocol==='file:'||/^(127\.0\.0\.1|localhost)$/.test(location.hostname))H.classList.add('bl-mine');
  var slot=document.getElementById('bl126-consent-slot');if(slot)slot.appendChild(el);
- var PILLS=[['start','1 · Before you start','#F2C66A','bl126-start',1],['consent','2 · Process Consent · 8 steps','#FFD60A','bl-path',1],['notes','3 · Listening notes','#F5A742','',0],['seasons','4 · Seasons','#5CE8F5','bl126-seasons',0],['tools','5 · Tools','#C9B3F5','bl126-tools',0],['sov','6 · Sovereign tech','#B6F23C','bl126-sov',0]];
+ var PILLS=[['start','Before you start','#F2C66A','bl126-start'],['consent','Process Consent','#FFD60A','bl-path'],['notes','Listening notes','#F5A742',''],['seasons','The Listening Room','#5CE8F5','bl126-seasons'],['tools','Tools','#C9B3F5','bl126-tools'],['sov','Sovereign tech','#B6F23C','bl126-sov']];
  var openKey='';
- function pillsHTML(){return PILLS.map(function(p){return '<button type="button" class="bl126-p'+(p[4]?' wide':'')+'" data-pill="'+p[0]+'" style="--k:'+p[2]+'"'+(p[3]?' aria-controls="'+p[3]+'"':'')+' aria-expanded="false">'+p[1]+'</button>';}).join('');}
- function pills(){var box=document.querySelector('.bo-buttons');if(!box)return;if(!box.querySelector('.bl126-p')){box.innerHTML=pillsHTML();box.setAttribute('aria-label','Sections of Booth Light');box.classList.add('bl126-pills');}mark();}
- function mark(){document.querySelectorAll('.bl126-p').forEach(function(b){var on=b.dataset.pill===openKey;b.classList.toggle('on',on);if(b.hasAttribute('aria-controls'))b.setAttribute('aria-expanded',on?'true':'false');});}
+ function pillsHTML(){return PILLS.map(function(p){return '<button type="button" class="bl126-p" data-pill="'+p[0]+'" style="--k:'+p[2]+'"'+(p[3]?' aria-controls="'+p[3]+'"':'')+' aria-expanded="false">'+p[1]+'</button>';}).join('');}
+ var nav=document.createElement('nav');nav.id='bl126-nav';nav.setAttribute('aria-label','Sections of Booth Light');nav.innerHTML=pillsHTML();var lg0=document.querySelector('.bl-nightlogo');lg0.parentNode.insertBefore(nav,lg0.nextSibling);
+ var SN=['Invite','Record','Edit','Review','Confirm','Audience','Listen','Close'],SC=['#FFD60A','#FF7A59','#5CE8F5','#B56CFF','#B6F23C','#3392FF','#FFBE5C','#FF4DDB'];
+ function pills(){var box=document.querySelector('.bo-buttons');if(!box)return;if(!box.querySelector('.bl126-st')){box.innerHTML='<div class="bl126-stt">Process Consent</div>'+SN.map(function(n,i){return '<button type="button" class="bl126-st" data-step="'+(i+1)+'" style="--k:'+SC[i]+'" aria-label="Process Consent, step '+(i+1)+', '+n+'">'+(i+1)+'</button>';}).join('');box.setAttribute('aria-label','Process Consent: the eight steps');box.classList.add('bl126-steps');}
+  var dots=document.querySelectorAll('#bl-path .pt-d');box.querySelectorAll('.bl126-st').forEach(function(b,i){var d=dots[i],now=!!d&&d.classList.contains('now')&&openKey==='consent',dn=!!d&&d.classList.contains('done');b.classList.toggle('now',now);b.classList.toggle('done',dn);var t=dn?'\u2713':String(i+1);if(b.textContent!==t)b.textContent=t;if(now)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});mark();}
+ function mark(){document.querySelectorAll('#bl126-nav .bl126-p').forEach(function(b){var on=b.dataset.pill===openKey;b.classList.toggle('on',on);if(b.hasAttribute('aria-controls'))b.setAttribute('aria-expanded',on?'true':'false');});}
  function hideAll(){['bl126-start','bl126-seasons','bl126-tools','bl126-sov'].forEach(function(id){var s=document.getElementById(id);if(s)s.hidden=true;});if(!el.classList.contains('bl126-closed')){el.classList.add('bl126-closed');try{P.unembed();}catch(e){}}}
  function open(key,focus){if(key==='notes'){P.lnOpen();return;}
   if(key===openKey){hideAll();openKey='';mark();return;}
@@ -14421,12 +14436,13 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
   else{tgt=document.getElementById(PILLS.filter(function(p){return p[0]===key;})[0][3]);if(tgt)tgt.hidden=false;}
   if(tgt&&focus){tgt.scrollIntoView({block:'start'});var f=tgt.querySelector(key==='consent'?'.pt-name':'.bl126-h');if(f)f.focus({preventScroll:true});}
   window.dispatchEvent(new Event('resize'));}
- document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-pill],[data-bl126]');if(!b)return;
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-pill],[data-bl126],[data-step]');if(!b)return;
   if(b.dataset.pill){e.preventDefault();open(b.dataset.pill,true);return;}
+  if(b.dataset.step){e.preventDefault();if(openKey!=='consent')open('consent',false);P.go(Number(b.dataset.step));el.scrollIntoView({block:'start'});var f=el.querySelector('.pt-name');if(f)f.focus({preventScroll:true});pills();return;}
   var a=b.dataset.bl126;if(a==='shelf'){P.shelfOpen();return;}
   if(a==='other'){open('tools',true);var x=[].filter.call(document.querySelectorAll('#more .mo-bar button, #more .mo-bar a'),function(y){return /other podcasts/i.test(y.textContent);})[0];if(x)x.click();return;}
   if(a==='stpage'){var s=document.querySelector('.st-navpill,[data-st-open]');if(s)s.click();return;}
-  if(a==='season'){open('seasons',true);return;}},true);
+  if(a==='season'){var l=document.getElementById('listen');if(l)l.scrollIntoView({block:'start'});return;}},true);
  /* the Listening Room card: Spotify is gone; it opens the seasons */
  var sp=document.getElementById('lr-top');if(sp){var w=document.createElement('div');w.className='bl126-row bl126-lr';w.innerHTML='<button type="button" class="bl126-b" data-bl126="shelf" style="--k:#5CE8F5">♪ Earlier seasons</button><button type="button" class="bl126-b" data-bl126="season" style="--k:#FFD60A">New Season</button>';sp.parentNode.replaceChild(w,sp);}
  /* step 6: one card per level, for the person chosen above them */
