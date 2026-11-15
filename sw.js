@@ -1,5 +1,5 @@
-/* Booth Light service worker, BUILD 124: keeps a copy of the app on the phone so it opens with no connection. With a connection it asks GitHub for the newest page each time the app opens, so every device shows the build that is published. It stores only the app's own files. It does not keep the withdrawn list or the Earlier seasons shelf: those always come from the network. It never sees or sends recordings. */
-const C='booth-light-124';const F=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-180.png'];
+/* Booth Light service worker, BUILD 125: keeps a copy of the app on the phone so it opens with no connection. With a connection it asks GitHub for the newest page each time the app opens, so every device shows the build that is published. It stores only the app's own files. It does not keep the withdrawn list or the Earlier seasons shelf: those always come from the network. It never sees or sends recordings. */
+const C='booth-light-125';const F=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-180.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(F.map(f=>new Request(f,{cache:'reload'})))));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{const r=e.request;const u=new URL(r.url);if(r.method!=='GET'||u.origin!==location.origin||u.pathname.indexOf('/shelf/')!==-1||u.pathname.endsWith('/revoked.json'))return;
