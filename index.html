@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 125</title>
+<title>Booth Light · BUILD 126</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 125 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 126 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 125</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 126</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2877,7 +2877,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 125 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 126 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3520,6 +3520,89 @@ html body #who #voices .voice .w5-badge{color:#14183A !important}
 html body #who #voices .voice .v-code{flex:1 1 8em !important;max-width:14.5em !important}
 html body #who #voices .voice .v-until input{width:9.6em !important}
 </style>
+<style id="bl-126-css">/* BUILD 126: the title pills, one section open at a time, and the step 6 cards. Every text colour here is at least 7 to 1 against its ground. */
+html.bl126 #bl-path{position:relative;inset:auto;z-index:20;overflow:visible;min-height:0;background:#070C22}
+html.bl126,html.bl126 body{overflow:visible !important}
+html.bl126 #bl-path.bl126-closed > .pt-in{display:none}
+html.bl126 #bl-path-back,html.bl126 body > .nav a[href^="#"]{display:none !important}
+html.bl126 body > #rec,html.bl126 body > #notes-band,html.bl126 body > #cut,html.bl126 body > #who,html.bl126 #who .w5-btns,html.bl126 #who .w5-pan,html.bl126 #who .w5-left,html.bl126 #who #w5-hint,html.bl126 #who .v-pick{display:none !important}
+html.bl126 #who .w5-grid{display:block !important}
+html:not(.bl-mine) #bl-path .pt-wip{display:none !important}
+.bo-buttons.bl126-pills{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:5% 5%}
+.bo-buttons .bl126-p{all:unset;box-sizing:border-box;display:grid;place-items:center;text-align:center;border-radius:999px;background:var(--k);color:#14183A;font:900 clamp(13px,1.35vw,19px)/1.12 Helvetica,Arial,sans-serif;padding:0 7%;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.3)}
+.bo-buttons .bl126-p.wide{grid-column:1 / -1}
+.bo-buttons .bl126-p.on{box-shadow:0 0 0 4px #FFF4C2,0 0 0 8px #14183A}
+.bo-buttons .bl126-p:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+@media (max-width:760px){.bl-nightlogo .bo-buttons.bl126-pills{position:static !important;width:auto !important;height:auto !important;margin:0;padding:14px 16px 18px;background:#070C22;grid-auto-rows:auto;gap:10px}.bo-buttons .bl126-p{min-height:54px;font-size:17px;padding:8px 12px}}
+#bl126-host{display:block;background:#070C22}
+.bl126-sec{max-width:1100px;margin:0 auto;padding:22px 16px 30px;display:flex;flex-direction:column;gap:14px;color:#FFF4C2;font-family:Helvetica,Arial,sans-serif}
+.bl126-sec[hidden]{display:none}
+.bl126-h{font:700 clamp(30px,3.4vw,44px)/1.1 Georgia,"Times New Roman",serif;color:var(--k);margin:0;text-align:center;outline:none}
+.bl126-h:focus-visible{outline:3px solid #FFFFFF;outline-offset:4px}
+.bl126-sub{margin:0;text-align:center;color:#FFD60A;font:700 clamp(16px,1.2vw,19px)/1.45 Helvetica,Arial,sans-serif}
+.bl126-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.bl126-b{all:unset;box-sizing:border-box;border-radius:999px;padding:.8em 1.4em;min-height:52px;display:inline-flex;align-items:center;font:900 clamp(16px,1.25vw,19px) Helvetica,Arial,sans-serif;background:var(--k);color:#14183A;cursor:pointer}
+.bl126-b.bl126-o{background:none;box-shadow:inset 0 0 0 3px var(--k);color:var(--k)}
+.bl126-b:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+.bl126-lr{justify-content:flex-start;margin-top:10px}
+#bl126-sov .w5-pan{display:block !important}
+#bl126-lv{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding:16px;border-radius:22px;background:#070C22;font-family:Helvetica,Arial,sans-serif}
+.b6-q{color:#FFD60A;font:800 clamp(17px,1.3vw,20px)/1.4 Helvetica,Arial,sans-serif;text-align:center}
+.b6-who{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.b6-p{all:unset;box-sizing:border-box;border-radius:999px;padding:.6em 1.2em;min-height:48px;display:inline-flex;align-items:center;font:800 17px Helvetica,Arial,sans-serif;box-shadow:inset 0 0 0 3px #FFD60A;color:#FFD60A;cursor:pointer}
+.b6-p.on{background:#FFD60A;color:#070C22}
+.b6-p:focus-visible,.b6-go:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+.b6-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px}
+.b6-c{border-radius:20px;padding:14px 12px;box-shadow:inset 0 0 0 3px var(--k);color:var(--k);display:flex;flex-direction:column;gap:8px;background:#070C22}
+.b6-c.pick{background:var(--k);color:#070C22}
+.b6-c.ff{box-shadow:none;border:3px dashed var(--k)}
+.b6-n{font:900 13px/1.3 Helvetica,Arial,sans-serif;letter-spacing:.07em}
+.b6-t{font:700 21px/1.15 Georgia,"Times New Roman",serif}
+.b6-d{display:flex;flex-wrap:wrap;gap:3px;min-height:12px}.b6-d i{width:11px;height:11px;border-radius:50%;background:currentColor;display:block}
+.b6-s{font:700 16px/1.4 Helvetica,Arial,sans-serif}
+.b6-go{all:unset;box-sizing:border-box;margin-top:auto;border-radius:999px;padding:.65em .8em;min-height:48px;text-align:center;font:900 16px Helvetica,Arial,sans-serif;background:var(--k);color:#070C22;cursor:pointer}
+.b6-c.pick .b6-go{background:#070C22;color:var(--k)}
+.b6-go:disabled{cursor:default;background:none;box-shadow:inset 0 0 0 3px var(--k);color:var(--k)}
+.b6-c.ff .b6-go:disabled{box-shadow:none;border:3px dashed var(--k)}
+.b6-note{margin:0;text-align:center;color:#FFD60A;font:700 16px/1.45 Helvetica,Arial,sans-serif}
+.b6-warn,.pt-warn{border:3px solid #FFD60A;border-radius:18px;padding:12px 14px;color:#FFD60A;font:700 16px/1.45 Helvetica,Arial,sans-serif;text-align:left}
+#bl-path .pt-no{display:block;margin-top:8px;font:900 1.05em/1.4 Helvetica,Arial,sans-serif}
+html.bl126 #bl-path .pt-qrside{position:absolute !important;top:16px !important}
+html.bl126 #bl-path.bl126-closed .pt-qrside{display:none !important}
+html.bl126 #bl-path .pt-nav{position:static !important}
+/* the older page colours every word inside the consent panel; these lines keep the card colours readable there */
+html body #bl126-lv .b6-q,html body #bl126-lv .b6-note,html body #bl126-lv .b6-warn,html body #bl126-lv .b6-warn b{color:#FFD60A !important}
+html body #bl126-lv .b6-p{color:#FFD60A !important;background:none !important}
+html body #bl126-lv .b6-p.on{color:#070C22 !important;background:#FFD60A !important}
+html body #bl126-lv .b6-c,html body #bl126-lv .b6-c *{color:var(--k) !important}
+html body #bl126-lv .b6-c.pick{background:var(--k) !important}
+html body #bl126-lv .b6-c.pick *{color:#070C22 !important}
+html body #bl126-lv .b6-go{background:var(--k) !important;color:#070C22 !important}
+html body #bl126-lv .b6-c.pick .b6-go{background:#070C22 !important;color:var(--k) !important}
+html body #bl126-lv .b6-go:disabled{background:none !important;color:var(--k) !important}
+html body #bl126-lv .b6-d i{background:currentColor !important}
+html body #bl126-lv .b6-t{font:700 21px/1.15 Georgia,"Times New Roman",serif !important}
+html body #bl126-lv .b6-s{font:700 16px/1.4 Helvetica,Arial,sans-serif !important}
+@media (min-width:1000px){html body #bl126-lv .b6-cards{grid-template-columns:repeat(5,1fr)}}
+html body #bl126-start .bl-two-h,html body #bl126-start .bl-two-n{color:#FFD60A !important}
+html body #bl126-seasons .lr-card label.btn.light{color:#FFFFFF !important}
+</style>
+<script id="bl-126-early">/* BUILD 126: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
+(function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
+ var host=document.createElement('div');host.id='bl126-host';lg.parentNode.insertBefore(host,lg.nextSibling);
+ function sec(id,col,title,sub){var s=document.createElement('section');s.id=id;s.className='bl126-sec';s.hidden=true;s.style.setProperty('--k',col);s.setAttribute('aria-label',title);s.innerHTML='<h2 class="bl126-h" tabindex="-1">'+title+'</h2>'+(sub?'<p class="bl126-sub">'+sub+'</p>':'');host.appendChild(s);return s;}
+ function take(s,id){var b=document.getElementById(id);if(!b)return null;b.classList.remove('shut');s.appendChild(b);return b;}
+ var st=sec('bl126-start','#F2C66A','Before you start','Choose the device you record on, and how you open Booth Light.');take(st,'bl-two');take(st,'dev');
+ var cs=document.createElement('div');cs.id='bl126-consent-slot';host.appendChild(cs);
+ var se=sec('bl126-seasons','#5CE8F5','Seasons','The Listening Room: earlier seasons, the new season, and other podcasts.');
+ var row=document.createElement('div');row.className='bl126-row';row.innerHTML='<button type="button" class="bl126-b" data-bl126="shelf" style="--k:#5CE8F5">♪ Earlier seasons</button><button type="button" class="bl126-b bl126-o" data-bl126="other" style="--k:#5CE8F5">Other podcasts</button>';se.appendChild(row);
+ var p=document.createElement('p');p.className='bl126-sub';p.textContent='Earlier seasons open with the class password. The new season is below.';se.appendChild(p);take(se,'listen');
+ var to=sec('bl126-tools','#C9B3F5','Tools','Send a packet to a storyteller, write together, edit audio, keep records private.');take(to,'more');
+ var sv=sec('bl126-sov','#B6F23C','Sovereign tech and process consent','Why Booth Light keeps your story on your device, and how consent works step by step.');
+ var pans=document.querySelectorAll('#who .w5-pan');if(pans[1]){pans[1].classList.remove('hide');sv.appendChild(pans[1]);}
+ var lk=document.createElement('div');lk.className='bl126-row';lk.innerHTML='<button type="button" class="bl126-b bl126-o" data-bl126="stpage" style="--k:#B6F23C">Sovereign Tech in Higher Ed: the full page</button>';sv.appendChild(lk);
+})();
+</script>
 <script type="text/plain" id="bl-jsqr">/* jsQR 1.4.0, a QR code reader by Cosmo Wolfe and contributors, https://github.com/cozmo/jsQR, licensed under the Apache License, Version 2.0. This copy is unchanged: it is the file dist/jsQR.js of jsQR 1.4.0 (sha256 bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859). Booth Light runs it only when someone presses "Read notes codes with this camera". Its licence follows in the next block. */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -13847,10 +13930,10 @@ function recording(){var s=R.stop();return !!s&&!s.disabled;}
 function sa(n){return (C.steps()[n]||{});}
 function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return (B.S.consent||{}).answer==='yes'&&((!!B.S.rec&&!recording())||!!sa(2).out);   /* done needs the yes; audio opened from a file does not count as a yes */if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
 function reach(){for(var n=1;n<9;n++)if(!done(n))return n;return 8;}
-var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','The path: eight steps');
-el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-shelf">\u266a Earlier seasons</button><button type="button" class="pt-allsteps pt-notes">\u270e Listening notes</button><button type="button" class="pt-allsteps pt-qr">\u25a6 QR code</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button><button type="button" class="pt-s pt-all">All tools</button></div><div class="pt-build"></div></div></div>';
+var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','Process Consent: eight steps');
+el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-qr">\u25a6 QR code</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button></div><div class="pt-build"></div></div></div>';
 document.body.appendChild(el);
-var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to the path';document.body.appendChild(back);
+var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to Process Consent';document.body.appendChild(back);
 var q=function(s){return el.querySelector(s);},ask=q('.pt-ask'),doc=q('.pt-do'),sky=q('.pt-sky'),tool=q('.pt-tool'),slot=q('.pt-slot'),home={};
 /* BUILD 113: move a section into the path, and back to where it came from */
 function unembed(){var id=tool.dataset.id;if(id){var b=document.getElementById(id),m=home[id];if(b&&m&&m.parentNode){m.parentNode.insertBefore(b,m.nextSibling);if(b.dataset.blShut==='1')b.classList.add('shut');}tool.dataset.id='';}tool.classList.remove('on');q('.pt-cols').classList.remove('tooly');doc.hidden=false;sky.style.display='';}
@@ -14179,12 +14262,12 @@ var WIP=[
  ['A storyteller cannot withdraw from their own phone yet.','Their storyteller page holds an erase code. The code works only in the class archive, which runs on the computer of the podcast producer (your instructor).','They tell you or the podcast producer, in any way they choose. The withdrawal is applied within 72 hours.'],
  ['\u201cErase everything kept\u201d leaves some things on your device.','It erases your recording, cuts, notes and consent answers. It leaves the class episodes in the New Season room, your settings and your podcast list. It never touches files you exported.','Delete class episodes one at a time in the New Season room, with \u201cDelete from this device\u201d. Delete exported files by hand.'],
  ['A listen-until date is optional.','A class episode with a date is removed from a device the next time Booth Light opens there after that date. An episode with no date stays until someone deletes it.','At step 6, ask your storyteller for a date. Type it in the \u201cuntil\u201d box beside their level.'],
- ['\u201cAll tools\u201d does not wait for a yes.','The path opens each tool only after the storyteller agrees. The All tools page opens every tool at any time.','Use the path for your interview.'],
- ['Two tools are not in the path.','Add more recordings to the end. Change the voice of a recording.','They are under All tools, in the section \u201cCut and save\u201d.'],
- ['The path has one look.','The path is always dark. Larger text and Easy read change it. Cream, High contrast, Low glare and Colour-safe do not change it yet.','Those looks work under All tools.'],
+ ['\u201cAll tools\u201d does not wait for a yes.','Process Consent opens each tool only after the storyteller agrees. The All tools page opens every tool at any time.','Use Process Consent for your interview.'],
+ ['Two tools are not in Process Consent.','Add more recordings to the end. Change the voice of a recording.','They are under All tools, in the section \u201cCut and save\u201d.'],
+ ['Process Consent has one look.','Process Consent is always dark. Larger text and Easy read change it. Cream, High contrast, Low glare and Colour-safe do not change it yet.','Those looks work under All tools.'],
  ['The room chalkboard is not tested with real phones or a real Wi-Fi router.','On a Wi-Fi of its own, the class computer can hand Booth Light to the phones in the room and show each listening note on the class screen as it is added. That was tested on one computer with a test browser. It was not tested with real phones, a real Wi-Fi router or Safari.','If a note does not reach the class screen, the phone still has it. Press \u201cShow my notes as a code\u201d and hold the phone in front of the class camera.'],
  ['The class camera is not tested on every phone and computer.','Listening notes reach the class screen as a code that a camera reads. That was tested with Chrome on a computer and with made-up camera pictures. It was not tested with every phone, camera and light.','If the camera does not read a code: press Bigger squares, turn the screen brightness up, or hold the phone closer. \u201cOpen notes files\u201d and reading the notes aloud still work.'],
- ['The path is not tested with a screen reader on a real phone.','Each step is labelled for VoiceOver and TalkBack. That was checked on a computer only.','If a step is not read aloud, tell the podcast producer.']];
+ ['Process Consent is not tested with a screen reader on a real phone.','Each step is labelled for VoiceOver and TalkBack. That was checked on a computer only.','If a step is not read aloud, tell the podcast producer.']];
 var wip=document.createElement('div');wip.className='pt-wipbox';wip.hidden=true;wip.setAttribute('role','dialog');wip.setAttribute('aria-modal','true');wip.setAttribute('aria-label','Still being built');
 wip.innerHTML='<div class="pt-wipin"><h1 class="pt-wiph" tabindex="-1">Still being built</h1><div class="pt-wiplead">Booth Light is not finished. Each box names one part that is not ready, and says what to do until it is.</div><div class="pt-wipgrid">'+WIP.map(function(w,i){return '<section class="pt-wipc" style="--k:'+COL[i%8]+'"><div class="pt-wipn" aria-hidden="true">'+(i+1)+'</div><div class="pt-wipt" role="heading" aria-level="2">'+esc(w[0])+'</div><div class="pt-wipp"><span class="pt-wipk">What happens today?</span>'+esc(w[1])+'</div><div class="pt-wipu"><span class="pt-wipk">What to do until then?</span>'+esc(w[2])+'</div></section>';}).join('')+'</div><div class="pt-wipfoot"></div><div class="pt-wipnav"><button type="button" class="pt-wipclose"></button></div></div>';
 el.appendChild(wip);
@@ -14208,11 +14291,11 @@ function show(n,focus){cur=n;var s=ST[n-1];el.style.setProperty('--c',COL[n-1]);
  var h='<div class="pt-tag">'+esc(s.tag)+'</div><div class="pt-say"></div><div class="pt-btns">';
  if(n===2)h+='<button type="button" class="pt-b" data-r="yes">Yes, they agreed</button><button type="button" class="pt-b" data-r="no">No</button>';
  else (s.ans||[]).forEach(function(a){h+='<button type="button" class="pt-b" data-a="'+a[0]+'">'+esc(a[1])+'</button>';});
- ask.innerHTML=h+'</div><div class="pt-st" aria-live="polite"></div><button type="button" class="pt-outside">I did this step outside Booth Light</button>';
+ ask.innerHTML=h+'</div><div class="pt-st" aria-live="polite"></div><button type="button" class="pt-outside">I did this step outside Booth Light</button>'+(n===7?'<button type="button" class="pt-outside pt-notes7">\u270e Open Listening notes</button>':'');
  var d='<div class="pt-tag"></div>';
  if(n===1)d+='<textarea class="pt-ta" placeholder="Write your questions here." aria-label="Your questions"></textarea>';
  else if(n===2)d+='<div class="pt-idle"><select class="pt-sel" aria-label="Voice"></select><button type="button" class="pt-t" data-r="rec">\u25cf Record</button></div><div class="pt-live" hidden><div class="pt-time" aria-label="Recording time"></div><div class="pt-line"></div><div class="pt-two"><button type="button" class="pt-o" data-r="main">Pause</button><button type="button" class="pt-t" data-r="stop">\u25a0 Stop</button></div><div class="pt-note"><input class="pt-in1" type="text" placeholder="A note, saved with the time" aria-label="A note, saved with the time"><button type="button" class="pt-plus" data-r="note" aria-label="Save the note">+</button></div></div><div class="pt-got" hidden><div class="pt-line"></div><button type="button" class="pt-o" data-r="again">Record more, or again</button></div>';
- else if(s.press)d+='<button type="button" class="pt-t" data-press="'+s.press[1]+'">'+esc(s.press[0])+'</button>';
+ else if(s.press)d+='<button type="button" class="pt-t" data-press="'+s.press[1]+'">'+esc(s.press[0])+'</button>'+(n===8?'<div class="pt-warn"><b>Withdrawing.</b> The erase code works only in the class archive on the podcast producer\u2019s computer. A storyteller cannot yet erase from their own phone: they tell the episode producer or the podcast producer, and the withdrawal is applied within 72 hours.</div>':'');
  else d+='<div class="pt-line" style="margin:0;text-align:left">The tool for this step shows here.</div>';
  doc.innerHTML=d;
  if(n===1){var ta=doc.querySelector('.pt-ta'),bf=document.getElementById('before');if(bf){ta.value=bf.value;ta.oninput=function(){bf.value=ta.value;bf.dispatchEvent(new Event('input',{bubbles:true}));};}}
@@ -14220,7 +14303,7 @@ function show(n,focus){cur=n;var s=ST[n-1];el.style.setProperty('--c',COL[n-1]);
  if(!s.embed)unembed();
  el.scrollTop=0;tick();paintSky();if(focus)q('.pt-name').focus();}
 var again=false,touched=false;
-function tick(){if(el.classList.contains('off'))return;
+function tick(){if(el.classList.contains('off')||el.classList.contains('bl126-closed'))return;
  if(!touched){var r0=reach();if(r0!==cur){show(r0,false);return;}}   /* a saved interview can come back a moment after the page opens: until the student touches the path, it follows the first step not done */
  var n=cur,s=ST[n-1],st=sa(n),r=reach();
  el.querySelectorAll('.pt-d').forEach(function(b){var i=Number(b.dataset.go),dn=done(i)&&i!==n;b.className='pt-d'+(i===n?' now':dn?' done':'');b.textContent=dn?'\u2713':i;b.disabled=false;if(i===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
@@ -14237,14 +14320,15 @@ function tick(){if(el.classList.contains('off'))return;
   if(showgot)gt.querySelector('.pt-line').textContent='\u2713 Recorded \u00b7 '+R.time()+' \u00b7 saved on your device';
  }else{say.textContent=s.say;
   ask.querySelectorAll('[data-a]').forEach(function(b){var a=b.dataset.a;b.classList.toggle('on',a==='sent'?!!st.sent:st.a===a);});
-  var cs=C.state(n);txt=n===6?cs[0]:(st.a||st.sent?cs[0]:'');
+  var cs=C.state(n);txt=n===6?cs[0]:(st.a||st.sent?cs[0]:'');if(st.a==='no'||st.a==='withdrew')txt+=' '+NOL[n];
   open=n===1?st.a==='yes':n===3?st.a==='yes':n===4?(st.a==='changes'):n===5?st.a==='yes':n===6?true:n===7?st.a==='yes':!!st.a;}
  if(stl.textContent!==txt)stl.textContent=txt;stl.hidden=!txt;
  if(s.embed){if(open)embed(s.embed);else if(tool.dataset.id)unembed();}
  doc.classList.toggle('locked',!open);var tg=open?(n===2&&recording()?'Recording':'Then do'):'Then do \u00b7 opens after a yes';if(n===4&&!open)tg='Then do \u00b7 opens if they ask for changes';if(tag.textContent!==tg)tag.textContent=tg;
  doc.querySelectorAll('button,textarea,select,input').forEach(function(x){if(!open)x.setAttribute('tabindex','-1');else x.removeAttribute('tabindex');});
- var nx=q('.pt-next');nx.disabled=n===8||!done(n);var nl=n===8?'The path ends here':'Next: '+(n+1)+' '+ST[n].sign+' '+ST[n].name;if(nx.textContent!==nl)nx.textContent=nl;
+ var nx=q('.pt-next');nx.disabled=n===8||!done(n);var nl=n===8?'Process Consent ends here':'Next: '+(n+1)+' '+ST[n].sign+' '+ST[n].name;if(nx.textContent!==nl)nx.textContent=nl;
  q('.pt-back').style.visibility=n===1?'hidden':'visible';}
+var NOL={1:'Stop here. Do not record. Nothing was recorded.',3:'Do not edit. Keep the raw recording as it is, or erase it at step 8.',4:'They withdrew. Do not use the recording. Erase it at step 8.',5:'Make the changes they ask for, then ask again.',7:'Do not play it. Ask them where it may play now, at step 6.'};
 function tools(hash){unembed();el.classList.add('off');document.documentElement.classList.remove('bl-pathon');document.documentElement.classList.add('bl-tools');
  if(hash){var a=document.querySelector('a[href="'+hash+'"]');if(a)a.click();else{var t=document.querySelector(hash);if(t)t.scrollIntoView();}}}
 function path(){touched=true;document.documentElement.classList.remove('bl-tools');document.documentElement.classList.add('bl-pathon');el.classList.remove('off');show(cur,true);}
@@ -14254,6 +14338,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('pt-back')){if(cur>1)show(cur-1,true);return;}
  if(b.classList.contains('pt-all')){tools('');return;}
  if(b.classList.contains('pt-wip')){wipOpen();return;}
+ if(b.classList.contains('pt-notes7')){lnOpen();return;}
  if(b.classList.contains('pt-wipclose')){wipClose();return;}
  if(b.classList.contains('ln-code')){ncOpen();return;}
  if(b.classList.contains('nc-back')){ncClose();return;}
@@ -14315,7 +14400,59 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
 el.addEventListener('keydown',function(e){if(e.key==='Escape'&&!cn.hidden){cnClose();return;}if(e.key==='Escape'&&!qr.hidden){qrClose();return;}if(e.key==='Escape'&&!ln.hidden){lnClose();return;}if(e.key==='Enter'&&!e.shiftKey&&e.target.classList&&e.target.classList.contains('ln-text')){e.preventDefault();lnAdd();return;}if(e.key==='Escape'&&!shelf.hidden){shelfClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('bls-pw')){e.preventDefault();sunlock(e.target.value);return;}if(e.key==='Escape'&&!sheet.hidden){sheetClose();return;}if(e.key==='Escape'&&!wip.hidden){wipClose();return;}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('pt-in1')){e.preventDefault();var p=doc.querySelector('[data-r="note"]');if(p)p.click();}});
 back.addEventListener('click',path);
 var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(!el.classList.contains('off'))paintSky();},150);});
+window.blPath={show:show,unembed:unembed,cur:function(){return cur;},lnOpen:lnOpen,shelfOpen:shelfOpen,wipOpen:wipOpen};
 document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(tick,300);drawSheets(true);setInterval(drawSheets,500);
 })();</script>
+<script id="bl-126-late">/* BUILD 126: the six pills on the red booth open one section at a time under the title. Process Consent (the eight steps) is open when the page opens. */
+(function(){var P=window.blPath,B=window.__BL,host=document.getElementById('bl126-host'),el=document.getElementById('bl-path');if(!P||!host||!el)return;
+ var H=document.documentElement;H.classList.add('bl126');H.classList.remove('bl-pathon');
+ if(location.protocol==='file:'||/^(127\.0\.0\.1|localhost)$/.test(location.hostname))H.classList.add('bl-mine');
+ var slot=document.getElementById('bl126-consent-slot');if(slot)slot.appendChild(el);
+ var PILLS=[['start','1 · Before you start','#F2C66A','bl126-start',1],['consent','2 · Process Consent · 8 steps','#FFD60A','bl-path',1],['notes','3 · Listening notes','#F5A742','',0],['seasons','4 · Seasons','#5CE8F5','bl126-seasons',0],['tools','5 · Tools','#C9B3F5','bl126-tools',0],['sov','6 · Sovereign tech','#B6F23C','bl126-sov',0]];
+ var openKey='';
+ function pillsHTML(){return PILLS.map(function(p){return '<button type="button" class="bl126-p'+(p[4]?' wide':'')+'" data-pill="'+p[0]+'" style="--k:'+p[2]+'"'+(p[3]?' aria-controls="'+p[3]+'"':'')+' aria-expanded="false">'+p[1]+'</button>';}).join('');}
+ function pills(){var box=document.querySelector('.bo-buttons');if(!box)return;if(!box.querySelector('.bl126-p')){box.innerHTML=pillsHTML();box.setAttribute('aria-label','Sections of Booth Light');box.classList.add('bl126-pills');}mark();}
+ function mark(){document.querySelectorAll('.bl126-p').forEach(function(b){var on=b.dataset.pill===openKey;b.classList.toggle('on',on);if(b.hasAttribute('aria-controls'))b.setAttribute('aria-expanded',on?'true':'false');});}
+ function hideAll(){['bl126-start','bl126-seasons','bl126-tools','bl126-sov'].forEach(function(id){var s=document.getElementById(id);if(s)s.hidden=true;});if(!el.classList.contains('bl126-closed')){el.classList.add('bl126-closed');try{P.unembed();}catch(e){}}}
+ function open(key,focus){if(key==='notes'){P.lnOpen();return;}
+  if(key===openKey){hideAll();openKey='';mark();return;}
+  hideAll();openKey=key;mark();var tgt;
+  if(key==='consent'){el.classList.remove('bl126-closed');P.show(P.cur(),false);tgt=el;}
+  else{tgt=document.getElementById(PILLS.filter(function(p){return p[0]===key;})[0][3]);if(tgt)tgt.hidden=false;}
+  if(tgt&&focus){tgt.scrollIntoView({block:'start'});var f=tgt.querySelector(key==='consent'?'.pt-name':'.bl126-h');if(f)f.focus({preventScroll:true});}
+  window.dispatchEvent(new Event('resize'));}
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-pill],[data-bl126]');if(!b)return;
+  if(b.dataset.pill){e.preventDefault();open(b.dataset.pill,true);return;}
+  var a=b.dataset.bl126;if(a==='shelf'){P.shelfOpen();return;}
+  if(a==='other'){open('tools',true);var x=[].filter.call(document.querySelectorAll('#more .mo-bar button, #more .mo-bar a'),function(y){return /other podcasts/i.test(y.textContent);})[0];if(x)x.click();return;}
+  if(a==='stpage'){var s=document.querySelector('.st-navpill,[data-st-open]');if(s)s.click();return;}
+  if(a==='season'){open('seasons',true);return;}},true);
+ /* the Listening Room card: Spotify is gone; it opens the seasons */
+ var sp=document.getElementById('lr-top');if(sp){var w=document.createElement('div');w.className='bl126-row bl126-lr';w.innerHTML='<button type="button" class="bl126-b" data-bl126="shelf" style="--k:#5CE8F5">♪ Earlier seasons</button><button type="button" class="bl126-b" data-bl126="season" style="--k:#FFD60A">New Season</button>';sp.parentNode.replaceChild(w,sp);}
+ /* step 6: one card per level, for the person chosen above them */
+ var SIX=[['Nowhere else','Only the episode producer who recorded it hears it, on the device they recorded with.',1],['On the podcast producer’s computer','The episode producer and the podcast producer (the instructor).',2],['In the classroom, during listening sessions','The class and the podcast producer.',8],['At the Listening Party','The class, the podcast producer, and guests the class curates.',13],['Future feature','Cannot be chosen this quarter.',0]];
+ var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80','#D2B8FF'],who=-1,sig='';
+ var lv=document.createElement('div');lv.id='bl126-lv';var grid=document.querySelector('#who .w5-grid');if(grid)grid.parentNode.insertBefore(lv,grid);
+ function fmt(iso){var d=new Date(iso);if(isNaN(d))return '';var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return d.getDate()+' '+M[d.getMonth()]+' '+d.getFullYear()+', '+(d.getHours()<10?'0':'')+d.getHours()+':'+(d.getMinutes()<10?'0':'')+d.getMinutes();}
+ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function name(v){return v.code?v.code+' · '+v.role:v.role;}
+ function draw(){var V=(B&&B.S&&B.S.voices)||[];if(!V.length)return;if(who<0||who>=V.length){who=0;for(var i=0;i<V.length;i++)if(!V[i].level&&!V[i].withdrawn){who=i;break;}}
+  var s=JSON.stringify([who,V.map(function(v){return [v.code,v.role,v.level,v.when,v.withdrawn];})]);if(s===sig)return;sig=s;var v=V[who];
+  var h='<div class="b6-q">Pick a person, then the place where their voice may be heard.</div><div class="b6-who" role="group" aria-label="Whose choice">';
+  V.forEach(function(x,i){h+='<button type="button" class="b6-p'+(i===who?' on':'')+'" data-b6who="'+i+'" aria-pressed="'+(i===who)+'">'+esc(name(x))+(x.withdrawn?' · withdrew':x.level?' · level '+x.level:'')+'</button>';});
+  h+='</div><div class="b6-cards" role="group" aria-label="Where may it play">';
+  SIX.forEach(function(c,i){var n=i+1,pick=v.level===n,off=n===5||!!v.withdrawn,dots='';for(var k=0;k<c[2];k++)dots+='<i></i>';
+   h+='<div class="b6-c'+(pick?' pick':'')+(n===5?' ff':'')+'" style="--k:'+KC[i]+'"><div class="b6-n">LEVEL '+n+(pick&&v.when?' · CHOSEN '+esc(fmt(v.when)).toUpperCase():'')+'</div><div class="b6-t">'+c[0]+'</div><div class="b6-d" aria-hidden="true">'+dots+'</div><div class="b6-s">'+c[1]+'</div>'
+   +'<button type="button" class="b6-go" data-b6lv="'+n+'"'+(off?' disabled':'')+'>'+(n===5?'Not available':pick?'✓ Chosen':'Choose level '+n)+'</button></div>';});
+  h+='</div><p class="b6-note">Each person chooses for themselves. The episode is heard at the lowest level anyone chose. Until everyone chooses, it stays at level 1.</p>'
+  +'<div class="b6-warn"><b>Withdrawing.</b> The erase code works only in the class archive on the podcast producer’s computer. A storyteller cannot yet erase from their own phone: they tell the episode producer or the podcast producer, and the withdrawal is applied within 72 hours.</div>';
+  lv.innerHTML=h;}
+ lv.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;
+  if(b.dataset.b6who){who=Number(b.dataset.b6who);sig='';draw();return;}
+  if(b.dataset.b6lv){var n=Number(b.dataset.b6lv),row=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n+'"]');if(row)row.click();sig='';setTimeout(draw,60);}});
+ pills();setInterval(function(){pills();draw();},500);draw();
+ open('consent',false);window.blOpen=open;
+})();
+</script>
 </body>
 </html>
