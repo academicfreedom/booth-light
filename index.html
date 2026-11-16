@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 131</title>
+<title>Booth Light · BUILD 132</title>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 131 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 132 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1539,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 131</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 132</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2750,7 +2750,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 131 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 132 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3539,6 +3539,55 @@ html body #bl-path .pt-lnbox .bl131-fol{display:none;margin:10px 0 0;font:700 15
 html body #bl-path .pt-lnbox.bl131-follow .bl131-fol{display:block}
 html body #bl-path .pt-lnbox.bl131-follow .ln-go,html body #bl-path .pt-lnbox.bl131-follow .ln-adj{display:none !important}
 #st-page .st-pill[data-st="booth"]{--c:#8A5410 !important}
+
+/* BUILD 132: the storyteller's screens, and the code at step 6 */
+#bl132-st{position:fixed;inset:0;z-index:100000;overflow:auto;background:#070C22;color:#FFD60A;padding:max(18px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+#bl132-st .b132-in2{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+#bl132-st .b132-k{margin:0;font:800 14px/1.3 ui-monospace,Menlo,monospace;letter-spacing:.1em;color:#FFD60A;display:flex;justify-content:space-between}
+#bl132-st h2{margin:0;font:700 clamp(28px,6vw,40px)/1.15 Georgia,serif;color:#FFD60A;outline:none}
+#bl132-st .b132-box{border:3px solid #FFD60A;border-radius:22px;padding:16px 18px;font:600 18px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl132-st .b132-box p{margin:0 0 8px}
+#bl132-st button{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:14px 20px;min-height:52px;text-align:center;font:800 19px/1.25 Helvetica,Arial,sans-serif}
+#bl132-st button:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+#bl132-st .b132-g{background:#B6F23C;color:#070C22}
+#bl132-st .b132-r{box-shadow:inset 0 0 0 3px #FF7A59;color:#FF9E80}
+#bl132-st .b132-y{background:#FFD60A;color:#070C22}
+#bl132-st .b132-y[disabled]{opacity:.45;cursor:default}
+#bl132-st .b132-y2{box-shadow:inset 0 0 0 3px #FFD60A;color:#FFD60A}
+#bl132-st .b132-b{box-shadow:inset 0 0 0 3px #5CE8F5;color:#5CE8F5}
+#bl132-st .b132-f{margin:0;text-align:center;font:700 16px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl132-st .b132-cards{display:flex;flex-direction:column;gap:10px}
+#bl132-st .b132-c{display:flex;flex-direction:column;gap:4px;text-align:left;border-radius:22px;padding:12px 16px;box-shadow:inset 0 0 0 3px var(--k);color:var(--k)}
+#bl132-st .b132-c.on{background:var(--k);color:#070C22}
+#bl132-st .b132-c.ff{box-shadow:none;border:3px dashed var(--k);opacity:.8;cursor:default}
+#bl132-st .b132-ct{font:800 18px/1.25 Helvetica,Arial,sans-serif}
+#bl132-st .b132-cs{font:600 15px/1.35 Helvetica,Arial,sans-serif}
+#bl132-st .b132-rec{background:#FFD60A;color:#070C22;border-radius:22px;padding:16px 18px;font:600 16px Helvetica,Arial,sans-serif}
+#bl132-st .b132-rec p{margin:0 0 6px}
+#bl132-st .b132-big{font:700 22px/1.3 Georgia,serif}
+#bl132-st .b132-code{background:#FFD60A;color:#070C22;border-radius:22px;padding:14px;text-align:center;font:800 clamp(40px,11vw,56px)/1 ui-monospace,Menlo,monospace;letter-spacing:.12em}
+#bl132-st .b132-x{position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));min-height:44px;padding:8px 16px;font-size:16px;box-shadow:inset 0 0 0 2px #FFD60A;color:#FFD60A;background:#070C22}
+html body #bl126-lv .b6-cp{font:600 14px/1.35 Helvetica,Arial,sans-serif !important;color:#FFF4C2 !important;margin:6px 0 0}
+html body #bl126-lv .b132-6{margin:16px 0 0;padding:14px;border:3px solid #FFD60A;border-radius:22px;display:flex;flex-direction:column;gap:10px}
+html body #bl126-lv .b132-lab{display:flex;flex-direction:column;gap:6px;font:800 17px Helvetica,Arial,sans-serif !important;color:#FFD60A !important}
+html body #bl126-lv .b132-in{font:800 26px ui-monospace,Menlo,monospace !important;letter-spacing:.12em;text-transform:uppercase;color:#FFD60A !important;background:#070C22 !important;border:3px solid #FFD60A !important;border-radius:16px;padding:10px 14px;max-width:260px}
+html body #bl126-lv .b132-6 button,html body #bl-path .b132-hand{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:12px 18px;min-height:48px;font:800 17px Helvetica,Arial,sans-serif;align-self:flex-start}
+html body #bl126-lv .b132-hand,html body #bl-path .b132-hand{background:#5CE8F5 !important;color:#070C22 !important}
+html body #bl-path .b132-hand.b132-alt{background:#070C22 !important;box-shadow:inset 0 0 0 3px #5CE8F5;color:#5CE8F5 !important}
+html body #bl126-lv .b132-chk{background:#FFD60A !important;color:#070C22 !important}
+html body #bl126-lv .b132-ok{background:#B6F23C !important;color:#070C22 !important}
+html body #bl126-lv .b132-no{box-shadow:inset 0 0 0 3px #FF7A59;color:#FF9E80 !important}
+html body #bl126-lv .b132-6 button:focus-visible,html body #bl-path .b132-hand:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+html body #bl126-lv .b132-sent{background:#FFD60A;border-radius:18px;padding:12px 16px;color:#070C22 !important}
+html body #bl126-lv .b132-sent p{margin:0;color:#070C22 !important}
+html body #bl126-lv .b132-big{font:700 21px/1.3 Georgia,serif !important}
+html body #bl126-lv .b132-show,html body #bl126-lv .b132-bad{margin:0;font:700 16px/1.4 Helvetica,Arial,sans-serif !important;color:#FFD60A !important}
+html body #bl126-lv .b132-bad{color:#FF9E80 !important}
+html body #bl-path .b132-s1{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+html body #bl-path .b132-lk{flex-basis:100%;margin:0;font:700 16px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl132-st .b132-k{padding-right:96px}
+html body #bl126-lv .b132-6 .b132-no{box-shadow:inset 0 0 0 3px #FF7A59 !important}
+html body #bl-path .b132-lk{background:#070C22;border-radius:16px;padding:10px 14px}
 </style>
 <script id="bl-126-early">/* BUILD 126-128: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
 (function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
@@ -14403,6 +14452,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  /* step 6: one card per level, for the person chosen above them */
  var SIX=[['Nowhere else','Only the episode producer who recorded it hears it, on the device they recorded with.',1],['On the podcast producer’s computer','The episode producer and the podcast producer (the instructor).',2],['In the classroom, during listening sessions','The class and the podcast producer.',8],['At the Listening Party','The class, the podcast producer, and guests the class curates.',13],['Future feature','Cannot be chosen this quarter.',0]];
  var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80','#D2B8FF'],who=-1,sig='';
+ var COP=['the episode producer\u2019s device only.','the episode producer\u2019s device and the podcast producer\u2019s computer.','the episode producer\u2019s device and the podcast producer\u2019s computer.','the episode producer\u2019s device and the podcast producer\u2019s computer.',''];
  var lv=document.createElement('div');lv.id='bl126-lv';var grid=document.querySelector('#who .w5-grid');if(grid)grid.parentNode.insertBefore(lv,grid);
  function fmt(iso){var d=new Date(iso);if(isNaN(d))return '';var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return d.getDate()+' '+M[d.getMonth()]+' '+d.getFullYear()+', '+(d.getHours()<10?'0':'')+d.getHours()+':'+(d.getMinutes()<10?'0':'')+d.getMinutes();}
  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -14414,11 +14464,19 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
   h+='</div><div class="b6-cards" role="group" aria-label="Where may it play">';
   SIX.forEach(function(c,i){var n=i+1,pick=v.level===n,off=n===5||!!v.withdrawn,dots='';for(var k=0;k<c[2];k++)dots+='<i></i>';
    h+='<div class="b6-c'+(pick?' pick':'')+(n===5?' ff':'')+'" style="--k:'+KC[i]+'"><div class="b6-n">LEVEL '+n+(pick&&v.when?' · CHOSEN '+esc(fmt(v.when)).toUpperCase():'')+'</div><div class="b6-t">'+c[0]+'</div><div class="b6-d" aria-hidden="true">'+dots+'</div><div class="b6-s">'+c[1]+'</div>'
-   +'<button type="button" class="b6-go" data-b6lv="'+n+'"'+(off?' disabled':'')+'>'+(n===5?'Not available':pick?'✓ Chosen':'Choose level '+n)+'</button></div>';});
+   +(COP[i]?'<div class="b6-cp"><b>Copies kept on:</b> '+COP[i]+'</div>':'')+'<button type="button" class="b6-go" data-b6lv="'+n+'"'+(off?' disabled':'')+'>'+(n===5?'Not available':pick?'✓ Chosen':'Choose level '+n)+'</button></div>';});
   h+='</div><p class="b6-note">Each person chooses for themselves. The episode is heard at the lowest level anyone chose. Until everyone chooses, it stays at level 1.</p>'
+  +'<div class="b132-6"><button type="button" class="b132-hand" data-b132hand="6">Hand this phone to '+esc(v.code||v.role)+' so they choose</button>'
+  +'<label class="b132-lab">Did they choose on their own phone? Type their code<input class="b132-in" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="K7Q-2MX" value="'+esc(PEND||'')+'"></label><button type="button" class="b132-chk">Check the code</button><div class="b132-res" aria-live="polite"></div></div>'
   +'<div class="b6-warn"><b>Withdrawing.</b> The erase code works only in the class archive on the podcast producer’s computer. A storyteller cannot yet erase from their own phone: they tell the episode producer or the podcast producer, and the withdrawal is applied within 72 hours.</div>';
   lv.innerHTML=h;}
  lv.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;
+  if(b.dataset.b132hand){stOpenS(6);return;}
+  if(b.classList.contains('b132-chk')){var inp=lv.querySelector('.b132-in'),r=lv.querySelector('.b132-res'),d=dec(inp.value),V=(B&&B.S&&B.S.voices)||[],v=V[who]||{};
+   if(!d){r.innerHTML='<p class="b132-bad">This code is not right. Check each character, then try again.</p>';return;}
+   r.innerHTML='<div class="b132-sent"><p class="b132-big">'+esc(v.code||v.role||'They')+' chose level '+d.lv+': '+SIX[d.lv-1][0].replace(/,.*/,'')+'.</p><p>Chosen '+esc(fmt(d.when))+'</p></div><p class="b132-show">Show this sentence to the storyteller. Press the button only when they say it is right.</p><button type="button" class="b132-ok" data-b132lv="'+d.lv+'">They say it is right</button><button type="button" class="b132-no">It is wrong: type the code again</button>';return;}
+  if(b.classList.contains('b132-ok')){var n2=Number(b.dataset.b132lv),row2=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n2+'"]');if(row2)row2.click();PEND='';sig='';setTimeout(draw,60);return;}
+  if(b.classList.contains('b132-no')){var i2=lv.querySelector('.b132-in');i2.value='';lv.querySelector('.b132-res').innerHTML='';i2.focus();return;}
   if(b.dataset.b6who){who=Number(b.dataset.b6who);sig='';draw();return;}
   if(b.dataset.b6lv){var n=Number(b.dataset.b6lv),row=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n+'"]');if(row)row.click();sig='';setTimeout(draw,60);}});
  /* BUILD 128: Other Podcasts lives in The Listening Room, after the new season. Only the instructor's own copy shows Add, Edit and Delete. */
@@ -14482,6 +14540,48 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
     else if(t.classList.contains('bl131-pod')&&t.value){setEp(t.value);}});}
   var ep=bx.querySelector('.bls-lab');if(ep)bx.insertBefore(srcBox,ep);else bx.appendChild(srcBox);srcPaint();}
  if(lnBox){srcMount();new MutationObserver(srcMount).observe(lnBox,{childList:true,subtree:false});new MutationObserver(srcMount).observe(lnBox.firstChild,{childList:true});setInterval(function(){if(!lnBox.hidden&&(SRC==='rec'||SRC==='page')){var n=srcBox&&srcBox.querySelector('.bl131-now');if(n)n.textContent=SRC==='rec'?'Recording timer now: '+(recSecs()===null?'not found':lnFmt2(recSecs())):(lastMedia?'Following the last episode played on this page: now at '+lnFmt2(lastMedia.currentTime||0):'No episode has been played on this page yet.');}},500);}
+ /* BUILD 132: the storyteller's own screens. Three screens: agree to be recorded, choose where the story may play, the receipt.
+    The receipt carries a six-character code: five characters hold only the level and the minute it was chosen, the sixth is a check that catches any one mistyped character and any two swapped neighbours.
+    Nothing is sent: the code travels by being shown and typed. */
+ var PEND='',AL='23456789ABCDEFGHJKLMNPQRSTUVWXYZ',E0=Date.UTC(2026,0,1);
+ function enc(lvn,ms){var m=Math.max(0,Math.min((1<<22)-1,Math.floor((ms-E0)/60000))),x=((lvn&7)*4194304)+m,d=[],s='',c=0;for(var i=0;i<5;i++){d.unshift(x%32);x=Math.floor(x/32);}for(i=0;i<5;i++)c+=(i+1)*d[i];c%=31;d.push(c);d.forEach(function(k){s+=AL[k];});return s.slice(0,3)+'-'+s.slice(3);}
+ function dec(s){s=String(s||'').toUpperCase().replace(/[^0-9A-Z]/g,'').replace(/O/g,'0').replace(/I/g,'1');if(s.length!==6)return null;var d=[],c=0,x=0;for(var i=0;i<6;i++){var k=AL.indexOf(s[i]);if(k<0)return null;d.push(k);}for(i=0;i<5;i++){c+=(i+1)*d[i];x=x*32+d[i];}if(c%31!==d[5])return null;var lvn=Math.floor(x/4194304),m=x%4194304;if(lvn<1||lvn>4)return null;return {lv:lvn,when:new Date(E0+m*60000).toISOString()};}
+ window.blStoryCode={enc:enc,dec:dec};
+ var SO=null,SM={from:0,lv:0,code:'',when:0};
+ function prodName(){var V=(B&&B.S&&B.S.voices)||[];for(var i=0;i<V.length;i++)if(/episode producer/i.test(V[i].role||'')&&V[i].code)return V[i].code;return '';}
+ function sHead(n){return '<p class="b132-k">I AM A STORYTELLER <span>'+n+' OF 3</span></p>';}
+ function sScreen(n){var h='',pn=prodName()||'The episode producer',own=SM.from===0;
+  if(n===1){var qs=document.querySelector('#bl-path .pt-ta');qs=qs&&qs.value.trim();
+   h=sHead(1)+'<h2>Do you agree to be recorded?</h2><div class="b132-box"><p>'+(own?'An episode producer in the class':esc(pn))+' would like to record an interview with you for The Listening Room, the class podcast.</p>'+(qs?'<p><b>The questions:</b> '+esc(qs)+'</p>':'')+'</div>'
+    +'<button type="button" class="b132-g" data-s="yes">Yes, record me</button><button type="button" class="b132-r" data-s="no">No</button><p class="b132-f">You can say no now, and you can change your mind later. Saying no ends here: nothing is recorded.</p>';}
+  else if(n===2){h=sHead(2)+'<h2>Where may your story play?</h2><div class="b132-cards">';
+   SIX.forEach(function(c,i){var k=i+1,ff=k===5;h+='<button type="button" class="b132-c'+(SM.lv===k?' on':'')+(ff?' ff':'')+'" style="--k:'+KC[i]+'" data-l="'+k+'"'+(ff?' disabled':'')+' aria-pressed="'+(SM.lv===k)+'"><span class="b132-ct">'+(SM.lv===k?'✓ ':'')+k+' · '+c[0]+'</span><span class="b132-cs">'+(ff?'Cannot be chosen this quarter.':'Who hears it: '+c[1])+'</span>'+(COP[i]?'<span class="b132-cs">Copies kept on: '+COP[i]+'</span>':'')+'</button>';});
+   h+='</div><button type="button" class="b132-y" data-s="pick"'+(SM.lv?'':' disabled')+'>'+(SM.lv?'Choose level '+SM.lv:'Choose a level above')+'</button>';}
+  else if(n===3){var d=new Date(SM.when);h=sHead(3)+'<h2>Your receipt</h2><div class="b132-rec"><p class="b132-big">You agreed to be recorded, and chose level '+SM.lv+': '+SIX[SM.lv-1][0].replace(/,.*/,'')+'.</p><p>'+esc(fmt(d.toISOString()))+'</p></div>'
+   +(own?'<p class="b132-f">Show this code to the episode producer. They type it in at step 6 of Process Consent.</p>':'<p class="b132-f">This code is filled in for the episode producer at step 6.</p>')
+   +'<div class="b132-code" aria-label="Your code">'+SM.code+'</div>'
+   +(own?'<button type="button" class="b132-b" data-s="save">Save my receipt</button>':'<button type="button" class="b132-g" data-s="back">Give the phone back</button>')
+   +'<button type="button" class="b132-y2" data-s="change">Change my choice</button><p class="b132-f">Erasing from your own phone is not built yet. To withdraw, tell the episode producer or the podcast producer: it is done within 72 hours.</p>';}
+  else if(n===4){h='<h2>Nothing is recorded</h2><div class="b132-box"><p>You said no. That ends it: no recording is made.</p></div>'+(own?'<p class="b132-f">You can close this page.</p>':'<button type="button" class="b132-g" data-s="backno">Give the phone back</button>');}
+  SO.querySelector('.b132-in2').innerHTML=h;var f=SO.querySelector('h2');if(f){f.setAttribute('tabindex','-1');f.focus();}}
+ function stOpenS(from){SM={from:from,lv:0,code:'',when:0};if(!SO){SO=document.createElement('div');SO.id='bl132-st';SO.setAttribute('role','dialog');SO.setAttribute('aria-modal','true');SO.setAttribute('aria-label','Storyteller');SO.innerHTML='<div class="b132-in2"></div><button type="button" class="b132-x" data-s="close">Close</button>';document.body.appendChild(SO);
+   SO.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;var s=b.dataset.s,l=b.dataset.l;
+    if(l){SM.lv=Number(l);sScreen(2);return;}
+    if(s==='yes'){sScreen(2);}
+    else if(s==='no'){if(SM.from===1){var nb=document.querySelector('#bl-path .pt-b[data-a="no"]');if(nb)nb.click();}sScreen(4);}
+    else if(s==='pick'){SM.when=Date.now();SM.code=enc(SM.lv,SM.when);sScreen(3);}
+    else if(s==='change'){sScreen(2);}
+    else if(s==='save'){var d=new Date(SM.when),t='Booth Light: my consent receipt\n\nI agreed to be recorded, and chose level '+SM.lv+': '+SIX[SM.lv-1][0]+'.\nChosen: '+fmt(d.toISOString())+'\nCode: '+SM.code+'\n\nWho hears it: '+SIX[SM.lv-1][1]+'\nCopies kept on: '+COP[SM.lv-1]+'\n\nTo withdraw, tell the episode producer or the podcast producer: it is done within 72 hours.\n',a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));a.download='booth-light-my-consent-receipt-'+d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+'.txt';document.body.appendChild(a);a.click();a.remove();}
+    else if(s==='back'){PEND=SM.code;if(SM.from===1){var yb=document.querySelector('#bl-path .pt-b[data-a="yes"]');if(yb)yb.click();}sig='';draw();SO.hidden=true;H.style.overflow='';}
+    else if(s==='backno'||s==='close'){SO.hidden=true;H.style.overflow='';}});}
+  SO.hidden=false;H.style.overflow='hidden';sScreen(from===6?2:1);}
+ window.blStoryteller=stOpenS;
+ /* step 1 gets two buttons: hand this phone to the storyteller, or show the link for their own phone */
+ setInterval(function(){var po=document.querySelector('#bl-path .pt-outside'),ask=po&&po.parentNode;if(!ask||!P||P.cur()!==1||ask.querySelector('.b132-s1'))return;var w=document.createElement('div');w.className='b132-s1';
+  w.innerHTML='<button type="button" class="b132-hand" data-b132s1="hand">Hand this phone to the storyteller</button><button type="button" class="b132-hand b132-alt" data-b132s1="link">The storyteller uses their own phone</button><p class="b132-lk" hidden>On their own phone, the storyteller opens <b>academicfreedom.github.io/booth-light/#storyteller</b>. At the end they show you a six-character code; you type it in at step 6.</p>';ask.appendChild(w);},400);
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-b132s1]');if(!b)return;if(b.dataset.b132s1==='hand')stOpenS(1);else{var p=b.parentNode.querySelector('.b132-lk');if(p)p.hidden=!p.hidden;}});
+ if(/^#storyteller$/i.test(location.hash))setTimeout(function(){stOpenS(0);},300);
+ addEventListener('hashchange',function(){if(/^#storyteller$/i.test(location.hash))stOpenS(0);});
  if(MINE||!swOff('h-consent'))open('consent',false);window.blOpen=open;
 })();
 </script>
