@@ -3,9 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booth Light · BUILD 132</title>
+<meta name="referrer" content="no-referrer">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQNK5GCMsYeYmui35aNcH9zSFIkZWjQrw61BFhkCvNYc0PNJLzvZr+4w8I3UNXdD11SVXzHbL4/MJk6ddgKmo2QA=">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Booth Light · BUILD 133</title>
+<script id="bl133-tabs">(function(){
+ /* BUILD 133: one working tab per device. A second tab of Booth Light on the same device pauses itself, so it cannot change or erase the recording and notes the first tab holds. */
+ window.blOtherTab=function(){return new Promise(function(res){var done=false;function fin(v){if(!done){done=true;res(v);}}
+  function bc(){try{var c=new BroadcastChannel('booth-light-device'),heard=false;c.onmessage=function(e){if(e.data==='here')heard=true;};c.postMessage('who');setTimeout(function(){fin(heard);if(!heard){window.__blBC=c;c.onmessage=function(e){if(e.data==='who')c.postMessage('here');};}else c.close();},400);}catch(e){fin(false);}}
+  try{if(navigator.locks&&navigator.locks.request){navigator.locks.request('booth-light-device',{ifAvailable:true},function(l){if(!l){fin(true);return;}fin(false);return new Promise(function(){});}).catch(bc);return;}}catch(e){}
+  bc();});};
+ window.blTab2Notice=function(){if(document.getElementById('bl133-tab2'))return;var d=document.createElement('div');d.id='bl133-tab2';d.setAttribute('role','alertdialog');d.setAttribute('aria-modal','true');d.setAttribute('aria-labelledby','bl133-tab2-h');
+  d.innerHTML='<div class="t2-in"><h2 id="bl133-tab2-h">Booth Light is already open in another tab</h2><p>This tab is paused. It cannot change or erase the recording and notes kept on this device.</p><p>Go back to the other tab. To use this tab instead, close the other tab, then press Reload.</p><button type="button" class="t2-b">Reload this tab</button></div>';
+  document.body.appendChild(d);document.documentElement.style.overflow='hidden';d.querySelector('.t2-b').onclick=function(){location.reload();};d.querySelector('h2').setAttribute('tabindex','-1');d.querySelector('h2').focus();};
+})();
+</script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 132 · 2026-11-15 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 133 · 2026-11-16 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1539,7 +1553,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 132</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 133</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1712,7 +1726,7 @@ $('keep-toggle').onclick=()=>setKeep(!keepOn());
 $('dev-yes').onclick=()=>{setKeep(true);$('labwarn').classList.add('hide');$('dev-msg').textContent='Keep my work is ON.';};
 $('dev-no').onclick=()=>{setKeep(false);$('labwarn').classList.remove('hide');$('where').classList.remove('hide');$('where-btn').textContent='Close';$('dev-msg').textContent='Keep my work is OFF. Before you leave: export your files to a USB stick, then press Erase everything kept.';};
 let autoT=null;
-function touch(){dirty=true;clearTimeout(autoT);autoT=setTimeout(()=>kvPut('state',JSON.parse(JSON.stringify(S))),1200);status();}
+function touch(){if(window.__blSTM){status();return;}dirty=true;clearTimeout(autoT);autoT=setTimeout(()=>kvPut('state',JSON.parse(JSON.stringify(S))),1200);status();}
 $('erase').onclick=async()=>{if(!confirm('Erase your recording, cuts, notes and consent answers from your device? Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported. This cannot be undone.'))return;stopPlay();await clearAll();try{localStorage.removeItem('bl-listen-notes-v1');}catch(e){}S=fresh();REC=null;markA=markB=null;history=[];dirty=false;renderAll();$('save-state').textContent='Erased: your recording, cuts, notes and consent answers. Not erased: class episodes in the New Season room, your settings, your podcast list, and files you exported.';};
 
 /* ---------- recording: sound to disk as it arrives ---------- */
@@ -1976,8 +1990,8 @@ $('inum').oninput=()=>{S.interview=num();touch();};
   renderKeep();renderAll();
   if(!('mediaDevices' in navigator)){$('rec-msg').textContent='This browser cannot record here. Open an audio file instead, or use a current Chrome, Edge, Firefox or Safari.';$('recbtn').disabled=true;}
   if(location.protocol==='file:'&&/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg/.test(navigator.userAgent))showBar('Safari gives a page opened from a file very little disk storage, sometimes none. Open this file in Chrome, Edge or Firefox to record.');
-  const here=await kvGet('rec');const st=await kvGet('state');
-  if(here&&here.n){if(keepOn()){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent='Resumed the recording kept on this device ('+fmt(dur())+').';}
+  window.__blSTM=/^#storyteller/i.test(location.hash);if(!window.__blSTM&&window.blOtherTab&&await window.blOtherTab()){window.__blSTM=true;window.blTab2Notice();}const here=await kvGet('rec');const st=await kvGet('state');
+  if(here&&here.n&&!window.__blSTM){if(keepOn()){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent='Resumed the recording kept on this device ('+fmt(dur())+').';}
     else{if(confirm('A recording from the last session is on this device ('+fmt(here.total/here.sr)+'). Recover it now? Cancel erases it.')){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent='Recovered. Export or save a version now; with Keep my work OFF it is offered only once.';}else{await clearAll();}}}
 })();
 
@@ -2750,7 +2764,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 132 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 133 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3588,6 +3602,38 @@ html body #bl-path .b132-lk{flex-basis:100%;margin:0;font:700 16px/1.45 Helvetic
 #bl132-st .b132-k{padding-right:96px}
 html body #bl126-lv .b132-6 .b132-no{box-shadow:inset 0 0 0 3px #FF7A59 !important}
 html body #bl-path .b132-lk{background:#070C22;border-radius:16px;padding:10px 14px}
+/* BUILD 133: hearing the edit, approving the final cut, the hand-in file */
+#bl132-st .b133-aud{width:100%;min-height:54px}
+#bl132-st .b133-pick{display:flex;flex-direction:column;gap:8px;border-radius:22px;padding:16px 18px;background:#5CE8F5;color:#070C22;font:800 19px Helvetica,Arial,sans-serif;cursor:pointer}
+#bl132-st .b133-pick input{font:600 16px Helvetica,Arial,sans-serif;color:#070C22}
+#bl132-st .b133-lab{display:flex;flex-direction:column;gap:8px;font:700 17px/1.4 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl132-st .b133-fb{font:600 18px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A;background:#070C22;border:3px solid #FFD60A;border-radius:18px;padding:12px 14px;resize:vertical}
+#bl132-st .b133-bad{color:#FF9E80}
+#bl132-st .b133-code{font-size:clamp(34px,9.5vw,52px)}
+html body #bl-path .b133-lk p,html body #bl126-lv .b133-lk p{margin:0 0 8px;font:700 16px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A !important}
+html body #bl-path .b133-sv,html body #bl126-lv .b133-6 .b133-sv,html body #bl126-lv .b132-6 .b133-sv{all:unset;box-sizing:border-box;cursor:pointer;display:inline-block;margin:6px 0 0;border-radius:999px;padding:10px 16px;min-height:44px;font:800 16px Helvetica,Arial,sans-serif;background:#FFD60A !important;color:#070C22 !important}
+html body #bl-path .b133-sv:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+html body #bl126-lv .b133-hi{margin:16px 0 0;padding:14px;border:3px solid #B6F23C;border-radius:22px;display:flex;flex-direction:column;gap:10px}
+html body #bl126-lv .b133-hi p{margin:0;font:600 16px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A !important}
+html body #bl126-lv .b133-hi .b133-h{font:700 21px/1.3 Georgia,serif !important;color:#B6F23C !important}
+html body #bl126-lv .b133-mk,html body #bl126-lv .b133-pg{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:12px 18px;min-height:48px;font:800 17px Helvetica,Arial,sans-serif;align-self:flex-start;background:#B6F23C !important;color:#070C22 !important}
+html body #bl126-lv .b133-pg{padding:8px 14px;min-height:40px;font-size:15px;margin:6px 0 0;display:inline-block;background:#C9B3F5 !important}
+html body #bl126-lv .b133-mk:focus-visible,html body #bl126-lv .b133-pg:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+html body .b133-hr .b133-bad{margin:0;font:700 16px/1.45 Helvetica,Arial,sans-serif !important;color:#FF9E80 !important}
+html body .b133-hr .b133-ul{margin:6px 0 0;padding-left:20px;font:600 16px/1.45 Helvetica,Arial,sans-serif;color:#FFD60A !important}
+html body .b133-hr .b133-ul li{margin:0 0 8px;color:#FFD60A !important}
+html body .b133-hr .b133-ok{background:#B6F23C;border-radius:18px;padding:12px 16px}
+html body .b133-hr .b133-ok p{margin:0 0 6px;color:#070C22 !important;font:600 16px/1.45 Helvetica,Arial,sans-serif}
+html body #b133-xhr{margin:10px 0 0;background:#070C22;border-radius:18px;padding:12px 14px}
+#bl132-st .b133-mode{margin:-8px 0 0;font:800 14px/1.3 ui-monospace,Menlo,monospace;letter-spacing:.1em;color:#5CE8F5}
+html body #bl126-lv .b133-hi .b133-ok p,html body #b133-xhr .b133-ok p{color:#070C22 !important}
+html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
+#bl133-tab2{position:fixed;inset:0;z-index:2147483000;background:#070C22;display:flex;align-items:center;justify-content:center;padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
+#bl133-tab2 .t2-in{max-width:560px;display:flex;flex-direction:column;gap:14px}
+#bl133-tab2 h2{margin:0;font:700 clamp(26px,6vw,36px)/1.2 Georgia,serif;color:#FFD60A}
+#bl133-tab2 p{margin:0;font:600 18px/1.5 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl133-tab2 .t2-b{all:unset;box-sizing:border-box;cursor:pointer;align-self:flex-start;border-radius:999px;padding:14px 22px;min-height:52px;font:800 18px Helvetica,Arial,sans-serif;background:#B6F23C;color:#070C22}
+#bl133-tab2 .t2-b:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
 </style>
 <script id="bl-126-early">/* BUILD 126-128: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
 (function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
@@ -14466,16 +14512,25 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
    h+='<div class="b6-c'+(pick?' pick':'')+(n===5?' ff':'')+'" style="--k:'+KC[i]+'"><div class="b6-n">LEVEL '+n+(pick&&v.when?' · CHOSEN '+esc(fmt(v.when)).toUpperCase():'')+'</div><div class="b6-t">'+c[0]+'</div><div class="b6-d" aria-hidden="true">'+dots+'</div><div class="b6-s">'+c[1]+'</div>'
    +(COP[i]?'<div class="b6-cp"><b>Copies kept on:</b> '+COP[i]+'</div>':'')+'<button type="button" class="b6-go" data-b6lv="'+n+'"'+(off?' disabled':'')+'>'+(n===5?'Not available':pick?'✓ Chosen':'Choose level '+n)+'</button></div>';});
   h+='</div><p class="b6-note">Each person chooses for themselves. The episode is heard at the lowest level anyone chose. Until everyone chooses, it stays at level 1.</p>'
-  +'<div class="b132-6"><button type="button" class="b132-hand" data-b132hand="6">Hand this phone to '+esc(v.code||v.role)+' so they choose</button>'
-  +'<label class="b132-lab">Did they choose on their own phone? Type their code<input class="b132-in" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="K7Q-2MX" value="'+esc(PEND||'')+'"></label><button type="button" class="b132-chk">Check the code</button><div class="b132-res" aria-live="polite"></div></div>'
+  +'<div class="b132-6"><button type="button" class="b132-hand" data-b133="hand6">Hand this phone to '+esc(v.code||v.role)+' to hear the final cut and choose</button><button type="button" class="b132-hand b132-alt" data-b133="link6">'+esc(v.code||v.role)+' uses their own phone</button>'
+  +'<div class="b132-lk b133-lk" hidden><p>1. Save the final cut on this device: <button type="button" class="b133-sv" data-b133="save">Save the final cut (.wav)</button></p><p>2. Send that file to '+esc(v.code||v.role)+' by AirDrop, a USB stick, or in person. It is a copy of their voice: send it only to them.</p><p>3. On their phone they open <b>academicfreedom.github.io/booth-light/#storyteller-final</b>, choose the file, and get an eight-character code.</p></div>'
+  +'<label class="b132-lab">Type their code<input class="b132-in" maxlength="10" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="AB3D-7KQ2" value="'+esc(PEND||'')+'"></label><button type="button" class="b132-chk">Check the code</button><div class="b132-res" aria-live="polite"></div></div>'
+  +'<div class="b133-hi"><p class="b133-h">Hand in to the podcast producer</p><p>One file holds the final cut, your notes, the Liner Notes and each storyteller\u2019s Final Cut code. Send it by AirDrop or a USB stick. The podcast producer adds it to the class archive on their computer. At level 1 there is nothing to hand in.</p><button type="button" class="b133-mk" data-b133="handin">Make the hand-in file</button><div class="b133-hr" aria-live="polite"></div></div>'
   +'<div class="b6-warn"><b>Withdrawing.</b> The erase code works only in the class archive on the podcast producer’s computer. A storyteller cannot yet erase from their own phone: they tell the episode producer or the podcast producer, and the withdrawal is applied within 72 hours.</div>';
   lv.innerHTML=h;}
  lv.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;
-  if(b.dataset.b132hand){stOpenS(6);return;}
-  if(b.classList.contains('b132-chk')){var inp=lv.querySelector('.b132-in'),r=lv.querySelector('.b132-res'),d=dec(inp.value),V=(B&&B.S&&B.S.voices)||[],v=V[who]||{};
+  if(b.classList.contains('b132-chk')){var inp=lv.querySelector('.b132-in'),r=lv.querySelector('.b132-res'),raw=String(inp.value||'').toUpperCase().replace(/[^0-9A-Z]/g,''),V=(B&&B.S&&B.S.voices)||[],v=V[who]||{},nm=esc(v.code||v.role||'They');
+   if(raw.length===8){var d8=dec8(inp.value);if(!d8){r.innerHTML='<p class="b132-bad">This code is not right. Check each character, then try again.</p>';return;}
+    r.innerHTML='<p class="b132-show">Checking the code against the final cut on this device\u2026</p>';
+    cutBlob().then(function(c){if(!c.blob){r.innerHTML='<p class="b132-bad">'+esc(c.err||'There is no recording on this device.')+'</p>';return;}
+     if(d8.tie!==tie(c.fp)){r.innerHTML='<p class="b132-bad">This code was given for a different cut. The cut changed after '+nm+' agreed to it, or they heard another file. Send them this final cut and ask again.</p>';return;}
+     r.innerHTML='<div class="b132-sent"><p class="b132-big">'+nm+' agreed to the final cut and chose level '+d8.lv+': '+SIX[d8.lv-1][0]+'.</p><p>Chosen '+esc(fmt(d8.when))+'</p></div><p class="b132-show">Show this sentence to the storyteller. Press the button only when they say it is right.</p><button type="button" class="b132-ok" data-b132lv="'+d8.lv+'" data-b133code="'+esc(inp.value.trim().toUpperCase())+'" data-b133fp="'+c.fp+'">They say it is right</button><button type="button" class="b132-no">It is wrong: type the code again</button>';});return;}
+   var d=dec(inp.value);
    if(!d){r.innerHTML='<p class="b132-bad">This code is not right. Check each character, then try again.</p>';return;}
-   r.innerHTML='<div class="b132-sent"><p class="b132-big">'+esc(v.code||v.role||'They')+' chose level '+d.lv+': '+SIX[d.lv-1][0].replace(/,.*/,'')+'.</p><p>Chosen '+esc(fmt(d.when))+'</p></div><p class="b132-show">Show this sentence to the storyteller. Press the button only when they say it is right.</p><button type="button" class="b132-ok" data-b132lv="'+d.lv+'">They say it is right</button><button type="button" class="b132-no">It is wrong: type the code again</button>';return;}
-  if(b.classList.contains('b132-ok')){var n2=Number(b.dataset.b132lv),row2=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n2+'"]');if(row2)row2.click();PEND='';sig='';setTimeout(draw,60);return;}
+   r.innerHTML='<div class="b132-sent"><p class="b132-big">'+nm+' chose level '+d.lv+': '+SIX[d.lv-1][0].replace(/,.*/,'')+'.</p><p>Chosen '+esc(fmt(d.when))+'</p></div><p class="b132-show">This is the code from step 1. At step 6 they also hear the final cut: hand them the phone, or ask for the eight-character code from their own phone.</p><button type="button" class="b132-ok" data-b132lv="'+d.lv+'" data-b132c6="'+esc(inp.value.trim().toUpperCase())+'">They say it is right</button><button type="button" class="b132-no">It is wrong: type the code again</button>';return;}
+  if(b.classList.contains('b132-ok')){var n2=Number(b.dataset.b132lv),row2=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n2+'"]');if(row2)row2.click();
+   var vv=((B&&B.S&&B.S.voices)||[])[who];if(vv){if(b.dataset.b133code){vv.finalCode=b.dataset.b133code;vv.finalAt=new Date().toISOString();B.S.cutFp=b.dataset.b133fp;}else if(b.dataset.b132c6){vv.consentCode=b.dataset.b132c6;}B.touch();}
+   PEND='';sig='';setTimeout(draw,60);return;}
   if(b.classList.contains('b132-no')){var i2=lv.querySelector('.b132-in');i2.value='';lv.querySelector('.b132-res').innerHTML='';i2.focus();return;}
   if(b.dataset.b6who){who=Number(b.dataset.b6who);sig='';draw();return;}
   if(b.dataset.b6lv){var n=Number(b.dataset.b6lv),row=document.querySelector('#voices .voice[data-i="'+who+'"] .lv[data-n="'+n+'"]');if(row)row.click();sig='';setTimeout(draw,60);}});
@@ -14582,6 +14637,129 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-b132s1]');if(!b)return;if(b.dataset.b132s1==='hand')stOpenS(1);else{var p=b.parentNode.querySelector('.b132-lk');if(p)p.hidden=!p.hidden;}});
  if(/^#storyteller$/i.test(location.hash))setTimeout(function(){stOpenS(0);},300);
  addEventListener('hashchange',function(){if(/^#storyteller$/i.test(location.hash))stOpenS(0);});
+ /* BUILD 133: the storyteller hears the edit (step 4) and approves the Final Cut (step 6).
+    The Final Cut code has eight characters: five hold the level and the minute, two come from the cut's fingerprint (SHA-256), the last is a check.
+    A cut changed after the storyteller approved it no longer matches their code. Nothing is sent: the code is shown and typed.
+    The hand-in file (.boothin) holds the final cut, the notes, the Liner Notes and the codes. The archive on the podcast producer's computer checks the codes again. */
+ function tie(fp){var n=parseInt(String(fp||'').slice(0,8),16);return isNaN(n)?0:n%1024;}
+ function enc8(lvn,ms,fp){var m=Math.max(0,Math.min((1<<22)-1,Math.floor((ms-E0)/60000))),x=((lvn&7)*4194304)+m,d=[],s='',c=0,i,t=tie(fp);for(i=0;i<5;i++){d.unshift(x%32);x=Math.floor(x/32);}d.push(Math.floor(t/32),t%32);for(i=0;i<7;i++)c+=(i+1)*d[i];d.push(c%31);d.forEach(function(k){s+=AL[k];});return s.slice(0,4)+'-'+s.slice(4);}
+ function dec8(s){s=String(s||'').toUpperCase().replace(/[^0-9A-Z]/g,'').replace(/O/g,'0').replace(/I/g,'1');if(s.length!==8)return null;var d=[],c=0,x=0,i;for(i=0;i<8;i++){var k=AL.indexOf(s[i]);if(k<0)return null;d.push(k);}for(i=0;i<7;i++)c+=(i+1)*d[i];if(c%31!==d[7])return null;for(i=0;i<5;i++)x=x*32+d[i];var lvn=Math.floor(x/4194304),m=x%4194304;if(lvn<1||lvn>4)return null;return {lv:lvn,when:new Date(E0+m*60000).toISOString(),tie:d[5]*32+d[6]};}
+ window.blStoryCode.enc8=enc8;window.blStoryCode.dec8=dec8;window.blStoryCode.tie=tie;
+ function hex(b){return Array.from(new Uint8Array(b)).map(function(x){return (x<16?'0':'')+x.toString(16);}).join('');}
+ function sha(blob){return blob.arrayBuffer().then(function(ab){return crypto.subtle.digest('SHA-256',ab);}).then(hex);}
+ function day(d){d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+ function saveFile(blob,name){var a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download=name;a.dataset.b133='1';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},60000);}
+ /* Ask one of the app's own export buttons for its file, without saving it to Downloads. The app lists every export it saves; this file was not saved, so its line is taken out again. */
+ var OC0=URL.createObjectURL,AK0=HTMLAnchorElement.prototype.click,OA0=window.alert,GQ=Promise.resolve();
+ function grab(id,re){var p=GQ.then(function(){return grab1(id,re);});GQ=p.then(function(){},function(){});return p;}
+ function grab1(id,re){return new Promise(function(res){var b=document.getElementById(id);if(!b)return res({err:'This copy of Booth Light has no '+id+' button.'});
+  var got=null,gname='',oc=OC0,ak=AK0,oa=OA0,xm=document.getElementById('x-msg'),xt=xm?xm.textContent:'',t0=new Date().toISOString(),done=false;
+  function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;window.alert=oa;if(xm)xm.textContent=xt;}
+  function fin(v){if(done)return;done=true;clearInterval(iv);restore();res(v);}
+  URL.createObjectURL=function(x){if(!got&&x&&re.test(x.type||''))got=x;return oc.call(URL,x);};
+  HTMLAnchorElement.prototype.click=function(){if(got&&this.download&&!this.dataset.b133){gname=this.download;return;}return ak.call(this);};
+  window.alert=function(m){fin({err:String(m)});};
+  var iv=setInterval(function(){if(got&&gname){var nm=gname;fin({blob:got,name:nm});var k=0,cl=setInterval(function(){var X=B&&B.S&&B.S.exports;if(Array.isArray(X)){var n=X.length;B.S.exports=X.filter(function(e){return !(e&&e.name===nm&&e.at>=t0);});if(B.S.exports.length!==n){B.touch();clearInterval(cl);}}if(xm&&xm.textContent.indexOf(nm)>=0)xm.textContent=xt;if(++k>120)clearInterval(cl);},500);}},100);
+  setTimeout(function(){fin(got?{blob:got,name:gname}:{err:'Booth Light could not make the file in time.'});},180000);
+  try{b.click();}catch(e){fin({err:String(e&&e.message||e)});}});}
+ function cutBlob(){return grab('x-edit',/audio\/wav/).then(function(r){if(!r.blob)return r;return sha(r.blob).then(function(fp){r.fp=fp;return r;});});}
+ var TM={},KEYW={review:'HEARING THE EDIT',final:'APPROVING THE FINAL CUT'};
+ function tHead(n,of){return '<p class="b132-k">I AM A STORYTELLER <span>'+n+' OF '+of+'</span></p><p class="b133-mode">'+KEYW[TM.mode]+'</p>';}
+ function player(){return TM.url?'<audio class="b133-aud" controls preload="metadata" src="'+TM.url+'"></audio>':'';}
+ function tScreen(k){var h='',own=TM.from===0,rv=TM.mode==='review',of=rv?2:3;
+  if(k==='wait')h='<h2>Getting the '+(rv?'edited interview':'final cut')+' ready</h2><div class="b132-box"><p>Booth Light is putting the cuts together on this device. A long interview takes a few seconds.</p></div>';
+  else if(k==='none')h='<h2>There is nothing to hear yet</h2><div class="b132-box"><p>'+esc(TM.err||'Record or open a recording first.')+'</p></div><button type="button" class="b132-g" data-s="t-close">Give the phone back</button>';
+  else if(k==='pick')h=tHead(1,of)+'<h2>Choose the '+(rv?'edited interview':'final cut')+'</h2><div class="b132-box"><p>The episode producer sent you a sound file (.wav). Choose it here.</p></div><label class="b133-pick">Choose the file<input type="file" accept="audio/*,.wav" class="b133-file"></label>'+(TM.err?'<p class="b132-f b133-bad">'+esc(TM.err)+'</p>':'')+'<p class="b132-f">The file plays on this phone only. Booth Light does not send it anywhere and does not store it (no IndexedDB, localStorage or cookies).</p>';
+  else if(k==='r1')h=tHead(own?1:1,of)+'<h2>Listen to the edited interview</h2>'+player()+'<label class="b133-lab">What would you change? Write the minute and what to change, or leave it empty.<textarea class="b133-fb" rows="5" placeholder="At 4:10, please take out the name of my street.">'+esc(TM.fb||'')+'</textarea></label>'
+   +'<button type="button" class="b132-g" data-s="r-ok">It is right as it is</button><button type="button" class="b132-y" data-s="r-ch">I want changes</button><button type="button" class="b132-r" data-s="r-wd">I want to withdraw</button><p class="b132-f">You can listen as many times as you want before you answer.</p>';
+  else if(k==='r2'){var said={approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice];
+   h=tHead(2,of)+'<h2>'+(TM.choice==='withdrew'?'You want to withdraw':'Thank you')+'</h2><div class="b132-rec"><p class="b132-big">You said: '+said+'</p>'+(TM.fb?'<p>'+esc(TM.fb).replace(/\n/g,'<br>')+'</p>':'')+'<p>'+esc(fmt(new Date().toISOString()))+'</p></div>'
+   +(TM.choice==='withdrew'?'<p class="b132-f">Tell the episode producer or the podcast producer now. The recording is not used, and the withdrawal is applied within 72 hours.</p>':'')
+   +(own?'<button type="button" class="b132-b" data-s="r-copy">Copy my words</button><button type="button" class="b132-b" data-s="r-save">Save my words</button><p class="b132-f">Send your words to the episode producer the way you choose: in person, a text or an email. Booth Light sends nothing.</p><p class="b133-msg b132-f" aria-live="polite"></p>':'<p class="b132-f">Your words go into the episode producer’s notes (After) on this phone.</p><button type="button" class="b132-g" data-s="r-back">Give the phone back</button>')
+   +'<button type="button" class="b132-y2" data-s="r-again">Change my answer</button>';}
+  else if(k==='f1')h=tHead(1,of)+'<h2>Listen to the final cut</h2>'+player()+'<div class="b132-box"><p>This is the version that may be heard. If you agree to it, you choose where it may play, and you get a code that matches this cut only.</p></div><button type="button" class="b132-g" data-s="f-yes">Yes, I agree to this final cut</button><button type="button" class="b132-y" data-s="f-ch">I want changes</button>';
+  else if(k==='fch')h='<h2>No code is made</h2><div class="b132-box"><p>Tell the episode producer what to change. They make the changes and ask you again, with the new cut.</p></div>'+(own?'<p class="b132-f">You can close this page.</p>':'<button type="button" class="b132-g" data-s="t-close">Give the phone back</button>');
+  else if(k==='f2'){h=tHead(2,of)+'<h2>Where may this final cut play?</h2><div class="b132-cards">';
+   SIX.forEach(function(c,i){var n=i+1,ff=n===5;h+='<button type="button" class="b132-c'+(TM.lv===n?' on':'')+(ff?' ff':'')+'" style="--k:'+KC[i]+'" data-fl="'+n+'"'+(ff?' disabled':'')+' aria-pressed="'+(TM.lv===n)+'"><span class="b132-ct">'+(TM.lv===n?'✓ ':'')+n+' · '+c[0]+'</span><span class="b132-cs">'+(ff?'Cannot be chosen this quarter.':'Who hears it: '+c[1])+'</span>'+(COP[i]?'<span class="b132-cs">Copies kept on: '+COP[i]+'</span>':'')+'</button>';});
+   h+='</div><button type="button" class="b132-y" data-s="f-pick"'+(TM.lv?'':' disabled')+'>'+(TM.lv?'Choose level '+TM.lv:'Choose a level above')+'</button>';}
+  else if(k==='f3')h=tHead(3,of)+'<h2>Your Final Cut receipt</h2><div class="b132-rec"><p class="b132-big">You agreed to this final cut, and chose level '+TM.lv+': '+SIX[TM.lv-1][0]+'.</p><p>'+esc(fmt(new Date(TM.when).toISOString()))+'</p><p>Fingerprint of the cut (SHA-256): '+esc(TM.fp.slice(0,16))+'…</p></div>'
+   +(own?'<p class="b132-f">Show this code to the episode producer. They type it in at step 6. It matches this cut only: if the cut changes, they must ask you again.</p>':'<p class="b132-f">This code is filled in for the episode producer at step 6.</p>')
+   +'<div class="b132-code b133-code" aria-label="Your Final Cut code">'+TM.code+'</div>'
+   +(own?'<button type="button" class="b132-b" data-s="f-save">Save my receipt</button>':'<button type="button" class="b132-g" data-s="f-back">Give the phone back</button>')
+   +'<button type="button" class="b132-y2" data-s="f-change">Change my choice</button><p class="b132-f">Erasing from your own phone is not built yet. To withdraw, tell the episode producer or the podcast producer: it is done within 72 hours.</p>';
+  SO.querySelector('.b132-in2').innerHTML=h;var f=SO.querySelector('h2');if(f){f.setAttribute('tabindex','-1');f.focus();}}
+ function mkSOnce(){if(!SO){stOpenS(0);SO.hidden=true;H.style.overflow='';}
+  if(SO.dataset.b133)return;SO.dataset.b133='1';
+  SO.addEventListener('change',function(e){var t=e.target;if(!TM.mode||!t.classList.contains('b133-file')||!t.files||!t.files[0])return;var f=t.files[0];TM.err='';tScreen('wait');
+   sha(f).then(function(fp){if(TM.url)URL.revokeObjectURL(TM.url);TM.blob=f;TM.url=URL.createObjectURL(f);TM.fp=fp;tScreen(TM.mode==='review'?'r1':'f1');},function(){TM.err='This file could not be read. Choose the .wav file the episode producer sent.';tScreen('pick');});});
+  SO.addEventListener('input',function(e){if(e.target.classList.contains('b133-fb'))TM.fb=e.target.value;});
+  SO.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled||!TM.mode)return;var s=b.dataset.s,l=b.dataset.fl;
+   if(l){TM.lv=Number(l);tScreen('f2');return;}
+   if(s==='r-ok'||s==='r-ch'||s==='r-wd'){TM.choice={'r-ok':'approved','r-ch':'changes','r-wd':'withdrew'}[s];tScreen('r2');}
+   else if(s==='r-again'){tScreen('r1');}
+   else if(s==='r-copy'||s==='r-save'){var txt='Booth Light: my answer about the edited interview\n\n'+{approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice]+'\n'+(TM.fb?'\n'+TM.fb+'\n':'')+'\nWritten '+fmt(new Date().toISOString())+'\nFingerprint of the file I heard (SHA-256): '+TM.fp+'\n',m=SO.querySelector('.b133-msg');
+    if(s==='r-save'){saveFile(new Blob([txt],{type:'text/plain'}),'booth-light-my-answer-about-the-edit-'+day()+'.txt');if(m)m.textContent='Saved in this phone’s Downloads folder.';}
+    else{var ok=function(){if(m)m.textContent='Copied. Paste it into the message you send the episode producer.';},no=function(){if(m)m.textContent='This browser did not allow copying. Use Save my words instead.';};try{navigator.clipboard.writeText(txt).then(ok,no);}catch(x){no();}}}
+   else if(s==='r-back'){var a=document.getElementById('after');if(a){a.value=(a.value?a.value+'\n\n':'')+'Storyteller’s answer about the edited interview ('+fmt(new Date().toISOString())+'): '+{approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice]+(TM.fb?'\n'+TM.fb:'');a.dispatchEvent(new Event('input',{bubbles:true}));}
+    var pb=document.querySelector('#bl-path .pt-b[data-a="'+TM.choice+'"]');if(pb)pb.click();tClose();}
+   else if(s==='f-yes'){tScreen('f2');}
+   else if(s==='f-ch'){tScreen('fch');}
+   else if(s==='f-pick'){TM.when=Date.now();TM.code=enc8(TM.lv,TM.when,TM.fp);tScreen('f3');}
+   else if(s==='f-change'){tScreen('f2');}
+   else if(s==='f-save'){var d=new Date(TM.when);saveFile(new Blob(['Booth Light: my Final Cut receipt\n\nI agreed to the final cut, and chose level '+TM.lv+': '+SIX[TM.lv-1][0]+'.\nChosen: '+fmt(d.toISOString())+'\nCode: '+TM.code+'\nFingerprint of the final cut (SHA-256): '+TM.fp+'\n\nWho hears it: '+SIX[TM.lv-1][1]+'\nCopies kept on: '+COP[TM.lv-1]+'\n\nThe code matches this cut only. If the cut changes, the episode producer must ask you again.\nTo withdraw, tell the episode producer or the podcast producer: it is done within 72 hours.\n'],{type:'text/plain'}),'booth-light-my-final-cut-receipt-'+day(d)+'.txt');}
+   else if(s==='f-back'){PEND=TM.code;sig='';draw();tClose();}
+   else if(s==='t-close'||s==='close'){tClose();}});}
+ function tClose(){if(TM.url&&TM.from!==0){URL.revokeObjectURL(TM.url);}TM={};if(SO){SO.hidden=true;H.style.overflow='';}}
+ function stOpenT(mode,from){mkSOnce();if(TM.url)URL.revokeObjectURL(TM.url);TM={mode:mode,from:from,fb:'',lv:0,code:'',fp:'',err:''};SO.hidden=false;H.style.overflow='hidden';
+  if(from===0){tScreen('pick');return;}
+  tScreen('wait');cutBlob().then(function(r){if(!TM.mode)return;if(!r.blob){TM.err=r.err;tScreen('none');return;}TM.blob=r.blob;TM.fp=r.fp;TM.url=URL.createObjectURL(r.blob);
+   if(mode==='final'){var V=(B&&B.S&&B.S.voices)||[],v=V[who];if(v&&v.level)TM.lv=v.level;}tScreen(mode==='review'?'r1':'f1');});}
+ window.blStorytellerT=stOpenT;
+ /* wrap the 132 opener: any 132 screen clears the 133 mode first */
+ var stOpenS0=stOpenS;stOpenS=function(from){TM={};return stOpenS0(from);};window.blStoryteller=stOpenS;
+ /* step 4: hand the phone over to hear the edit, or send the edit to the storyteller's own phone */
+ setInterval(function(){var po=document.querySelector('#bl-path .pt-outside'),ask=po&&po.parentNode;if(!ask||!P||P.cur()!==4||ask.querySelector('.b133-s4'))return;var w=document.createElement('div');w.className='b132-s1 b133-s4';
+  w.innerHTML='<button type="button" class="b132-hand" data-b133="hand4">Hand this phone to the storyteller to hear the edit</button><button type="button" class="b132-hand b132-alt" data-b133="link4">The storyteller listens on their own phone</button><div class="b132-lk b133-lk" hidden><p>1. Save the edited interview on this device: <button type="button" class="b133-sv" data-b133="save">Save the edited interview (.wav)</button></p><p>2. Send that file to the storyteller by AirDrop, a USB stick, or in person. It is a copy of their voice: send it only to them.</p><p>3. On their phone they open <b>academicfreedom.github.io/booth-light/#storyteller-review</b> and choose the file. They tell you what to change, the way they choose.</p></div>';ask.appendChild(w);},400);
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-b133]');if(!b)return;var k=b.dataset.b133;
+  if(k==='hand4')stOpenT('review',4);else if(k==='hand6')stOpenT('final',6);
+  else if(k==='link4'||k==='link6'){var p=b.parentNode.querySelector('.b133-lk');if(p)p.hidden=!p.hidden;}
+  else if(k==='save'){var x=document.getElementById('x-edit');if(x)x.click();}
+  else if(k==='handin'){handIn(b.parentNode.querySelector('.b133-hr'));}});
+ if(/^#storyteller-review$/i.test(location.hash))setTimeout(function(){stOpenT('review',0);},300);
+ if(/^#storyteller-final$/i.test(location.hash))setTimeout(function(){stOpenT('final',0);},300);
+ addEventListener('hashchange',function(){if(/^#storyteller-review$/i.test(location.hash))stOpenT('review',0);else if(/^#storyteller-final$/i.test(location.hash))stOpenT('final',0);});
+ /* the hand-in file */
+ function inum(){var i=document.getElementById('inum');return (String(i&&i.value||'01').trim().replace(/[^0-9A-Za-z-]/g,'')||'01');}
+ function slug(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+ function epName(){var V=(B&&B.S&&B.S.voices)||[];for(var i=0;i<V.length;i++)if(/^(interviewer|student|episode producer)/i.test(V[i].role||'')&&V[i].code)return V[i].code;return '';}
+ function isST(v){return /^storyteller/i.test(v.role||'');}
+ function vname(v){return v.code||v.role||'A voice';}
+ function hiProblems(fp){var V=(B&&B.S&&B.S.voices)||[],p=[];if(!V.length)p.push(['No voices are listed. Add the storyteller at step 6.']);
+  V.forEach(function(v,i){var n=vname(v);
+   if(v.withdrawn){p.push([n+' withdrew consent. Do not hand this recording in. Erase it at step 8.']);return;}
+   if(v.level===1){p.push([n+' chose level 1, Nowhere else. The recording stays on this device. There is nothing to hand in.']);return;}
+   if(!v.level||v.level>4){p.push([n+' has not chosen a level yet. Ask them at step 6.']);return;}
+   if(isST(v)){var d=dec8(v.finalCode);if(!d)p.push([n+' has not approved the final cut. At step 6, hand them the phone, or type the eight-character code from their own phone.']);
+    else if(d.lv!==v.level)p.push([n+'’s level ('+v.level+') is not the level in their Final Cut code ('+d.lv+'). Ask them again at step 6.']);
+    else if(fp&&d.tie!==tie(fp))p.push([n+' approved a different cut. The cut changed after they approved it. Ask them to hear this cut at step 6.']);}
+   if(!v.codeHash)p.push([n+' has no erase-code page yet. The class archive needs one for every voice.',i]);});
+  return p;}
+ function hiShow(out,p){out.innerHTML='<p class="b133-bad">The hand-in file was not made:</p><ul class="b133-ul">'+p.map(function(x){return '<li>'+esc(x[0])+(typeof x[1]==='number'?' <button type="button" class="b133-pg" data-b133pg="'+x[1]+'">Make '+esc(vname(B.S.voices[x[1]]))+'’s erase-code page</button>':'')+'</li>';}).join('')+'</ul>';}
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-b133pg]');if(!b)return;var r=document.querySelector('#voices .voice[data-i="'+b.dataset.b133pg+'"] .v-page');if(r)r.click();});
+ var hiBusy=false;
+ function handIn(out){if(hiBusy)return;var p0=hiProblems('');if(p0.length){hiShow(out,p0);return;}hiBusy=true;out.innerHTML='<p>Putting the final cut together and checking each code…</p>';
+  cutBlob().then(function(c){if(!c.blob)throw new Error(c.err||'There is no recording on this device.');var p=hiProblems(c.fp);if(p.length){hiShow(out,p);return null;}
+   return grab('x-liner',/text\/html/).then(function(l){return (l.blob?l.blob.text():Promise.resolve('')).then(function(lt){
+    var S=JSON.parse(JSON.stringify(B.S)),n=inum(),now=new Date();S.interview=n;S.cutFp=c.fp;
+    var head={kind:'booth-light-hand-in',v:1,build:133,made:now.toISOString(),interview:n,title:'Listening Room interview '+n,audio:{name:'final-cut.wav',type:'audio/wav',size:c.blob.size,sha256:c.fp},notes:S,liner:lt};
+    var hj=new TextEncoder().encode(JSON.stringify(head)),pre='BOOTHIN1\n'+String(hj.length).padStart(10,'0')+'\n',blob=new Blob([pre,hj,c.blob],{type:'application/octet-stream'});
+    var name=(slug(prodName()||epName())||'episode-producer')+'-interview-'+slug(n)+'-hand-in-'+day(now)+'.boothin';saveFile(blob,name);
+    try{if(!Array.isArray(B.S.exports))B.S.exports=[];B.S.exports.push({name:name,size:blob.size,sha:'',at:now.toISOString()});B.touch();}catch(x){}
+    out.innerHTML='<div class="b133-ok"><p><b>Saved '+esc(name)+'</b> ('+Math.max(1,Math.round(blob.size/1048576))+' MB) in this device’s Downloads folder.</p><p>It holds the final cut, your notes (Before, During, After), the Liner Notes and each storyteller’s Final Cut code. It holds codenames, not real names.</p><p>Send it to the podcast producer by AirDrop or a USB stick. When they tell you it is in the class archive, delete it from your Downloads folder.</p></div>';});});})
+  .catch(function(err){out.innerHTML='<p class="b133-bad">The hand-in file was not made: '+esc(err&&err.message||err)+'</p>';}).then(function(){hiBusy=false;});}
+ window.blHandIn=handIn;window.__b133cut=cutBlob;
+ /* the Export panel gets the hand-in button too */
+ (function(){var rec=document.getElementById('x-liner');if(!rec||document.getElementById('x-handin'))return;var b=document.createElement('button');b.className='btn green';b.id='x-handin';b.textContent='Hand-in file (.boothin)';rec.parentNode.appendChild(b);b.addEventListener('click',function(){var m=document.getElementById('x-msg'),o=document.getElementById('b133-xhr');if(!o){o=document.createElement('div');o.id='b133-xhr';o.className='b133-hr';m.parentNode.insertBefore(o,m.nextSibling);}handIn(o);});})();
  if(MINE||!swOff('h-consent'))open('consent',false);window.blOpen=open;
 })();
 </script>
