@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQFtOLVrXknsUr+Z1+Pti2buTft5bER8t/nLfl2Skrt8q774mOZCFGIgYNp952KOpMqPOel22A5mR7BdRrXFf4Ac=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQHEsFH6BFBDIAM11ATHuPAPnI0YdufrwJTNL3h08xBzL9z5Kp2TONBdP7DmHgiI6EcPDG6m+X4l4frH5OBd61QA=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 139</title>
+<title>Booth Light · BUILD 140</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -36,7 +36,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 139 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 140 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1570,7 +1570,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 139</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 140</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1909,7 +1909,7 @@ function stepsTxt(){try{return window.blStepsText?window.blStepsText():'';}catch
 const p2=n=>String(n).padStart(2,'0'),ldate=x=>{const d=new Date(x);return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());},ltime=x=>{const d=new Date(x);return ldate(x)+' '+p2(d.getHours())+':'+p2(d.getMinutes());};
 function ensureVoices(){if(!Array.isArray(S.voices)||!S.voices.length)S.voices=[{role:'Storyteller',code:'',level:0,when:null,withdrawn:null},{role:'Interviewer',code:'',level:0,when:null,withdrawn:null}];S.voices.forEach(v=>{if(v.level===5){v.level=0;v.when=null;}});}
 function voiceLevel(){ensureVoices();const w=S.voices.find(v=>v.withdrawn);if(w)return {kind:'withdrawn',v:w};const open=S.voices.filter(v=>!v.level);if(open.length)return {kind:'open',list:open};return {kind:'level',n:Math.min(...S.voices.map(v=>v.level))};}
-function renderVoices(){ensureVoices();const box=$('voices');if(!box)return;box.innerHTML=S.voices.map((v,i)=>'<div class="voice'+(v.withdrawn?' wd':'')+'" data-i="'+i+'"><span class="v-role">'+esc(v.role)+'</span><input class="v-code" placeholder="Codename, not a real name" value="'+esc(v.code)+'"><span class="v-pick">'+[1,2,3,4,5].map(n=>'<button class="lv'+(v.level===n?' on':'')+'" data-n="'+n+'" title="'+esc(CLINES[n-1])+'">'+n+'</button>').join('')+'</span><label class="v-until">until <input type="date" class="v-until-in" value="'+esc(v.until||'')+'"></label>'+(v.withdrawn?'<span class="v-wdate">Withdrew consent '+esc(ldate(v.withdrawn))+'</span>':'<button class="btn dark v-wd">Withdrew consent</button>')+'<button class="btn violet v-page">'+(v.codeHash?'New ':'')+(/^Student|^Interviewer/.test(v.role)?'episode producer page':/^Storyteller/.test(v.role)?'storyteller page':'erase-code page').replace(/^p|^s|^e/,c=>v.codeHash?c:c.toUpperCase())+'</button>'+(v.codeHash?'<span class="v-made">codes given '+esc(ldate(v.pageMade))+'</span>':'')+(i>1?'<button class="v-x" title="Remove this voice">×</button>':'')+'</div>').join('');
+function renderVoices(){ensureVoices();const box=$('voices');if(!box)return;box.innerHTML=S.voices.map((v,i)=>'<div class="voice'+(v.withdrawn?' wd':'')+'" data-i="'+i+'"><span class="v-role">'+esc(v.role)+'</span><input class="v-code" placeholder="Codename (not a real name)" value="'+esc(v.code)+'"><span class="v-pick">'+[1,2,3,4,5].map(n=>'<button class="lv'+(v.level===n?' on':'')+'" data-n="'+n+'" title="'+esc(CLINES[n-1])+'">'+n+'</button>').join('')+'</span><label class="v-until">Listen until <input type="date" class="v-until-in" value="'+esc(v.until||'')+'"></label>'+(v.withdrawn?'<span class="v-wdate">Withdrew consent '+esc(ldate(v.withdrawn))+'</span>':'<button class="btn dark v-wd">Withdrew consent</button>')+'<button class="btn violet v-page">'+(v.codeHash?'New ':'')+(/^Student|^Interviewer/.test(v.role)?'episode producer page':/^Storyteller/.test(v.role)?'storyteller page':'erase-code page').replace(/^p|^s|^e/,c=>v.codeHash?c:c.toUpperCase())+'</button>'+(v.codeHash?'<span class="v-made">codes given '+esc(ldate(v.pageMade))+'</span>':'')+(i>1?'<button class="v-x" title="Remove this voice">×</button>':'')+'</div>').join('');
 box.querySelectorAll('.voice').forEach(row=>{const v=S.voices[Number(row.dataset.i)];
  row.querySelector('.v-page').onclick=()=>{storytellerPage(Number(row.dataset.i)).catch(e=>say('Storyteller page failed: '+(e&&e.message||e)));};
  row.querySelector('.v-code').oninput=e=>{v.code=e.target.value.slice(0,40);touch();};
@@ -2781,7 +2781,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 139 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 140 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3705,7 +3705,44 @@ html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
 #bl-path .pt-end h3{margin:0 0 6px;font:900 1.35em/1.2 Georgia,'Times New Roman',serif;color:#FFD60A}
 #bl-path .pt-end p{margin:0 0 10px}
 #bl-path .pt-end .pt-x{background:#FFD60A;color:#0B1030}
+
+/* BUILD 140: the people at step 6 as colour cards. Each card takes the colour of the level that person chose (the same colour as the level cards above);
+   smaller pills; the summary under them takes the colour of the level the episode plays at. */
+html.bl126:root body #who #voices{display:flex !important;flex-direction:column;gap:10px !important}
+html.bl126:root body #who #voices .voice{display:flex !important;flex-wrap:wrap;align-items:center;gap:8px !important;padding:12px 14px 12px 16px !important;margin:0 !important;border-radius:18px !important;background:#FFFFFF !important;border:0 !important;border-left:12px solid var(--lvl,#C9CCD9) !important;box-shadow:0 4px 12px rgba(20,24,58,.10) !important;cursor:pointer}
+html.bl126:root body #who #voices .voice.active{box-shadow:0 0 0 3px #14183A,0 6px 16px rgba(20,24,58,.16) !important}
+html.bl126:root body #who #voices .voice .v-role{order:0;min-width:0 !important;font:800 1.08em/1.2 Georgia,'Times New Roman',serif !important;color:#14183A !important}
+html.bl126:root body #who #voices .voice .p140-chip{order:1;display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font:800 .8em/1.25 Helvetica,Arial,sans-serif;background:var(--lvl,transparent);color:#070C22}
+html.bl126:root body #who #voices .voice .p140-chip.none{background:transparent;box-shadow:inset 0 0 0 2px #14183A;color:#14183A}
+html.bl126:root body #who #voices .voice .p140-chip.wd{background:#E8473C;color:#FFFFFF}
+html.bl126:root body #who #voices .voice .w5-badge{display:none !important}
+html.bl126:root body #who #voices .voice .v-x{order:2;margin-left:auto !important;font-size:1.3em;color:#14183A !important;opacity:.7}
+html.bl126:root body #who #voices .voice .v-code{order:3;flex:1 1 100% !important;max-width:none !important;min-height:38px !important;padding:6px 14px !important;border-radius:999px !important;border:2px solid #14183A !important;background:#FFFFFF !important;color:#14183A !important;font:600 .9em Helvetica,Arial,sans-serif !important}
+html.bl126:root body #who #voices .voice .v-until{order:4;margin:0 !important;display:inline-flex;align-items:center;gap:6px;padding:3px 4px 3px 12px;border-radius:999px;background:#EAEFFF;color:#14183A !important;font:800 .78em Helvetica,Arial,sans-serif !important}
+html.bl126:root body #who #voices .voice .v-until input{border:0 !important;border-radius:999px !important;background:#FFFFFF !important;color:#14183A !important;padding:3px 8px !important;min-height:28px !important;font:700 1em Helvetica,Arial,sans-serif !important;width:auto !important}
+html.bl126:root body #who #voices .voice .v-page{order:5;border:0 !important;border-radius:999px !important;background:#D2B8FF !important;color:#070C22 !important;box-shadow:none !important;font:800 .78em Helvetica,Arial,sans-serif !important;padding:6px 12px !important;min-height:32px !important}
+html.bl126:root body #who #voices .voice .v-wd{order:6;border:0 !important;border-radius:999px !important;background:transparent !important;color:#B3261E !important;box-shadow:inset 0 0 0 2px #B3261E !important;font:800 .78em Helvetica,Arial,sans-serif !important;padding:6px 12px !important;min-height:32px !important}
+html.bl126:root body #who #voices .voice .v-wdate{display:none !important;order:6;border-radius:999px;background:#E8473C;color:#FFFFFF !important;font:800 .78em Helvetica,Arial,sans-serif;padding:6px 12px}
+html.bl126:root body #who #voices .voice .v-made{order:7;border-radius:999px;background:#DDF5D2;color:#1F5F2E !important;font:800 .74em Helvetica,Arial,sans-serif !important;padding:5px 10px}
+html.bl126:root body #who #voices .voice.wd{opacity:1 !important}
+html.bl126:root body #who .w5-add{gap:8px !important;margin-top:10px !important}
+html.bl126:root body #who .w5-add .btn{border:0 !important;border-radius:999px !important;color:#070C22 !important;font:800 .82em Helvetica,Arial,sans-serif !important;padding:7px 14px !important;min-height:34px !important;box-shadow:none !important}
+html.bl126:root body #who .w5-add #v-add-s{background:#FF9E80 !important}
+html.bl126:root body #who .w5-add #v-add-i{background:#5CE8F5 !important}
+html.bl126:root body #who #v-sum.cons-sum{margin-top:12px !important;border-radius:18px !important;border:0 !important;padding:12px 16px !important;background:var(--sumc,#E8E1CF) !important;color:#070C22 !important;font:800 .9em/1.4 Helvetica,Arial,sans-serif !important;text-align:left !important;box-shadow:none !important}
+html.bl126:root body #who #v-sum.cons-sum.open{background:#FFFFFF !important;box-shadow:inset 0 0 0 3px #14183A !important}
+html.bl126:root body #who #v-sum.cons-sum.withdrawn{background:#E8473C !important;color:#FFFFFF !important}
 </style>
+<script id="bl-140-people">/* BUILD 140: colour cards for the people at step 6 */
+(function(){var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80','#D2B8FF'],NM=['Nowhere else','On the podcast producer\u2019s computer','In the classroom','At the Listening Party','Future feature'];
+function paint(){var box=document.getElementById('voices');if(!box)return;var low=9;
+ box.querySelectorAll('.voice').forEach(function(r){var on=r.querySelector('.lv.on'),n=on?Number(on.dataset.n):0,wd=r.classList.contains('wd');if(n&&n<low&&!wd)low=n;
+  var c=r.querySelector('.p140-chip');if(!c){c=document.createElement('span');c.className='p140-chip';var ro=r.querySelector('.v-role');if(ro&&ro.nextSibling)r.insertBefore(c,ro.nextSibling);else r.appendChild(c);}
+  var wdd=wd?((r.querySelector('.v-wdate')||{}).textContent||'').replace(/^Withdrew consent\s*/,''):'',t=wd?'Withdrew consent'+(wdd?' \u00b7 '+wdd:''):n?'Level '+n+' \u00b7 '+NM[n-1]:'No level yet',k=wd?'wd':n?'':'none',col=wd?'#E8473C':n?KC[n-1]:'';
+  if(c.textContent!==t)c.textContent=t;if(c.className!=='p140-chip '+k)c.className='p140-chip '+k;
+  if(r.style.getPropertyValue('--lvl')!==col){if(col)r.style.setProperty('--lvl',col);else r.style.removeProperty('--lvl');}});
+ var s=document.getElementById('v-sum');if(s){var sc=low<9?KC[low-1]:'';if(s.style.getPropertyValue('--sumc')!==sc){if(sc)s.style.setProperty('--sumc',sc);else s.style.removeProperty('--sumc');}}}
+setInterval(paint,400);paint();})();</script>
 <script id="bl-137-mic">/* BUILD 137: when the microphone does not open, say why in plain words and what to do, under the Record button. */
 window.blMicHelp=function(e){var n=e&&e.name?e.name:'',ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua),
  inapp=/FBAN|FBAV|Instagram|Line\/|Snapchat|LinkedInApp|GSA\/|MicroMessenger|CanvasStudent|Canvas\//.test(ua)||(ios&&!/Safari\//.test(ua)),
@@ -14520,7 +14557,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 139 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 140 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
