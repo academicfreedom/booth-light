@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQOTq2HWZ3QboMkGeB57ibjzl0i00S31mEZZ/PNdqpmV/1wBb2RJ9R0GaBXe2oFLp1cNio/BPXqRh4eMc6UwsAQ0=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQJaQUUs3i+f+7yf0c8I8/oTa662AjeLLlOqU/ROtY4WtCF+CM7jBhixM6I7qE3xikQXX59xVje69kI6RRBGK/AQ=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 137</title>
+<title>Booth Light · BUILD 138</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -36,7 +36,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 137 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 138 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1570,7 +1570,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 137</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 138</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2781,7 +2781,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 137 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 138 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3689,6 +3689,11 @@ html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
 #bl-path .pt-out2 button{display:block;width:100%;margin:0 0 8px;padding:.8em 1em;min-height:52px;border:0;border-radius:999px;font:900 1em/1.25 Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030;text-align:center;cursor:pointer}
 #bl-path .pt-out2 button.pt-o2x{background:none;color:#FFD60A;box-shadow:inset 0 0 0 3px #FFD60A}
 #bl-path .pt-out2 p{margin:0 0 10px;font:700 .95em/1.4 Helvetica,Arial,sans-serif;color:#FFD60A}
+
+/* BUILD 138: every step takes "done outside Booth Light" in one tap; Next says what is missing; the dots say they jump */
+#bl-path .pt-nav .pt-next.pt-lockd{background:none;box-shadow:inset 0 0 0 3px var(--n);color:var(--n);cursor:pointer}
+#bl-path .pt-ask .pt-b.pt-flash,#bl-path .pt-ask .pt-outside.pt-flash{outline:4px solid #0B1030;outline-offset:3px}
+#bl-path .pt-jump{text-align:center;margin:0;color:#FFD60A;font:700 .9em/1.3 Helvetica,Arial,sans-serif}
 </style>
 <script id="bl-137-mic">/* BUILD 137: when the microphone does not open, say why in plain words and what to do, under the Record button. */
 window.blMicHelp=function(e){var n=e&&e.name?e.name:'',ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua),
@@ -14051,7 +14056,7 @@ function sa(n){return (C.steps()[n]||{});}
 function done(n){var a=sa(n).a;if(n===1||n===3||n===5||n===7)return a==='yes';if(n===2)return (B.S.consent||{}).answer==='yes'&&((!!B.S.rec&&!recording())||!!sa(2).out);   /* done needs the yes; audio opened from a file does not count as a yes */if(n===4)return a==='approved'||a==='changes';if(n===6)return C.state(6)[1]==='yes';return !!a;}
 function reach(){for(var n=1;n<9;n++)if(!done(n))return n;return 8;}
 var cur=reach(),el=document.createElement('div');el.id='bl-path';el.setAttribute('role','region');el.setAttribute('aria-label','Process Consent: eight steps');
-el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-qr">\u25a6 QR code</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button></div><div class="pt-build"></div></div></div>';
+el.innerHTML='<div class="pt-in"><ol class="pt-dots"></ol><p class="pt-jump">Tap a number to jump to that step.</p><div class="pt-tops"><button type="button" class="pt-allsteps">See all 8 steps</button><button type="button" class="pt-allsteps pt-qr">\u25a6 QR code</button></div><div class="pt-where"></div><h1 class="pt-name" tabindex="-1"></h1><div class="pt-cols"><section class="pt-card pt-ask" aria-label="Ask"></section><section class="pt-card pt-do" aria-label="Then do"></section></div><div class="pt-tool"><div class="pt-tooltag">Then do</div><div class="pt-slot"></div></div><div class="pt-sky" aria-hidden="true"></div><div class="pt-nav"><button type="button" class="pt-next"></button><div class="pt-sub"><button type="button" class="pt-s pt-back">\u2190 Back</button><button type="button" class="pt-s pt-wip">Still being built</button></div><div class="pt-build"></div></div></div>';
 document.body.appendChild(el);
 var back=document.createElement('button');back.id='bl-path-back';back.type='button';back.textContent='\u2190 Back to Process Consent';document.body.appendChild(back);
 var q=function(s){return el.querySelector(s);},ask=q('.pt-ask'),doc=q('.pt-do'),sky=q('.pt-sky'),tool=q('.pt-tool'),slot=q('.pt-slot'),home={};
@@ -14448,7 +14453,7 @@ function tick(){if(el.classList.contains('off')||el.classList.contains('bl126-cl
  if(s.embed){if(open)embed(s.embed);else if(tool.dataset.id)unembed();}
  doc.classList.toggle('locked',!open);var tg=open?(n===2&&recording()?'Recording':'Then do'):'Then do \u00b7 opens after a yes';if(n===4&&!open)tg='Then do \u00b7 opens if they ask for changes';if(tag.textContent!==tg)tag.textContent=tg;
  doc.querySelectorAll('button,textarea,select,input').forEach(function(x){if(!open)x.setAttribute('tabindex','-1');else x.removeAttribute('tabindex');});
- var nx=q('.pt-next');nx.disabled=n===8||!done(n);var nl=n===8?'Process Consent ends here':'Next: '+(n+1)+' '+ST[n].sign+' '+ST[n].name;if(nx.textContent!==nl)nx.textContent=nl;
+ var nx=q('.pt-next'),nd=n<8&&!done(n);nx.disabled=n===8;nx.classList.toggle('pt-lockd',nd);nx.setAttribute('aria-disabled',nd?'true':'false');var nl=n===8?'Process Consent ends here':'Next: '+(n+1)+' '+ST[n].sign+' '+ST[n].name;if(nx.textContent!==nl)nx.textContent=nl;
  q('.pt-back').style.visibility=n===1?'hidden':'visible';}
 var NOL={1:'Stop here. Do not record. Nothing was recorded.',3:'Do not edit. Keep the raw recording as it is, or erase it at step 8.',4:'They withdrew. Do not use the recording. Erase it at step 8.',5:'Make the changes they ask for, then ask again.',7:'Do not play it. Ask them where it may play now, at step 6.'};
 var hint='',hintT=0,hintN=0,recTapAt=0,recMsg0='',fileYes=0,fileRec0=null;
@@ -14467,12 +14472,31 @@ function out2Pick(o){var p=ask.querySelector('.pt-out2');if(p)p.remove();if(o===
  if(o==='paper')say2('Marked: they agreed outside Booth Light. Record is open. Ask again once you start, so their answer is also on the recording.');
  else if(o==='file'){fileYes=Date.now()+600000;fileRec0=B.S.rec||null;say2('Marked: recorded outside Booth Light. Choose the audio file. It stays where it is; Booth Light makes a working copy on this device.');openFile();}
  else say2('Marked: they did not agree. Nothing is recorded.');tick();}
+function flash(sel){ask.querySelectorAll(sel).forEach(function(x){x.classList.add('pt-flash');setTimeout(function(){x.classList.remove('pt-flash');},2400);});}
+function nextWhy(){var n=cur,st=sa(n),c=B.S.consent||{},m;
+ if(n===2)m=c.answer==='no'?'They said no, so this step is not done. Process Consent stops here unless they change their mind.':c.answer==='yes'?'Record first (Record, then Stop), or tap \u201cI did this step outside Booth Light\u201d if you recorded elsewhere.':'Answer first: tap \u201cYes, they agreed\u201d and record, or tap \u201cI did this step outside Booth Light\u201d.';
+ else if(n===6)m='Choose each person\u2019s level first, in the tool below, or tap \u201cI did this step outside Booth Light\u201d.';
+ else if(st.a==='no'||st.a==='withdrew')m='Their answer was no, so this step is not done. '+(NOL[n]||'');
+ else if(n===4)m=st.sent?'Answer first: tap \u201cApproved\u201d or \u201cAsked for changes\u201d, or tap \u201cI did this step outside Booth Light\u201d.':'Send the edited interview first and tap \u201cI sent it\u201d, then their answer. Or tap \u201cI did this step outside Booth Light\u201d.';
+ else m='Answer first: tap the storyteller\u2019s answer above, or tap \u201cI did this step outside Booth Light\u201d.';
+ say2(m);flash('.pt-b,.pt-outside');var a=ask.querySelector('.pt-b')||ask;if(a.scrollIntoView)a.scrollIntoView({block:'center'});tick();}
+function out3(){var n=cur,p=ask.querySelector('.pt-out2');if(p){p.remove();return;}p=document.createElement('div');p.className='pt-out2';
+ var h='<h3>Done outside Booth Light. What was the answer?</h3>';
+ if(n===6)h+='<button type="button" data-o3="out">They chose their level outside Booth Light</button>';
+ else (ST[n-1].ans||[]).forEach(function(a){if(n===4&&a[0]==='sent')return;h+='<button type="button" data-o3="'+a[0]+'">'+esc(n===4?'They saw the edited interview: '+a[1].toLowerCase():a[1])+'</button>';});
+ p.innerHTML=h+'<button type="button" class="pt-o2x" data-o3="x">Cancel</button><p>Booth Light writes this into the consent record as \u201cdone outside Booth Light\u201d, with today\u2019s date.</p>';
+ ask.appendChild(p);var f=p.querySelector('button');if(f)f.focus();}
+function out3Pick(a){var n=cur,p=ask.querySelector('.pt-out2');if(p)p.remove();if(a==='x')return;var st=sa(n);
+ if(n===6){if(!st.out){pend[6]=today();fillAnswer(6,'out');}}
+ else{if(n===4&&!st.sent){pend[4]=today();fillAnswer(4,'sent');st=sa(4);}if(!(st.a===a&&st.out)){pend[n]=today();fillAnswer(n,a);}}
+ var lab=n===6?'They chose their level outside Booth Light':((ST[n-1].ans||[]).filter(function(x){return x[0]===a;})[0]||['',''])[1];
+ say2('Marked, outside Booth Light, '+today()+': '+lab+'.'+(n===6&&!done(6)?' Now enter each person’s level in the tool below: the archive uses it to decide where the episode may play.':n<8&&done(n)?' Next is open.':''));tick();}
 function tools(hash){unembed();el.classList.add('off');document.documentElement.classList.remove('bl-pathon');document.documentElement.classList.add('bl-tools');
  if(hash){var a=document.querySelector('a[href="'+hash+'"]');if(a)a.click();else{var t=document.querySelector(hash);if(t)t.scrollIntoView();}}}
 function path(){touched=true;document.documentElement.classList.remove('bl-tools');document.documentElement.classList.add('bl-pathon');el.classList.remove('off');show(cur,true);}
 el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.target.closest('.pt-tool .pt-slot'))return;var b=e.target.closest&&e.target.closest('button');if(!b||b.disabled)return;
  if(b.dataset.go){show(Number(b.dataset.go),true);return;}
- if(b.classList.contains('pt-next')){if(cur<8&&done(cur))show(cur+1,true);return;}
+ if(b.classList.contains('pt-next')){if(cur<8&&done(cur))show(cur+1,true);else if(cur<8)nextWhy();return;}
  if(b.classList.contains('pt-back')){if(cur>1)show(cur-1,true);return;}
  if(b.classList.contains('pt-all')){tools('');return;}
  if(b.classList.contains('pt-wip')){wipOpen();return;}
@@ -14522,7 +14546,9 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}
  if(b.classList.contains('bls-file')){openFile();return;}
  if(b.dataset.o2){out2Pick(b.dataset.o2);return;}
+ if(b.dataset.o3){out3Pick(b.dataset.o3);return;}
  if(b.classList.contains('pt-outside')&&cur===2){out2();return;}
+ if(b.classList.contains('pt-outside')&&!b.classList.contains('pt-notes7')){out3();return;}
  if(b.classList.contains('pt-outside')){fill=true;sheetOpen();var rw=sheet.querySelectorAll('.bls-row')[cur-1];if(rw&&rw.scrollIntoView)rw.scrollIntoView({block:'center'});return;}
  if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}
  if(b.dataset.step){sheet.hidden=true;show(Number(b.dataset.step),true);return;}
