@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQHEsFH6BFBDIAM11ATHuPAPnI0YdufrwJTNL3h08xBzL9z5Kp2TONBdP7DmHgiI6EcPDG6m+X4l4frH5OBd61QA=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQBzhWeViYRHw4GuhEou8m9G0HSCPmpFBab9hKORo8l4M006VNFGk/NZ857yP2SdRtjcZ8xOuWAFkp0yH7csH5Q8=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Booth Light · BUILD 140</title>
 <script id="bl133-tabs">(function(){
@@ -3708,7 +3708,7 @@ html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
 
 /* BUILD 140: the people at step 6 as colour cards. Each card takes the colour of the level that person chose (the same colour as the level cards above);
    smaller pills; the summary under them takes the colour of the level the episode plays at. */
-html.bl126:root body #who #voices{display:flex !important;flex-direction:column;gap:10px !important}
+html.bl126:root body #who #voices{display:grid !important;grid-template-columns:repeat(auto-fill,minmax(260px,340px));gap:12px !important;justify-content:start;max-width:none !important}
 html.bl126:root body #who #voices .voice{display:flex !important;flex-wrap:wrap;align-items:center;gap:8px !important;padding:12px 14px 12px 16px !important;margin:0 !important;border-radius:18px !important;background:#FFFFFF !important;border:0 !important;border-left:12px solid var(--lvl,#C9CCD9) !important;box-shadow:0 4px 12px rgba(20,24,58,.10) !important;cursor:pointer}
 html.bl126:root body #who #voices .voice.active{box-shadow:0 0 0 3px #14183A,0 6px 16px rgba(20,24,58,.16) !important}
 html.bl126:root body #who #voices .voice .v-role{order:0;min-width:0 !important;font:800 1.08em/1.2 Georgia,'Times New Roman',serif !important;color:#14183A !important}
@@ -3719,7 +3719,7 @@ html.bl126:root body #who #voices .voice .w5-badge{display:none !important}
 html.bl126:root body #who #voices .voice .v-x{order:2;margin-left:auto !important;font-size:1.3em;color:#14183A !important;opacity:.7}
 html.bl126:root body #who #voices .voice .v-code{order:3;flex:1 1 100% !important;max-width:none !important;min-height:38px !important;padding:6px 14px !important;border-radius:999px !important;border:2px solid #14183A !important;background:#FFFFFF !important;color:#14183A !important;font:600 .9em Helvetica,Arial,sans-serif !important}
 html.bl126:root body #who #voices .voice .v-until{order:4;margin:0 !important;display:inline-flex;align-items:center;gap:6px;padding:3px 4px 3px 12px;border-radius:999px;background:#EAEFFF;color:#14183A !important;font:800 .78em Helvetica,Arial,sans-serif !important}
-html.bl126:root body #who #voices .voice .v-until input{border:0 !important;border-radius:999px !important;background:#FFFFFF !important;color:#14183A !important;padding:3px 8px !important;min-height:28px !important;font:700 1em Helvetica,Arial,sans-serif !important;width:auto !important}
+html.bl126:root body #who #voices .voice .v-until input{max-width:9.5em !important;border:0 !important;border-radius:999px !important;background:#FFFFFF !important;color:#14183A !important;padding:3px 8px !important;min-height:28px !important;font:700 1em Helvetica,Arial,sans-serif !important;width:auto !important}
 html.bl126:root body #who #voices .voice .v-page{order:5;border:0 !important;border-radius:999px !important;background:#D2B8FF !important;color:#070C22 !important;box-shadow:none !important;font:800 .78em Helvetica,Arial,sans-serif !important;padding:6px 12px !important;min-height:32px !important}
 html.bl126:root body #who #voices .voice .v-wd{order:6;border:0 !important;border-radius:999px !important;background:transparent !important;color:#B3261E !important;box-shadow:inset 0 0 0 2px #B3261E !important;font:800 .78em Helvetica,Arial,sans-serif !important;padding:6px 12px !important;min-height:32px !important}
 html.bl126:root body #who #voices .voice .v-wdate{display:none !important;order:6;border-radius:999px;background:#E8473C;color:#FFFFFF !important;font:800 .78em Helvetica,Arial,sans-serif;padding:6px 12px}
@@ -3729,7 +3729,7 @@ html.bl126:root body #who .w5-add{gap:8px !important;margin-top:10px !important}
 html.bl126:root body #who .w5-add .btn{border:0 !important;border-radius:999px !important;color:#070C22 !important;font:800 .82em Helvetica,Arial,sans-serif !important;padding:7px 14px !important;min-height:34px !important;box-shadow:none !important}
 html.bl126:root body #who .w5-add #v-add-s{background:#FF9E80 !important}
 html.bl126:root body #who .w5-add #v-add-i{background:#5CE8F5 !important}
-html.bl126:root body #who #v-sum.cons-sum{margin-top:12px !important;border-radius:18px !important;border:0 !important;padding:12px 16px !important;background:var(--sumc,#E8E1CF) !important;color:#070C22 !important;font:800 .9em/1.4 Helvetica,Arial,sans-serif !important;text-align:left !important;box-shadow:none !important}
+html.bl126:root body #who #v-sum.cons-sum{max-width:700px;margin-top:12px !important;border-radius:18px !important;border:0 !important;padding:12px 16px !important;background:var(--sumc,#E8E1CF) !important;color:#070C22 !important;font:800 .9em/1.4 Helvetica,Arial,sans-serif !important;text-align:left !important;box-shadow:none !important}
 html.bl126:root body #who #v-sum.cons-sum.open{background:#FFFFFF !important;box-shadow:inset 0 0 0 3px #14183A !important}
 html.bl126:root body #who #v-sum.cons-sum.withdrawn{background:#E8473C !important;color:#FFFFFF !important}
 </style>
