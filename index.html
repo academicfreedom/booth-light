@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQPCVm5baAsTTn8nSEjowT2LM2nYKPOy2Kr12CT1Nx0fprIn4DLm7yj6ZUI5mKkNRJ0tV2mn2Q1fi0TPLggEhlAQ=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQOTq2HWZ3QboMkGeB57ibjzl0i00S31mEZZ/PNdqpmV/1wBb2RJ9R0GaBXe2oFLp1cNio/BPXqRh4eMc6UwsAQ0=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 136</title>
+<title>Booth Light · BUILD 137</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -36,7 +36,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 136 · 2026-11-16 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 137 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1570,7 +1570,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 136</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 137</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1761,11 +1761,11 @@ async function appendFile(f){if(!REC)throw new Error('open or record a first rec
  flush();await queue;rec.fp=await sha(new TextEncoder().encode(rec.hashes.join('')));REC=snap();S.rec=REC;S.fp=REC.fp;extendKept(joinAt,REC.total/REC.sr);S.during.push({t:joinAt,s:'',x:'— added here: '+f.name+' —'});await kvPut('rec',REC);return joinAt;}
 $('recbtn').onclick=async()=>{
   const ADD=addMode&&!!REC;addMode=false;if(REC&&!ADD&&!replaceOK&&!confirm('Start a new recording? The current one is replaced on this device. Save or export it first if you need it.'))return;replaceOK=false;
-  $('rec-msg').textContent='';
+  $('rec-msg').textContent='';let preCtx=null;try{preCtx=new AC();if(preCtx.state==='suspended'&&preCtx.resume)preCtx.resume().catch(()=>{});}catch(e){preCtx=null;}/* BUILD 137 */
   try{stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false}});}
-  catch(e){$('rec-msg').textContent='The microphone did not open ('+(e&&e.name?e.name:'error')+'). Browsers open it for a page at an https address or at localhost, and on a laptop for a file opened in Chrome, Edge or Firefox. On a phone, record with the phone\'s own recorder, then open the file here.';return;}
+  catch(e){try{if(preCtx)preCtx.close();}catch(x){}$('rec-msg').textContent=window.blMicHelp?window.blMicHelp(e):'The microphone did not open ('+(e&&e.name?e.name:'error')+').';return;}
   stopPlay();if(!ADD){const KEEP={interview:S.interview,speakers:S.speakers,current:S.current,before:S.before,after:S.after,voices:S.voices,steps:S.steps?{1:S.steps[1],3:S.steps[3]}:undefined,during:REC?[]:S.during};/* KEEP NOTES v62 */await clearAll();S=fresh();for(const k in KEEP){if(KEEP[k]!==undefined)S[k]=KEEP[k];}REC=null;markA=markB=null;history=[];}
-  ctx=new AC();/* MIC v17 */
+  ctx=preCtx||new AC();preCtx=null;/* MIC v17 */
   if(ctx.state==='suspended')await ctx.resume();
   const TR=32000;const joinAt=ADD?dur():0;if(ADD){await reopenTail();}else{rec={sr:TR,chunk:TR*CHUNK_SEC,n:0,total:0,peaks:[],hashes:[],fp:'',name:'recording-'+today(),created:new Date().toISOString()};acc=new Int16Array(rec.chunk);accN=0;}const rs={pos:0};recJoin=ADD?joinAt:null;
   let src;try{src=ctx.createMediaStreamSource(stream);}catch(e){$('rec-msg').textContent='The microphone opened but the browser could not connect it: '+(e&&e.message||e);stream.getTracks().forEach(x=>x.stop());return;}proc=ctx.createScriptProcessor(4096,1,1);const mute=ctx.createGain();mute.gain.value=0;
@@ -2781,7 +2781,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 136 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 137 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3680,6 +3680,31 @@ html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
 }
 @media (max-width:480px){html body #bl126-lv .b132-lab{align-self:stretch}html body #bl126-lv .b132-in{width:100%;box-sizing:border-box}}
 </style>
+<style id="bl-137-css">/* BUILD 137: step 2 says why Record is locked, shows microphone problems under Record, and takes consent given outside Booth Light in one tap */
+#bl-path .pt-do .pt-t.pt-lockd{background:none;box-shadow:inset 0 0 0 3px var(--c);color:var(--c);border:3px dashed var(--c);cursor:pointer}
+#bl-path .pt-ask .pt-b.pt-flash{outline:5px solid #FFD60A;outline-offset:4px}
+#bl-path .pt-recmsg{margin:12px 0 0;padding:12px 14px;border:3px solid #FFD60A;border-radius:18px;color:#FFD60A;background:#0B1030;font:700 1em/1.4 Helvetica,Arial,sans-serif;overflow-wrap:anywhere}
+#bl-path .pt-out2{margin:12px 0 0;padding:14px;border:3px solid #FFD60A;border-radius:18px;background:#0B1030;color:#FFD60A}
+#bl-path .pt-out2 h3{margin:0 0 10px;font:900 1.05em/1.3 Helvetica,Arial,sans-serif;color:#FFD60A}
+#bl-path .pt-out2 button{display:block;width:100%;margin:0 0 8px;padding:.8em 1em;min-height:52px;border:0;border-radius:999px;font:900 1em/1.25 Helvetica,Arial,sans-serif;background:#FFD60A;color:#0B1030;text-align:center;cursor:pointer}
+#bl-path .pt-out2 button.pt-o2x{background:none;color:#FFD60A;box-shadow:inset 0 0 0 3px #FFD60A}
+#bl-path .pt-out2 p{margin:0 0 10px;font:700 .95em/1.4 Helvetica,Arial,sans-serif;color:#FFD60A}
+</style>
+<script id="bl-137-mic">/* BUILD 137: when the microphone does not open, say why in plain words and what to do, under the Record button. */
+window.blMicHelp=function(e){var n=e&&e.name?e.name:'',ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1),and=/Android/.test(ua),
+ inapp=/FBAN|FBAV|Instagram|Line\/|Snapchat|LinkedInApp|GSA\/|MicroMessenger|CanvasStudent|Canvas\//.test(ua)||(ios&&!/Safari\//.test(ua)),
+ alt=' You can also record with the phone’s own recorder (Voice Memos on an iPhone), then at step 2 tap “I did this step outside Booth Light” and bring the file in.',
+ tail=' (The browser said: '+(n||'no microphone access')+'.)';
+ if(!window.isSecureContext||!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)return 'The microphone did not open: this page is not at an https address (it is at '+location.protocol+'//'+location.host+'), and browsers keep the microphone closed there. Open https://academicfreedom.github.io/booth-light/ instead.'+alt;
+ if(inapp)return 'The microphone did not open: this page is open inside another app (for example Canvas, Gmail, Instagram or Messages), and that app keeps the microphone closed. Open the page in Safari or Chrome: tap the share button or the ••• menu, then “Open in Safari” (or “Open in browser”).'+alt+tail;
+ if(n==='NotAllowedError'||n==='SecurityError'||n==='PermissionDeniedError'){
+  if(ios)return 'The microphone is blocked for this page. In Safari, tap “aA” (or the page icon) at the left of the address bar → Website Settings → Microphone → Allow, then tap Record again. If that is not there: open the Settings app → Safari (on newer iPhones: Apps → Safari) → Microphone → Ask or Allow.'+alt+tail;
+  if(and)return 'The microphone is blocked for this page. In Chrome, tap the icon at the left of the address bar → Permissions → Microphone → Allow, then tap Record again.'+alt+tail;
+  return 'The microphone is blocked for this page. Click the icon at the left of the address bar, allow the microphone, then click Record again.'+alt+tail;}
+ if(n==='NotFoundError'||n==='OverconstrainedError')return 'No microphone was found on this device.'+alt+tail;
+ if(n==='NotReadableError'||n==='AbortError')return 'Another app is using the microphone (a call, Voice Memos, a video app or another browser tab). Close it, then tap Record again.'+alt+tail;
+ return 'The microphone did not open.'+alt+tail;};
+</script>
 <script id="bl-126-early">/* BUILD 126-128: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
 (function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
  var host=document.createElement('div');host.id='bl126-host';lg.parentNode.insertBefore(host,lg.nextSibling);
@@ -14389,7 +14414,7 @@ function show(n,focus){cur=n;var s=ST[n-1];el.style.setProperty('--c',COL[n-1]);
  ask.innerHTML=h+'</div><div class="pt-st" aria-live="polite"></div><button type="button" class="pt-outside">I did this step outside Booth Light</button>'+(n===7?'<button type="button" class="pt-outside pt-notes7">\u270e Open Listening notes</button>':'');
  var d='<div class="pt-tag"></div>';
  if(n===1)d+='<textarea class="pt-ta" placeholder="Write your questions here." aria-label="Your questions"></textarea>';
- else if(n===2)d+='<div class="pt-idle"><select class="pt-sel" aria-label="Voice"></select><button type="button" class="pt-t" data-r="rec">\u25cf Record</button></div><div class="pt-live" hidden><div class="pt-time" aria-label="Recording time"></div><div class="pt-line"></div><div class="pt-two"><button type="button" class="pt-o" data-r="main">Pause</button><button type="button" class="pt-t" data-r="stop">\u25a0 Stop</button></div><div class="pt-note"><input class="pt-in1" type="text" placeholder="A note, saved with the time" aria-label="A note, saved with the time"><button type="button" class="pt-plus" data-r="note" aria-label="Save the note">+</button></div></div><div class="pt-got" hidden><div class="pt-line"></div><button type="button" class="pt-o" data-r="again">Record more, or again</button></div>';
+ else if(n===2)d+='<div class="pt-idle"><select class="pt-sel" aria-label="Voice"></select><button type="button" class="pt-t" data-r="rec">\u25cf Record</button></div><div class="pt-recmsg" role="alert" hidden></div><div class="pt-live" hidden><div class="pt-time" aria-label="Recording time"></div><div class="pt-line"></div><div class="pt-two"><button type="button" class="pt-o" data-r="main">Pause</button><button type="button" class="pt-t" data-r="stop">\u25a0 Stop</button></div><div class="pt-note"><input class="pt-in1" type="text" placeholder="A note, saved with the time" aria-label="A note, saved with the time"><button type="button" class="pt-plus" data-r="note" aria-label="Save the note">+</button></div></div><div class="pt-got" hidden><div class="pt-line"></div><button type="button" class="pt-o" data-r="again">Record more, or again</button></div>';
  else if(s.press)d+='<button type="button" class="pt-t" data-press="'+s.press[1]+'">'+esc(s.press[0])+'</button>'+(n===8?'<div class="pt-warn"><b>Withdrawing.</b> The erase code works only in the class archive on the podcast producer\u2019s computer. A storyteller cannot yet erase from their own phone: they tell the episode producer or the podcast producer, and the withdrawal is applied within 72 hours.</div>':'');
  else d+='<div class="pt-line" style="margin:0;text-align:left">The tool for this step shows here.</div>';
  doc.innerHTML=d;
@@ -14409,21 +14434,39 @@ function tick(){if(el.classList.contains('off')||el.classList.contains('bl126-cl
   by.classList.toggle('on',isyes);bn.classList.toggle('on',isno);by.disabled=!y||y.disabled;bn.disabled=!no||no.disabled;
   txt=live?'Ask again now, so their answer is on the recording.':isno?(B.S.rec?'They said no. Do not edit or share this recording until they agree.':'They said no. No sound is recorded.'):got&&c.answer==='yes'?C.state(2)[0]:sa(2).out&&c.answer?C.state(2)[0]:yon?'Now press Record, and ask again so their answer is on the recording.':'';
   var idle=doc.querySelector('.pt-idle'),lv=doc.querySelector('.pt-live'),gt=doc.querySelector('.pt-got'),rb=R.rec();
-  var showgot=got&&!again&&!yon;idle.hidden=live||showgot;lv.hidden=!live;gt.hidden=!showgot;open=live||showgot||(!!rb&&!rb.disabled);
-  if(rb){var pb=doc.querySelector('[data-r="rec"]');pb.disabled=rb.disabled;var lab=rb.textContent.trim();if(pb.textContent!==lab)pb.textContent=lab;}
+  var showgot=got&&!again&&!yon;idle.hidden=live||showgot;lv.hidden=!live;gt.hidden=!showgot;open=true;
+  if(rb){var pb=doc.querySelector('[data-r="rec"]'),need=!isyes&&!live;pb.disabled=false;pb.classList.toggle('pt-lockd',need);pb.setAttribute('aria-disabled',need?'true':'false');var lab=isno?'They said no \u00b7 nothing is recorded':need?'\uD83D\uDD12 Tap \u201cYes, they agreed\u201d first':rb.textContent.trim();if(pb.textContent!==lab)pb.textContent=lab;}
+  if(live)recTapAt=0;var rmm=document.getElementById('rec-msg'),pmm=doc.querySelector('.pt-recmsg');if(pmm){var shw=!!recTapAt&&!!rmm&&!live&&rmm.textContent!==recMsg0&&!/^Stopped at/.test(rmm.textContent);pmm.hidden=!shw;if(shw&&pmm.textContent!==rmm.textContent)pmm.textContent=rmm.textContent;}
   if(live){doc.querySelector('.pt-time').textContent=R.time();var m=R.main(),mb=doc.querySelector('[data-r="main"]'),ml=m?m.textContent.trim():'Pause';if(mb.textContent!==ml)mb.textContent=ml;doc.querySelector('.pt-live .pt-line').textContent=/PAUSED/.test(R.state())?'Paused. Nothing is being recorded.':'Recording';again=false;}
   if(showgot)gt.querySelector('.pt-line').textContent='\u2713 Recorded \u00b7 '+R.time()+' \u00b7 saved on your device';
  }else{say.textContent=s.say;
   ask.querySelectorAll('[data-a]').forEach(function(b){var a=b.dataset.a;b.classList.toggle('on',a==='sent'?!!st.sent:st.a===a);});
   var cs=C.state(n);txt=n===6?cs[0]:(st.a||st.sent?cs[0]:'');if(st.a==='no'||st.a==='withdrew')txt+=' '+NOL[n];
   open=n===1?st.a==='yes':n===3?st.a==='yes':n===4?(st.a==='changes'):n===5?st.a==='yes':n===6?true:n===7?st.a==='yes':!!st.a;}
- if(stl.textContent!==txt)stl.textContent=txt;stl.hidden=!txt;
+ if(fileYes&&fileYes>Date.now()&&B.S.rec&&B.S.rec!==fileRec0){fileYes=0;var cf=B.S.consent||{};if(!(cf.answer==='yes'&&sa(2).out)){pend[2]=today();fillAnswer(2,'yes');}say2('Marked: recorded outside Booth Light, and they agreed. The audio file is open here.');}else if(fileYes&&fileYes<=Date.now())fileYes=0;
+ if(hintT>Date.now()&&n===hintN)txt=hint;if(stl.textContent!==txt)stl.textContent=txt;stl.hidden=!txt;
  if(s.embed){if(open)embed(s.embed);else if(tool.dataset.id)unembed();}
  doc.classList.toggle('locked',!open);var tg=open?(n===2&&recording()?'Recording':'Then do'):'Then do \u00b7 opens after a yes';if(n===4&&!open)tg='Then do \u00b7 opens if they ask for changes';if(tag.textContent!==tg)tag.textContent=tg;
  doc.querySelectorAll('button,textarea,select,input').forEach(function(x){if(!open)x.setAttribute('tabindex','-1');else x.removeAttribute('tabindex');});
  var nx=q('.pt-next');nx.disabled=n===8||!done(n);var nl=n===8?'Process Consent ends here':'Next: '+(n+1)+' '+ST[n].sign+' '+ST[n].name;if(nx.textContent!==nl)nx.textContent=nl;
  q('.pt-back').style.visibility=n===1?'hidden':'visible';}
 var NOL={1:'Stop here. Do not record. Nothing was recorded.',3:'Do not edit. Keep the raw recording as it is, or erase it at step 8.',4:'They withdrew. Do not use the recording. Erase it at step 8.',5:'Make the changes they ask for, then ask again.',7:'Do not play it. Ask them where it may play now, at step 6.'};
+var hint='',hintT=0,hintN=0,recTapAt=0,recMsg0='',fileYes=0,fileRec0=null;
+function say2(m){hint=m;hintT=Date.now()+9000;hintN=cur;}
+function recTap(){var x=R.rec(),y=R.yes(),no=R.no(),c=B.S.consent||{},non=!!no&&no.classList.contains('on'),yon=!!y&&y.classList.contains('on'),isyes=(c.answer==='yes'&&!non)||yon;
+ if(!isyes){var by=ask.querySelector('[data-r="yes"]');say2(c.answer==='no'||non?'They said no, so nothing is recorded. If they change their mind, tap \u201cYes, they agreed\u201d.':'First read the question above to the storyteller. If they agree, tap \u201cYes, they agreed\u201d. Record then opens.');
+  if(by){by.classList.add('pt-flash');setTimeout(function(){by.classList.remove('pt-flash');},2400);if(by.scrollIntoView)by.scrollIntoView({block:'center'});by.focus();}return;}
+ if(!x)return;var rm=document.getElementById('rec-msg');recMsg0=rm?rm.textContent:'';recTapAt=Date.now();
+ if(y&&!yon&&!y.disabled)y.click();   /* the yes lasts for the whole interview: the app's own Yes is pressed again for this recording */
+ x.disabled=false;x.click();}
+function out2(){var p=ask.querySelector('.pt-out2');if(p){p.remove();return;}p=document.createElement('div');p.className='pt-out2';
+ p.innerHTML='<h3>Where did this step happen?</h3><button type="button" data-o2="paper">They agreed outside Booth Light (on paper or out loud). I record here.</button><button type="button" data-o2="file">We recorded outside Booth Light (Voice Memos, Zoom, another recorder). Bring the file in.</button><button type="button" data-o2="no">They did not agree.</button><button type="button" class="pt-o2x" data-o2="x">Cancel</button><p>Booth Light writes this into the consent record as \u201cdone outside Booth Light\u201d, with today\u2019s date.</p>';
+ ask.appendChild(p);var f=p.querySelector('button');if(f)f.focus();}
+function out2Pick(o){var p=ask.querySelector('.pt-out2');if(p)p.remove();if(o==='x')return;var c=B.S.consent||{},s2=sa(2),a=o==='no'?'no':'yes';
+ if(!(c.answer===a&&s2.out)){pend[2]=today();fillAnswer(2,a);}
+ if(o==='paper')say2('Marked: they agreed outside Booth Light. Record is open. Ask again once you start, so their answer is also on the recording.');
+ else if(o==='file'){fileYes=Date.now()+600000;fileRec0=B.S.rec||null;say2('Marked: recorded outside Booth Light. Choose the audio file. It stays where it is; Booth Light makes a working copy on this device.');openFile();}
+ else say2('Marked: they did not agree. Nothing is recorded.');tick();}
 function tools(hash){unembed();el.classList.add('off');document.documentElement.classList.remove('bl-pathon');document.documentElement.classList.add('bl-tools');
  if(hash){var a=document.querySelector('a[href="'+hash+'"]');if(a)a.click();else{var t=document.querySelector(hash);if(t)t.scrollIntoView();}}}
 function path(){touched=true;document.documentElement.classList.remove('bl-tools');document.documentElement.classList.add('bl-pathon');el.classList.remove('off');show(cur,true);}
@@ -14478,6 +14521,8 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.classList.contains('bls-print')){printSheet();return;}
  if(b.classList.contains('bls-out')){fill=!fill;drawSheets(true);return;}
  if(b.classList.contains('bls-file')){openFile();return;}
+ if(b.dataset.o2){out2Pick(b.dataset.o2);return;}
+ if(b.classList.contains('pt-outside')&&cur===2){out2();return;}
  if(b.classList.contains('pt-outside')){fill=true;sheetOpen();var rw=sheet.querySelectorAll('.bls-row')[cur-1];if(rw&&rw.scrollIntoView)rw.scrollIntoView({block:'center'});return;}
  if(b.classList.contains('bls-a')&&b.dataset.a){fillAnswer(Number(b.dataset.n),b.dataset.a);return;}
  if(b.dataset.step){sheet.hidden=true;show(Number(b.dataset.step),true);return;}
@@ -14486,7 +14531,7 @@ el.addEventListener('click',function(e){touched=true;if(e.target.closest&&e.targ
  if(b.dataset.a){C.answer(cur,b.dataset.a);tick();return;}
  var r=b.dataset.r;if(!r)return;
  if(r==='yes'||r==='no'){var t=R[r]();if(t&&!t.disabled)t.click();}
- else if(r==='rec'){var x=R.rec();if(x&&!x.disabled)x.click();}
+ else if(r==='rec'){recTap();}
  else if(r==='main'){var m=R.main();if(m)m.click();}
  else if(r==='stop'){var s2=R.stop();if(s2&&!s2.disabled)s2.click();}
  else if(r==='note'){var i=doc.querySelector('.pt-in1'),di=document.getElementById('dur-in'),da=document.getElementById('dur-add');if(i&&di&&da&&i.value.trim()){di.value=i.value;da.click();i.value='';i.focus();}}
