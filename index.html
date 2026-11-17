@@ -4,22 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQASg6FIWv5zTfOFC9h5NtE//S3YNrgwAGgCABNIH2nByFzjGCewm5fc4bUuKy5fjYSCXTCuIQuVvQYGe7hogCgM=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQHp+aVdULt7z5mXXG3vcgHQTD/zzQqlPKwPx3xGu8mKYEILwZHo+y5dcm58FYXs7tbfIkOyvEuaMiGx4c2/asw8=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 134</title>
+<title>Booth Light · BUILD 135</title>
 <script id="bl133-tabs">(function(){
- /* BUILD 133: one working tab per device. A second tab of Booth Light on the same device pauses itself, so it cannot change or erase the recording and notes the first tab holds. */
- window.blOtherTab=function(){return new Promise(function(res){var done=false;function fin(v){if(!done){done=true;res(v);}}
-  function bc(){try{var c=new BroadcastChannel('booth-light-device'),heard=false;c.onmessage=function(e){if(e.data==='here')heard=true;};c.postMessage('who');setTimeout(function(){fin(heard);if(!heard){window.__blBC=c;c.onmessage=function(e){if(e.data==='who')c.postMessage('here');};}else c.close();},400);}catch(e){fin(false);}}
-  try{if(navigator.locks&&navigator.locks.request){navigator.locks.request('booth-light-device',{ifAvailable:true},function(l){if(!l){fin(true);return;}fin(false);return new Promise(function(){});}).catch(bc);return;}}catch(e){}
-  bc();});};
- window.blTab2Notice=function(){if(document.getElementById('bl133-tab2'))return;var d=document.createElement('div');d.id='bl133-tab2';d.setAttribute('role','alertdialog');d.setAttribute('aria-modal','true');d.setAttribute('aria-labelledby','bl133-tab2-h');
-  d.innerHTML='<div class="t2-in"><h2 id="bl133-tab2-h">Booth Light is already open in another tab</h2><p>This tab is paused. It cannot change or erase the recording and notes kept on this device.</p><p>Go back to the other tab. To use this tab instead, close the other tab, then press Reload.</p><button type="button" class="t2-b">Reload this tab</button></div>';
-  document.body.appendChild(d);document.documentElement.style.overflow='hidden';d.querySelector('.t2-b').onclick=function(){location.reload();};d.querySelector('h2').setAttribute('tabindex','-1');d.querySelector('h2').focus();};
+ /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
+    hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
+    Tabs find each other with the browser's tab lock (Web Locks) and a same-device message channel (BroadcastChannel). Nothing leaves the device. */
+ var NAME='booth-light-device',C=null,held=false;
+ try{C=new BroadcastChannel(NAME);}catch(e){}
+ function rel(){try{if(C)C.postMessage('released');}catch(e){}}
+ function pauseMoved(){if(window.__blMoved)return;window.__blMoved=true;window.__blSTM=true;held=false;
+  var sb=document.getElementById('stopbtn'),wasRec=!!(sb&&!sb.disabled);if(wasRec){try{sb.click();}catch(e){}}
+  var t0=Date.now();(function wait(){var s=document.getElementById('stopbtn');if(wasRec&&s&&!s.disabled&&Date.now()-t0<8000)return setTimeout(wait,200);setTimeout(rel,1500);})();
+  window.blTab2Notice(true,wasRec);}
+ if(C)C.addEventListener('message',function(e){if(e.data==='who'&&held&&!window.__blMoved)C.postMessage('here');if(e.data==='taken'&&held&&!window.__blMoved)pauseMoved();});
+ window.blOtherTab=function(){return new Promise(function(res){var done=false,take=false;function fin(v){if(!done){done=true;res(v);}}
+  try{take=window.name==='bl-take';if(take){window.name='';window.__blTook=true;}}catch(e){}
+  function afterTake(){if(!C)return fin(false);var h=function(e){if(e.data==='released'){C.removeEventListener('message',h);fin(false);}};C.addEventListener('message',h);C.postMessage('taken');setTimeout(function(){C.removeEventListener('message',h);fin(false);},6000);}
+  function bcCheck(){if(!C)return fin(false);if(take){held=true;afterTake();return;}var heard=false,h=function(e){if(e.data==='here')heard=true;};C.addEventListener('message',h);C.postMessage('who');setTimeout(function(){C.removeEventListener('message',h);if(!heard)held=true;fin(heard);},400);}
+  try{if(navigator.locks&&navigator.locks.request){navigator.locks.request(NAME,take?{steal:true}:{ifAvailable:true},function(l){if(!l){fin(true);return;}held=true;if(take)afterTake();else fin(false);return new Promise(function(){});})
+   .catch(function(){if(held)pauseMoved();else if(!done)bcCheck();});return;}}catch(e){}
+  bcCheck();});};
+ window.blTakeOver=function(){try{window.name='bl-take';}catch(e){}location.reload();};
+ window.blTab2Notice=function(moved,wasRec){var d=document.getElementById('bl133-tab2');if(!d){d=document.createElement('div');d.id='bl133-tab2';d.setAttribute('role','alertdialog');d.setAttribute('aria-modal','true');d.setAttribute('aria-labelledby','bl133-tab2-h');document.body.appendChild(d);}
+  d.innerHTML='<div class="t2-in"><h2 id="bl133-tab2-h">'+(moved?'Booth Light moved to another tab':'Booth Light is already open in another tab')+'</h2>'
+   +(moved?'<p>You chose to use Booth Light in another tab. This tab is paused, so the two tabs cannot write over each other’s recording and notes.</p>'+(wasRec?'<p>The recording in this tab was stopped and saved on this device first.</p>':''):'<p>This tab is paused, so it cannot change or erase the recording and notes kept on this device.</p>')
+   +'<button type="button" class="t2-b">Use this tab instead</button><p class="t2-s">The other tab pauses itself. If it is recording, it stops and saves the recording first. You do not need to find or close it.</p>'
+   +(moved?'':'<p class="t2-s">Or go back to the other tab and keep working there.</p>')+'</div>';
+  document.documentElement.style.overflow='hidden';d.querySelector('.t2-b').onclick=function(){window.blTakeOver();};var h=d.querySelector('h2');h.setAttribute('tabindex','-1');h.focus();};
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 134 · 2026-11-16 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 135 · 2026-11-16 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1553,7 +1570,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 134</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 135</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1982,7 +1999,7 @@ function showBar(t){$('bar').textContent=t;$('bar').classList.add('on');}
 function hideBar(){$('bar').classList.remove('on');}
 $('bar').onclick=hideBar;
 setInterval(()=>{if(dirty&&Date.now()-lastSaved>600000&&!recording)showBar('Not saved for 10 minutes. Press Save version in section 4 (your recording itself is already on this device\'s disk).');},30000);
-window.addEventListener('beforeunload',e=>{if(recording||(dirty&&!keepOn())){e.preventDefault();e.returnValue='';}});
+window.addEventListener('beforeunload',e=>{if(window.__blSTM)return;if(recording||(dirty&&!keepOn())){e.preventDefault();e.returnValue='';}});
 function status(){const sa=$('saveaudio1');if(sa)sa.disabled=!REC||recording;if(recording)return;if(REC)ensureKept();$('status').textContent=!REC?'no recording yet':'original '+fmt(dur())+' · round '+(S.rounds||[]).length+' · working '+fmt(wd())+' · '+S.cuts.length+' pending cut'+(S.cuts.length===1?'':'s')+' · edited '+fmt(editedLen())+' · v'+(S.version||0)+(dirty?' · not saved':'');$('o-len').textContent=fmt(dur());$('e-len').textContent=fmt(editedLen());$('v-num').textContent='v'+(S.version||0);$('o-fp').textContent=REC&&REC.fp?'fingerprint '+REC.fp.slice(0,24)+'…':'';}
 function renderAll(){$('inum').value=S.interview||'01';$('before').value=S.before||'';$('after').value=S.after||'';renderSpeakers();renderDuring();renderCuts();renderRounds();cutUI();renderConsent();renderVoices();renderKeep();$('len').textContent=fmt(wd());$('pos').textContent=fmt(posW());draw();status();}
 $('inum').oninput=()=>{S.interview=num();touch();};
@@ -1991,7 +2008,7 @@ $('inum').oninput=()=>{S.interview=num();touch();};
   if(!('mediaDevices' in navigator)){$('rec-msg').textContent='This browser cannot record here. Open an audio file instead, or use a current Chrome, Edge, Firefox or Safari.';$('recbtn').disabled=true;}
   if(location.protocol==='file:'&&/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg/.test(navigator.userAgent))showBar('Safari gives a page opened from a file very little disk storage, sometimes none. Open this file in Chrome, Edge or Firefox to record.');
   window.__blSTM=/^#storyteller/i.test(location.hash);if(!window.__blSTM&&window.blOtherTab&&await window.blOtherTab()){window.__blSTM=true;window.blTab2Notice();}const here=await kvGet('rec');const st=await kvGet('state');
-  if(here&&here.n&&!window.__blSTM){if(keepOn()){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent='Resumed the recording kept on this device ('+fmt(dur())+').';}
+  if(here&&here.n&&!window.__blSTM){if(keepOn()||window.__blTook){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent=(window.__blTook?'Picked up from the other tab: the recording kept on this device (':'Resumed the recording kept on this device (')+fmt(dur())+').';}
     else{if(confirm('A recording from the last session is on this device ('+fmt(here.total/here.sr)+'). Recover it now? Cancel erases it.')){REC=here;if(st)S=Object.assign(fresh(),st);S.rec=REC;renderAll();$('consent2').classList.remove('hide');$('save-state').textContent='Recovered. Export or save a version now; with Keep my work OFF it is offered only once.';}else{await clearAll();}}}
 })();
 
@@ -2764,7 +2781,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 134 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 135 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3641,6 +3658,8 @@ html body #bl126-lv .b133-hi .b133-ok p b{color:#070C22 !important}
 #bl132-st .b134-er .b134-eh{font:700 20px/1.3 Georgia,serif;color:#FF9E80}
 #bl132-st .b134-er .b134-small{font:800 14px/1.3 ui-monospace,Menlo,monospace;letter-spacing:.08em;color:#5CE8F5}
 #bl132-st .b134-ec{font:800 clamp(18px,5.2vw,26px)/1.3 ui-monospace,Menlo,monospace;letter-spacing:.04em;background:#FF9E80;color:#070C22;border-radius:14px;padding:10px 12px;word-break:break-word}
+#bl133-tab2 .t2-s{font-size:16px !important;opacity:1}
+#bl133-tab2 h2:focus{outline:none}
 </style>
 <script id="bl-126-early">/* BUILD 126-128: the title pills. Before the Process Consent script runs, the sections that the pills open are gathered under the title, one section open at a time. Nothing here is sent anywhere. */
 (function(){var lg=document.querySelector('.bl-nightlogo');if(!lg||document.getElementById('bl126-host'))return;
