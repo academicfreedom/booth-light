@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQBzhWeViYRHw4GuhEou8m9G0HSCPmpFBab9hKORo8l4M006VNFGk/NZ857yP2SdRtjcZ8xOuWAFkp0yH7csH5Q8=">
+<meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCGF6h4frsH7ssfg18f4LROlhM9PjErJdxj4Nc10HuZxErHH5owTmX4uJcMmLza5pPIiwtwLZI/fSA9sgNGfOgc=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 140</title>
+<title>Booth Light · BUILD 141</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -36,7 +36,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 140 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 141 · 2026-11-17 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1570,7 +1570,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 140</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 141</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2781,7 +2781,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 140 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 141 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3732,9 +3732,28 @@ html.bl126:root body #who .w5-add #v-add-i{background:#5CE8F5 !important}
 html.bl126:root body #who #v-sum.cons-sum{max-width:700px;margin-top:12px !important;border-radius:18px !important;border:0 !important;padding:12px 16px !important;background:var(--sumc,#E8E1CF) !important;color:#070C22 !important;font:800 .9em/1.4 Helvetica,Arial,sans-serif !important;text-align:left !important;box-shadow:none !important}
 html.bl126:root body #who #v-sum.cons-sum.open{background:#FFFFFF !important;box-shadow:inset 0 0 0 3px #14183A !important}
 html.bl126:root body #who #v-sum.cons-sum.withdrawn{background:#E8473C !important;color:#FFFFFF !important}
+
+/* BUILD 141: the people cards at step 6, compact: narrower, less padding, smaller type and pills */
+html.bl126:root body #who #voices{grid-template-columns:repeat(auto-fill,minmax(210px,260px)) !important;gap:8px !important}
+html.bl126:root body #who #voices .voice{gap:5px !important;padding:8px 10px 9px 12px !important;border-radius:14px !important;border-left-width:8px !important;box-shadow:0 2px 6px rgba(20,24,58,.10) !important}
+html.bl126:root body #who #voices .voice.active{box-shadow:0 0 0 2px #14183A,0 3px 8px rgba(20,24,58,.14) !important}
+html.bl126:root body #who #voices .voice .v-role{font-size:.95em !important}
+html.bl126:root body #who #voices .voice .p140-chip{padding:2px 9px;font-size:.7em}
+html.bl126:root body #who #voices .voice{position:relative !important}
+html.bl126:root body #who #voices .voice .v-x{position:absolute !important;top:6px;right:8px;margin:0 !important;font-size:1.05em}
+html.bl126:root body #who #voices .voice .v-role{padding-right:18px}
+html.bl126:root body #who #voices .voice .v-code{min-height:30px !important;padding:3px 10px !important;border-width:1.5px !important;font-size:.82em !important}
+html.bl126:root body #who #voices .voice .v-until{padding:2px 3px 2px 9px;font-size:.7em !important;gap:4px}
+html.bl126:root body #who #voices .voice .v-until input{min-height:22px !important;padding:1px 6px !important;max-width:8.5em !important}
+html.bl126:root body #who #voices .voice .v-page,html.bl126:root body #who #voices .voice .v-wd{font-size:.7em !important;padding:3px 9px !important;min-height:24px !important}
+html.bl126:root body #who #voices .voice .v-wd{box-shadow:inset 0 0 0 1.5px #B3261E !important}
+html.bl126:root body #who #voices .voice .v-made{font-size:.66em !important;padding:3px 8px}
+html.bl126:root body #who .w5-add{gap:6px !important;margin-top:8px !important}
+html.bl126:root body #who .w5-add .btn{font-size:.74em !important;padding:4px 11px !important;min-height:28px !important}
+html.bl126:root body #who #v-sum.cons-sum{max-width:560px;margin-top:8px !important;padding:8px 12px !important;border-radius:14px !important;font-size:.8em !important}
 </style>
 <script id="bl-140-people">/* BUILD 140: colour cards for the people at step 6 */
-(function(){var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80','#D2B8FF'],NM=['Nowhere else','On the podcast producer\u2019s computer','In the classroom','At the Listening Party','Future feature'];
+(function(){var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80','#D2B8FF'],NM=['Nowhere else','Producer\u2019s computer','Classroom','Listening Party','Future feature'];
 function paint(){var box=document.getElementById('voices');if(!box)return;var low=9;
  box.querySelectorAll('.voice').forEach(function(r){var on=r.querySelector('.lv.on'),n=on?Number(on.dataset.n):0,wd=r.classList.contains('wd');if(n&&n<low&&!wd)low=n;
   var c=r.querySelector('.p140-chip');if(!c){c=document.createElement('span');c.className='p140-chip';var ro=r.querySelector('.v-role');if(ro&&ro.nextSibling)r.insertBefore(c,ro.nextSibling);else r.appendChild(c);}
@@ -14557,7 +14576,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 140 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 141 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
