@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 149</title>
+<title>Booth Light · BUILD 150</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 149 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 150 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1432,6 +1432,48 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <meta name="theme-color" content="#0B1030">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Booth Light">
+<style id="bl-150-css">/* BUILD 150 */
+#bl150-back{position:fixed;top:12px;left:12px;z-index:2147482000;font:800 clamp(16px,1.2vw,20px)/1.1 Helvetica,Arial,sans-serif;padding:.65em 1.25em;border-radius:999px;border:3px solid #070C22;background:#FFD60A;color:#070C22;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+#bl150-back[hidden]{display:none}
+#bl150-back:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+html.ez #bl150-back{background:#FFF8EC !important;color:#1F2433 !important;border-color:#1F2433 !important;box-shadow:none !important}
+/* the pills under the title: even columns, nothing runs to the right */
+#bl126-nav.bl128-in{align-items:stretch !important}
+#bl126-nav.bl128-in .bl128-row1{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}
+#bl126-nav.bl128-in .bl128-row2{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}
+#bl126-nav .bl128-row1 .bl126-p{width:100%;text-align:center;line-height:1.15 !important;font-size:clamp(16px,1.25vw,22px) !important;padding:.5em .7em !important;white-space:normal}
+#bl126-nav .bl128-row2 .bl128-s{width:100%;justify-content:center;text-align:center;font-size:clamp(15px,1.1vw,19px) !important}
+@media (max-width:759px){#bl126-nav .bl128-row1{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}#bl126-nav .bl128-row2{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}#bl126-nav .bl128-row1 .bl126-p{font-size:16px !important}}
+/* the Look controls under the pills */
+.bl150-look{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;width:100%;margin-top:4px}
+.bl150-look .nav-skins{display:flex !important;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:0 !important}
+.bl150-look .skin-pick{display:inline-flex;align-items:center;gap:6px;font:700 clamp(15px,1.05vw,18px) Helvetica,Arial,sans-serif;color:#F6F0E2}
+.bl150-look select{font:700 clamp(15px,1.05vw,18px) Helvetica,Arial,sans-serif;padding:.35em .6em;border-radius:999px}
+.bl150-look .chip,.bl150-look #ezread,.bl150-look #bigtext{font:700 clamp(15px,1.05vw,18px)/1.1 Helvetica,Arial,sans-serif !important;padding:.45em 1em !important;min-height:40px !important;border-radius:999px !important;border:0 !important;background:#2E3460 !important;color:#FFFFFF !important;box-shadow:none !important}
+.bl150-look #bigtext.on,.bl150-look #ezread.on{background:#F6F0E2 !important;color:#0B1030 !important;box-shadow:inset 0 0 0 2px #0B1030 !important}
+.bl150-look .status{position:static !important;width:100%;text-align:center;font:600 clamp(13px,.95vw,16px) Helvetica,Arial,sans-serif;color:#F6F0E2;opacity:.85}
+.bl150-look #eztints .ezt{font-size:clamp(14px,1vw,17px)}
+.bo-under:empty{display:none}
+/* larger lettering on the booth */
+.bo-buttons.bl126-steps .bl126-st{font-size:clamp(15px,1.3vw,22px) !important;min-height:clamp(34px,3.1vw,50px) !important}
+.bo-buttons.bl126-steps .bl126-n{width:1.6em !important;height:1.6em !important}
+.bo-buttons.bl126-steps .bl126-stt{font-size:clamp(17px,1.5vw,25px) !important}
+/* the editor, in the order you use it */
+.bl150-ed{display:grid;gap:14px;margin:12px 0}
+.bl150-box{border-radius:20px;padding:12px 14px 14px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 3px var(--k)}
+.bl150-q{margin:0 0 10px;font:800 clamp(16px,1.15vw,20px)/1.25 Helvetica,Arial,sans-serif;color:#14183A}
+.bl150-g{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.bl150-g.bl150-mv{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+@media (max-width:700px){.bl150-g.bl150-mv{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.bl150-g > .btn,.bl150-g > button{flex:1 1 12em;max-width:16em;margin:0 !important;justify-content:center;text-align:center;min-height:46px}
+.bl150-g.bl150-mv > button{max-width:none}
+.bl150-g > .hide{display:none !important}
+.bl150-zoom{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;width:100%}
+.bl150-zoom .chip{min-height:44px;padding:.4em 1.2em;font-weight:800}
+.bl150-n{margin:10px 0 0;font:600 clamp(14px,1vw,16px)/1.45 Helvetica,Arial,sans-serif;color:#2A2F45}
+.bl150-sel{position:absolute;background:rgba(255,214,10,.35);border-left:3px solid #FFD60A;border-right:3px solid #FFD60A;pointer-events:none;z-index:2}
+.bl150-ed button:disabled{opacity:.45;cursor:default}
+</style>
 </head>
 <body><div class="st-notice" id="bl-notice"><b>⚠ Work in progress</b><span>Please excuse the mess, while our humans continue to conceptualize, design, make, edit, and test these apps.</span><i>— AI Agent 1984 <em>(supervised)</em><u></u></i><button type="button" class="st-nx" aria-label="Close this notice">×</button></div>
 
@@ -1575,7 +1617,7 @@ html body .lr-say .w-line{display:block;margin-top:14px;padding-top:14px;border-
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 149</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 150</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2104,7 +2146,7 @@ setInterval(()=>{
   else{mb.textContent='❚❚ Pause';mb.className='tp-main pause';sb.disabled=false;st.className='rec';st.textContent='● RECORDING · '+fmt(recNow());}
 },250);
 /* BUILD 111: the consent page (bl-111-js) reads and saves the consent steps through this */
-window.__BL={get S(){return S;},touch:()=>touch(),sum:()=>voiceLevel()};
+window.__BLED={wd:wd,viewRange:viewRange,seekW:seekW,addCut:addCut};window.__BL={get S(){return S;},touch:()=>touch(),sum:()=>voiceLevel()};
 })();
 </script>
 <script>/* SKIN CHIPS v35: in Night, light the Night chip, not the stored skin underneath */
@@ -2786,7 +2828,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 149 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 150 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14717,7 +14759,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 149 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 150 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -14815,7 +14857,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  var spc=document.createElement('div');spc.className='bl128-spc';spc.setAttribute('aria-hidden','true');spc.style.cssText='height:0px;background:#070C22';lg0.parentNode.insertBefore(spc,lg0.nextSibling);
  function place(){var tg=[].filter.call(lg0.querySelectorAll('svg text'),function(t){return /erase/i.test(t.textContent);})[0],sv=lg0.querySelector('svg');
   if(innerWidth>=760&&tg&&sv){if(nav.parentNode!==lg0)lg0.appendChild(nav);nav.classList.add('bl128-in');var r=lg0.getBoundingClientRect(),q=tg.getBoundingClientRect(),left=Math.round(q.left-r.left);
-   nav.style.left=left+'px';nav.style.top=Math.round(q.bottom-r.top+18)+'px';nav.style.width=Math.max(320,Math.round(r.width-left-24))+'px';
+   var tx=[].filter.call(lg0.querySelectorAll('svg text'),function(t){return /^(BOOTH|LIGHT)$/i.test(t.textContent.trim())||/listens|erase/i.test(t.textContent);}),L=q.left,Rr=q.right;tx.forEach(function(t){var b=t.getBoundingClientRect();if(b.width){L=Math.min(L,b.left);Rr=Math.max(Rr,b.right);}});left=Math.round(L-r.left);var wd=Math.round(Rr-L);wd=Math.max(420,Math.min(wd,Math.round(r.width-left-24)));nav.style.left=left+'px';nav.style.top=Math.round(q.bottom-r.top+18)+'px';nav.style.width=wd+'px';
    var over=Math.round(nav.offsetTop+nav.offsetHeight+28-sv.getBoundingClientRect().height);var pb=(over>0?over:0)+'px';if(spc.style.height!==pb)spc.style.height=pb;}
   else{nav.classList.remove('bl128-in');nav.style.left=nav.style.top=nav.style.width='';spc.style.height='0px';if(nav.previousElementSibling!==ttl)ttl.parentNode.insertBefore(nav,ttl.nextSibling);}}
  place();addEventListener('resize',place);
@@ -15129,6 +15171,95 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  /* the Export panel gets the hand-in button too */
  (function(){var rec=document.getElementById('x-liner');if(!rec||document.getElementById('x-handin'))return;var b=document.createElement('button');b.className='btn green';b.id='x-handin';b.textContent='Hand-in file (.boothin)';rec.parentNode.appendChild(b);b.addEventListener('click',function(){var m=document.getElementById('x-msg'),o=document.getElementById('b133-xhr');if(!o){o=document.createElement('div');o.id='b133-xhr';o.className='b133-hr';m.parentNode.insertBefore(o,m.nextSibling);}handIn(o);});})();
  if(MINE||!swOff('h-consent'))open('consent',false);window.blOpen=open;
+})();
+</script>
+<script id="bl-150">/* BUILD 150: a Back button on every page, the pills under the title in an even grid with the Look controls, larger lettering on the booth, the editor's buttons grouped in order with drag-to-select, larger type on wide screens, and choosing a Look turns Easy read off. */
+(function(){
+var R=document.documentElement;
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function vis(el){if(!el)return false;if(el.hidden)return false;var c=getComputedStyle(el);if(c.display==='none'||c.visibility==='hidden')return false;var r=el.getBoundingClientRect();return r.width>0&&r.height>0;}
+
+/* ---------- 1. Back: one layer at a time ---------- */
+var STACK=[];   /* openers the reader pressed inside an open part, most recent last */
+function openPill(){return $$('#bl126-nav .bl126-p').filter(function(b){return b.getAttribute('aria-expanded')==='true'||b.classList.contains('on');})[0]||null;}
+function pillLabel(p){return p?p.textContent.trim():'';}
+function sectionOf(p){var id=p&&p.getAttribute('aria-controls');return id?document.getElementById(id):null;}
+function overlay(){
+ var r=document.getElementById('bls-reader');if(r)return {name:'syllabus',close:function(){if(typeof sreadx==='function')sreadx();else r.remove();}};
+ var st=document.getElementById('st-page');if(st&&!st.classList.contains('st-hide')&&vis(st))return {name:'Sovereign Tech',close:function(){var x=st.querySelector('.st-x,[data-st-close],.st-close');if(x)x.click();else{st.classList.add('st-hide');R.style.overflow='';}}};
+ var big=$$('.qr-big,.qr-full,.bl-qrbig').filter(vis)[0];if(big)return {name:'QR code',close:function(){var x=big.querySelector('button');if(x)x.click();else big.classList.add('hide');}};
+ return null;}
+function sheetBack(){return $$('#bl-path a, #bl-path button').filter(function(a){return vis(a)&&/^← Back to step/.test(a.textContent.trim());})[0]||null;}
+function prune(){var p=openPill(),sec=sectionOf(p);STACK=STACK.filter(function(o){return o.el.isConnected&&vis(o.el)&&(!sec||sec.contains(o.el));});}
+function target(){
+ var ov=overlay();if(ov)return {label:'← Back',run:ov.close};
+ var sb=sheetBack();if(sb)return {label:'← Back',run:function(){sb.click();}};
+ prune();var top=STACK[STACK.length-1],p=openPill();
+ if(top)return {label:'← Back to '+pillLabel(p),run:function(){STACK.pop();var h=top.sec?top.sec.offsetHeight:0;top.el.click();setTimeout(function(){if(top.sec&&top.sec.offsetHeight>=h-4){if(p)p.click();scrollTo(0,0);}else top.el.scrollIntoView({block:'center'});},120);}};
+ if(p&&p.getAttribute('data-pill')!=='consent')return {label:'← Home',run:function(){p.click();STACK=[];scrollTo(0,0);}};
+ return null;}
+var BK=document.createElement('button');BK.type='button';BK.id='bl150-back';BK.hidden=true;document.body.appendChild(BK);
+BK.addEventListener('click',function(){var t=target();if(t)t.run();setTimeout(sync,160);});
+function sync(){var t=target();BK.hidden=!t;if(t&&BK.textContent!==t.label)BK.textContent=t.label;}
+/* remember a button that opened a sub-part: a toggle (aria-expanded, a ▾ or ▴ mark, a summary or a Listening Room door) that made the part taller */
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button,summary');if(!b||b===BK)return;var p=openPill(),sec=sectionOf(p);if(!sec||!sec.contains(b))return;
+ var tog=b.hasAttribute('aria-expanded')||/[▾▴▼▲]\s*$/.test(b.textContent)||b.tagName==='SUMMARY'||b.hasAttribute('data-bl126');if(!tog)return;
+ var h=sec.offsetHeight;setTimeout(function(){if(sec.offsetHeight>h+30){STACK=STACK.filter(function(o){return o.el!==b;});STACK.push({el:b,sec:sec});}else STACK=STACK.filter(function(o){return o.el!==b;});sync();},150);},true);
+document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('#bl126-nav .bl126-p'))STACK=[];setTimeout(sync,200);});
+setInterval(sync,700);
+
+/* ---------- 4 + 7. the pills under the title: an even grid, the Look controls with them ---------- */
+function look(){var nav=document.getElementById('bl126-nav'),sk=$('.nav-skins'),st=document.getElementById('status');if(!nav||!sk)return;
+ var row=document.getElementById('bl150-look');if(!row){row=document.createElement('div');row.id='bl150-look';row.className='bl150-look';nav.appendChild(row);}
+ if(sk.parentNode!==row)row.appendChild(sk);if(st&&st.parentNode!==row)row.appendChild(st);}
+look();setInterval(look,1000);
+
+/* ---------- 8. choosing a Look turns Easy read off ---------- */
+function ezOff(){if(R.classList.contains('ez')){var b=document.getElementById('ezread');if(b)b.click();}}
+document.addEventListener('change',function(e){if(e.target&&e.target.id==='skin-sel')ezOff();},true);
+document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.chip.sk');if(c)ezOff();},true);
+
+/* ---------- 6. larger type on wide screens: the parts under the title grow with the window ---------- */
+function scale(){var w=innerWidth,z=w<1200?1:Math.min(1.3,Math.round((1+(w-1200)/1500)*100)/100);
+ ['bl126-host'].forEach(function(id){var el=document.getElementById(id);if(el&&el.style.zoom!==String(z))el.style.zoom=z===1?'':String(z);});
+ var sp=$('#st-page > *:not(.st-notice)');R.style.setProperty('--bl150-z',z);}
+scale();addEventListener('resize',scale);
+
+/* ---------- 2. the editor: buttons grouped in the order you use them; drag across the waveform to select a part ---------- */
+function editor(){var st=$('.cut-stage');if(!st||st.querySelector('.bl150-ed'))return;
+ var ids=['cutbtn','cutcancel','undo','cutclear','trim-s','trim-e','back','n-m1','n-m01','n-p01','n-p1','fwd','round-save','round-back','cs-lens'];if(ids.some(function(i){return !document.getElementById(i);}))return;
+ var ed=document.createElement('div');ed.className='bl150-ed';
+ function box(q,k,kids,note){var d=document.createElement('div');d.className='bl150-box';d.style.setProperty('--k',k);var h=document.createElement('p');h.className='bl150-q';h.textContent=q;d.appendChild(h);var g=document.createElement('div');g.className='bl150-g';kids.forEach(function(x){if(x)g.appendChild(x);});d.appendChild(g);if(note){var n=document.createElement('p');n.className='bl150-n';n.textContent=note;d.appendChild(n);}ed.appendChild(d);return d;}
+ var g=function(i){return document.getElementById(i);};
+ var sel=document.createElement('button');sel.type='button';sel.className='btn verm';sel.id='bl150-cutsel';sel.textContent='✂ Cut the selected part';sel.disabled=true;
+ var clr=document.createElement('button');clr.type='button';clr.className='btn light';clr.id='bl150-selclr';clr.textContent='Clear the selection';clr.disabled=true;
+ box('Which part do you want to cut out?','#FF7A59',[sel,g('cutbtn'),g('cutcancel'),clr,g('undo'),g('cutclear')],'Drag across the waveform to select a part, then press “Cut the selected part”. Or press “Start a cut here” while it plays, and press it again where the cut ends.');
+ box('Do you want to cut the start or the end?','#F5A742',[g('trim-s'),g('trim-e')],'Move to the point first. “Before here” cuts from 0:00 to that point. “After here” cuts from that point to the end.');
+ var zw=document.createElement('div');zw.className='bl150-zoom';$$('[data-zoom]',st).forEach(function(z){zw.appendChild(z);});
+ box('Where in the recording are you?','#5CE8F5',[g('back'),g('n-m1'),g('n-m01'),g('n-p01'),g('n-p1'),g('fwd')],'Click the waveform to jump to a point.').querySelector('.bl150-g').classList.add('bl150-mv');
+ var zb=box('How much of the recording do you see?','#5CE8F5',[],null);zb.querySelector('.bl150-g').appendChild(zw);
+ box('Are you done cutting for now?','#B6F23C',[g('round-save'),g('round-back'),g('cs-lens')],null);
+ var keys=$$('.cs-more .note',st)[0];if(keys)ed.appendChild(keys);
+ var main=$('.cs-main',st);if(main)main.parentNode.insertBefore(ed,main);
+ var more=$('.cs-more',st);if(more)more.style.display='none';if(main)main.style.display='none';
+ var rm=g('round-msg'),cl=g('cutlist'),ro=g('rounds');var last=ed.querySelector('.bl150-box:last-of-type');if(last){[cl,ro,rm].forEach(function(x){if(x)last.appendChild(x);});}
+ drag(sel,clr);}
+function drag(sel,clr){var c=document.getElementById('wave'),wrap=c&&c.parentNode;if(!c||!wrap)return;if(getComputedStyle(wrap).position==='static')wrap.style.position='relative';
+ var ov=document.createElement('div');ov.className='bl150-sel';ov.hidden=true;wrap.appendChild(ov);
+ var A=null,B=null,down=null,moved=false,skip=false;
+ var E=window.__BLED||{};function tAt(x){var r=c.getBoundingClientRect();var f=Math.max(0,Math.min(1,(x-r.left)/r.width));var v=E.viewRange?E.viewRange():[0,0];return v[0]+f*(v[1]-v[0]);}
+ function show(){if(A==null||B==null){ov.hidden=true;sel.disabled=clr.disabled=true;return;}var v=E.viewRange?E.viewRange():[0,1],a=Math.min(A,B),b=Math.max(A,B);var l=(a-v[0])/(v[1]-v[0]),w=(b-a)/(v[1]-v[0]);
+  ov.style.left=(c.offsetLeft+Math.max(0,l)*c.offsetWidth)+'px';ov.style.width=Math.max(2,Math.min(1-Math.max(0,l),w+Math.min(0,l))*c.offsetWidth)+'px';ov.style.top=c.offsetTop+'px';ov.style.height=c.offsetHeight+'px';ov.hidden=false;sel.disabled=clr.disabled=false;}
+ c.addEventListener('pointerdown',function(e){if(!E.wd||!E.wd())return;down=e.clientX;moved=false;A=tAt(e.clientX);B=null;try{c.setPointerCapture(e.pointerId);}catch(_){}});
+ c.addEventListener('pointermove',function(e){if(down==null)return;if(Math.abs(e.clientX-down)>6){moved=true;B=tAt(e.clientX);show();}});
+ c.addEventListener('pointerup',function(e){if(down==null)return;down=null;if(moved){B=tAt(e.clientX);skip=true;show();if(E.seekW)E.seekW(Math.min(A,B));}else{A=B=null;show();}});
+ c.addEventListener('click',function(e){if(skip){skip=false;e.stopImmediatePropagation();e.preventDefault();}},true);
+ sel.addEventListener('click',function(){if(A==null||B==null||!E.addCut)return;var a=Math.min(A,B),b=Math.max(A,B);A=B=null;show();E.addCut(a,b);});
+ clr.addEventListener('click',function(){A=B=null;show();});
+ new MutationObserver(function(){if(A!=null&&B!=null)show();}).observe(c,{attributes:true});addEventListener('resize',show);
+ document.querySelectorAll('[data-zoom]').forEach(function(z){z.addEventListener('click',function(){setTimeout(show,30);});});}
+editor();setTimeout(editor,800);
 })();
 </script>
 </body>
