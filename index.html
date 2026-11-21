@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 152</title>
+<title>Booth Light · BUILD 153</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 152 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 153 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1543,6 +1543,28 @@ html .bl151-jump{font-size:calc(var(--bl152-bf,16px) * .74) !important}
 html .bo-buttons.bl126-steps .bl126-st{gap:.25em !important;padding:0 .35em 0 .15em !important;letter-spacing:0 !important}
 html .bo-buttons.bl126-steps .bl126-n{width:1.45em !important;height:1.45em !important}
 </style>
+<style id="bl-153-css">/* BUILD 153 */
+#bl-path .pt-ask{display:grid !important;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;grid-auto-flow:row dense;align-items:start}
+#bl-path .pt-ask > *{grid-column:1/-1}
+#bl-path .pt-ask > .pt-btns{grid-column:1 !important;grid-template-columns:1fr !important}
+#bl-path .pt-ask > button.pt-outside:not(.pt-notes7){grid-column:2 !important;align-self:center;margin:0 !important;max-width:8.5em !important;white-space:normal !important;line-height:1.2 !important;text-align:center !important;border-radius:2em !important;padding:.8em 1em !important;font-size:.8em !important}
+@media (max-width:420px){#bl-path .pt-ask > .pt-btns,#bl-path .pt-ask > button.pt-outside:not(.pt-notes7){grid-column:1/-1 !important;justify-self:start}}
+#bl126-nav.bl128-in .bl128-row2{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+@media (max-width:759px){#bl126-nav .bl128-row2{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+#bl126-nav .bl128-row2 .bl153-p{color:#FF8FD8 !important;box-shadow:inset 0 0 0 2px #FF8FD8 !important}
+.bl151-r{grid-template-columns:repeat(10,minmax(0,1fr)) !important}
+.bl151-p.bl153-p,.bl151-p[style*="FF8FD8"]{color:#FF8FD8}
+#bl153-st{position:fixed;inset:0;z-index:2147482600;background:rgba(7,12,34,.8);display:flex;align-items:center;justify-content:center;padding:16px}
+#bl153-st[hidden]{display:none}
+.bl153-in{width:min(100%,34em);background:#FFF8EC;color:#14183A;border-radius:28px;border:5px solid #FF8FD8;padding:20px;display:grid;gap:12px;font-family:Helvetica,Arial,sans-serif}
+.bl153-h{margin:0;font:800 clamp(19px,1.6vw,26px)/1.25 Helvetica,Arial,sans-serif}
+.bl153-go{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:4px;padding:14px 18px;border-radius:22px;background:#FFE3F4;box-shadow:inset 0 0 0 3px #FF8FD8}
+.bl153-go b{font:800 clamp(17px,1.3vw,22px)/1.2 Helvetica,Arial,sans-serif}
+.bl153-go span{font:600 clamp(14px,1vw,17px)/1.4 Helvetica,Arial,sans-serif}
+.bl153-go:focus-visible,.bl153-x:focus-visible{outline:4px solid #14183A;outline-offset:3px}
+.bl153-note{margin:0;font:600 14px/1.4 Helvetica,Arial,sans-serif}
+.bl153-x{all:unset;box-sizing:border-box;cursor:pointer;justify-self:end;padding:.6em 1.4em;border-radius:999px;background:#14183A;color:#FFF8EC;font:800 16px Helvetica,Arial,sans-serif}
+</style>
 </head>
 <body><div class="st-notice" id="bl-notice"><b>⚠ Work in progress</b><span>Please excuse the mess, while our humans continue to conceptualize, design, make, edit, and test these apps.</span><i>— AI Agent 1984 <em>(supervised)</em><u></u></i><button type="button" class="st-nx" aria-label="Close this notice">×</button></div>
 
@@ -1686,7 +1708,7 @@ html .bo-buttons.bl126-steps .bl126-n{width:1.45em !important;height:1.45em !imp
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 152</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 153</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2897,7 +2919,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 152 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 153 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14828,7 +14850,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 152 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 153 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15329,6 +15351,23 @@ function drag(sel,clr){var c=document.getElementById('wave'),wrap=c&&c.parentNod
  new MutationObserver(function(){if(A!=null&&B!=null)show();}).observe(c,{attributes:true});addEventListener('resize',show);
  document.querySelectorAll('[data-zoom]').forEach(function(z){z.addEventListener('click',function(){setTimeout(show,30);});});}
 editor();setTimeout(editor,800);
+})();
+</script>
+<script id="bl-153">/* BUILD 153: a home pill for storytellers opens their three ways in. (The step layout is CSS only, so the app still finds its buttons where it put them.) */
+(function(){
+function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+/* the storyteller pill on the home page */
+var LINKS=[['#storyteller','Give my consent for the interview','Your consent steps open on this phone. At the end you show the episode producer a six-character code.'],
+ ['#storyteller-review','Hear the edited interview','Choose the file the episode producer sent you, listen, and tell them what to change.'],
+ ['#storyteller-final','Approve the final cut','Choose the final cut file. You get a code for the episode producer and your own erase code.']];
+var box=document.createElement('div');box.id='bl153-st';box.hidden=true;box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','For storytellers');
+box.innerHTML='<div class="bl153-in"><p class="bl153-h">Are you the storyteller? What do you want to do?</p>'+LINKS.map(function(l){return '<button type="button" class="bl153-go" data-h="'+l[0]+'"><b>'+l[1]+'</b><span>'+l[2]+'</span></button>';}).join('')+'<p class="bl153-note">Nothing you choose here is sent anywhere. Your answers stay on this phone until you show the code.</p><button type="button" class="bl153-x">Close</button></div>';
+document.body.appendChild(box);
+function shut(){box.hidden=true;}
+box.addEventListener('click',function(e){var g=e.target.closest('.bl153-go');if(g){shut();var h=g.getAttribute('data-h');if(location.hash===h){location.hash='';}setTimeout(function(){location.hash=h;},30);return;}if(e.target.closest('.bl153-x')||e.target===box)shut();});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&!box.hidden)shut();});
+function pill(){var r2=document.querySelector('#bl126-nav .bl128-row2');if(!r2||r2.querySelector('.bl153-p'))return;var b=document.createElement('button');b.type='button';b.className='bl128-s bl153-p';b.textContent='I’m a storyteller';b.style.setProperty('--k','#FF8FD8');b.addEventListener('click',function(){box.hidden=false;var f=box.querySelector('.bl153-go');if(f)f.focus();});r2.appendChild(b);}
+pill();
 })();
 </script>
 <script id="bl-151">/* BUILD 151: the home stays in reach (a bar with every option follows you down the page); "Tap a number" sits on the booth; the editor selects, plays and cuts a part, with handles to adjust it; saving and exporting in one box. */
