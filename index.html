@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 155</title>
+<title>Booth Light · BUILD 156</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 155 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 156 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1721,7 +1721,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 155</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 156</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2124,7 +2124,7 @@ function dl(b,name){recordExport(b,name);const u=URL.createObjectURL(b);const a=
 const num=()=>(String($('inum').value||'01').trim().replace(/[^0-9A-Za-z-]/g,'')||'01');
 const base=()=>'listening-room-interview-'+num();
 function wavHeader(samples,sr){const ab=new ArrayBuffer(44),v=new DataView(ab);let p=0;const w32=x=>{v.setUint32(p,x,true);p+=4;},w16=x=>{v.setUint16(p,x,true);p+=2;},ws=s=>{for(let i=0;i<s.length;i++)v.setUint8(p++,s.charCodeAt(i));};ws('RIFF');w32(36+samples*2);ws('WAVE');ws('fmt ');w32(16);w16(1);w16(1);w32(sr);w32(sr*2);w16(2);w16(16);ws('data');w32(samples*2);return ab;}
-async function wavOf(ranges){const sr=REC.sr,parts=[];let total=0;for(const [a,b] of ranges){let s=Math.floor(a*sr);const e=Math.min(REC.total,Math.floor(b*sr));let i=Math.floor(s/REC.chunk);while(s<e&&i<REC.n){const ab=await pcmGet(i);if(!ab)break;const cs=i*REC.chunk,v=new Int16Array(ab);const from=Math.max(0,s-cs),to=Math.min(v.length,e-cs);if(to>from){parts.push(v.slice(from,to).buffer);total+=to-from;}i++;s=cs+to;}}return {blob:new Blob([wavHeader(total,sr),...parts],{type:'audio/wav'}),total};}
+async function wavOf(ranges){/* BUILD 156: each join between kept parts gets a 12 ms fade out and fade in, so a cut does not click */const sr=REC.sr,parts=[];let total=0;const F=Math.max(1,Math.round(sr*0.012));const fade=(arr,inn)=>{let left=F;if(inn){for(const v of arr){for(let k=0;k<v.length&&left>0;k++,left--){const t=(F-left)/F;v[k]=Math.round(v[k]*(0.5-0.5*Math.cos(Math.PI*t)));}if(left<=0)break;}}else{for(let q=arr.length-1;q>=0&&left>0;q--){const v=arr[q];for(let k=v.length-1;k>=0&&left>0;k--,left--){const t=(F-left)/F;v[k]=Math.round(v[k]*(0.5-0.5*Math.cos(Math.PI*t)));}}}};let ri=0;for(const [a,b] of ranges){const mine=[];let s=Math.floor(a*sr);const e=Math.min(REC.total,Math.floor(b*sr));let i=Math.floor(s/REC.chunk);while(s<e&&i<REC.n){const ab=await pcmGet(i);if(!ab)break;const cs=i*REC.chunk,v=new Int16Array(ab);const from=Math.max(0,s-cs),to=Math.min(v.length,e-cs);if(to>from){mine.push(v.slice(from,to));total+=to-from;}i++;s=cs+to;}if(ranges.length>1){if(ri>0)fade(mine,true);if(ri<ranges.length-1)fade(mine,false);}mine.forEach(v=>parts.push(v.buffer));ri++;}return {blob:new Blob([wavHeader(total,sr),...parts],{type:'audio/wav'}),total};}
 async function fpBlob(b){if(b.size>300e6)return '';try{return hex(await crypto.subtle.digest('SHA-256',await b.arrayBuffer()));}catch(e){return '';}}
 $('x-edit').onclick=async()=>{if(!REC)return alert('Record or open a recording first.');$('x-msg').textContent='Writing the edited audio…';const {blob,total}=await wavOf(keepRanges());const name=base()+'-edited-v'+(S.version||0)+'-'+today()+'.wav';dl(blob,name);const fp=await fpBlob(blob);S.editedFp=fp;$('x-msg').textContent='Exported '+name+' · '+fmt(total/REC.sr)+' · '+Math.round(blob.size/1e6)+' MB'+(fp?' · fingerprint (SHA-256) '+fp.slice(0,16)+'…':'')+'. '+removedRanges().length+' removed passage(s) applied.';touch();};
 $('x-orig').onclick=async()=>{if(!REC)return alert('Record or open a recording first.');$('x-msg').textContent='Writing the original…';const {blob}=await wavOf([[0,dur()]]);const name=base()+'-original-'+today()+'.wav';dl(blob,name);$('x-msg').textContent='Saved '+name+' · '+fmt(dur())+' · '+Math.round(blob.size/1e6)+' MB. Keep this file: a version opened later asks for it if the audio is no longer on this device.';};
@@ -2932,7 +2932,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 155 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 156 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14863,7 +14863,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 155 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 156 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
