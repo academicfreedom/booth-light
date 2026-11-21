@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 151</title>
+<title>Booth Light · BUILD 152</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 151 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 152 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1518,6 +1518,31 @@ html.bl151-jumpon #bl-path .pt-jump{display:none}
 .bl151-ch{margin:0;text-align:center;font:800 clamp(14px,1vw,17px) Helvetica,Arial,sans-serif;color:#14183A}
 .bl151-ex > .note{grid-column:1/-1;margin:0}
 </style>
+<style id="bl-152-css">/* BUILD 152 */
+html .bo-buttons.bl126-steps .bl126-st{font-size:var(--bl152-bf,16px) !important}
+html .bo-buttons.bl126-steps .bl126-stt{font-size:calc(var(--bl152-bf,16px) * 1.06) !important}
+html .bl151-jump{font-size:calc(var(--bl152-bf,16px) * .74) !important}
+#bl126-nav.bl128-in .bl128-row1 .bl126-p{font-size:var(--bl152-p,17px) !important}
+#bl126-nav.bl128-in .bl128-row2 .bl128-s{font-size:var(--bl152-s,15px) !important}
+#bl126-nav.bl128-in .bl150-look .chip,#bl126-nav.bl128-in .bl150-look #ezread,#bl126-nav.bl128-in .bl150-look #bigtext,#bl126-nav.bl128-in .bl150-look select,#bl126-nav.bl128-in .bl150-look .skin-pick{font-size:var(--bl152-l,15px) !important}
+/* step buttons in rows: the answers side by side, the smaller choices under them */
+#bl-path .pt-ask .pt-btns{display:grid !important;grid-template-columns:repeat(auto-fit,minmax(min(100%,8.5em),1fr));gap:10px}
+#bl-path .pt-ask .pt-btns > .pt-b{width:100% !important;margin:0 !important;justify-content:center;text-align:center}
+#bl-path .pt-ask button.pt-outside{font-size:.8em !important;padding:.5em 1.1em !important;min-height:0 !important;width:auto !important;margin:12px 0 0 !important}
+#bl-path .pt-ask .b132-s1{display:grid !important;grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}
+#bl-path .pt-ask .b132-s1 > .b132-hand{width:100%;font-size:.8em !important;padding:.55em .8em !important;min-height:0 !important;text-align:center;justify-content:center;display:flex;align-items:center;align-self:stretch}
+#bl-path .pt-ask .b132-s1 > :not(.b132-hand){grid-column:1/-1}
+#bl-path .pt-ask .pt-xs{display:grid !important;grid-template-columns:1fr 1fr;gap:8px}
+#bl-path .pt-ask .pt-xs > button{width:100%;font-size:.8em !important;margin:0 !important;justify-content:center;text-align:center}
+@media (max-width:520px){#bl-path .pt-ask .b132-s1,#bl-path .pt-ask .pt-xs{grid-template-columns:1fr}}
+/* the storyteller's link */
+.bl152-ln{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+.bl152-lb{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:.55em 1.1em;font:800 15px/1.1 Helvetica,Arial,sans-serif;background:#070C22;color:#5CE8F5;box-shadow:inset 0 0 0 2px #5CE8F5}
+.bl152-lb:focus-visible{outline:3px solid #070C22;outline-offset:2px}
+.bl152-lnote{margin:4px 0 0;font:600 14px/1.4 Helvetica,Arial,sans-serif}
+html .bo-buttons.bl126-steps .bl126-st{gap:.25em !important;padding:0 .35em 0 .15em !important;letter-spacing:0 !important}
+html .bo-buttons.bl126-steps .bl126-n{width:1.45em !important;height:1.45em !important}
+</style>
 </head>
 <body><div class="st-notice" id="bl-notice"><b>⚠ Work in progress</b><span>Please excuse the mess, while our humans continue to conceptualize, design, make, edit, and test these apps.</span><i>— AI Agent 1984 <em>(supervised)</em><u></u></i><button type="button" class="st-nx" aria-label="Close this notice">×</button></div>
 
@@ -1661,7 +1686,7 @@ html.bl151-jumpon #bl-path .pt-jump{display:none}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 151</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 152</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2872,7 +2897,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 151 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 152 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14803,7 +14828,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 151 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 152 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15372,6 +15397,27 @@ function save(){var sx=$('details.sx');if(!sx||sx.dataset.bl151||$('.bl151-save'
  sn.textContent='A saved file (.booth) keeps your cuts, notes, speakers and consent choices, not the audio. File names use the interview number and the date, never a name.';
  box.appendChild(sst);sx.style.display='none';}
 save();setInterval(save,1000);
+})();
+</script>
+<script id="bl-152">/* BUILD 152: the booth lettering is sized from the booth itself (works in every browser); the step buttons sit in tidy rows; the storyteller's link can be copied or shared in one tap. */
+(function(){
+function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+/* lettering sized from the width of the booth and of the title, measured on the page */
+function fit(){var box=document.querySelector('.bo-buttons.bl126-steps');if(box&&box.offsetWidth){var v=Math.max(11,Math.round(box.offsetWidth*0.066))+'px';if(box.style.getPropertyValue('--bl152-bf')!==v)box.style.setProperty('--bl152-bf',v);}
+ var nav=document.getElementById('bl126-nav');if(nav&&nav.classList.contains('bl128-in')&&nav.offsetWidth){var w=nav.offsetWidth,a=Math.max(12,Math.round(w*0.034))+'px',b=Math.max(11,Math.round(w*0.03))+'px',c=Math.max(11,Math.round(w*0.027))+'px';
+  if(nav.style.getPropertyValue('--bl152-p')!==a){nav.style.setProperty('--bl152-p',a);nav.style.setProperty('--bl152-s',b);nav.style.setProperty('--bl152-l',c);}}}
+fit();addEventListener('resize',fit);setInterval(fit,800);
+/* the storyteller's link: copy it, or share it by Messages, AirDrop or email */
+function links(){$$('.b132-lk').forEach(function(p){if(p.querySelector('.bl152-ln'))return;var b=[].filter.call(p.querySelectorAll('b'),function(x){return /booth-light\/#storyteller/.test(x.textContent);})[0];if(!b)return;
+ var url='https://'+b.textContent.trim().replace(/^https?:\/\//,'');var row=document.createElement('div');row.className='bl152-ln';
+ var cp=document.createElement('button');cp.type='button';cp.className='bl152-lb';cp.textContent='📋 Copy the link';
+ cp.addEventListener('click',function(){var done=function(){cp.textContent='✓ Copied';setTimeout(function(){cp.textContent='📋 Copy the link';},2000);};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(done,function(){prompt('Copy this link:',url);});else prompt('Copy this link:',url);});
+ row.appendChild(cp);
+ if(navigator.share){var sh=document.createElement('button');sh.type='button';sh.className='bl152-lb';sh.textContent='⤴ Send the link…';sh.addEventListener('click',function(){navigator.share({title:'Booth Light',text:'Your consent steps for our interview, in Booth Light:',url:url}).catch(function(){});});row.appendChild(sh);}
+ var n=document.createElement('p');n.className='bl152-lnote';n.textContent='The link holds no names and no recording. It opens Booth Light on the storyteller’s own phone at their consent steps. Their answers stay on their phone until they show you the code.';
+ p.appendChild(row);p.appendChild(n);});}
+links();setInterval(links,700);
 })();
 </script>
 </body>
