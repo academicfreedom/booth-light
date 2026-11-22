@@ -1,7 +1,7 @@
-BOOTH LIGHT BUILD 156 · GitHub site files · SHA-256
+BOOTH LIGHT BUILD 157 · GitHub site files · SHA-256
 ebe603890575fdd4329d8624d56532486b9dcd0453206f076f1bb7e43ffa8020  booth-light.html
 ba0374cf6b382e1422e9d2195708a118effd37a353b029b4bb4a09d7cb19eab6  icon-180.png
 313e9d0ebd72563711ea2c36814e62b5275964b04def3ab5c837f2f916ee9b64  icon.svg
-70590ce21711f8feb015ce2b17b178b5bf2be91c2074dae36997b9d6c6b51bba  index.html
+fb9155b73d68b7a75b1ba2a37b8dbac00979a006adae68affba8af50e4a56d47  index.html
 8b6098bec68b00bd4cfb7148a9c7e59d8282b9697e58f0f2c64a52f8fd6b3cfe  manifest.webmanifest
-4b6471b6c568d540cb63822994476d8893ce3e9a6d1a411bec36fb020d45999f  sw.js
+1a25d7e26ec0d58aad17f090df50decf106665b5a0290b2c74e37c8baa0e5a03  sw.js
