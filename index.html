@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 157</title>
+<title>Booth Light · BUILD 160</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 157 · 2026-11-21 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 160 · 2026-11-22 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1585,6 +1585,23 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 #bl157-up b{font-weight:800}
 #bl157-up button{border:0;border-radius:2em;background:#0B1030;color:#FFF;font:700 1rem system-ui,-apple-system,Arial,sans-serif;padding:8px 18px;cursor:pointer}
 </style>
+<style id="bl-158-css">#bl158-shut{margin:12px 0 0;background:#FFE9A8;color:#14183A;border-radius:18px;padding:12px 16px;font-weight:700}
+#bl126-nav .bl128-row2 .bl158-k{grid-column:1/-1;color:var(--k) !important;box-shadow:inset 0 0 0 2px var(--k) !important}
+.bl151-p[style*="5AB16E"],.bl151-p[style*="F5A742"]{color:var(--k)}
+#bl126-nav .bl128-row2 .bl158-w{color:#5CE8F5 !important;box-shadow:inset 0 0 0 2px #5CE8F5 !important}
+#bl126-nav.bl128-in .bl128-row2 .bl158-w,#bl126-nav.bl128-in .bl128-row2 .bl158-k{grid-column:span 2}
+#bl126-nav:not(.bl128-in) .bl128-row2 .bl158-w,#bl126-nav:not(.bl128-in) .bl128-row2 .bl158-k{grid-column:1/-1}
+.bl151-r{grid-template-columns:repeat(12,minmax(0,1fr)) !important}
+.bl151-p[style*="5CE8F5"]{color:#5CE8F5}
+#bl158-wh{position:fixed;inset:0;z-index:100000;background:rgba(6,9,26,.72);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:24px 12px}
+#bl158-wh[hidden]{display:none}
+#bl158-wh .bl158-in{background:#FFF8EC;border:6px solid #5CE8F5;border-radius:30px;max-width:980px;width:100%;padding:18px 18px 22px;box-sizing:border-box}
+#bl158-wh .panel.wh{margin:0;background:transparent;box-shadow:none}
+#bl158-wh .bl158-x{display:block;margin:14px 0 0 auto;border:0;border-radius:2em;background:#14183A;color:#fff;font:700 1.05rem system-ui,-apple-system,Arial,sans-serif;padding:12px 26px;cursor:pointer}
+#bl158-wh .wh-title{color:#14183A !important;font-size:1.6rem}
+</style>
+<style id="bl-159-css">html.bl151-on #bl-path .pt-lnbox{top:var(--bl151-h,60px) !important}
+</style>
 </head>
 <body><div class="st-notice" id="bl-notice"><b>⚠ Work in progress</b><span>Please excuse the mess, while our humans continue to conceptualize, design, make, edit, and test these apps.</span><i>— AI Agent 1984 <em>(supervised)</em><u></u></i><button type="button" class="st-nx" aria-label="Close this notice">×</button></div>
 
@@ -1728,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 157</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 160</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -1752,7 +1769,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 
 <!-- DEVICE FIRST v29 --><div class="band bl-two" id="bl-two"><h2 class="bl-two-h">Two ways to use Booth Light. Same app, same features.</h2><div class="bl-two-g"><div class="bl-two-c"><h3>On a laptop, as a file</h3><p>Most private. Get the file from your instructor (AirDrop, USB or the class QR code) and open it in Chrome or Firefox. Nothing about you reaches any company. The file does not update itself: get the new file from your instructor when a new version comes out.</p></div><div class="bl-two-c"><h3>On a phone or laptop, at the web address</h3><p><b>academicfreedom.github.io/booth-light</b>. Nothing to download; add it to your Home Screen if you like. It updates itself. GitHub (owned by Microsoft) logs each visit’s IP address and time; it never receives your recordings.</p></div></div><p class="bl-two-n">Either way, your recordings stay on the device you recorded on. Export them to move them.</p></div><div class="band" id="dev" style="background:var(--amber2,var(--panel))"><!-- SECTION 1 ONE PANEL v39 -->
 <h2><span class="num">1</span>Your device</h2>
-<div class="panel dev1"><div class="lp" id="lp"><!-- LAPTOP OR PHONE v74 --><p class="lp-q">How will you use Booth Light?</p><div class="lp-btns"><button type="button" class="lp-b lp-lap" data-k="lap">On a laptop · fully sovereign</button><button type="button" class="lp-b lp-ph" data-k="ph">On a phone · from GitHub</button><button type="button" class="lp-b lp-qr" data-k="qr">▦ QR code · class hand-out</button></div><div class="lp-pan hide" data-k="qr"><p class="lp-qrn">QR code opens the class hand-out page on the instructor’s Mac (http://127.0.0.1:8971). It works only while Start-Handout.command is running on that Mac; students on the same Wi-Fi scan the code to download Booth Light.</p><a class="lp-dl" href="http://127.0.0.1:8971/" target="_blank" rel="noopener">Open the hand-out page (on the instructor’s Mac, while it runs)</a></div><p class="lp-where" id="lp-where"></p><div class="lp-pan hide" data-k="lap"><ol class="lp-steps"><li>Booth Light is one file, <b>booth-light.html</b>. Your instructor sends it as a zip (Canvas, email or the classroom hand-out).</li><li>Unzip it and keep the file in a folder on your laptop. Open it by double-clicking: Chrome, Firefox or Edge.</li><li>Opened from the disk, no website sends it to you. It connects to GitHub only for the withdrawn list, if your device holds a class episode, and for the Earlier seasons shelf, if you unlock it.</li></ol><a class="lp-dl hide" id="lp-dl" href="booth-light.html" download>Download the laptop file</a></div><div class="lp-pan hide" data-k="ph"><p class="lp-url" id="lp-url"></p><div class="lp-os"><button type="button" class="lp-o on" data-o="ios">iPhone</button><button type="button" class="lp-o" data-o="and">Android</button><button type="button" class="lp-o" data-o="log">What can be logged</button></div><div class="lp-osp" data-o="ios"><ol class="lp-steps"><li>Open the address in <b>Safari</b> while connected.</li><li>Tap <b>Share</b> (the square with an arrow), then <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open Booth Light from its Home Screen icon and allow the microphone. Do this before you record: Safari deletes the stored work of websites not opened for 7 days; Home Screen apps are exempt.</li><li>Recording stops if the screen locks or you switch apps. Keep the screen on.</li></ol><p class="lp-card">Once Booth Light is on your Home Screen, open it in aeroplane mode (Wi-Fi and mobile data off). The phone then makes no network connection, so neither your network nor GitHub receives anything. If you open it while connected, the phone checks GitHub for an update, and that check is logged like your first visit. Your recordings, notes and texts are not part of that check: Booth Light never sends them. A file you export stays on the phone if you save it to On My iPhone. Saved to iCloud Drive, it is copied to Apple’s servers. If Safari is on under Settings › your name › iCloud, Apple receives the address of this page in your Safari history, not your recordings.</p></div><div class="lp-osp hide" data-o="and"><ol class="lp-steps"><li>Open the address in <b>Chrome</b> while connected.</li><li>Tap <b>⋮</b> (top right), then <b>Add to Home screen</b> (on some phones: <b>Install app</b>), then <b>Install</b>.</li><li>Open Booth Light from its Home Screen icon and allow the microphone.</li><li>Recording stops if the screen locks or you switch apps. Keep the screen on.</li></ol><p class="lp-card">Once Booth Light is on your Home Screen, turn on Airplane mode and open it. The phone then makes no network connection, so neither your network nor GitHub receives anything. If you open it while connected, Chrome checks GitHub for an update, and that check is logged like your first visit. Your recordings, notes and texts are not part of that check: Booth Light never sends them. Exports are saved to the Download folder on your phone. They stay on the phone unless you move them to Google Drive or share them. If Chrome sync is on, Google receives the address of this page in your browsing history, not your recordings.</p></div><div class="lp-osp hide" data-o="log"><ol class="lp-steps"><li>Opening the page while connected: the phone asks the network for the address of the site (a DNS lookup) and starts an encrypted connection whose first message names the site in plain text (TLS SNI). The network (WWU Wi-Fi or your phone carrier) can log your device, your login on eduroam, the site name, the time and how much data moved.</li><li>The network cannot read the page or anything you type or record: the connection is encrypted (https), and Booth Light sends none of it.</li><li>GitHub logs your internet address, the time, the files requested and your phone and browser type. It receives no recordings.</li><li>After you add it to the Home Screen, the phone keeps a copy (a service worker). Opened with no connection, it contacts nothing. Opened while connected, it asks GitHub for the newest page each time it opens; each time is logged like the first visit.</li><li>How long WWU and GitHub keep these logs, and who may obtain them, is set by WWU policy, Washington State law and GitHub’s terms. Booth Light cannot change that.</li><li>The laptop file is not loaded from the internet, so none of this happens when it opens. It connects to GitHub only for the withdrawn list and the Earlier seasons shelf.</li></ol></div></div></div><!-- DEVICE TILES v72 --><div class="dv-all"><div class="dv-pair"><div class="dv-tile"><span class="dv-n" style="background:#5AB16E">1</span><p class="dv-q">Whose computer is this?</p><button class="btn green" id="dev-yes">Yes, my own laptop or phone</button><button class="btn amber" id="dev-no">No, a shared or lab computer</button></div><div class="dv-tile"><span class="dv-n" style="background:#6FA8F5">2</span><p class="dv-q">Keep my work between visits?</p><button class="btn blue" id="keep-toggle"></button><span id="keep-state" class="hide"></span><details class="dv-more"><summary>What ON and OFF mean</summary><p class="note">ON: kept in this browser until you press Erase. Anyone using this browser can open it. OFF: erased the next time this page opens, after one chance to recover.</p></details><button class="btn dark" id="erase">Erase everything kept</button></div></div><div class="dv-br"><div class="dv-left"><p class="dv-q">3 Which browser?</p><div class="dv-browsers bh-pick"><button class="btn verm" data-b="chrome">Chrome</button><button class="btn teal" data-b="edge">Edge</button><button class="btn amber" data-b="firefox">Firefox</button><button class="btn violet" data-b="safari">Safari on Mac</button><button class="btn green" data-b="ios">iPhone or iPad</button><button class="btn blue" data-b="android">Android</button></div><div class="dv-ground"></div></div><div class="dv-right"><p class="dv-ph">Choose your browser on the left. The steps show here.</p><div class="bh-out hide" id="bh-out"><div class="bh-card"><div class="bh-h">Allow the microphone</div><ol id="bh-mic"></ol></div><div class="bh-card"><div class="bh-h">Clear this browser's data</div><ol id="bh-clr"></ol></div></div></div></div></div><p id="dev-msg" class="d-msg"></p><button class="btn light dv-where" id="where-btn">Where is my interview?</button></div>
+<div class="panel dev1"><div class="lp" id="lp"><!-- LAPTOP OR PHONE v74 --><p class="lp-q">How will you use Booth Light?</p><div class="lp-btns"><button type="button" class="lp-b lp-lap" data-k="lap">On a laptop · fully sovereign</button><button type="button" class="lp-b lp-ph" data-k="ph">On a phone · from GitHub</button><button type="button" class="lp-b lp-qr" data-k="qr">▦ QR code · class hand-out</button></div><div class="lp-pan hide" data-k="qr"><p class="lp-qrn">QR code opens the class hand-out page on the instructor’s Mac (http://127.0.0.1:8971). It works only while Start-Handout.command is running on that Mac; students on the same Wi-Fi scan the code to download Booth Light.</p><a class="lp-dl" href="http://127.0.0.1:8971/" target="_blank" rel="noopener">Open the hand-out page (on the instructor’s Mac, while it runs)</a></div><p class="lp-where" id="lp-where"></p><div class="lp-pan hide" data-k="lap"><ol class="lp-steps"><li>Booth Light is one file, <b>booth-light.html</b>. Your instructor sends it as a zip (Canvas, email or the classroom hand-out).</li><li>Unzip it and keep the file in a folder on your laptop. Open it by double-clicking: Chrome, Firefox or Edge.</li><li>Opened from the disk, no website sends it to you. It connects to GitHub only for the withdrawn list, if your device holds a class episode, and for the Earlier seasons shelf, if you unlock it.</li></ol><a class="lp-dl hide" id="lp-dl" href="booth-light.html" download>Download the laptop file</a></div><div class="lp-pan hide" data-k="ph"><p class="lp-url" id="lp-url"></p><div class="lp-os"><button type="button" class="lp-o on" data-o="ios">iPhone</button><button type="button" class="lp-o" data-o="and">Android</button><button type="button" class="lp-o" data-o="log">What can be logged</button></div><div class="lp-osp" data-o="ios"><ol class="lp-steps"><li>Open the address in <b>Safari</b> while connected.</li><li>Tap <b>Share</b> (the square with an arrow), then <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open Booth Light from its Home Screen icon and allow the microphone. Do this before you record: Safari deletes the stored work of websites not opened for 7 days; Home Screen apps are exempt.</li><li>Recording stops if the screen locks or you switch apps. Keep the screen on.</li></ol><p class="lp-card">Once Booth Light is on your Home Screen, open it in aeroplane mode (Wi-Fi and mobile data off). The phone then makes no network connection, so neither your network nor GitHub receives anything. If you open it while connected, the phone checks GitHub for an update, and that check is logged like your first visit. Your recordings, notes and texts are not part of that check: Booth Light never sends them. A file you export stays on the phone if you save it to On My iPhone. Saved to iCloud Drive, it is copied to Apple’s servers. If Safari is on under Settings › your name › iCloud, Apple receives the address of this page in your Safari history, not your recordings.</p></div><div class="lp-osp hide" data-o="and"><ol class="lp-steps"><li>Open the address in <b>Chrome</b> while connected.</li><li>Tap <b>⋮</b> (top right), then <b>Add to Home screen</b> (on some phones: <b>Install app</b>), then <b>Install</b>.</li><li>Open Booth Light from its Home Screen icon and allow the microphone.</li><li>Recording stops if the screen locks or you switch apps. Keep the screen on.</li></ol><p class="lp-card">Once Booth Light is on your Home Screen, turn on Airplane mode and open it. The phone then makes no network connection, so neither your network nor GitHub receives anything. If you open it while connected, Chrome checks GitHub for an update, and that check is logged like your first visit. Your recordings, notes and texts are not part of that check: Booth Light never sends them. Exports are saved to the Download folder on your phone. They stay on the phone unless you move them to Google Drive or share them. If Chrome sync is on, Google receives the address of this page in your browsing history, not your recordings.</p></div><div class="lp-osp hide" data-o="log"><ol class="lp-steps"><li>Opening the page while connected: the phone asks the network for the address of the site (a DNS lookup) and starts an encrypted connection whose first message names the site in plain text (TLS SNI). The network (WWU Wi-Fi or your phone carrier) can log your device, your login on eduroam, the site name, the time and how much data moved.</li><li>The network cannot read the page or anything you type or record: the connection is encrypted (https), and Booth Light sends none of it.</li><li>GitHub logs your internet address, the time, the files requested and your phone and browser type. It receives no recordings.</li><li>After you add it to the Home Screen, the phone keeps a copy (a service worker). Opened with no connection, it contacts nothing. Opened while connected, it asks GitHub for the newest page each time it opens; each time is logged like the first visit.</li><li>How long WWU and GitHub keep these logs, and who may obtain them, is set by WWU policy, Washington State law and GitHub’s terms. Booth Light cannot change that.</li><li>The laptop file is not loaded from the internet, so none of this happens when it opens. It connects to GitHub only for the withdrawn list and the Earlier seasons shelf.</li></ol></div></div></div><!-- DEVICE TILES v72 --><div class="dv-all"><div class="dv-pair"><div class="dv-tile"><span class="dv-n" style="background:#5AB16E">1</span><p class="dv-q">Whose computer is this?</p><button class="btn green" id="dev-yes">Yes, my own laptop or phone</button><button class="btn amber" id="dev-no">No, a shared or lab computer</button></div><div class="dv-tile"><span class="dv-n" style="background:#6FA8F5">2</span><p class="dv-q">Keep my work between visits?</p><button class="btn blue" id="keep-toggle"></button><span id="keep-state" class="hide"></span><details class="dv-more"><summary>What ON and OFF mean</summary><p class="note">ON: kept in this browser until you press Erase. Anyone using this browser can open it. OFF: erased the next time this page opens, after one chance to recover.</p></details><button class="btn dark" id="erase">Erase everything kept</button></div></div><div class="dv-br"><div class="dv-left"><p class="dv-q">3 Which browser?</p><div class="dv-browsers bh-pick"><button class="btn verm" data-b="chrome">Chrome</button><button class="btn teal" data-b="edge">Edge</button><button class="btn amber" data-b="firefox">Firefox</button><button class="btn violet" data-b="safari">Safari on Mac</button><button class="btn green" data-b="ios">iPhone or iPad</button><button class="btn blue" data-b="android">Android</button></div><div class="dv-ground"></div></div><div class="dv-right"><p class="dv-ph">Choose your browser on the left. The steps show here.</p><div class="bh-out hide" id="bh-out"><div class="bh-card"><div class="bh-h">Allow the microphone</div><ol id="bh-mic"></ol></div><div class="bh-card"><div class="bh-h">Clear this browser's data</div><ol id="bh-clr"></ol></div></div></div></div></div><p id="dev-msg" class="d-msg"></p><button class="btn light dv-where" id="where-btn">Where is my recording saved?</button></div>
 </div>
 
 <div class="band hide" id="where">
@@ -1761,7 +1778,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
     <p>The university controls this computer. It may log what you do and copy your Documents and Downloads folders to a university drive. Do not record a sensitive interview here. If you have to: keep Keep my work OFF, export to a USB stick, and press Erase everything kept before you log out.</p>
   </div>
   <div class="panel wh"><!-- WHERE CARDS v33 -->
-<h3 class="wh-title">Where is my interview?</h3>
+<h3 class="wh-title">Where is my recording saved?</h3>
 <div class="wh-row">
   <div class="wh-card wh-green"><div class="wh-h"><span class="wh-n">1</span>While you record</div><p>Saved to this device every 5 seconds.</p></div>
   <div class="wh-card wh-green"><div class="wh-h"><span class="wh-n">2</span>Between visits</div><p>Keep my work ON: kept.<br>OFF: erased after one chance to recover.</p></div>
@@ -1882,7 +1899,7 @@ function fresh(){return {app:'Booth Light',build:BUILD,version:0,interview:'01',
 let S=fresh(),REC=null,dirty=false,lastSaved=Date.now(),markA=null,markB=null,history=[],recording=false;
 const dur=()=>REC?REC.total/REC.sr:0;
 $('hostline').textContent=location.protocol==='file:'?'THIS PAGE IS A FILE ON THIS DEVICE · NO WEBSITE IS SENDING IT TO YOU · IT SENDS NOTHING OVER THE INTERNET':'SENT BY '+location.host+' · THAT SITE LOGGED THIS VISIT · IT NEVER RECEIVES WHAT YOU RECORD';
-$('where-btn').onclick=()=>{$('where').classList.toggle('hide');$('where-btn').textContent=$('where').classList.contains('hide')?'Where is my interview?':'Close';};
+$('where-btn').onclick=()=>{$('where').classList.toggle('hide');$('where-btn').textContent=$('where').classList.contains('hide')?'Where is my recording saved?':'Close';};
 
 /* ---------- storage: pieces of sound on disk ---------- */
 const DBN='boothlight2';
@@ -2939,7 +2956,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 157 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 160 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14870,7 +14887,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 157 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 160 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15390,6 +15407,37 @@ function pill(){var r2=document.querySelector('#bl126-nav .bl128-row2');if(!r2||
 pill();
 })();
 </script>
+<script id="bl-158k">/* BUILD 158: Keep my work ON/OFF as a home pill, always in view; it presses the same switch as section 1 */
+(function(){
+function on(){var t=document.getElementById('keep-toggle');if(t&&/is (ON|OFF)/.test(t.textContent))return /is ON/.test(t.textContent);try{return localStorage.getItem('boothlight.keep')==='on';}catch(e){return false;}}
+function lab(){return on()?'Keep my work: ON':'Keep my work: OFF';}
+function col(){return on()?'#5AB16E':'#F5A742';}
+var p=null;
+function sync(){var r2=document.querySelector('#bl126-nav .bl128-row2');if(!r2)return;
+ if(!p){p=document.createElement('button');p.type='button';p.className='bl128-s bl158-k';p.title='ON: your recording and notes stay in this browser until you press Erase. OFF: erased the next time this page opens, after one chance to recover.';
+  p.addEventListener('click',function(){var t=document.getElementById('keep-toggle');if(t)t.click();setTimeout(sync,30);});r2.appendChild(p);}
+ var l=lab(),c=col(),a=on()?'true':'false';
+ if(p.textContent!==l)p.textContent=l;if(p.style.getPropertyValue('--k')!==c)p.style.setProperty('--k',c);if(p.getAttribute('aria-pressed')!==a)p.setAttribute('aria-pressed',a);
+ [].forEach.call(document.querySelectorAll('#bl151-bar .bl151-p'),function(b){if(b._o!==p)return;if(b.textContent!==l)b.textContent=l;if(b.style.getPropertyValue('--k')!==c)b.style.setProperty('--k',c);});}
+sync();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',sync);
+setInterval(sync,1000);
+})();
+</script>
+<script id="bl-158w">/* BUILD 158: "Where is my recording saved?" as a home pill; it opens the same cards as section 1 in a box */
+(function(){
+var box=null,p=null;
+function open(){var src=document.querySelector('#where .panel.wh');if(!src)return;
+ if(!box){box=document.createElement('div');box.id='bl158-wh';box.hidden=true;box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Where is my recording saved?');
+  box.addEventListener('click',function(e){if(e.target===box||e.target.closest('.bl158-x'))box.hidden=true;});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&box&&!box.hidden)box.hidden=true;});document.body.appendChild(box);}
+ box.innerHTML='<div class="bl158-in"><div class="panel wh">'+src.innerHTML+'</div><button type="button" class="bl158-x">Close</button></div>';
+ box.hidden=false;box.scrollTop=0;var x=box.querySelector('.bl158-x');if(x)x.focus({preventScroll:true});}
+function make(){var r2=document.querySelector('#bl126-nav .bl128-row2');if(!r2||p)return;
+ p=document.createElement('button');p.type='button';p.className='bl128-s bl158-w';p.textContent='Where is my recording saved?';p.style.setProperty('--k','#5CE8F5');p.addEventListener('click',open);
+ var k=r2.querySelector('.bl158-k');if(k)r2.insertBefore(p,k);else r2.appendChild(p);}
+make();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',make);
+})();
+</script>
 <script id="bl-151">/* BUILD 151: the home stays in reach (a bar with every option follows you down the page); "Tap a number" sits on the booth; the editor selects, plays and cuts a part, with handles to adjust it; saving and exporting in one box. */
 (function(){
 var R=document.documentElement;
@@ -15403,8 +15451,9 @@ function build(){var nav=document.getElementById('bl126-nav');if(!nav||bar.child
  $$('.bl128-row1 .bl126-p,.bl128-row2 .bl128-s',nav).forEach(function(o){var b=document.createElement('button');b.type='button';b.className='bl151-p'+(o.classList.contains('bl128-s')?' bl151-s':'');b.textContent=o.textContent;var k=o.style.getPropertyValue('--k');if(k)b.style.setProperty('--k',k);b.addEventListener('click',function(){var st=document.getElementById('st-page');if(stOpen()&&o.getAttribute('data-pill')!=='sov'){var x=st.querySelector('.st-close');if(x)x.click();}o.click();setTimeout(sync,120);});b._o=o;r1.appendChild(b);});
  bar.appendChild(r1);}
 function heroOut(){var h=$('.bl-nightlogo'),n=document.getElementById('bl126-nav');var el=(n&&n.classList.contains('bl128-in'))?h:n;if(!el)return false;var r=el.getBoundingClientRect();return r.bottom<8;}
+function lnOpen(){var b=document.querySelector('#bl-path .pt-lnbox');return !!(b&&!b.hidden&&getComputedStyle(b).display!=='none');}
 function stOpen(){var st=document.getElementById('st-page');return !!(st&&!st.classList.contains('st-hide')&&getComputedStyle(st).display!=='none');}
-function sync(){build();var on=heroOut()||stOpen();if(R.classList.contains('bl151-on')!==on)R.classList.toggle('bl151-on',on);if(on&&R.style.getPropertyValue('--bl151-h')!==bar.offsetHeight+'px')R.style.setProperty('--bl151-h',bar.offsetHeight+'px');
+function sync(){build();var on=heroOut()||stOpen()||lnOpen();if(R.classList.contains('bl151-on')!==on)R.classList.toggle('bl151-on',on);if(on&&R.style.getPropertyValue('--bl151-h')!==bar.offsetHeight+'px')R.style.setProperty('--bl151-h',bar.offsetHeight+'px');
  $$('.bl151-p',bar).forEach(function(b){var o=b._o;if(!o)return;var a=o.getAttribute('aria-expanded')==='true'||o.classList.contains('on');if(b.classList.contains('on')!==a)b.classList.toggle('on',a);if(b.getAttribute('aria-pressed')!==(a?'true':'false'))b.setAttribute('aria-pressed',a?'true':'false');});}
 addEventListener('scroll',sync,{passive:true});addEventListener('resize',sync);setInterval(sync,600);setTimeout(sync,300);
 
@@ -15536,5 +15585,78 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 setInterval(tick,60000);
 })();
 </script>
+<script id="bl-158">/* BUILD 158: when the "download" switch is off, the laptop-file button in "How will you use Booth Light?" is hidden too, and a plain line says why */
+(function(){
+var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
+if(S.download!==false)return;
+var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
+function run(){var a=document.getElementById('lp-dl');if(!a)return;
+ if(mine){a.style.opacity='.45';a.style.outline='3px dashed #F87171';return;}
+ if(a.style.display!=='none')a.style.display='none';
+ if(!document.getElementById('bl158-shut')){var p=document.createElement('p');p.id='bl158-shut';p.textContent='The laptop file is closed right now. Your instructor opens it at set times. Until then, use Booth Light at its web address: academicfreedom.github.io/booth-light';a.parentNode.insertBefore(p,a.nextSibling);}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+setInterval(run,1000);
+})();
+</script>
+<script id="bl-159">/* BUILD 159: while Listening notes is open, the home bar (every pill) stays on top; a bar pill closes the notes first */
+(function(){
+function ln(){var b=document.querySelector('#bl-path .pt-lnbox');return (b&&!b.hidden&&getComputedStyle(b).display!=='none')?b:null;}
+document.addEventListener('click',function(e){var p=e.target.closest&&e.target.closest('#bl151-bar .bl151-p');if(!p)return;var b=ln();if(!b)return;
+ var o=p._o;if(o&&o.getAttribute('data-pill')==='notes')return;var h=b.querySelector('.bl128-home');if(h)h.click();},true);
+})();
+</script>
+<style id="bl-160-css">/* BUILD 160: Listening notes as an app screen: one narrow column, numbered cards, each with its own colour */
+#bl-path .pt-lnbox .bls{max-width:720px !important;width:100% !important;margin:0 auto !important;padding:14px 14px 28px !important;box-sizing:border-box;display:flex !important;flex-direction:column !important;gap:0 !important;font-size:16px !important;color:#F6F0E2 !important}
+#bl-path .pt-lnbox .bls > *{margin-top:0 !important;margin-bottom:0 !important}
+#bl-path .pt-lnbox .bl128-home-top{margin:0 0 10px !important;font-size:16px !important;min-height:40px !important;padding:.35em 1.1em !important}
+#bl-path .pt-lnbox .bls-h{font-size:30px !important;line-height:1.1 !important;text-align:left !important;margin:4px 0 6px !important;color:#FFD60A !important;text-shadow:none !important}
+#bl-path .pt-lnbox .bls > .bls-note:not(.ln-build){font-size:15px !important;line-height:1.45 !important;text-align:left !important;color:#C9CCE8 !important;font-weight:600 !important;margin-bottom:16px !important;max-width:40em}
+/* the card look, shared */
+#bl-path .pt-lnbox .bl131-src,#bl-path .pt-lnbox .bls > .bls-lab,#bl-path .pt-lnbox .ln-clock,#bl-path .pt-lnbox .ln-text,#bl-path .pt-lnbox .bls-acts,#bl-path .pt-lnbox .bls-aud{position:relative;background:#101736 !important;border:0 !important;border-left:8px solid var(--c) !important;border-radius:22px !important;padding:44px 16px 16px !important;box-sizing:border-box;margin-bottom:14px !important;box-shadow:none !important}
+#bl-path .pt-lnbox .bl131-src::before,#bl-path .pt-lnbox .bls > .bls-lab::before,#bl-path .pt-lnbox .ln-clock::before,#bl-path .pt-lnbox .ln-text-wrap::before,#bl-path .pt-lnbox .bls-acts::before{position:absolute;left:14px;top:12px;font:800 13px/1 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0B1030;background:var(--c);border-radius:999px;padding:5px 11px}
+#bl-path .pt-lnbox .bl131-src{--c:#FFD60A}
+#bl-path .pt-lnbox .bl131-src::before{content:"1 · What"}
+#bl-path .pt-lnbox .bls > .bls-lab{--c:#FFB347;font-size:15px !important;color:#FFB347 !important;display:block}
+#bl-path .pt-lnbox .bls > .bls-lab::before{content:"2 · Episode"}
+#bl-path .pt-lnbox .ln-clock{--c:#B7F03A;text-align:center}
+#bl-path .pt-lnbox .ln-clock::before{content:"3 · The clock"}
+#bl-path .pt-lnbox .bls-acts{--c:#FF4DDB}
+#bl-path .pt-lnbox .bls-acts::before{content:"5 · Hand them in"}
+#bl-path .pt-lnbox .bls-aud{--c:#C9B3F5;padding:16px !important}
+/* 1 what */
+#bl-path .pt-lnbox .bl131-q{font-size:17px !important;color:#FFD60A !important;margin:0 0 10px !important}
+#bl-path .pt-lnbox .bl131-row{display:grid !important;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px !important}
+#bl-path .pt-lnbox .bl131-s{font-size:14px !important;padding:9px 12px !important;min-height:0 !important;width:100%;text-align:center;line-height:1.25}
+#bl-path .pt-lnbox .bl131-sh p,#bl-path .pt-lnbox .bl131-sh{font-size:14px !important;color:#C9CCE8 !important;margin:10px 0 0 !important;line-height:1.4}
+/* 2 episode */
+#bl-path .pt-lnbox .ln-in{font-size:16px !important;padding:10px 14px !important;margin-top:6px !important;border-width:2px !important;width:100% !important;box-sizing:border-box}
+/* 3 clock */
+#bl-path .pt-lnbox .ln-time{font-size:46px !important;line-height:1.1 !important;margin:0 0 8px !important}
+#bl-path .pt-lnbox .ln-go{font-size:16px !important;padding:12px 16px !important;min-height:46px !important;height:auto !important;line-height:1.3 !important}
+#bl-path .pt-lnbox .ln-adj{display:flex !important;flex-wrap:wrap;justify-content:center;gap:6px !important;margin-top:10px !important}
+#bl-path .pt-lnbox .ln-adj .bls-a{font-size:14px !important;padding:6px 12px !important;min-height:0 !important}
+/* 4 notes: text box, add button and list read as one card */
+#bl-path .pt-lnbox .ln-text{--c:#5CE8F5;font-size:16px !important;min-height:96px;margin-bottom:0 !important;border-radius:22px 22px 0 0 !important;padding:44px 16px 12px !important;color:#F6F0E2 !important;width:100% !important;background:#101736 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='30'%3E%3Crect x='0' y='4' width='140' height='23' rx='11.5' fill='%235CE8F5'/%3E%3Ctext x='11' y='20' font-family='Helvetica,Arial,sans-serif' font-size='13' font-weight='800' letter-spacing='1' fill='%230B1030'%3E4 · YOUR NOTES%3C/text%3E%3C/svg%3E") no-repeat 14px 8px !important}
+#bl-path .pt-lnbox .ln-add{background:#5CE8F5 !important;color:#0B1030 !important;border-radius:0 !important;margin:0 !important;font-size:16px !important;padding:12px !important;min-height:46px !important;height:auto !important;line-height:1.3 !important;border-left:8px solid #5CE8F5 !important;box-sizing:border-box}
+#bl-path .pt-lnbox .ln-list{background:#101736 !important;border-left:8px solid #5CE8F5 !important;border-radius:0 0 22px 22px !important;padding:12px 16px !important;margin-bottom:14px !important;font-size:15px !important;box-sizing:border-box}
+#bl-path .pt-lnbox .ln-list .bls-note{font-size:14px !important;color:#C9CCE8 !important;text-align:left !important;margin:0 !important}
+/* 5 hand them in */
+#bl-path .pt-lnbox .bls-acts{display:grid !important;grid-template-columns:1fr 1fr;gap:8px !important}
+#bl-path .pt-lnbox .bls-acts > *{grid-column:1/-1;margin:0 !important}
+#bl-path .pt-lnbox .bls-acts > .bls-lab{font-size:14px !important;color:#FF8FE8 !important}
+#bl-path .pt-lnbox .bls-acts .ln-code{font-size:16px !important;padding:12px !important;min-height:46px !important;height:auto !important;line-height:1.3 !important}
+#bl-path .pt-lnbox .bls-acts > .bls-note{font-size:13px !important;color:#C9CCE8 !important;text-align:left !important;margin:-2px 0 4px !important}
+#bl-path .pt-lnbox .bls-acts .bls-out{grid-column:auto;font-size:14px !important;padding:9px 10px !important;min-height:0 !important;border-width:2px !important;width:100% !important}
+#bl-path .pt-lnbox .bls-acts .ln-erase{color:#FF8A80 !important;border-color:#FF8A80 !important}
+#bl-path .pt-lnbox .bls-acts .ln-msg:empty{display:none}
+/* where these notes are */
+#bl-path .pt-lnbox .bls-audh{font:800 15px/1.3 Helvetica,Arial,sans-serif !important;color:#C9B3F5 !important;margin:0 0 6px !important}
+#bl-path .pt-lnbox .bls-audt{font-size:13.5px !important;line-height:1.5 !important;color:#C9CCE8 !important;font-weight:500 !important;margin:0 0 6px !important}
+/* the rest */
+#bl-path .pt-lnbox .ln-class{font-size:16px !important;padding:12px !important;min-height:46px !important;height:auto !important;line-height:1.3 !important;margin-bottom:12px !important}
+#bl-path .pt-lnbox .ln-back{font-size:15px !important;margin-bottom:8px !important}
+#bl-path .pt-lnbox .bl128-home-bot{font-size:16px !important;min-height:40px !important;padding:.35em 1.1em !important;margin:6px 0 10px !important}
+@media (max-width:520px){#bl-path .pt-lnbox .bls-acts{grid-template-columns:1fr}#bl-path .pt-lnbox .bls-h{font-size:26px !important}}
+</style>
 </body>
 </html>
