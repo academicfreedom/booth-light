@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 172</title>
+<title>Booth Light · BUILD 173</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 172 · 2026-11-25 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 173 · 2026-11-26 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 172</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 173</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2084,7 +2084,7 @@ function stepsTxt(){try{return window.blStepsText?window.blStepsText():'';}catch
 const p2=n=>String(n).padStart(2,'0'),ldate=x=>{const d=new Date(x);return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());},ltime=x=>{const d=new Date(x);return ldate(x)+' '+p2(d.getHours())+':'+p2(d.getMinutes());};
 function ensureVoices(){if(!Array.isArray(S.voices)||!S.voices.length)S.voices=[{role:'Storyteller',code:'',level:0,when:null,withdrawn:null},{role:'Interviewer',code:'',level:0,when:null,withdrawn:null}];S.voices.forEach(v=>{if(v.level===5){v.level=0;v.when=null;}});}
 function voiceLevel(){ensureVoices();const w=S.voices.find(v=>v.withdrawn);if(w)return {kind:'withdrawn',v:w};const open=S.voices.filter(v=>!v.level);if(open.length)return {kind:'open',list:open};return {kind:'level',n:Math.min(...S.voices.map(v=>v.level))};}
-function renderVoices(){ensureVoices();const box=$('voices');if(!box)return;box.innerHTML=S.voices.map((v,i)=>'<div class="voice'+(v.withdrawn?' wd':'')+'" data-i="'+i+'"><span class="v-role">'+esc(v.role)+'</span><input class="v-code" placeholder="Codename (not a real name)" value="'+esc(v.code)+'"><span class="v-pick">'+[1,2,3,4,5].map(n=>'<button class="lv'+(v.level===n?' on':'')+'" data-n="'+n+'" title="'+esc(CLINES[n-1])+'">'+n+'</button>').join('')+'</span><label class="v-until">Listen until <input type="date" class="v-until-in" value="'+esc(v.until||'')+'"></label>'+(v.withdrawn?'<span class="v-wdate">Withdrew consent '+esc(ldate(v.withdrawn))+'</span>':'<button class="btn dark v-wd">Withdrew consent</button>')+'<button class="btn violet v-page">'+(v.codeHash?'New ':'')+(/^Student|^Interviewer/.test(v.role)?'episode producer page':/^Storyteller/.test(v.role)?'storyteller page':'erase-code page').replace(/^p|^s|^e/,c=>v.codeHash?c:c.toUpperCase())+'</button>'+(v.codeHash?'<span class="v-made">codes given '+esc(ldate(v.pageMade))+'</span>':'')+(i>1?'<button class="v-x" title="Remove this voice">×</button>':'')+'</div>').join('');
+function renderVoices(){ensureVoices();const box=$('voices');if(!box)return;box.innerHTML=S.voices.map((v,i)=>'<div class="voice'+(v.withdrawn?' wd':'')+'" data-i="'+i+'"><span class="v-role">'+esc(v.role)+'</span><input class="v-code" placeholder="Codename (not a real name)" value="'+esc(v.code)+'"><span class="v-pick">'+[1,2,3,4,5].map(n=>'<button class="lv'+(v.level===n?' on':'')+'" data-n="'+n+'" title="'+esc(CLINES[n-1])+'">'+n+'</button>').join('')+'</span><label class="v-until">Listen until <input type="date" class="v-until-in" value="'+esc(v.until||'')+'"></label>'+(v.withdrawn?'<span class="v-wdate">Withdrew consent '+esc(ldate(v.withdrawn))+'</span>':'<button class="btn dark v-wd">Withdrew consent</button>')+'<button class="btn violet v-page">'+(v.codeHash?'New ':'')+(/^Student|^Interviewer/.test(v.role)?'episode producer page':/^Storyteller/.test(v.role)?'storyteller page':'erase-code page').replace(/^p|^s|^e/,c=>v.codeHash?c:c.toUpperCase())+'</button>'+(v.codeHash?'<span class="v-made">codes given '+esc(ldate(v.pageMade))+(v.rq?' · request code '+esc(v.rq):'')+'</span>':'')+(i>1?'<button class="v-x" title="Remove this voice">×</button>':'')+'</div>').join('');
 box.querySelectorAll('.voice').forEach(row=>{const v=S.voices[Number(row.dataset.i)];
  row.querySelector('.v-page').onclick=()=>{storytellerPage(Number(row.dataset.i)).catch(e=>say('Storyteller page failed: '+(e&&e.message||e)));};
  row.querySelector('.v-code').oninput=e=>{v.code=e.target.value.slice(0,40);touch();};
@@ -2103,7 +2103,7 @@ window.blEraseCode=function(){return eraseCode();};function eraseCode(){const r=
 async function codeHash(c){return await sha(new TextEncoder().encode(c.replace(/\s+/g,'').toUpperCase()));}
 function holderText(lv){return lv===1?'One copy, on the episode producer’s device. It does not leave that device.':lv>1?'The episode producer’s device, and the podcast producer’s copy once the episode is handed in.':'The episode producer’s device. No level is chosen yet, so it stays there.';}
 async function storytellerPage(i){ensureVoices();const v=S.voices[i];if(!v)return;if(v.codeHash&&!confirm('A page with erase codes was already made for '+(v.code||v.role)+'. Making a new one replaces both codes: the old page stops working. Continue?'))return;
- const c1=eraseCode(),c2=eraseCode();v.codeHash=await codeHash(c1);v.backupHash=await codeHash(c2);v.pageMade=new Date().toISOString();touch();renderVoices();
+ const c1=eraseCode(),c2=eraseCode();if(!v.rq)v.rq=window.blReqCode();v.codeHash=await codeHash(c1);v.backupHash=await codeHash(c2);v.pageMade=new Date().toISOString();touch();renderVoices();
  const who=esc(v.code||v.role),line=v.level?('Level '+v.level+': '+esc(SLINES[v.level-1])):'No level chosen yet. Until you choose, the recording stays on the device of the episode producer who recorded you.';
  const css='body{font-family:Helvetica,Arial,sans-serif;background:#F6F0E2;color:#14183A;max-width:760px;margin:24px auto;padding:0 18px;line-height:1.5}h1{font-family:Georgia,serif;font-size:28px;margin:0 0 4px}.k{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#4A4F6E;margin:18px 0 4px}.box{background:#fff;border:2px solid #14183A;border-radius:16px;padding:14px 18px;margin:8px 0}.code{font-family:Menlo,Consolas,monospace;font-size:28px;font-weight:700;letter-spacing:2px;background:#14183A;color:#F5C451;border-radius:12px;padding:12px 16px;display:inline-block;margin:6px 0}.cut{border-top:2px dashed #14183A;margin:28px 0 8px;padding-top:6px;font-size:12px;color:#4A4F6E}ol{margin:6px 0 0 20px;padding:0}.fp{font-family:Menlo,monospace;font-size:12px;word-break:break-all}';
  const h='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Listening Room · storyteller page · '+who+'</title><style>'+css+'</style></head><body>'
@@ -2112,6 +2112,7 @@ async function storytellerPage(i){ensureVoices();const v=S.voices[i];if(!v)retur
  +'<div class="k">Who may hear it</div><div class="box">'+line+'</div>'
  +'<div class="k">Where copies are now</div><div class="box">'+esc(holderText(v.level))+'</div>'
  +'<div class="k">Your erase code</div><div class="box"><div class="code">'+c1+'</div><ol><li>Open the episode in the Listening Room archive.</li><li>Press <b>Erase this episode</b>.</li><li>Type this code. The episode is deleted at once. No one approves it, and no one can stop it.</li></ol></div>'
+ +'<div class="k">Your request code</div><div class="box"><div class="code">'+esc(v.rq||'')+'</div><p>Use it with <b>Message The Podcast Producer</b> in Booth Light, if the other ways to change or erase your episode did not work for you. It lets the podcast producer check that a message comes from someone on this recording. It cannot erase anything. It is also written in the consent record the podcast producer holds, next to your codename, so she can match it.</p></div>'
  +'<p>This page is the only place your codes exist. The episode producer saved it to give to you, then deletes their copy of the file. The app keeps only a fingerprint of each code (SHA-256), which cannot be turned back into the code. Three people can erase this episode, each with their own code: you, the episode producer, and the instructor, who keeps one code for emergencies. If you lose this page and the backup code below, ask the episode producer or the instructor to erase it.</p>'
  +'<div class="k">Recording fingerprint (SHA-256)</div><div class="box fp">'+esc(S.fp||'not recorded yet')+'</div>'
  +'<div class="cut">✂ cut here · keep the backup code somewhere else, or give it to someone you trust</div>'
@@ -2120,7 +2121,7 @@ async function storytellerPage(i){ensureVoices();const v=S.voices[i];if(!v)retur
  const name=base()+'-storyteller-page-'+(v.code||('voice-'+(i+1))).replace(/[^0-9A-Za-z-]/g,'')+'-'+today()+'.html';dl(new Blob([h],{type:'text/html'}),name);
  $('v-sum').insertAdjacentText('afterend','');say('Saved '+name+'. Give it to '+(v.code||v.role)+', then delete your copy of the file. It holds their two erase codes; this app keeps only their fingerprints.');}
 function consentText(){ensureVoices();const s=voiceLevel();let o='CONSENT RECORD\nListening Room interview '+num()+'\nWritten '+ltime(Date.now())+' (local time on the device that wrote it)'+'\nRecording fingerprint (SHA-256): '+(S.fp||'no recording')+'\nConsent to be recorded: '+(S.consent.answer==='yes'?'yes'+(S.consent.when?', '+ltime(S.consent.when):''):S.consent.answer==='no'?'no':'not recorded')+((S.steps&&S.steps[2]&&S.steps[2].out)?' (reported afterwards)':'')+'\n'+stepsTxt()+'\nWHO MAY HEAR IT\n';
-S.voices.forEach(v=>{o+='- '+v.role+(v.code?' ('+v.code+')':'')+(v.codeHash?' [erase code fingerprints: '+v.codeHash+' / '+v.backupHash+']':v.eraseTag?' [erase-code tag: '+v.eraseTag+']':'')+': '+(v.level?'level '+v.level+', '+rl(v.level)+(v.when?' Chosen '+ldate(v.when)+'.':'')+(v.until?' Listen until '+v.until+'.':''):'not chosen')+(v.withdrawn?' WITHDREW CONSENT '+ldate(v.withdrawn)+'.':'')+'\n';});
+S.voices.forEach(v=>{o+='- '+v.role+(v.code?' ('+v.code+')':'')+(v.rq?' [request code: '+v.rq+']':'')+(v.codeHash?' [erase code fingerprints: '+v.codeHash+' / '+v.backupHash+']':v.eraseTag?' [erase-code tag: '+v.eraseTag+']':'')+': '+(v.level?'level '+v.level+', '+rl(v.level)+(v.when?' Chosen '+ldate(v.when)+'.':'')+(v.until?' Listen until '+v.until+'.':''):'not chosen')+(v.withdrawn?' WITHDREW CONSENT '+ldate(v.withdrawn)+'.':'')+'\n';});
 o+='\nRESULT\n'+(s.kind==='withdrawn'?'Consent withdrawn. Do not share. Delete every copy.':s.kind==='open'?'Not every voice has chosen. The recording stays on the device that made it (level 1).':'No further than level '+s.n+': '+rl(s.n))+'\n\nThe levels\n'+SLINES.map((l,i)=>(i+1)+'. '+rl(i+1)).join('\n')+'\n';return o;}
 /* ---------- LINER NOTES v48: the facts that travel with an episode, no real names ---------- */
 function recordExport(b,name){if(/storyteller-page|liner-notes/.test(name))return;try{if(!Array.isArray(S.exports))S.exports=[];const at=new Date().toISOString();b.arrayBuffer().then(ab=>sha(ab)).then(h=>{S.exports.push({name,size:b.size,sha:h,at});touch();}).catch(()=>{});}catch(e){}}
@@ -2956,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 172 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 173 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14888,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 172 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 173 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15821,6 +15822,191 @@ setInterval(inject,300);inject();
 .bl172 .bl172-blank{background:#FFE14D;padding:0 .3em;border-radius:4px;font-weight:800}
 #cs8 .bl172-cs details.bl172-d{border-color:#F5A742}
 #bl132-st .bl172-st{margin:12px 0}
+</style>
+<script id="bl-173">/* BUILD 173: Message The Podcast Producer. A storyteller or episode co-producer writes a request (episode number, request code, the change wanted); this device seals it with the podcast producer's public key (OpenPGP) and copies it; they paste it into her Hush Line page. Each person on a recording now gets a request code on their storyteller page. Step 1: "Before we start" sits in its own wide box under the two columns. */
+(function(){
+/* Booth Light seal: OpenPGP message (RFC 4880: PKESK v3 RSA + SEIPD v1 with MDC, AES-256), written for this app only. */
+var BLPGP=(function(){
+var C=window.crypto;
+function b64d(s){var bin=atob(s),u=new Uint8Array(bin.length);for(var i=0;i!==bin.length;i++)u[i]=bin.charCodeAt(i);return u;}
+function b64e(u){var s='';for(var i=0;i!==u.length;i++)s+=String.fromCharCode(u[i]);return btoa(s);}
+function cat(a){var n=0,i,o;for(i=0;i!==a.length;i++)n+=a[i].length;var r=new Uint8Array(n);o=0;for(i=0;i!==a.length;i++){r.set(a[i],o);o+=a[i].length;}return r;}
+function crc24(u){var c=0xB704CE,i,j;for(i=0;i!==u.length;i++){c^=u[i]*65536;for(j=0;j!==8;j++){c*=2;if(c&0x1000000)c^=0x1864CFB;}}return c&0xFFFFFF;}
+function dearmor(t){var L=String(t).replace(/\r/g,'').split('\n'),body=[],st=0;
+ for(var i=0;i!==L.length;i++){var l=L[i].trim();if(st===0){if(l.indexOf('-----BEGIN PGP PUBLIC KEY BLOCK-----')===0)st=1;continue;}
+  if(st===1){if(l==='')st=2;continue;}if(l.indexOf('-----END')===0||l.charAt(0)==='=')break;body.push(l);}
+ return b64d(body.join(''));}
+function packets(u){var out=[],p=0;while(p!==u.length&&p<u.length){var h=u[p++],tag,len;
+ if(h&64){tag=h&63;var o=u[p++];if(o<192)len=o;else if(o<224){len=(o-192)*256+u[p++]+192;}else if(o===255){len=((u[p]*16777216)+(u[p+1]*65536)+(u[p+2]*256)+u[p+3]);p+=4;}else throw new Error('partial length');}
+ else{tag=(h>>2)&15;var lt=h&3;if(lt===0)len=u[p++];else if(lt===1){len=u[p]*256+u[p+1];p+=2;}else if(lt===2){len=((u[p]*16777216)+(u[p+1]*65536)+(u[p+2]*256)+u[p+3]);p+=4;}else throw new Error('indeterminate');}
+ out.push({tag:tag,body:u.subarray(p,p+len)});p+=len;}return out;}
+function mpi(b,p){var bits=b[p]*256+b[p+1],n=Math.ceil(bits/8);return {v:b.subarray(p+2,p+2+n),end:p+2+n};}
+function hex(u){var s='';for(var i=0;i!==u.length;i++)s+=(u[i]<16?'0':'')+u[i].toString(16);return s;}
+async function sha(alg,u){return new Uint8Array(await C.subtle.digest(alg,u));}
+async function fpr(body){return sha('SHA-1',cat([new Uint8Array([0x99,body.length>>8,body.length&255]),body]));}
+async function readKey(armor){var ps=packets(dearmor(armor)),prim=null,sub=null,uid='';
+ for(var i=0;i!==ps.length;i++){var k=ps[i];if(k.tag===6&&!prim)prim=k.body;if(k.tag===13&&!uid)uid=new TextDecoder().decode(k.body);if(k.tag===14&&!sub&&k.body[0]===4&&k.body[5]===1)sub=k.body;}
+ var use=sub||((prim&&prim[0]===4&&prim[5]===1)?prim:null);if(!use)throw new Error('no RSA encryption key');
+ var a=mpi(use,6),b=mpi(use,a.end),f=await fpr(use),pf=await fpr(prim);
+ return {n:a.v,e:b.v,id:f.subarray(12,20),fingerprint:hex(pf).toUpperCase().replace(/(.{4})/g,'$1 ').trim(),uid:uid};}
+function big(u){return u.length?BigInt('0x'+hex(u)):0n;}
+function modpow(b,e,m){var r=1n;b%=m;while(e>0n){if(e&1n)r=r*b%m;e>>=1n;b=b*b%m;}return r;}
+function bytes(x,len){var h=x.toString(16);if(h.length%2)h='0'+h;var u=new Uint8Array(len),o=len-h.length/2;for(var i=0;i!==h.length/2;i++)u[o+i]=parseInt(h.substr(i*2,2),16);return u;}
+function rnd(n){var u=new Uint8Array(n);C.getRandomValues(u);return u;}
+function nz(n){var u=new Uint8Array(n),i=0;while(i!==n){var r=rnd(n);for(var j=0;j!==n&&i!==n;j++)if(r[j])u[i++]=r[j];}return u;}
+function hdr(tag,len){if(len<192)return new Uint8Array([192|tag,len]);if(len<8384){var l=len-192;return new Uint8Array([192|tag,(l>>8)+192,l&255]);}
+ return new Uint8Array([192|tag,255,(len>>>24)&255,(len>>>16)&255,(len>>>8)&255,len&255]);}
+function pkt(tag,body){return cat([hdr(tag,body.length),body]);}
+async function cfb(key,data){var k=await C.subtle.importKey('raw',key,{name:'AES-CBC'},false,['encrypt']),z=new Uint8Array(16),fr=new Uint8Array(16),out=new Uint8Array(data.length);
+ for(var p=0;p<data.length;p+=16){var e=new Uint8Array(await C.subtle.encrypt({name:'AES-CBC',iv:z},k,fr)).subarray(0,16);var n=Math.min(16,data.length-p),c=new Uint8Array(16);
+  for(var i=0;i!==n;i++){out[p+i]=data[p+i]^e[i];c[i]=out[p+i];}fr=c;}
+ return out;}
+function armor(u){var b=b64e(u),l=[];for(var i=0;i<b.length;i+=64)l.push(b.substr(i,64));var c=crc24(u);
+ return '-----BEGIN PGP MESSAGE-----\n\n'+l.join('\n')+'\n='+b64e(new Uint8Array([c>>16,(c>>8)&255,c&255]))+'\n-----END PGP MESSAGE-----\n';}
+async function seal(key,text){var K=rnd(32),s=0;for(var i=0;i!==32;i++)s+=K[i];
+ var m=cat([new Uint8Array([9]),K,new Uint8Array([(s>>8)&255,s&255])]),kl=key.n.length;
+ if(m.length>kl-11)throw new Error('key too small');
+ var em=cat([new Uint8Array([0,2]),nz(kl-3-m.length),new Uint8Array([0]),m]);
+ var c=modpow(big(em),big(key.e),big(key.n)),cb=bytes(c,kl),bits=(c.toString(2)).length,st=0;while(st!==cb.length-1&&cb[st]===0)st++;
+ var pk=pkt(1,cat([new Uint8Array([3]),key.id,new Uint8Array([1,bits>>8,bits&255]),cb.subarray(st)]));
+ var d=new TextEncoder().encode(text),lit=pkt(11,cat([new Uint8Array([0x75,0,0,0,0,0]),d]));
+ var pre=rnd(16),pre2=cat([pre,pre.subarray(14,16)]),mdch=new Uint8Array([0xD3,0x14]);
+ var h=await sha('SHA-1',cat([pre2,lit,mdch])),plain=cat([pre2,lit,mdch,h]);
+ var enc=await cfb(K,plain);K.fill(0);
+ return armor(cat([pk,pkt(18,cat([new Uint8Array([1]),enc]))]));}
+return {readKey:readKey,seal:seal};
+})();
+
+var KEY="-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Mailvelope v6.3.0\nComment: https://mailvelope.com\n\n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\n8bpfqnB0\n=Y0O9\n-----END PGP PUBLIC KEY BLOCK-----";
+var HUSH='https://tips.hushline.app/to/academicfreedom1989';
+var K=null,KP=BLPGP.readKey(KEY).then(function(k){K=k;return k;});
+function esc(s){return String(s==null?'':s).replace(/[&\x3c\x3e"']/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
+window.blReqCode=function(){var A='ACDEFGHJKMNPQRTUVWXY3479',r=new Uint32Array(8),s='';crypto.getRandomValues(r);for(var i=0;i!==8;i++){s+=A.charAt(r[i]%A.length);if(i===3)s+='-';}return 'RQ-'+s;};
+/* ---- Before we start: own wide box in step 1 ---- */
+function bws(){var P=window.blPath,ask=document.querySelector('#bl-path .pt-ask'),cols=ask&&ask.closest('.pt-cols'),old=document.querySelectorAll('#bl-path .bl173-bws');
+ var on=!!(ask&&cols&&P&&P.cur&&P.cur()===1&&ask.querySelector('.bl172-path'));
+ if(!on){[].forEach.call(old,function(e){e.remove();});return;}
+ [].forEach.call(old,function(e,i){if(i)e.remove();});
+ var d=ask.querySelector('.bl172-path details.bl172-d');
+ if(d){var w=old[0];if(!w){w=document.createElement('div');w.className='bl172 bl173-bws';cols.parentNode.insertBefore(w,cols.nextSibling);}[].forEach.call(w.querySelectorAll('details'),function(x){x.remove();});w.appendChild(d);}
+ else if(old.length&&old[0].previousElementSibling!==cols)cols.parentNode.insertBefore(old[0],cols.nextSibling);}
+/* ---- the message page ---- */
+var BOX=null;
+function isOpen(){return !!(BOX&&!BOX.hidden);}
+var o0=window.blOverlayOpen;window.blOverlayOpen=function(){return (o0?o0():false)||isOpen();};
+function top(){var b=document.getElementById('bl151-bar'),R=document.documentElement;if(!BOX)return;var on=!!(b&&R.classList.contains('bl151-on')&&getComputedStyle(b).display!=='none');var v=(on?Math.max(0,Math.round(b.getBoundingClientRect().bottom)):0)+'px';if(BOX.style.top!==v)BOX.style.top=v;}
+function build(){BOX=document.createElement('div');BOX.id='bl173-msg';BOX.hidden=true;BOX.setAttribute('role','dialog');BOX.setAttribute('aria-modal','true');BOX.setAttribute('aria-label','Message The Podcast Producer');
+ BOX.innerHTML='<div class="m173-in">'
+ +'<button type="button" class="m173-back" data-m="close">← Back</button>'
+ +'<h2 class="m173-h" tabindex="-1">Message The Podcast Producer</h2>'
+ +'<div class="m173-her"><p>If you are a current or past episode co-producer and/or interviewee, you can leave a message here for your episode to be removed. This is in case the other options did not work for you. Do not leave your name or any identifying details. Only mention the episode number and the changes you want made (erase forever, set a time limit for availability, etc.).</p></div>'
+ +'<div class="m173-grid">'
+ +'<label class="m173-f m173-c1"><span class="m173-l">1 · Which episode?</span><input type="text" class="m173-ep" autocomplete="off" inputmode="text" placeholder="Episode number, e.g. 07"></label>'
+ +'<label class="m173-f m173-c2"><span class="m173-l">2 · Your request code</span><input type="text" class="m173-rq" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="RQ-XXXX-XXXX"><span class="m173-hint">It is on your storyteller page, under your erase code. Without it, the podcast producer cannot check that the message comes from someone on the recording.</span></label>'
+ +'</div>'
+ +'<fieldset class="m173-f m173-c3"><legend class="m173-l">3 · What change do you want?</legend><div class="m173-pills">'
+ +'<label class="m173-p"><input type="radio" name="m173-ch" value="erase"> Erase forever</label>'
+ +'<label class="m173-p"><input type="radio" name="m173-ch" value="until"> Set a time limit</label>'
+ +'<label class="m173-p"><input type="radio" name="m173-ch" value="other"> Another change</label></div>'
+ +'<label class="m173-sub m173-until" hidden>Available until <input type="date" class="m173-date"></label>'
+ +'<label class="m173-sub m173-other" hidden>Which change? No names. <input type="text" class="m173-ot" autocomplete="off" placeholder="e.g. play it in class only"></label></fieldset>'
+ +'<label class="m173-f m173-c4"><span class="m173-l">4 · Anything else? (optional, no names)</span><textarea class="m173-more" rows="3"></textarea></label>'
+ +'<div class="m173-go"><button type="button" class="m173-seal" data-m="seal">Seal and copy</button><span class="m173-st" role="status"></span></div>'
+ +'<textarea class="m173-out" rows="5" readonly hidden aria-label="Sealed message"></textarea>'
+ +'<div class="m173-next" hidden><a class="m173-open" href="'+HUSH+'" target="_blank" rel="noopener noreferrer">Open the podcast producer’s Hush Line page ↗</a>'
+ +'<ol class="m173-ol"><li>Paste the sealed message into the <b>Message</b> box. Leave <b>Contact Method</b> empty.</li><li>Press <b>Send Message</b>.</li><li>Hush Line then shows you a <b>reply address</b>. Copy it and keep it where only you can see it. Hush Line shows it once. Open it later to see whether the podcast producer answered.</li></ol>'
+ +'<button type="button" class="m173-clear" data-m="clear">Clear this form</button></div>'
+ +'<div class="m173-q">'
+ +'<div class="m173-qa" style="--k:#7CF2A0"><b>Who can read your message?</b><span>Only the podcast producer. This device seals it with her public key (OpenPGP, AES-256) before you copy it, so what sits on your clipboard and on Hush Line is unreadable to anyone else. Booth Light sends nothing anywhere. Key fingerprint: <code class="m173-fp">…</code></span></div>'
+ +'<div class="m173-qa" style="--k:#5CE8F5"><b>What does Hush Line see?</b><span>The sealed text, and your internet address (IP address) when you press Send, unless you use Tor Browser. It does not see what you wrote.</span></div>'
+ +'<div class="m173-qa" style="--k:#FFD60A"><b>What could still identify you?</b><span>Details you write. The episode number tells the podcast producer which episode. The request code tells her which person on that recording sent it, by role and codename, because it is written next to them in the consent record she holds.</span></div>'
+ +'<div class="m173-qa" style="--k:#FF8FD8"><b>Does this form keep what you type?</b><span>No. Nothing is saved on this device. Closing this page clears the form.</span></div>'
+ +'</div></div>';
+ document.body.appendChild(BOX);
+ BOX.addEventListener('change',function(e){if(e.target.name==='m173-ch'){var v=e.target.value;BOX.querySelector('.m173-until').hidden=v!=='until';BOX.querySelector('.m173-other').hidden=v!=='other';}});
+ BOX.addEventListener('click',function(e){var b=e.target.closest('[data-m]');if(!b)return;var m=b.getAttribute('data-m');if(m==='close')close();else if(m==='seal')doSeal();else if(m==='clear')clear();});
+ KP.then(function(k){BOX.querySelector('.m173-fp').textContent=k.fingerprint;}).catch(function(){BOX.querySelector('.m173-fp').textContent='the key could not be read';});}
+function v(c){var e=BOX.querySelector(c);return e?String(e.value||'').trim():'';}
+function st(t,bad){var e=BOX.querySelector('.m173-st');e.textContent=t;e.classList.toggle('bad',!!bad);}
+function doSeal(){var ep=v('.m173-ep'),rq=v('.m173-rq').toUpperCase(),ch=BOX.querySelector('input[name="m173-ch"]:checked'),c=ch&&ch.value,more=v('.m173-more'),line='';
+ if(!ep){st('Type the episode number first.',true);BOX.querySelector('.m173-ep').focus();return;}
+ if(!c){st('Choose the change you want.',true);return;}
+ if(c==='erase')line='Erase forever';else if(c==='until'){var d=v('.m173-date');if(!d){st('Choose the date it should stay available until.',true);return;}line='Set a time limit: available until '+d;}else{var o=v('.m173-ot');if(!o){st('Write which change you want.',true);return;}line='Another change: '+o;}
+ var txt='MESSAGE THE PODCAST PRODUCER (Booth Light)\nEpisode: '+ep+'\nRequest code: '+(rq||'(none given)')+'\nChange wanted: '+line+(more?'\nAnything else: '+more:'')+'\n';
+ st('Sealing…');KP.then(function(k){return BLPGP.seal(k,txt);}).then(function(a){var out=BOX.querySelector('.m173-out');out.value=a;out.hidden=false;BOX.querySelector('.m173-next').hidden=false;
+  var done=function(){st('Sealed and copied. Next: open the Hush Line page below and paste.');},fb=function(){out.focus();out.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok)done();else st('Sealed. Select the sealed text below and copy it (⌘C or Ctrl+C), then open the Hush Line page.');};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(a).then(done,fb);else fb();})
+ .catch(function(e){st('Could not seal: '+(e&&e.message||e)+'. Nothing was sent.',true);});}
+function clear(){if(!BOX)return;[].forEach.call(BOX.querySelectorAll('input[type=text],input[type=date],textarea'),function(e){e.value='';});[].forEach.call(BOX.querySelectorAll('input[type=radio]'),function(e){e.checked=false;});
+ BOX.querySelector('.m173-until').hidden=true;BOX.querySelector('.m173-other').hidden=true;BOX.querySelector('.m173-out').hidden=true;BOX.querySelector('.m173-next').hidden=true;st('');}
+function open(){if(!BOX)build();clear();BOX.hidden=false;top();BOX.scrollTop=0;var h=BOX.querySelector('.m173-h');h&&h.focus({preventScroll:true});}
+function close(){if(!BOX||BOX.hidden)return;clear();BOX.hidden=true;}
+window.blMessageProducer=open;
+window.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen()){e.stopImmediatePropagation();e.stopPropagation();close();}},true);
+/* ---- the buttons that open it ---- */
+function pill(cls,txt){var b=document.createElement('button');b.type='button';b.className=cls;b.textContent=txt;b.setAttribute('data-m173','open');return b;}
+function add(){var r=document.querySelector('#bl151-bar .bl151-r');if(r&&!r.querySelector('.bl173-bar')){var b=pill('bl151-p bl151-s bl173-bar','✉ Message the podcast producer');b.style.setProperty('--k','#7CF2A0');b.setAttribute('aria-pressed','false');r.appendChild(b);}
+ var so=document.getElementById('bl132-st'),in2=so&&so.querySelector('.b132-in2');if(in2&&getComputedStyle(so).display!=='none'&&!in2.querySelector('.bl173-stb')){in2.appendChild(pill('bl173-stb','✉ Message the podcast producer, without your name'));}
+ var sb=document.querySelector('#bl-path .pt-shelfbox');if(sb&&!sb.hidden){var hm=sb.querySelector('.bl170-home');if(hm&&!sb.querySelector('.bl173-shb')){hm.parentNode.insertBefore(pill('bl173-shb','✉ Message the podcast producer'),hm.nextSibling);}}
+ bws();if(isOpen())top();}
+document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-m173="open"]');if(t){e.preventDefault();e.stopPropagation();open();return;}
+ var p=e.target.closest&&e.target.closest('#bl151-bar .bl151-p');if(p&&isOpen())close();},true);
+window.addEventListener('resize',top);
+setInterval(add,300);add();
+})();
+</script>
+<style id="bl-173-css">/* BUILD 173 */
+#bl-path .bl173-bws{margin:18px 0 6px}
+#bl-path .bl173-bws details.bl172-d{background:#FFFFFF;border:3px solid #0B1030;border-radius:16px;padding:12px 18px}
+#bl-path .bl173-bws details.bl172-d summary{font:800 1em Helvetica,Arial,sans-serif;color:#0B1030;cursor:pointer}
+#bl-path .bl173-bws .bl172-b{font-size:.86em;column-gap:28px;column-rule:2px solid #E8E2D0}
+#bl-path .bl173-bws .bl172-b p{break-inside:avoid;margin:8px 0 0;font-size:1em;line-height:1.45}
+@media (min-width:640px){#bl-path .bl173-bws .bl172-b{column-count:2}}
+@media (min-width:1000px){#bl-path .bl173-bws .bl172-b{column-count:3}}
+#bl173-msg{position:fixed;left:0;right:0;bottom:0;top:0;z-index:2147483600;overflow:auto;background:#FFF8E7;color:#0B1030;font-family:Helvetica,Arial,sans-serif}
+#bl173-msg[hidden]{display:none}
+#bl173-msg .m173-in{max-width:980px;margin:0 auto;padding:18px 22px 60px}
+#bl173-msg button,#bl173-msg .m173-open{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.55em 1.4em;border-radius:999px;font:900 19px Helvetica,Arial,sans-serif}
+#bl173-msg button:focus-visible,#bl173-msg .m173-open:focus-visible{outline:4px solid #0B1030;outline-offset:3px}
+#bl173-msg .m173-back{background:#FFD60A;color:#070C22}
+#bl173-msg .m173-h{font:900 clamp(28px,4vw,44px)/1.1 Georgia,"Times New Roman",serif;margin:14px 0 12px;outline:none}
+#bl173-msg .m173-her{background:#7CF2A0;border-radius:22px;padding:16px 22px;font:700 1.15em/1.5 Helvetica,Arial,sans-serif}
+#bl173-msg .m173-her p{margin:0}
+#bl173-msg .m173-grid{display:grid;align-items:start;grid-template-columns:1fr;gap:14px;margin-top:16px}
+@media (min-width:760px){#bl173-msg .m173-grid{grid-template-columns:1fr 1fr}}
+#bl173-msg .m173-f{display:block;border:0;margin:0;background:#FFFFFF;border-radius:20px;padding:14px 18px;box-shadow:inset 0 0 0 3px #0B1030}
+#bl173-msg fieldset.m173-f,#bl173-msg .m173-c4{margin-top:14px}
+#bl173-msg legend.m173-l{float:left;width:100%}
+#bl173-msg .m173-pills{clear:both}
+#bl173-msg .m173-l{display:block;font:900 1.15em Helvetica,Arial,sans-serif;margin:0 0 8px;padding:0}
+#bl173-msg input[type=text],#bl173-msg input[type=date],#bl173-msg textarea{box-sizing:border-box;width:100%;border:3px solid #0B1030;border-radius:14px;padding:.55em .8em;font:700 1.1em Helvetica,Arial,sans-serif;background:#FFFDF6;color:#0B1030}
+#bl173-msg .m173-rq{font-family:Menlo,Consolas,monospace;letter-spacing:1px}
+#bl173-msg .m173-hint{display:block;margin-top:8px;font:600 .95em/1.4 Helvetica,Arial,sans-serif}
+#bl173-msg .m173-pills{display:flex;flex-wrap:wrap;gap:10px}
+#bl173-msg .m173-p{display:inline-flex;align-items:center;gap:.45em;min-height:50px;padding:.4em 1.2em;border-radius:999px;background:#FFF4C2;box-shadow:inset 0 0 0 3px #0B1030;font:800 1.08em Helvetica,Arial,sans-serif;cursor:pointer}
+#bl173-msg .m173-p:has(input:checked){background:#FFD60A}
+#bl173-msg .m173-p input{width:22px;height:22px;accent-color:#0B1030}
+#bl173-msg .m173-sub{display:block;margin-top:12px;font:800 1.05em Helvetica,Arial,sans-serif}
+#bl173-msg .m173-sub[hidden]{display:none}
+#bl173-msg .m173-sub input{margin-top:6px}
+#bl173-msg .m173-go{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:20px 0 10px}
+#bl173-msg .m173-seal{background:#0B1030;color:#FFFFFF;font-size:22px;min-height:60px;padding:.6em 2em}
+#bl173-msg .m173-st{font:800 1.08em/1.4 Helvetica,Arial,sans-serif;color:#1C6B35}
+#bl173-msg .m173-st.bad{color:#B3261E}
+#bl173-msg .m173-out{font:500 12px/1.35 Menlo,Consolas,monospace;background:#F2F0EA}
+#bl173-msg .m173-out[hidden],#bl173-msg .m173-next[hidden]{display:none}
+#bl173-msg .m173-next{margin-top:14px;background:#FFFFFF;border-radius:20px;padding:16px 20px;box-shadow:inset 0 0 0 3px #0B1030}
+#bl173-msg .m173-open{background:#5CE8F5;color:#070C22}
+#bl173-msg .m173-ol{margin:14px 0 10px 1.2em;padding:0;font:600 1.08em/1.5 Helvetica,Arial,sans-serif}
+#bl173-msg .m173-clear{background:#EDE7D6;color:#0B1030;font-size:16px;min-height:44px}
+#bl173-msg .m173-q{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px}
+@media (min-width:760px){#bl173-msg .m173-q{grid-template-columns:1fr 1fr}}
+#bl173-msg .m173-qa{background:var(--k);border-radius:20px;padding:14px 18px;font:600 1em/1.45 Helvetica,Arial,sans-serif}
+#bl173-msg .m173-qa b{display:block;font:900 1.1em Helvetica,Arial,sans-serif;margin-bottom:6px}
+#bl173-msg .m173-fp{font:700 .9em Menlo,Consolas,monospace;word-break:break-word}
+#bl132-st .bl173-stb,#bl-path .pt-shelfbox .bl173-shb{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;min-height:48px;padding:.5em 1.3em;border-radius:999px;background:#7CF2A0 !important;color:#070C22 !important;font:900 17px Helvetica,Arial,sans-serif;cursor:pointer;margin:14px 0 4px}
+#bl-path .pt-shelfbox .bl173-shb{margin:4px 0 8px 10px;align-self:flex-start}
+#bl132-st .bl173-stb:focus-visible,#bl-path .pt-shelfbox .bl173-shb:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
 </style>
 </body>
 </html>
