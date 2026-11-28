@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 177</title>
+<title>Booth Light · BUILD 178</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 177 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 178 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 177</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 178</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 177 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 178 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 177 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 178 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -16129,6 +16129,56 @@ setInterval(function(){var so=document.getElementById('bl132-st'),v=!!(so&&!so.h
 #st-page .st-kit > .st-card:last-child{background:#FDE2DE !important;box-shadow:inset 0 0 0 3px #B3261E}
 #st-page .st-kit > .st-card h4{font-size:26px !important}
 #st-page .st-kit > .st-card li{font-size:19px !important;line-height:1.5;margin-bottom:6px}
+</style>
+<script id="bl-178">/* BUILD 178: a Home pill on every page; Message the podcast producer on the front page; Sovereign Tech pages get Next/Previous section buttons. */
+(function(){
+function vis(e){return !!(e&&!e.hidden&&e.offsetParent!==null&&getComputedStyle(e).display!=='none');}
+function goHome(){var m=document.getElementById('bl173-msg');if(m)m.hidden=true;var s=document.getElementById('bl174-st');if(s)s.hidden=true;
+ var st=document.getElementById('st-page');if(vis(st)){var x=st.querySelector('.st-close');if(x)x.click();}
+ for(var i=0;i!==3;i++)document.body.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+ if(/^#(for-storytellers|storyteller)/i.test(location.hash)){try{history.replaceState(null,'',location.pathname+location.search);}catch(x){}}
+ setTimeout(function(){window.scrollTo(0,0);},60);}
+window.blGoHome=goHome;
+function homePill(){var b=document.createElement('button');b.type='button';b.className='bl178-home';b.textContent='⌂ Home';b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();goHome();});return b;}
+var BOXES=['#bl-path .pt-lnbox','#bl-path .pt-cnbox','#bl-path .pt-ncbox','#bl-path .pt-qrbox','#bl-path .pt-shelfbox','#bl-path .pt-sheetbox','#bl-path .pt-wipbox','#bls-reader'];
+function hasHome(el){return [].some.call(el.querySelectorAll('button,a'),function(b){return /\bHome\b/.test(b.textContent);});}
+function tick(){
+ var mb=document.querySelector('#bl173-msg .m173-back');if(mb&&!mb.parentNode.querySelector('.bl178-home'))mb.parentNode.insertBefore(homePill(),mb.nextSibling);
+ var sb=document.querySelector('#bl174-st .s174-back');if(sb&&!sb.parentNode.querySelector('.bl178-home'))sb.parentNode.insertBefore(homePill(),sb.nextSibling);
+ var sn=document.querySelector('#st-page .st-pills');if(sn&&!sn.querySelector('.bl178-home')){var h=homePill();h.classList.add('bl178-sth');sn.insertBefore(h,sn.firstChild);}
+ BOXES.forEach(function(q){var el=document.querySelector(q);if(vis(el)&&!hasHome(el)){el.insertBefore(homePill(),el.firstChild);}});
+ var r2=document.querySelector('#bl126-nav .bl128-row2'),sp=r2&&r2.querySelector('.bl153-p');
+ if(r2&&sp&&!r2.querySelector('.bl178-msg')){var b=document.createElement('button');b.type='button';b.className='bl128-s bl178-msg';b.setAttribute('data-m173','open');b.style.setProperty('--k','#7CF2A0');b.textContent='✉ Message the podcast producer';sp.parentNode.insertBefore(b,sp.nextSibling);}
+ var P=document.getElementById('st-page');if(P){var pills=[].slice.call(P.querySelectorAll('.st-pill')),secs=[].slice.call(P.querySelectorAll('section.st-sec'));
+  if(pills.length===secs.length)secs.forEach(function(sec,i){if(sec.querySelector('.bl178-nav'))return;var d=document.createElement('div');d.className='bl178-nav';
+   if(i>0){var a=document.createElement('button');a.type='button';a.className='bl178-prev';a.textContent='← '+pills[i-1].textContent;a.addEventListener('click',function(){pills[i-1].click();P.scrollTop=0;});d.appendChild(a);}
+   if(i!==secs.length-1){var n=document.createElement('button');n.type='button';n.className='bl178-next';n.textContent='Next: '+pills[i+1].textContent+' →';n.addEventListener('click',function(){pills[i+1].click();P.scrollTop=0;});d.appendChild(n);}
+   sec.appendChild(d);});}}
+setInterval(tick,400);tick();
+})();
+</script>
+<style id="bl-178-css">/* BUILD 178 */
+.bl178-home{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:48px;padding:.45em 1.3em;border-radius:999px;background:#FFFFFF;color:#070C22;font:900 18px Helvetica,Arial,sans-serif;box-shadow:inset 0 0 0 3px #070C22;margin:0 0 10px 10px}
+.bl178-home:focus-visible{outline:4px solid #FFD60A;outline-offset:3px}
+#bl-path .bl178-home,#bls-reader .bl178-home{margin:10px 0 10px 0}
+#st-page .bl178-sth{margin:0 10px 0 0;min-height:46px;font-size:18px}
+#bl151-bar .bl173-bar{display:none !important}
+#bl126-nav .bl178-msg{flex-basis:100%;max-width:none}
+.mo-bar{display:grid !important;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:12px;max-width:1100px;margin:0 auto !important}
+.mo-bar .mo-b{width:100%;justify-content:space-between;text-align:left;font-size:1em !important;padding:14px 22px !important}
+#st-page section.st-sec,#st-page .st-head{padding-left:max(24px,calc((100% - 1200px)/2)) !important;padding-right:max(24px,calc((100% - 1200px)/2)) !important}
+#st-page section.st-sec p,#st-page section.st-sec li{font-size:clamp(18px,1.2vw,23px) !important;line-height:1.55}
+#st-page section.st-sec h4{font-size:clamp(22px,1.5vw,28px) !important}
+#st-page .st-kit > .st-qa{border-top:12px solid #E8A33D;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+#st-page .st-kit > .st-qa:nth-child(3n+2){border-top-color:#5CB8E8}
+#st-page .st-kit > .st-qa:nth-child(3n){border-top-color:#9B7BE0}
+#st-page .st-kit > .st-qa h4{color:#0B1030 !important}
+#st-page .st-kit > .st-qa strong{background:#FFF1A8;color:#0B1030 !important;padding:0 .2em;border-radius:6px}
+#st-page section.st-sec .st-grid > .st-card{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+#st-page .bl178-nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:34px 0 10px}
+#st-page .bl178-nav button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:52px;padding:.5em 1.5em;border-radius:999px;font:900 19px Helvetica,Arial,sans-serif;background:#F2C443;color:#0B1030;box-shadow:inset 0 0 0 3px #0B1030}
+#st-page .bl178-nav .bl178-next{margin-left:auto;background:#0B1030;color:#FFFFFF}
+#st-page .bl178-nav button:focus-visible{outline:4px solid #B4471B;outline-offset:3px}
 </style>
 </body>
 </html>
