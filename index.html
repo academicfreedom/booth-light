@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 185</title>
+<title>Booth Light · BUILD 186</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 185 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 186 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 185</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 186</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 185 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 186 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 185 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 186 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -16506,7 +16506,7 @@ function tick(){var on=SW['consent-contacts']===true,m=mine();if(!on&&!m)return;
 function hr(){var a=[114,101,115,101,97,114,99,104,105,110,116,101,103,114,105,116,121],d=[119,119,117,46,101,100,117];return String.fromCharCode.apply(null,a)+String.fromCharCode(64)+String.fromCharCode.apply(null,d);}
 function mail(){location.href='mai'+'lto:'+hr()+'?subject='+encodeURIComponent('A concern about a class podcast project');}
 document.addEventListener('click',function(e){var h=e.target.closest&&e.target.closest('.c185-hr');if(h){e.preventDefault();mail();return;}var g=e.target.closest&&e.target.closest('.c185-go');if(g&&window.blMessageProducer){e.preventDefault();window.blMessageProducer();}});
-function msgPage(){var m=document.getElementById('bl173-msg');if(!m||m.querySelector('.c185-to'))return;var form=m.querySelector('.m173-c1')||m.querySelector('.m173-f');var go=m.querySelector('.m173-go');if(!form||!go)return;
+function msgPage(){return;var m=document.getElementById('bl173-msg');if(!m||m.querySelector('.c185-to'))return;var form=m.querySelector('.m173-c1')||m.querySelector('.m173-f');var go=m.querySelector('.m173-go');if(!form||!go)return;
  var f=document.createElement('fieldset');f.className='c185-to';
  f.innerHTML='\x3clegend class="c185-h2">Who should get your message?\x3c/legend>\x3cdiv class="c185-pills">\x3clabel class="c185-p">\x3cinput type="radio" name="c185-to" value="pp" checked> The podcast producer \x3cspan>sealed, sent through Hush Line, no names shown\x3c/span>\x3c/label>\x3clabel class="c185-p">\x3cinput type="radio" name="c185-to" value="hr"> WWU’s research ethics office (HRPP) \x3cspan>for concerns about ethics, consent or safety · opens your own email app, so the office sees your email address · not sealed\x3c/span>\x3c/label>\x3c/div>';
  var host=form.closest('.m173-grid')||form.parentNode;host.parentNode.insertBefore(f,host);
@@ -16542,6 +16542,25 @@ setInterval(tick,400);tick();
 .c185-h{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.08em}
 .c185-n{width:2em;height:2em;border-radius:50%;background:#FFB347;display:inline-flex;align-items:center;justify-content:center;font-weight:900}
 #bl132-st .b185-q{font-weight:700}
+</style>
+<script id="bl-186">/* BUILD 186: WWU's research ethics office (HRPP) is a direct link to its own website, in card 5 of Before we start and in card 7. No email form for it. Message the podcast producer is only for withdrawing or changing an episode again. */
+(function(){
+var U='https://vpr.wwu.edu/researchintegrity/hrpp-overview';
+function link(t){return '\x3ca class="c186-a" href="'+U+'" target="_blank" rel="noopener noreferrer">'+t+'\x3c/a>';}
+function tick(){
+ [].forEach.call(document.querySelectorAll('.bl172-b'),function(bx){var ps=[].filter.call(bx.children,function(c){return c.tagName==='P';});var p=ps[4];if(!p||ps.length!==6||p.querySelector('.c186-l'))return;var sp=document.createElement('span');sp.className='c186-l';sp.innerHTML=link('WWU’s research ethics office (HRPP)')+' for concerns about ethics, consent or safety.';p.appendChild(sp);});
+ [].forEach.call(document.querySelectorAll('.c185 .c185-hr'),function(b){var a=document.createElement('span');a.innerHTML=link('WWU’s research ethics office (HRPP) →');var x=a.firstChild;x.classList.add('c186-btn');b.parentNode.replaceChild(x,b);});
+ [].forEach.call(document.querySelectorAll('.c185 .c185-f'),function(f){f.remove();});
+ var m=document.getElementById('bl173-msg');if(m){var c=m.querySelector('.c185-to');if(c)c.remove();var sb=m.querySelector('.m173-seal');if(sb&&sb.textContent!=='Seal and copy')sb.textContent='Seal and copy';}}
+var q=false;function soon(){if(q)return;q=true;Promise.resolve().then(function(){q=false;tick();});}
+new MutationObserver(soon).observe(document.body,{childList:true,subtree:true});
+setInterval(tick,400);tick();
+})();</script>
+<style id="bl-186-css">/* BUILD 186 */
+.c186-l{display:block;margin-top:.6em}
+.c186-a{color:#1E4FD8;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.c186-a:focus-visible{outline:3px solid #0B1030;outline-offset:2px}
+.c186-btn{display:inline-flex;align-items:center;min-height:48px;margin:6px 0;padding:.45em 1.3em;border-radius:999px;background:#FFFFFF;box-shadow:inset 0 0 0 3px #1E4FD8;text-decoration:none !important}
 </style>
 </body>
 </html>
