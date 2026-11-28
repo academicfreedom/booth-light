@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 173</title>
+<title>Booth Light · BUILD 174</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 173 · 2026-11-26 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 174 · 2026-11-27 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 173</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 174</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 173 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 174 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 173 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 174 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -16007,6 +16007,77 @@ setInterval(add,300);add();
 #bl132-st .bl173-stb,#bl-path .pt-shelfbox .bl173-shb{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;min-height:48px;padding:.5em 1.3em;border-radius:999px;background:#7CF2A0 !important;color:#070C22 !important;font:900 17px Helvetica,Arial,sans-serif;cursor:pointer;margin:14px 0 4px}
 #bl-path .pt-shelfbox .bl173-shb{margin:4px 0 8px 10px;align-self:flex-start}
 #bl132-st .bl173-stb:focus-visible,#bl-path .pt-shelfbox .bl173-shb:focus-visible{outline:4px solid #FFFFFF;outline-offset:3px}
+</style>
+<script id="bl-174">/* BUILD 174: "I'm a storyteller" opens a full page instead of a pop-up: the three things a storyteller can do, the eight steps from their side, and the pill to Message The Podcast Producer. Opens from the home pill, the bar pill, and the link #for-storytellers. */
+(function(){
+var PG=null;
+var DO=[['#storyteller','Give my consent for the interview','Your consent steps open on this phone. At the end you show the episode producer a six-character code.','#FF8A5C'],
+ ['#storyteller-review','Hear the edited interview','Choose the file the episode producer sent you, listen, and tell them what to change.','#B58CFF'],
+ ['#storyteller-final','Approve the final cut','Choose the final cut file. You get a code for the episode producer, your own erase code and your request code.','#C4F25C']];
+var STEPS=[['1','Invite','#FFD60A','The episode producer reads you “Before we start”: the topic, your rights, and how your identity is kept confidential.','You say yes or no. Nothing is recorded before your yes.',null],
+ ['2','Record','#FF8A5C','You give your consent, on your own phone or on the episode producer’s phone. Then the interview is recorded.','At the end of the consent steps you show the episode producer a six-character code.','#storyteller'],
+ ['3','Edit','#5CE8F5','The episode co-producers (the interviewers) edit the interview.','You can tell them at any time which parts must come out.',null],
+ ['4','Review','#B58CFF','You hear the edited interview.','You tell the episode producer what to change. Nothing is shared until you have heard it and agreed.','#storyteller-review'],
+ ['5','Confirm','#C4F25C','You approve the final cut.','You get a code for the episode producer, your own erase code, and your request code. Keep the codes where only you can see them.','#storyteller-final'],
+ ['6','Audience','#6FA8FF','You decide who may hear the episode.','This quarter: the Listening Party, class only; possibly with storytellers (decision pending).',null],
+ ['7','Listen','#FFB347','The class hears the episodes at the Listening Party.','You do nothing here unless you are invited.',null],
+ ['8','Close','#FF7AD9','At the end of the quarter you get your episode back, and any copy kept for the class is erased.','With your erase code you can delete the episode yourself, at any time, without asking anyone.',null]];
+function esc(s){return String(s).replace(/[&\x3c\x3e"]/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
+function build(){PG=document.createElement('div');PG.id='bl174-st';PG.hidden=true;PG.setAttribute('role','dialog');PG.setAttribute('aria-modal','true');PG.setAttribute('aria-label','For storytellers');
+ var h='\x3cdiv class="s174-in">\x3cbutton type="button" class="s174-back" data-s="close">← Back\x3c/button>'
+ +'\x3ch2 class="s174-h" tabindex="-1">For storytellers\x3c/h2>'
+ +'\x3cp class="s174-lede">You are telling your story to an episode co-producer of The Listening Room. This page shows each step you take, and where to do it.\x3c/p>'
+ +'\x3ch3 class="s174-k">What do you want to do now?\x3c/h3>\x3cdiv class="s174-do">'
+ +DO.map(function(d){return '\x3cbutton type="button" class="s174-go" data-h="'+d[0]+'" style="--k:'+d[3]+'">\x3cb>'+esc(d[1])+'\x3c/b>\x3cspan>'+esc(d[2])+'\x3c/span>\x3c/button>';}).join('')
+ +'\x3cbutton type="button" class="s174-go s174-msg" data-s="msg" style="--k:#7CF2A0">\x3cb>✉ Message the podcast producer\x3c/b>\x3cspan>If the other ways did not work for you: ask, without your name, for your episode to be erased or limited in time. Sealed on this phone before you send it.\x3c/span>\x3c/button>'
+ +'\x3c/div>\x3cp class="s174-note">Nothing you choose here is sent anywhere. Your answers stay on this phone until you show the code.\x3c/p>'
+ +'\x3ch3 class="s174-k">Your steps\x3c/h3>\x3col class="s174-steps">'
+ +STEPS.map(function(t){return '\x3cli class="s174-step" style="--k:'+t[2]+'">\x3cspan class="s174-n">'+t[0]+'\x3c/span>\x3cdiv>\x3cb class="s174-t">'+esc(t[1])+'\x3c/b>\x3cp>\x3cem>What happens?\x3c/em> '+esc(t[3])+'\x3c/p>\x3cp>\x3cem>What do you do?\x3c/em> '+esc(t[4])+'\x3c/p>'+(t[5]?'\x3cbutton type="button" class="s174-sb" data-h="'+t[5]+'">Do this step →\x3c/button>':'')+'\x3c/div>\x3c/li>';}).join('')
+ +'\x3c/ol>\x3c/div>';
+ PG.innerHTML=h;document.body.appendChild(PG);
+ PG.addEventListener('click',function(e){var b=e.target.closest('[data-h],[data-s]');if(!b)return;var s=b.getAttribute('data-s');
+  if(s==='close'){close();return;}
+  if(s==='msg'){if(window.blMessageProducer)window.blMessageProducer();return;}
+  var hh=b.getAttribute('data-h');close();if(location.hash===hh)location.hash='';setTimeout(function(){location.hash=hh;},30);});}
+function isOpen(){return !!(PG&&!PG.hidden);}
+var o0=window.blOverlayOpen;window.blOverlayOpen=function(){return (o0?o0():false)||isOpen();};
+function top(){if(!PG)return;var b=document.getElementById('bl151-bar'),R=document.documentElement;var on=!!(b&&R.classList.contains('bl151-on')&&getComputedStyle(b).display!=='none');var v=(on?Math.max(0,Math.round(b.getBoundingClientRect().bottom)):0)+'px';if(PG.style.top!==v)PG.style.top=v;}
+function open(){if(!PG)build();PG.hidden=false;top();PG.scrollTop=0;var h=PG.querySelector('.s174-h');h&&h.focus({preventScroll:true});}
+function close(){if(!PG||PG.hidden)return;PG.hidden=true;if(/^#for-storytellers$/i.test(location.hash)){try{history.replaceState(null,'',location.pathname+location.search);}catch(x){}}}
+window.blStorytellerPage=open;
+window.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen()){var m=document.getElementById('bl173-msg');if(m&&!m.hidden)return;e.stopImmediatePropagation();e.stopPropagation();close();}},true);
+document.addEventListener('click',function(e){var p=e.target.closest&&e.target.closest('.bl153-p');if(p){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();open();return;}
+ var q=e.target.closest&&e.target.closest('#bl151-bar .bl151-p');if(q&&isOpen()&&!q.classList.contains('bl173-bar'))close();},true);
+function hc(){if(/^#for-storytellers$/i.test(location.hash))open();}
+addEventListener('hashchange',hc);setTimeout(hc,300);
+window.addEventListener('resize',top);setInterval(function(){if(isOpen())top();},300);
+})();
+</script>
+<style id="bl-174-css">/* BUILD 174 */
+#bl174-st{position:fixed;left:0;right:0;bottom:0;top:0;z-index:2147483500;overflow:auto;background:#FFF8E7;color:#0B1030;font-family:Helvetica,Arial,sans-serif}
+#bl174-st[hidden]{display:none}
+#bl174-st .s174-in{max-width:1080px;margin:0 auto;padding:18px 22px 60px}
+#bl174-st button{all:unset;box-sizing:border-box;cursor:pointer}
+#bl174-st button:focus-visible{outline:4px solid #0B1030;outline-offset:3px}
+#bl174-st .s174-back{display:inline-flex;align-items:center;min-height:52px;padding:.55em 1.4em;border-radius:999px;background:#FFD60A;color:#070C22;font:900 19px Helvetica,Arial,sans-serif}
+#bl174-st .s174-h{font:900 clamp(32px,4.4vw,52px)/1.08 Georgia,"Times New Roman",serif;margin:14px 0 8px;outline:none}
+#bl174-st .s174-lede{font:700 1.2em/1.5 Helvetica,Arial,sans-serif;margin:0 0 6px;max-width:48em}
+#bl174-st .s174-k{font:900 1.35em Helvetica,Arial,sans-serif;margin:26px 0 12px}
+#bl174-st .s174-do{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){#bl174-st .s174-do{grid-template-columns:1fr 1fr}}
+#bl174-st .s174-go{display:block;background:var(--k);border-radius:22px;padding:16px 20px;color:#070C22;box-shadow:inset 0 0 0 3px #0B1030}
+#bl174-st .s174-go b{display:block;font:900 1.25em/1.25 Helvetica,Arial,sans-serif;margin-bottom:6px}
+#bl174-st .s174-go span{display:block;font:600 1em/1.45 Helvetica,Arial,sans-serif}
+#bl174-st .s174-note{font:700 1em/1.45 Helvetica,Arial,sans-serif;margin:12px 0 0}
+#bl174-st .s174-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){#bl174-st .s174-steps{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){#bl174-st .s174-steps{grid-template-columns:1fr 1fr 1fr 1fr}}
+#bl174-st .s174-step{display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border-radius:20px;padding:14px 16px;box-shadow:inset 0 0 0 3px #0B1030,inset 0 10px 0 0 var(--k)}
+#bl174-st .s174-n{flex:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--k);font:900 20px Helvetica,Arial,sans-serif;margin-top:8px;box-shadow:inset 0 0 0 3px #0B1030}
+#bl174-st .s174-t{display:block;font:900 1.25em Helvetica,Arial,sans-serif;margin:8px 0 4px}
+#bl174-st .s174-step p{margin:6px 0 0;font:600 1em/1.45 Helvetica,Arial,sans-serif}
+#bl174-st .s174-step em{font-style:normal;font-weight:900}
+#bl174-st .s174-sb{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;padding:.4em 1.1em;border-radius:999px;background:var(--k);color:#070C22;font:900 16px Helvetica,Arial,sans-serif;box-shadow:inset 0 0 0 3px #0B1030}
 </style>
 </body>
 </html>
