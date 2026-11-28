@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 181</title>
+<title>Booth Light · BUILD 185</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 181 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 185 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 181</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 185</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 181 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 185 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -3176,7 +3176,7 @@ if(p0){var cs=p0.querySelector('.vsel');if(cs){cs.innerHTML='';opts(cs,true);}
   function restore(){URL.createObjectURL=oc;HTMLAnchorElement.prototype.click=ak;}
   msg.textContent='Reading the recording\u2026';x.click();var t0=Date.now(),iv=setInterval(function(){if(got||Date.now()-t0>60000){clearInterval(iv);restore();if(!got){msg.textContent='No recording here yet. Record or open one first.';return;}fromFile(new File([got],'booth-light-recording-'+new Date().toISOString().slice(0,10)+'.wav',{type:'audio/wav'}),cs.value);}},200);};}
 })();</script>
-<script id="bl-switches" type="application/json">{"app": true, "download": false, "voices": true, "qr": true, "h-start": true, "h-consent": true, "h-notes": true, "h-lr": true, "h-tools": true, "h-st": true, "lr-other": true, "st-sov": true, "st-apps": false, "st-risk": true, "st-red": true, "st-ladder": true, "st-booth": true, "st-ped": false, "st-help": true, "st-kit": true, "st-eth": true}</script>
+<script id="bl-switches" type="application/json">{"app": true, "download": false, "voices": true, "qr": true, "h-start": true, "h-consent": true, "h-notes": true, "h-lr": true, "h-tools": true, "h-st": true, "lr-other": true, "st-sov": true, "st-apps": false, "st-risk": true, "st-red": true, "st-ladder": true, "st-booth": true, "st-ped": false, "st-help": true, "st-kit": true, "st-eth": true, "consent-contacts": false}</script>
 <script id="bl-108-js">(function(){
 var S={};try{S=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
 var mine=/^(127\.0\.0\.1|localhost)$/.test(location.hostname);
@@ -3270,7 +3270,7 @@ if(two)two.insertAdjacentElement('afterend',box);else host.insertBefore(box,host
 var p2=function(n){return String(n).padStart(2,'0');};
 var at=function(x){if(!x)return'';var d=new Date(x);return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())+' '+p2(d.getHours())+':'+p2(d.getMinutes());};
 var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return'&#'+c.charCodeAt(0)+';';});};
-var T={1:['Ask for the interview','“May I interview you? Here is the purpose and the topics.”',[['yes','They said yes'],['no','They said no']]],
+var T={1:['Ask for the interview','“May I interview you? Here is the purpose and the topics. Do you have any questions before you answer?”',[['yes','They said yes'],['no','They said no']]],
 2:['Ask again on the recording','“Do you agree to be recorded?”'],
 3:['Ask before you edit','“May I edit the raw recording?”',[['yes','They said yes'],['no','They said no']]],
 4:['Send the edited interview','“Here is the edited interview (20 to 30 minutes). What would you change?”',[['approved','Approved'],['changes','Asked for changes'],['withdrew','Withdrew']]],
@@ -14300,7 +14300,7 @@ var B=window.__BL,C=window.blConsent;if(!B||!C||document.getElementById('bl-path
 var $=function(s){return document.querySelector(s);},esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return'&#'+c.charCodeAt(0)+';';});};
 var COL=['#FFD60A','#FF7A59','#5CE8F5','#B56CFF','#B6F23C','#3392FF','#FFBE5C','#FF4DDB'];   /* chosen with a colour-blindness simulation: neighbouring steps stay different, and dark text on every colour stays readable */
 var ST=[
- {name:'Invite',sign:'\u2709',tag:'Ask the storyteller',say:'\u201cMay I interview you? Here is the purpose and the topics.\u201d',ans:[['yes','They said yes'],['no','They said no']]},
+ {name:'Invite',sign:'\u2709',tag:'Ask the storyteller',say:'\u201cMay I interview you? Here is the purpose and the topics. Do you have any questions before you answer?\u201d',ans:[['yes','They said yes'],['no','They said no']]},
  {name:'Record',sign:'\u25cf',tag:'Read this, then ask'},
  {name:'Edit',sign:'\u2702',tag:'Ask the storyteller',say:'\u201cMay I edit the raw recording?\u201d',ans:[['yes','They said yes'],['no','They said no']],embed:'cut'},
  {name:'Review',sign:'\u21ba',tag:'Send the edited interview, then ask',say:'\u201cHere is the edited interview. What would you change?\u201d',ans:[['sent','I sent it'],['approved','Approved'],['changes','Asked for changes'],['withdrew','Withdrew']],embed:'cut'},
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 181 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 185 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15129,7 +15129,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
  function sScreen(n){var h='',pn=prodName()||'The episode producer',own=SM.from===0;
   if(n===1){var qs=document.querySelector('#bl-path .pt-ta');qs=qs&&qs.value.trim();
    h=sHead(1)+'<h2>Do you agree to be recorded?</h2><div class="b132-box"><p>'+(own?'An episode producer in the class':esc(pn))+' would like to record an interview with you for The Listening Room, the class podcast.</p>'+(qs?'<p><b>The questions:</b> '+esc(qs)+'</p>':'')+'</div>'
-    +'<button type="button" class="b132-g" data-s="yes">Yes, record me</button><button type="button" class="b132-r" data-s="no">No</button><p class="b132-f">You can say no now, and you can change your mind later. Saying no ends here: nothing is recorded.</p>';}
+    +'<p class="b132-f b185-q">Do you have any questions? Ask the episode producer before you answer.</p><button type="button" class="b132-g" data-s="yes">Yes, record me</button><button type="button" class="b132-r" data-s="no">No</button><p class="b132-f">You can say no now, and you can change your mind later. Saying no ends here: nothing is recorded.</p>';}
   else if(n===2){h=sHead(2)+'<h2>Where may your story play?</h2><div class="b132-cards">';
    SIX.forEach(function(c,i){var k=i+1,ff=k===5;h+='<button type="button" class="b132-c'+(SM.lv===k?' on':'')+(ff?' ff':'')+'" style="--k:'+KC[i]+'" data-l="'+k+'"'+(ff?' disabled':'')+' aria-pressed="'+(SM.lv===k)+'"><span class="b132-ct">'+(SM.lv===k?'✓ ':'')+k+' · '+c[0]+'</span><span class="b132-cs">'+(ff?'Not built yet; not an option this quarter.':'Who hears it: '+c[1])+'</span>'+(COP[i]?'<span class="b132-cs">Copies kept on: '+COP[i]+'</span>':'')+'</button>';});
    h+='</div><button type="button" class="b132-y" data-s="pick"'+(SM.lv?'':' disabled')+'>'+(SM.lv?'Choose level '+SM.lv:'Choose a level above')+'</button>';}
@@ -15787,9 +15787,9 @@ var B=window.__BL;
 function esc(s){return String(s==null?'':s).replace(/[&\x3c\x3e"']/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
 function topic(){try{return String((B&&B.S&&B.S.topic)||'').trim();}catch(e){return '';}}
 function body(st){var t=topic(),tp=t?'\x3cb\x3e'+esc(t)+'\x3c/b\x3e':(st?'the topic the episode producer told you about':'\x3cspan class="bl172-blank"\x3e[say your topic in one sentence]\x3c/span\x3e');
- return '\x3cp\x3eThis interview is for The Listening Room, a podcast for a course at WWU. It is about '+tp+'.\x3c/p\x3e'
+ return '\x3cp\x3eThis interview is for The Listening Room, a podcast for a course at WWU. It is about '+tp+'. The interview takes about 45 minutes to 1 hour.\x3c/p\x3e'
  +'\x3cp\x3eSome questions may touch on things that are personal or sensitive for you. In this class that can mean sex, gender or sexuality — but not necessarily, depending on the topic we agreed to explore together.\x3c/p\x3e'
- +'\x3cp\x3eYou can skip any question. You can stop answering at any time. You can tell me now, or at any point, which topics are off limits. You can withdraw your consent to this interview at any time, now or later, even after we finish.\x3c/p\x3e'
+ +'\x3cp\x3eTaking part in this interview is voluntary. You can skip any question. You can stop answering at any time. You can tell me now, or at any point, which topics are off limits. You can withdraw your consent to this interview at any time, now or later, even after we finish.\x3c/p\x3e'
  +'\x3cp\x3eAs an episode co-producer, I will ask for your consent throughout all stages of developing the podcast episode: editing, sharing scope, as well as the timing of withdrawing the interview altogether. In addition, at the end of the quarter, you will get your episode back, and if any copy had been temporarily kept for the class (by the podcast producer, the instructor, or by the episode co-producers, the interviewers), it will be erased.\x3c/p\x3e'
  +'\x3cp\x3eYou decide who may hear the episode. Nothing is shared until you have heard the edited interview and agreed.\x3c/p\x3e'
  +'\x3cp\x3eBooth Light keeps your interview confidential: only the episode producer knows your name, and every record uses a codename. No one can promise complete confidentiality. Anyone who hears the episode may recognise your voice or details you mention. If you do not want to be recognised by your voice, ask for Booth Light’s voice changer: it changes the pitch and tone of your voice in the episode; your words, your accent and the details you mention stay the same. We ask everyone who listens to keep what they hear private, but we cannot guarantee it.\x3c/p\x3e';}
@@ -16427,6 +16427,121 @@ setInterval(enhance,300);
 #bl132-st .a181-go{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:center;width:100%;min-height:52px;align-items:center;margin-top:8px;border-radius:999px;background:#1E9E5A;color:#FFFFFF;font-weight:900;font-size:1.05em;padding:.5em 1em;text-align:center}
 #bl132-st .a181-go:focus-visible,#bl132-st .a181-cp:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 #bl132-st .a181-cp{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin:8px 0 6px;padding:.4em 1.2em;border-radius:999px;background:#5CE8F5;color:#070C22;font-weight:900}
+</style>
+<script id="bl-182">/* BUILD 182: "Before we start" as six numbered colour cards in reading order, each with a question label; the first sentence of each card in bold. The text is unchanged. */
+(function(){
+var Q=['What is this interview?','What might it touch on?','You can skip any question or stop the interview at any time.','When will I ask for your consent?','Who will hear it?','How is your identity kept confidential?'];
+var K=['#FFD60A','#FF8A5C','#3DDC84','#5CE8F5','#B58CFF','#FF7AD9'];
+function boldFirst(p){var w=document.createTreeWalker(p,NodeFilter.SHOW_TEXT),n;while((n=w.nextNode())){var i=n.nodeValue.search(/[.:]\s/);if(i>=0){var a=n.nodeValue.slice(0,i+1),rest=n.nodeValue.slice(i+1);var st=document.createElement('strong');st.className='c182-first';
+ var r=document.createRange();r.setStart(p.firstChild,0);r.setEnd(n,0);var before=r.extractContents();st.appendChild(before);st.appendChild(document.createTextNode(a));n.nodeValue=rest;p.insertBefore(st,p.firstChild);return;}}}
+function tick(){[].forEach.call(document.querySelectorAll('#bl-path .bl173-bws .bl172-b'),one);}
+function one(b){var ps=[].filter.call(b.children,function(c){return c.tagName==='P';});
+ if(ps.length!==6)return;
+ ps.forEach(function(p,i){if(p.getAttribute('data-c182'))return;p.setAttribute('data-c182',String(i+1));p.classList.add('c182-card');p.style.setProperty('--k',K[i]);
+  boldFirst(p);var h=document.createElement('span');h.className='c182-h';h.innerHTML='\x3cspan class="c182-n">'+(i+1)+'\x3c/span>\x3cspan class="c182-q">\x3c/span>';h.querySelector('.c182-q').textContent=Q[i];p.insertBefore(h,p.firstChild);});
+ b.classList.add('c182-grid');}
+var q=false;function soon(){if(q)return;q=true;Promise.resolve().then(function(){q=false;tick();});}
+function obs(){var P=document.getElementById('bl-path');if(!P||P._c182)return;P._c182=1;new MutationObserver(soon).observe(P,{childList:true,subtree:true});}
+setInterval(function(){obs();tick();},400);obs();tick();
+})();</script>
+<style id="bl-182-css">/* BUILD 182 */
+#bl-path .bl173-bws details.bl172-d{background:#FFF8E7 !important;border:none !important;border-radius:24px !important;padding:16px 20px 20px !important}
+#bl-path .bl173-bws details.bl172-d summary{font:900 1.05em Helvetica,Arial,sans-serif !important;color:#0B1030;margin-bottom:12px}
+#bl-path .bl173-bws .bl172-b.c182-grid{column-count:1 !important;columns:auto !important;display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;column-rule:none !important;font-size:.84em !important;counter-reset:none}
+@media (max-width:1100px){#bl-path .bl173-bws .bl172-b.c182-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){#bl-path .bl173-bws .bl172-b.c182-grid{grid-template-columns:1fr}}
+#bl-path .bl173-bws .bl172-b p.c182-card{margin:0 !important;background:#FFFFFF;border-radius:18px;padding:14px 16px 16px !important;border-top:8px solid var(--k);box-shadow:0 2px 0 rgba(11,16,48,.08);line-height:1.5 !important;color:#0B1030;break-inside:avoid}
+#bl-path .bl173-bws .c182-h{display:flex;align-items:center;gap:10px;margin:0 0 8px}
+#bl-path .bl173-bws .c182-n{flex:0 0 auto;width:2em;height:2em;border-radius:50%;background:var(--k);color:#0B1030;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:1.05em}
+#bl-path .bl173-bws .c182-q{font-weight:900;font-size:1.08em;line-height:1.2;color:#0B1030}
+#bl-path .bl173-bws .c182-first{font-weight:800;background:linear-gradient(transparent 60%,color-mix(in srgb,var(--k) 45%,transparent) 60%)}
+html.ez #bl-path .bl173-bws details.bl172-d{background:#FBF6E8 !important}
+</style>
+<script id="bl-184">/* BUILD 184: Step 0 for the instructor, in Before you start: submit the HRPP Student Course Project Instructor Submission Form before any interview is recorded. Shown only in the instructor's own copy (html.bl-mine: opened as a file or from this Mac), like the other instructor-only parts. */
+(function(){
+var U='https://vpr.wwu.edu/researchintegrity/hrpp-course-projects';
+function make(){var H=document.documentElement;if(!H.classList.contains('bl-mine'))return;var st=document.getElementById('bl126-start');if(!st||st.querySelector('.i184'))return;
+ var sub=st.querySelector('.bl126-sub');var d=document.createElement('section');d.className='i184';d.setAttribute('aria-label','Step 0 for the instructor');
+ d.innerHTML='\x3cdiv class="i184-top">\x3cspan class="i184-n">0\x3c/span>\x3cdiv>\x3cp class="i184-chip">Instructor only · students do not see this\x3c/p>\x3ch3 class="i184-h">Submit the course project form to the HRPP before any interview is recorded\x3c/h3>\x3c/div>\x3c/div>'
+  +'\x3cdiv class="i184-grid">'
+  +'\x3cdiv class="i184-c" style="--k:#FFD60A">\x3cb>What is it?\x3c/b>\x3cspan>WWU’s Student Course Project Instructor Submission Form. The HRPP (Human Research Protections Program) briefly checks the class project for risks to the people students interview.\x3c/span>\x3c/div>'
+  +'\x3cdiv class="i184-c" style="--k:#FF8A5C">\x3cb>When?\x3c/b>\x3cspan>Before the first interview is recorded. The HRPP cannot review interviews that are already recorded: federal rules allow no review after the fact.\x3c/span>\x3c/div>'
+  +'\x3cdiv class="i184-c" style="--k:#3DDC84">\x3cb>What does it give the class?\x3c/b>\x3cspan>If faculty or staff ask whether the project went to the HRPP, students can say yes. Without the form, an email from the HRPP is not a determination.\x3c/span>\x3c/div>'
+  +'\x3cdiv class="i184-c" style="--k:#5CE8F5">\x3cb>When is a full review needed?\x3c/b>\x3cspan>If any episode or finding will go beyond the class (a public listening, a presentation, a symposium), the HRPP must consider it before the data is collected.\x3c/span>\x3c/div>'
+  +'\x3c/div>\x3ca class="i184-go" href="'+U+'" target="_blank" rel="noopener noreferrer">Open the HRPP Student Course Projects page →\x3c/a>\x3cp class="i184-f">On that page, open the first section to find the form. This link is a public WWU page; hiding it from students only keeps their screen uncluttered.\x3c/p>';
+ if(sub&&sub.parentNode)sub.parentNode.insertBefore(d,sub.nextSibling);else st.insertBefore(d,st.firstChild);}
+setInterval(make,800);make();
+})();</script>
+<style id="bl-184-css">/* BUILD 184 */
+.i184{margin:18px 0 22px;background:#FFF8E7;color:#0B1030;border-radius:24px;padding:18px 22px 20px;outline:3px dashed #E0453A;outline-offset:4px;font-family:Helvetica,Arial,sans-serif}
+.i184-top{display:flex;gap:14px;align-items:center}
+.i184-n{flex:0 0 auto;width:2.2em;height:2.2em;border-radius:50%;background:#E0453A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:1.5em}
+.i184-chip{display:inline-block;margin:0 0 4px;background:#0B1030;color:#FFD60A;font-weight:900;font-size:.78em;letter-spacing:.06em;padding:.3em .9em;border-radius:999px}
+.i184-h{margin:0;font:900 clamp(20px,1.5vw,30px)/1.2 Georgia,"Times New Roman",serif;color:#0B1030}
+.i184-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0}
+@media (max-width:1100px){.i184-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.i184-grid{grid-template-columns:1fr}}
+.i184-c{background:#FFFFFF;border-radius:16px;border-top:8px solid var(--k);padding:12px 14px;display:flex;flex-direction:column;gap:4px;font-size:clamp(15px,1vw,19px);line-height:1.45}
+.i184-c b{font-size:1.05em}
+.i184-go{display:inline-flex;align-items:center;min-height:52px;padding:.5em 1.4em;border-radius:999px;background:#E0453A;color:#FFFFFF !important;font-weight:900;font-size:1.05em;text-decoration:none}
+.i184-go:focus-visible{outline:3px solid #0B1030;outline-offset:3px}
+.i184-f{margin:10px 0 0;font-size:.9em;color:#4A4F6E}
+</style>
+<script id="bl-185">/* BUILD 185: "Who can you contact with concerns?" under Before we start. Its switch is "consent-contacts" in the switch list: off for students this quarter. The instructor's own copy shows it with the red dashed edge. */
+(function(){
+var SW={};try{SW=JSON.parse(document.getElementById('bl-switches').textContent||'{}');}catch(e){}
+function mine(){return document.documentElement.classList.contains('bl-mine');}
+function tick(){var on=SW['consent-contacts']===true,m=mine();if(!on&&!m)return;
+ [].forEach.call(document.querySelectorAll('.bl172-b'),function(b){var n=b.nextElementSibling;if(n&&n.classList.contains('c185'))return;
+  var d=document.createElement('div');d.className='c185'+(on?'':' c185-off');
+  d.innerHTML=(on?'':'\x3cp class="c185-chip">Off for students · switch: consent-contacts\x3c/p>')
+   +'\x3cp class="c185-h">\x3cspan class="c185-n">7\x3c/span>Who can you contact with concerns?\x3c/p>'
+   +'\x3cp>\x3cb>The episode producer\x3c/b> who interviews you.\x3c/p>'
+   +'\x3cp>\x3cb>The instructor (the podcast producer):\x3c/b> use Message the podcast producer. Your message is sealed on this device (encrypted) and sent through Hush Line, a tip line. It reaches the podcast producer without showing their name or email address, and you do not have to give yours.\x3c/p>'
+   +'\x3cbutton type="button" class="c185-go" data-m173="open">✉ Message the podcast producer\x3c/button>'
+   +'\x3cp>\x3cb>For greater concerns:\x3c/b> WWU’s Human Research Protections Program (HRPP), the office that oversees research ethics.\x3c/p>'
+   +'\x3cbutton type="button" class="c185-go c185-hr">✉ Write to WWU’s research ethics office\x3c/button>'
+   +'\x3cp class="c185-f">This opens your own email app with the office’s address filled in, so the office sees your email address.\x3c/p>';
+  b.parentNode.insertBefore(d,b.nextSibling);});}
+function hr(){var a=[114,101,115,101,97,114,99,104,105,110,116,101,103,114,105,116,121],d=[119,119,117,46,101,100,117];return String.fromCharCode.apply(null,a)+String.fromCharCode(64)+String.fromCharCode.apply(null,d);}
+function mail(){location.href='mai'+'lto:'+hr()+'?subject='+encodeURIComponent('A concern about a class podcast project');}
+document.addEventListener('click',function(e){var h=e.target.closest&&e.target.closest('.c185-hr');if(h){e.preventDefault();mail();return;}var g=e.target.closest&&e.target.closest('.c185-go');if(g&&window.blMessageProducer){e.preventDefault();window.blMessageProducer();}});
+function msgPage(){var m=document.getElementById('bl173-msg');if(!m||m.querySelector('.c185-to'))return;var form=m.querySelector('.m173-c1')||m.querySelector('.m173-f');var go=m.querySelector('.m173-go');if(!form||!go)return;
+ var f=document.createElement('fieldset');f.className='c185-to';
+ f.innerHTML='\x3clegend class="c185-h2">Who should get your message?\x3c/legend>\x3cdiv class="c185-pills">\x3clabel class="c185-p">\x3cinput type="radio" name="c185-to" value="pp" checked> The podcast producer \x3cspan>sealed, sent through Hush Line, no names shown\x3c/span>\x3c/label>\x3clabel class="c185-p">\x3cinput type="radio" name="c185-to" value="hr"> WWU’s research ethics office (HRPP) \x3cspan>for concerns about ethics, consent or safety · opens your own email app, so the office sees your email address · not sealed\x3c/span>\x3c/label>\x3c/div>';
+ var host=form.closest('.m173-grid')||form.parentNode;host.parentNode.insertBefore(f,host);
+ f.addEventListener('change',function(){var h=f.querySelector('input[value=hr]').checked,b=m.querySelector('.m173-seal');if(b)b.textContent=h?'Open my email with this message':'Seal and copy';});}
+function val(m,sel){var e=m.querySelector(sel);return e?String(e.value||'').trim():'';}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('#bl173-msg .m173-seal');if(!b)return;var m=document.getElementById('bl173-msg'),r=m.querySelector('.c185-to input[value=hr]');if(!r||!r.checked)return;
+ e.preventDefault();e.stopImmediatePropagation();
+ var ch=m.querySelector('input[name=m173-ch]:checked'),cv=ch?ch.value:'',lab={erase:'Erase forever',until:'Set a time limit',other:'Another change'}[cv]||'';
+ var t='A concern about a class podcast project (The Listening Room, a podcast for a course at WWU).\n\n';
+ var ep=val(m,'.m173-ep');if(ep)t+='Episode: '+ep+'\n';
+ if(lab)t+='Change wanted: '+lab+(cv==='until'&&val(m,'.m173-date')?' (available until '+val(m,'.m173-date')+')':'')+(cv==='other'&&val(m,'.m173-ot')?' ('+val(m,'.m173-ot')+')':'')+'\n';
+ var mo=val(m,'.m173-more');if(mo)t+='\n'+mo+'\n';
+ location.href='mai'+'lto:'+hr()+'?subject='+encodeURIComponent('A concern about a class podcast project')+'&body='+encodeURIComponent(t);},true);
+setInterval(msgPage,500);
+setInterval(tick,400);tick();
+})();</script>
+<style id="bl-185-css">/* BUILD 185 */
+.c185{margin:14px 0 0;background:#FFFFFF;color:#0B1030;border-radius:18px;border-top:8px solid #FFB347;padding:14px 16px;line-height:1.5;font-size:.84em}
+.c185 p{margin:.3em 0}
+.c185-off{outline:3px dashed #E0453A;outline-offset:3px}
+.c185-go{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:48px;margin:6px 0;padding:.45em 1.3em;border-radius:999px;background:#7CF2A0;color:#0B1030;font-weight:900}
+.c185-go:focus-visible{outline:3px solid #0B1030;outline-offset:3px}
+.c185-hr{background:#FFFFFF !important;box-shadow:inset 0 0 0 3px #0B1030}
+.c185-f{font-size:.9em;color:#4A4F6E}
+.c185-to{border:0;margin:0 0 16px;padding:14px 18px;background:#FFFFFF;border-radius:18px;border-top:8px solid #FFB347;color:#0B1030}
+.c185-to legend{float:left;width:100%;padding:0;margin:0 0 6px}
+.c185-pills{clear:both;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:10px;margin-top:6px}
+.c185-p{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:16px;box-shadow:inset 0 0 0 3px #0B1030;cursor:pointer;font-weight:900}
+.c185-p:has(input:checked){background:#7CF2A0}
+.c185-p span{font-weight:400;font-size:.9em}
+.c185-h2{font-weight:900;font-size:1.05em}
+.c185-chip{display:inline-block;background:#0B1030;color:#FFD60A;font-weight:900;font-size:.8em;padding:.25em .8em;border-radius:999px}
+.c185-h{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.08em}
+.c185-n{width:2em;height:2em;border-radius:50%;background:#FFB347;display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+#bl132-st .b185-q{font-weight:700}
 </style>
 </body>
 </html>
