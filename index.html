@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 174</title>
+<title>Booth Light · BUILD 175</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 174 · 2026-11-27 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 175 · 2026-11-27 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 174</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 175</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 174 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 175 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 174 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 175 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -15136,7 +15136,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
   else if(n===3){var d=new Date(SM.when);h=sHead(3)+'<h2>Your receipt</h2><div class="b132-rec"><p class="b132-big">You agreed to be recorded, and chose level '+SM.lv+': '+SIX[SM.lv-1][0].replace(/,.*/,'')+'.</p><p>'+esc(fmt(d.toISOString()))+'</p></div>'
    +(own?'<p class="b132-f">Show this code to the episode producer. They type it in at step 6 of Process Consent.</p>':'<p class="b132-f">This code is filled in for the episode producer at step 6.</p>')
    +'<div class="b132-code" aria-label="Your code">'+SM.code+'</div>'
-   +(own?'<button type="button" class="b132-b" data-s="save">Save my receipt</button>':'<button type="button" class="b132-g" data-s="back">Give the phone back</button>')
+   +(own?'<button type="button" class="b132-b" data-s="save">Save my consent</button>':'<button type="button" class="b132-g" data-s="back">Give the phone back</button>')
    +'<button type="button" class="b132-y2" data-s="change">Change my choice</button><p class="b132-f">Erasing from your own phone is not built yet. To withdraw, tell the episode producer or the podcast producer: the podcast producer does it within 48–72 hours.</p>';}
   else if(n===4){h='<h2>Nothing is recorded</h2><div class="b132-box"><p>You said no. That ends it: no recording is made.</p></div>'+(own?'<p class="b132-f">You can close this page.</p>':'<button type="button" class="b132-g" data-s="backno">Give the phone back</button>');}
   SO.querySelector('.b132-in2').innerHTML=h;var f=SO.querySelector('h2');if(f){f.setAttribute('tabindex','-1');f.focus();}}
@@ -15210,7 +15210,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
   else if(k==='r2'){var said={approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice];
    h=tHead(2,of)+'<h2>'+(TM.choice==='withdrew'?'You want to withdraw':'Thank you')+'</h2><div class="b132-rec"><p class="b132-big">You said: '+said+'</p>'+(TM.fb?'<p>'+esc(TM.fb).replace(/\n/g,'<br>')+'</p>':'')+'<p>'+esc(fmt(new Date().toISOString()))+'</p></div>'
    +(TM.choice==='withdrew'?'<p class="b132-f">Tell the episode producer or the podcast producer now. The recording is not used, and the podcast producer applies the withdrawal within 48–72 hours.</p>':'')
-   +(own?'<button type="button" class="b132-b" data-s="r-copy">Copy my words</button><button type="button" class="b132-b" data-s="r-save">Save my words</button><p class="b132-f">Send your words to the episode producer the way you choose: in person, a text or an email. Booth Light sends nothing.</p><p class="b133-msg b132-f" aria-live="polite"></p>':'<p class="b132-f">Your words go into the episode producer’s notes (After) on this phone.</p><button type="button" class="b132-g" data-s="r-back">Give the phone back</button>')
+   +(own?'<button type="button" class="b132-b" data-s="r-copy">Copy my consent</button><button type="button" class="b132-b" data-s="r-save">Save my consent</button><p class="b132-f">Send your words to the episode producer the way you choose: in person, a text or an email. Booth Light sends nothing.</p><p class="b133-msg b132-f" aria-live="polite"></p>':'<p class="b132-f">Your words go into the episode producer’s notes (After) on this phone.</p><button type="button" class="b132-g" data-s="r-back">Give the phone back</button>')
    +'<button type="button" class="b132-y2" data-s="r-again">Change my answer</button>';}
   else if(k==='f1')h=tHead(1,of)+'<h2>Listen to the final cut</h2>'+player()+'<div class="b132-box"><p>This is the version that may be heard. If you agree to it, you choose where it may play, and you get a code that matches this cut only.</p></div><button type="button" class="b132-g" data-s="f-yes">Yes, I agree to this final cut</button><button type="button" class="b132-y" data-s="f-ch">I want changes</button>';
   else if(k==='fch')h='<h2>No code is made</h2><div class="b132-box"><p>Tell the episode producer what to change. They make the changes and ask you again, with the new cut.</p></div>'+(own?'<p class="b132-f">You can close this page.</p>':'<button type="button" class="b132-g" data-s="t-close">Give the phone back</button>');
@@ -15234,7 +15234,7 @@ document.documentElement.classList.add('bl-pathon');show(cur,false);setInterval(
    else if(s==='r-again'){tScreen('r1');}
    else if(s==='r-copy'||s==='r-save'){var txt='Booth Light: my answer about the edited interview\n\n'+{approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice]+'\n'+(TM.fb?'\n'+TM.fb+'\n':'')+'\nWritten '+fmt(new Date().toISOString())+'\nFingerprint of the file I heard (SHA-256): '+TM.fp+'\n',m=SO.querySelector('.b133-msg');
     if(s==='r-save'){saveFile(new Blob([txt],{type:'text/plain'}),'booth-light-my-answer-about-the-edit-'+day()+'.txt');if(m)m.textContent='Saved in this phone’s Downloads folder.';}
-    else{var ok=function(){if(m)m.textContent='Copied. Paste it into the message you send the episode producer.';},no=function(){if(m)m.textContent='This browser did not allow copying. Use Save my words instead.';};try{navigator.clipboard.writeText(txt).then(ok,no);}catch(x){no();}}}
+    else{var ok=function(){if(m)m.textContent='Copied. Paste it into the message you send the episode producer.';},no=function(){if(m)m.textContent='This browser did not allow copying. Use Save my consent instead.';};try{navigator.clipboard.writeText(txt).then(ok,no);}catch(x){no();}}}
    else if(s==='r-back'){var a=document.getElementById('after');if(a){a.value=(a.value?a.value+'\n\n':'')+'Storyteller’s answer about the edited interview ('+fmt(new Date().toISOString())+'): '+{approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[TM.choice]+(TM.fb?'\n'+TM.fb:'');a.dispatchEvent(new Event('input',{bubbles:true}));}
     var pb=document.querySelector('#bl-path .pt-b[data-a="'+TM.choice+'"]');if(pb)pb.click();tClose();}
    else if(s==='f-yes'){tScreen('f2');}
@@ -15787,8 +15787,8 @@ var B=window.__BL;
 function esc(s){return String(s==null?'':s).replace(/[&\x3c\x3e"']/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
 function topic(){try{return String((B&&B.S&&B.S.topic)||'').trim();}catch(e){return '';}}
 function body(st){var t=topic(),tp=t?'\x3cb\x3e'+esc(t)+'\x3c/b\x3e':(st?'the topic the episode producer told you about':'\x3cspan class="bl172-blank"\x3e[say your topic in one sentence]\x3c/span\x3e');
- return '\x3cp\x3eThis interview is for The Listening Room, the class podcast of ANTH 353, Sex and Gender in Culture, at Western Washington University. It is about '+tp+'.\x3c/p\x3e'
- +'\x3cp\x3eSome questions may touch on things that are personal or sensitive for you. In this class that can mean sex, gender or sexuality. It can also be anything else that is sensitive in your life or in the topic we agreed to explore together.\x3c/p\x3e'
+ return '\x3cp\x3eThis interview is for The Listening Room, a podcast for a course at WWU. It is about '+tp+'.\x3c/p\x3e'
+ +'\x3cp\x3eSome questions may touch on things that are personal or sensitive for you. In this class that can mean sex, gender or sexuality — but not necessarily, depending on the topic we agreed to explore together. It can also be anything else that is sensitive in your life.\x3c/p\x3e'
  +'\x3cp\x3eYou can skip any question. You can stop answering at any time. You can tell me now, or at any point, which topics are off limits. You can withdraw your consent to this interview at any time, now or later, even after we finish.\x3c/p\x3e'
  +'\x3cp\x3eAs an episode co-producer, I will ask for your consent throughout all stages of developing the podcast episode: editing, sharing scope, as well as the timing of withdrawing the interview altogether. In addition, at the end of the quarter, you will get your episode back, and if any copy had been temporarily kept for the class (by the podcast producer, the instructor, or by the episode co-producers, the interviewers), it will be erased.\x3c/p\x3e'
  +'\x3cp\x3eYou decide who may hear the episode. Nothing is shared until you have heard the edited interview and agreed.\x3c/p\x3e'
@@ -16014,12 +16014,12 @@ var PG=null;
 var DO=[['#storyteller','Give my consent for the interview','Your consent steps open on this phone. At the end you show the episode producer a six-character code.','#FF8A5C'],
  ['#storyteller-review','Hear the edited interview','Choose the file the episode producer sent you, listen, and tell them what to change.','#B58CFF'],
  ['#storyteller-final','Approve the final cut','Choose the final cut file. You get a code for the episode producer, your own erase code and your request code.','#C4F25C']];
-var STEPS=[['1','Invite','#FFD60A','The episode producer reads you “Before we start”: the topic, your rights, and how your identity is kept confidential.','You say yes or no. Nothing is recorded before your yes.',null],
+var STEPS=[['1','Invite','#FFD60A','The episode producer reads you “Before we start”: the topic; your rights (you can skip any question, stop answering at any time, say which topics are off limits, and withdraw your consent, now or later); and how your identity is kept confidential.','You say yes or no. Nothing is recorded before your yes.',null],
  ['2','Record','#FF8A5C','You give your consent, on your own phone or on the episode producer’s phone. Then the interview is recorded.','At the end of the consent steps you show the episode producer a six-character code.','#storyteller'],
  ['3','Edit','#5CE8F5','The episode co-producers (the interviewers) edit the interview.','You can tell them at any time which parts must come out.',null],
  ['4','Review','#B58CFF','You hear the edited interview.','You tell the episode producer what to change. Nothing is shared until you have heard it and agreed.','#storyteller-review'],
  ['5','Confirm','#C4F25C','You approve the final cut.','You get a code for the episode producer, your own erase code, and your request code. Keep the codes where only you can see them.','#storyteller-final'],
- ['6','Audience','#6FA8FF','You decide who may hear the episode.','This quarter: the Listening Party, class only; possibly with storytellers (decision pending).',null],
+ ['6','Audience','#6FA8FF','You decide who may hear the episode: only the episode producer; the podcast producer (the instructor); the class, in listening sessions with the instructor; or the Listening Party (class only).','You choose one of these. If you change your mind, tell the episode producer.',null],
  ['7','Listen','#FFB347','The class hears the episodes at the Listening Party.','You do nothing here unless you are invited.',null],
  ['8','Close','#FF7AD9','At the end of the quarter you get your episode back, and any copy kept for the class is erased.','With your erase code you can delete the episode yourself, at any time, without asking anyone.',null]];
 function esc(s){return String(s).replace(/[&\x3c\x3e"]/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
@@ -16078,6 +16078,20 @@ window.addEventListener('resize',top);setInterval(function(){if(isOpen())top();}
 #bl174-st .s174-step p{margin:6px 0 0;font:600 1em/1.45 Helvetica,Arial,sans-serif}
 #bl174-st .s174-step em{font-style:normal;font-weight:900}
 #bl174-st .s174-sb{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;padding:.4em 1.1em;border-radius:999px;background:var(--k);color:#070C22;font:900 16px Helvetica,Arial,sans-serif;box-shadow:inset 0 0 0 3px #0B1030}
+</style>
+<script id="bl-175">/* BUILD 175: closing a storyteller screen that was opened from the storyteller page returns to that page. */
+(function(){
+var back=false,was=false;
+document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('#bl174-st .s174-go[data-h], #bl174-st .s174-sb[data-h]');if(t)back=true;},true);
+setInterval(function(){var so=document.getElementById('bl132-st'),v=!!(so&&!so.hidden&&getComputedStyle(so).display!=='none');
+ if(was&&!v&&back){back=false;if(/^#storyteller/i.test(location.hash)){try{history.replaceState(null,'',location.pathname+location.search);}catch(x){}}if(window.blStorytellerPage)window.blStorytellerPage();}
+ if(!v&&!was&&back){var pg=document.getElementById('bl174-st');if(pg&&!pg.hidden)back=back;}
+ was=v;},250);
+})();
+</script>
+<style id="bl-175-css">/* BUILD 175 */
+@media (min-width:1100px){#bl174-st .s174-steps{grid-template-columns:1fr 1fr}}
+#bl174-st .s174-step p{font-size:1.05em}
 </style>
 </body>
 </html>
