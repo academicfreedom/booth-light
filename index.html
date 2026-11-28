@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 180</title>
+<title>Booth Light · BUILD 181</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 180 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 181 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 180</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 181</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 180 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 181 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 180 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 181 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -16012,13 +16012,14 @@ setInterval(add,300);add();
 (function(){
 var PG=null;
 var DO=[['#storyteller','Give my consent for the interview','Your consent steps open on this phone. At the end you show the episode producer a six-character code.','#FF8A5C'],
- ['#storyteller-review','Hear the edited interview','Choose the file the episode producer sent you, listen, and tell them what to change.','#B58CFF'],
- ['#storyteller-final','Approve the final cut','Choose the final cut file. You get a code for the episode producer, your own erase code and your request code.','#C4F25C']];
+ ['#storyteller-edit','Say yes or no to the edit','Tell the episode producer whether your interview may be edited, and which parts must come out. No file needed.','#5CE8F5'],
+ ['#storyteller-review','Hear the edited interview','Tell the episode producer if it is right or what to change. You can answer with or without the file they sent you.','#B58CFF'],
+ ['#storyteller-final','Approve the final cut','Say yes or ask for changes, with or without the file. With the file you also get a code for the episode producer and your own erase code.','#C4F25C']];
 var STEPS=[['1','Invite','#FFD60A','The episode producer reads you “Before we start”: the topic; your rights (you can skip any question, stop answering at any time, say which topics are off limits, and withdraw your consent, now or later); and how your identity is kept confidential.','You say yes or no. Nothing is recorded before your yes.',null],
  ['2','Record','#FF8A5C','You give your consent, on your own phone or on the episode producer’s phone. Then the interview is recorded.','At the end of the consent steps you show the episode producer a six-character code.','#storyteller'],
- ['3','Edit','#5CE8F5','The episode co-producers (the interviewers) edit the interview.','You can tell them at any time which parts must come out.',null],
+ ['3','Edit','#5CE8F5','The episode co-producers (the interviewers) edit the interview.','You say yes or no to the edit, and which parts must come out. You can also tell them at any time.','#storyteller-edit'],
  ['4','Review','#B58CFF','You hear the edited interview.','You tell the episode producer what to change. Nothing is shared until you have heard it and agreed.','#storyteller-review'],
- ['5','Confirm','#C4F25C','You approve the final cut.','You get a code for the episode producer, your own erase code, and your request code. Keep the codes where only you can see them.','#storyteller-final'],
+ ['5','Confirm','#C4F25C','You approve the final cut.','You say yes or ask for changes, and choose who may hear it. If you have the file, you also get a code for the episode producer and your own erase code. Your request code is on the storyteller page the episode producer gives you. Keep the codes where only you can see them.','#storyteller-final'],
  ['6','Audience','#6FA8FF','You decide who may hear the episode: only the episode producer; the podcast producer (the instructor); the class, in listening sessions with the instructor; or the Listening Party (class only).','You choose one of these. If you change your mind, tell the episode producer.',null],
  ['7','Listen','#FFB347','The class hears the episodes at the Listening Party.','You do nothing here unless you are invited.',null],
  ['8','Close','#FF7AD9','At the end of the quarter you get your episode back, and any copy kept for the class is erased.','With your erase code you can delete the episode yourself, at any time, without asking anyone.',null]];
@@ -16288,6 +16289,144 @@ var gh=window.blGoHome;if(gh&&!gh._k180){var w=function(){close();return gh.appl
 #bl180-keep .k180-btns{display:flex;flex-wrap:wrap;gap:12px}
 #bl180-keep .k180-t{background:#0B1030;color:#FFD60A;font-size:1.05em;min-width:12em}
 #bl180-keep .k180-e{background:#FFFFFF;color:#B3261E;box-shadow:inset 0 0 0 3px #B3261E}
+</style>
+<script id="bl-181">/* BUILD 181: storytellers can answer without a file. Edit: a new screen to say yes or no to the edit. Review and Final Cut: step 1 is the answer (no file needed), step 2 is the file (to listen, and for the codes). Every code on a storyteller screen gets a Copy button. */
+(function(){
+var LV=[['Nowhere else','Only the episode producer who recorded it hears it, on the device they recorded with.'],['On the podcast producer’s computer','The episode producer and the podcast producer (the instructor).'],['In the classroom, during listening sessions','The class and the podcast producer.'],['At the Listening Party','Class only.']];
+var KC=['#B6F23C','#5CE8F5','#FFD60A','#FF9E80'];
+var OV=null,M={},BACK=false;
+function esc(t){return String(t==null?'':t).replace(/[&\x3c>"]/g,function(c){return '&#'+c.charCodeAt(0)+';';});}
+function now(){var d=new Date();try{return d.toLocaleString('en-CA',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return d.toISOString();}}
+function day(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function copyText(t,done){function fb(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}a.remove();done(ok);}
+ try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true);},fb);return;}}catch(x){}fb();}
+function saveText(t,name){var b=new Blob([t],{type:'text/plain'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);}
+var KEY={edit:'THE EDIT',review:'HEARING THE EDIT',final:'APPROVING THE FINAL CUT'};
+function head(n,of){return '\x3cp class="a181-k">I AM A STORYTELLER \x3cspan>'+n+' OF '+of+'\x3c/span>\x3c/p>\x3cp class="a181-mode">'+KEY[M.mode]+'\x3c/p>';}
+function fbBox(lab,ph){return '\x3clabel class="a181-lab">'+lab+'\x3ctextarea class="a181-fb" rows="4" placeholder="'+esc(ph)+'">'+esc(M.fb||'')+'\x3c/textarea>\x3c/label>';}
+function answerText(){var t;
+ if(M.mode==='edit')t='Booth Light: my answer about editing my interview\n\n'+(M.a==='yes'?'Yes, the episode co-producers may edit my interview.':'No, my interview may not be edited.');
+ else if(M.mode==='review')t='Booth Light: my answer about the edited interview\n\nHow I heard it: '+M.how+'\n'+{approved:'It is right as it is.',changes:'I want changes.',withdrew:'I want to withdraw.'}[M.a];
+ else t='Booth Light: my answer about the final cut\n\nHow I heard it: '+M.how+'\n'+(M.a==='yes'?'I agree to this final cut, and chose level '+M.lv+': '+LV[M.lv-1][0]+'.\nWho hears it: '+LV[M.lv-1][1]:'I want changes.');
+ if(M.fb)t+='\n\n'+(M.mode==='edit'?'Parts that must come out:\n':'')+M.fb;
+ t+='\n\nWritten '+now()+'\n';
+ if(M.mode==='final'&&M.a==='yes')t+='\nNo approval code: it was made without the file. The episode producer records this answer at step 5 with "I did this step outside Booth Light".\n';
+ return t;}
+function receipt(){var own='\x3cdiv class="a181-rec">\x3cp class="a181-big">'+esc(answerText().split('\n\n')[1].split('\n').filter(function(l){return !/^How I heard it/.test(l);}).join(' '))+'\x3c/p>'+(M.fb?'\x3cp>'+esc(M.fb).replace(/\n/g,'\x3cbr>')+'\x3c/p>':'')+'\x3cp>'+esc(now())+'\x3c/p>\x3c/div>';
+ var x='';
+ if(M.mode==='review'&&M.a==='withdrew')x='\x3cp class="a181-f">Tell the episode producer or the podcast producer now. The recording is not used, and the podcast producer applies the withdrawal within 48–72 hours.\x3c/p>';
+ if(M.mode==='final'&&M.a==='yes')x='\x3cdiv class="a181-warn">\x3cp>\x3cb>No code is made without the file.\x3c/b> The code must match the exact final cut (its SHA-256 fingerprint), and Booth Light can only read that from the file.\x3c/p>\x3cp>What happens instead: send this answer to the episode producer. They record it at step 5 with “I did this step outside Booth Light”.\x3c/p>\x3cp>To get your erase code: choose the file (step 2 on the previous screen), or ask the episode producer to hand you their phone at step 5.\x3c/p>\x3c/div>';
+ return own+x+'\x3cdiv class="a181-row">\x3cbutton type="button" class="a181-b" data-a="copy">📋 Copy my answer\x3c/button>\x3cbutton type="button" class="a181-b" data-a="save">Save my answer\x3c/button>\x3c/div>\x3cp class="a181-msg" aria-live="polite">\x3c/p>\x3cp class="a181-f">Send your answer to the episode producer the way you choose: in person, a text or an email. Booth Light sends nothing.\x3c/p>\x3cbutton type="button" class="a181-y2" data-a="again">Change my answer\x3c/button>\x3cbutton type="button" class="a181-d" data-a="close">Done\x3c/button>';}
+function how(of){return head(1,of)+'\x3ch2>How did you hear the '+(M.mode==='review'?'edited interview':'final cut')+'?\x3c/h2>\x3cdiv class="a181-box">\x3cp>You can answer without the file. Choose how you heard it.\x3c/p>\x3c/div>'
+ +'\x3cbutton type="button" class="a181-g" data-how="The episode producer played it to me.">The episode producer played it to me\x3c/button>\x3cbutton type="button" class="a181-g" data-how="I heard it another way.">I heard it another way\x3c/button>\x3cbutton type="button" class="a181-r" data-a="notyet">I have not heard it yet\x3c/button>';}
+function draw(k){var h='',of=M.mode==='final'?3:2;
+ if(M.mode==='edit'){
+  if(k==='q')h=head(1,2)+'\x3ch2>May the episode co-producers edit your interview?\x3c/h2>\x3cdiv class="a181-box">\x3cp>Editing means they cut the raw recording: they take parts out, shorten it and change the order.\x3c/p>\x3cp>Nothing is shared until you have heard the edited interview and agreed (step 4).\x3c/p>\x3c/div>'
+   +fbBox('Parts that must come out (you can leave this empty). Write the minute or describe the part.','The part about my street. The name of my school.')
+   +'\x3cbutton type="button" class="a181-g" data-a="yes">Yes, they may edit it\x3c/button>\x3cbutton type="button" class="a181-r" data-a="no">No, do not edit it\x3c/button>';
+  else h=head(2,2)+'\x3ch2>Your answer\x3c/h2>'+receipt();}
+ else{
+  if(k==='how')h=how(of);
+  else if(k==='notyet')h='\x3ch2>Hear it first\x3c/h2>\x3cdiv class="a181-box">\x3cp>Ask the episode producer to play it to you, or to send you the file. Then come back to this step.\x3c/p>\x3c/div>\x3cbutton type="button" class="a181-d" data-a="close">Done\x3c/button>';
+  else if(k==='q'&&M.mode==='review')h=head(2,of)+'\x3ch2>Is the edited interview right?\x3c/h2>'+fbBox('What would you change? Write the minute and what to change, or leave it empty.','At 4:10, please take out the name of my street.')
+   +'\x3cbutton type="button" class="a181-g" data-a="approved">It is right as it is\x3c/button>\x3cbutton type="button" class="a181-y" data-a="changes">I want changes\x3c/button>\x3cbutton type="button" class="a181-r" data-a="withdrew">I want to withdraw\x3c/button>';
+  else if(k==='q')h=head(2,of)+'\x3ch2>Do you agree to this final cut?\x3c/h2>\x3cdiv class="a181-box">\x3cp>This is the version that may be heard. If you agree, you choose where it may play.\x3c/p>\x3c/div>'+fbBox('Anything to add (you can leave this empty).','')
+   +'\x3cbutton type="button" class="a181-g" data-a="yes">Yes, I agree to this final cut\x3c/button>\x3cbutton type="button" class="a181-y" data-a="fch">I want changes\x3c/button>';
+  else if(k==='lv'){h=head(3,of)+'\x3ch2>Where may this final cut play?\x3c/h2>\x3cdiv class="a181-cards">';
+   LV.forEach(function(c,i){var n=i+1;h+='\x3cbutton type="button" class="a181-c'+(M.lv===n?' on':'')+'" style="--k:'+KC[i]+'" data-lv="'+n+'" aria-pressed="'+(M.lv===n)+'">\x3cb>'+(M.lv===n?'✓ ':'')+n+' · '+esc(c[0])+'\x3c/b>\x3cspan>Who hears it: '+esc(c[1])+'\x3c/span>\x3c/button>';});
+   h+='\x3cbutton type="button" class="a181-c" disabled>\x3cb>5 · Living Archive\x3c/b>\x3cspan>Not built yet; not an option this quarter.\x3c/span>\x3c/button>\x3c/div>\x3cbutton type="button" class="a181-y" data-a="pick"'+(M.lv?'':' disabled')+'>'+(M.lv?'Choose level '+M.lv:'Choose a level above')+'\x3c/button>';}
+  else h=head(of,of)+'\x3ch2>Your answer\x3c/h2>'+receipt();}
+ M.k=k;OV.querySelector('.a181-in').innerHTML=h;OV.scrollTop=0;var f=OV.querySelector('h2');if(f){f.setAttribute('tabindex','-1');f.focus({preventScroll:true});}}
+function make(){if(OV)return;OV=document.createElement('div');OV.id='bl181-ap';OV.setAttribute('role','dialog');OV.setAttribute('aria-modal','true');OV.setAttribute('aria-label','Storyteller');OV.hidden=true;
+ OV.innerHTML='\x3cdiv class="a181-top">\x3cbutton type="button" class="a181-x a181-h" data-a="home">⌂ Home\x3c/button>\x3cbutton type="button" class="a181-x" data-a="close">✕ Close\x3c/button>\x3c/div>\x3cdiv class="a181-in">\x3c/div>';document.body.appendChild(OV);
+ OV.addEventListener('input',function(e){if(e.target.classList.contains('a181-fb'))M.fb=e.target.value.trim();});
+ OV.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;var a=b.getAttribute('data-a'),hw=b.getAttribute('data-how'),lv=b.getAttribute('data-lv');
+  if(hw){M.how=hw;draw('q');return;}
+  if(lv){M.lv=Number(lv);draw('lv');return;}
+  if(a==='close'){close();return;}
+  if(a==='home'){BACK=false;close();if(window.blGoHome)window.blGoHome();return;}
+  if(a==='notyet'){draw('notyet');return;}
+  if(M.mode==='edit'&&(a==='yes'||a==='no')){M.a=a;draw('r');return;}
+  if(M.mode==='review'&&(a==='approved'||a==='changes'||a==='withdrew')){M.a=a;draw('r');return;}
+  if(M.mode==='final'&&a==='yes'){M.a='yes';draw('lv');return;}
+  if(M.mode==='final'&&a==='fch'){M.a='fch';draw('r');return;}
+  if(a==='pick'){draw('r');return;}
+  if(a==='again'){M.a='';draw(M.mode==='edit'?'q':(M.mode==='final'?'q':'q'));return;}
+  if(a==='copy'||a==='save'){var t=answerText(),m=OV.querySelector('.a181-msg');
+   if(a==='save'){saveText(t,'booth-light-my-answer-'+(M.mode==='edit'?'about-the-edit':M.mode==='review'?'about-the-edited-interview':'about-the-final-cut')+'-'+day()+'.txt');if(m)m.textContent='Saved in this device’s Downloads folder.';}
+   else copyText(t,function(ok){if(m)m.textContent=ok?'Copied. Paste it into the message you send the episode producer.':'This browser did not allow copying. Use Save my answer instead.';});}});}
+function open(mode){make();M={mode:mode,fb:'',a:'',lv:0,how:''};OV.hidden=false;document.documentElement.style.overflow='hidden';draw(mode==='edit'?'q':'how');}
+function close(){if(!OV||OV.hidden)return;OV.hidden=true;var so=document.getElementById('bl132-st');if(!so||so.hidden)document.documentElement.style.overflow='';
+ if(/^#storyteller-edit$/i.test(location.hash)){try{history.replaceState(null,'',location.pathname+location.search);}catch(x){}}
+ if(BACK&&M.mode==='edit'){BACK=false;if(window.blStorytellerPage)window.blStorytellerPage();}}
+window.blStorytellerAnswer=open;
+var o0=window.blOverlayOpen;window.blOverlayOpen=function(){return (o0?o0():false)||!!(OV&&!OV.hidden);};
+var gh=window.blGoHome;if(gh&&!gh._a181){var w=function(){BACK=false;close();var so=document.getElementById('bl132-st'),had=!!(so&&!so.hidden);if(had){var x=so.querySelector('.b132-x');if(x)x.click();}var r=gh.apply(this,arguments);
+ /* closing a storyteller screen re-opens the storyteller page (BUILD 175); Home means the front page, so close it again */
+ if(had)[350,700].forEach(function(t){setTimeout(function(){var pg=document.getElementById('bl174-st');if(pg&&!pg.hidden){pg.hidden=true;scrollTo(0,0);}},t);});return r;};w._a181=1;window.blGoHome=w;}
+addEventListener('keydown',function(e){if(e.key==='Escape'&&OV&&!OV.hidden){e.stopImmediatePropagation();e.preventDefault();close();}},true);
+document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('#bl174-st [data-h="#storyteller-edit"]');if(t)BACK=true;},true);
+function hc(){if(/^#storyteller-edit$/i.test(location.hash))open('edit');}
+addEventListener('hashchange',hc);setTimeout(hc,300);
+/* the two steps on the Review and Final Cut file screen, and Copy buttons on every code */
+function enhance(){var so=document.getElementById('bl132-st');if(!so||so.hidden)return;
+ var lab=so.querySelector('label.b133-pick');
+ if(lab&&!so.querySelector('.a181-two')){var mode=/FINAL CUT/i.test((so.querySelector('.b133-mode')||{}).textContent||'')?'final':'review';
+  var d=document.createElement('div');d.className='a181-two';
+  d.innerHTML='\x3cdiv class="a181-st a181-s1">\x3cp class="a181-sn">Step 1 · Your answer\x3c/p>\x3cp>No file needed. Say if it is right, or what to change'+(mode==='final'?', and where it may play':'')+'.\x3c/p>\x3cbutton type="button" class="a181-g a181-go" data-m="'+mode+'">Give my answer without the file\x3c/button>\x3c/div>'
+   +'\x3cdiv class="a181-st a181-s2">\x3cp class="a181-sn">Step 2 · The file\x3c/p>\x3cp>'+(mode==='final'?'If the episode producer sent you the final cut, choose it below. With the file you also get a code for the episode producer and your own erase code.':'If the episode producer sent you the file, choose it below to listen and answer on this phone.')+'\x3c/p>\x3c/div>';
+  var h2=so.querySelector('h2');var box=h2&&h2.nextElementSibling&&h2.nextElementSibling.classList.contains('b132-box')?h2.nextElementSibling:h2;
+  if(box&&box.parentNode)box.parentNode.insertBefore(d,box.nextSibling);
+  var s2=d.querySelector('.a181-s2');s2.appendChild(lab);}
+ [].forEach.call(so.querySelectorAll('.b132-code, .b134-ec'),function(c){var n=c.nextElementSibling;if(n&&n.classList.contains('a181-cp'))return;var b=document.createElement('button');b.type='button';b.className='a181-cp';b.textContent='📋 Copy this code';
+  b.addEventListener('click',function(){var t=c.textContent.trim();copyText(t,function(ok){b.textContent=ok?'✓ Copied':'Copying was not allowed. Write it down.';setTimeout(function(){b.textContent='📋 Copy this code';},2500);});});c.parentNode.insertBefore(b,c.nextSibling);});}
+document.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('#bl132-st .a181-go');if(g){e.preventDefault();open(g.getAttribute('data-m'));}},true);
+setInterval(enhance,300);
+})();</script>
+<style id="bl-181-css">/* BUILD 181 */
+#bl181-ap{position:fixed;inset:0;z-index:2147483500;overflow:auto;background:#070C22;color:#FFF4C2;font-family:Helvetica,Arial,sans-serif;padding:max(16px,env(safe-area-inset-top,0px)) 16px 40px}
+#bl181-ap[hidden]{display:none}
+#bl181-ap .a181-top{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;gap:10px}
+#bl181-ap .a181-in{max-width:760px;margin:0 auto;font-size:clamp(17px,1.2vw,22px);line-height:1.45}
+#bl181-ap button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;width:100%;min-height:54px;margin:10px 0 0;padding:.6em 1.1em;border-radius:999px;font-weight:900;font-size:1.05em}
+#bl181-ap button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
+#bl181-ap button:disabled{opacity:.5;cursor:default}
+#bl181-ap .a181-x{width:auto;min-height:46px;margin:0;background:#FFFFFF;color:#070C22;font-size:.95em}
+#bl181-ap .a181-k{letter-spacing:.12em;font-weight:900;font-size:.8em;color:#FFD60A;margin:12px 0 0}
+#bl181-ap .a181-k span{margin-left:.6em;color:#FFF4C2}
+#bl181-ap .a181-mode{display:inline-block;background:#FFD60A;color:#070C22;font-weight:900;font-size:.75em;letter-spacing:.1em;padding:.3em .9em;border-radius:999px;margin:6px 0 0}
+#bl181-ap h2{font:900 clamp(26px,2.2vw,40px)/1.15 Georgia,"Times New Roman",serif;color:#FFFFFF;margin:12px 0}
+#bl181-ap .a181-box,#bl181-ap .a181-rec{background:#14183A;border-radius:18px;padding:12px 18px;margin:10px 0}
+#bl181-ap .a181-rec{background:#FFF8E7;color:#0B1030}
+#bl181-ap .a181-big{font-weight:900;font-size:1.15em}
+#bl181-ap .a181-box p,#bl181-ap .a181-rec p{margin:.4em 0}
+#bl181-ap .a181-lab{display:block;margin:12px 0 4px;font-weight:700}
+#bl181-ap .a181-fb{display:block;width:100%;box-sizing:border-box;margin-top:6px;border-radius:14px;border:3px solid #FFD60A;background:#0B1030;color:#FFFFFF;font:inherit;padding:10px 12px}
+#bl181-ap .a181-g{background:#1E9E5A;color:#FFFFFF}
+#bl181-ap .a181-y{background:#FFD60A;color:#070C22}
+#bl181-ap .a181-r{background:#FFFFFF;color:#B3261E;box-shadow:inset 0 0 0 3px #B3261E}
+#bl181-ap .a181-b{background:#5CE8F5;color:#070C22}
+#bl181-ap .a181-y2{background:none;color:#FFD60A;box-shadow:inset 0 0 0 3px #FFD60A}
+#bl181-ap .a181-d{background:#FFFFFF;color:#070C22}
+#bl181-ap .a181-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#bl181-ap .a181-row button{margin-top:0}
+#bl181-ap .a181-msg{min-height:1.2em;color:#7CF2A0;font-weight:700}
+#bl181-ap .a181-f{font-size:.9em}
+#bl181-ap .a181-warn{background:#FDE7CC;color:#0B1030;border-radius:18px;padding:12px 18px;border-top:6px solid #C9731A;margin:10px 0}
+#bl181-ap .a181-warn p{margin:.4em 0}
+#bl181-ap .a181-cards{display:grid;gap:10px}
+#bl181-ap .a181-c{flex-direction:column;align-items:flex-start;text-align:left;border-radius:18px;background:#14183A;color:#FFF4C2;box-shadow:inset 0 0 0 3px var(--k,#5A5F80);margin:0;padding:12px 16px}
+#bl181-ap .a181-c.on{background:var(--k);color:#070C22}
+#bl181-ap .a181-c span{font-weight:400;font-size:.9em}
+#bl132-st .a181-two{display:grid;gap:12px;margin:12px 0}
+#bl132-st .a181-st{border-radius:18px;padding:12px 16px;background:#14183A;box-shadow:inset 0 0 0 3px var(--k)}
+#bl132-st .a181-s1{--k:#1E9E5A}
+#bl132-st .a181-s2{--k:#5CE8F5}
+#bl132-st .a181-sn{font-weight:900;letter-spacing:.06em;color:var(--k);margin:0 0 4px;text-transform:uppercase;font-size:.85em}
+#bl132-st .a181-st p{margin:.3em 0}
+#bl132-st .a181-go{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:center;width:100%;min-height:52px;align-items:center;margin-top:8px;border-radius:999px;background:#1E9E5A;color:#FFFFFF;font-weight:900;font-size:1.05em;padding:.5em 1em;text-align:center}
+#bl132-st .a181-go:focus-visible,#bl132-st .a181-cp:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
+#bl132-st .a181-cp{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin:8px 0 6px;padding:.4em 1.2em;border-radius:999px;background:#5CE8F5;color:#070C22;font-weight:900}
 </style>
 </body>
 </html>
