@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="sovereign-tools-signature" content="v1; signer=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiYKUU4iJibHxck0hW2UvgIlGBuVbew6boumX7DGiW3 sovereign-tools; namespace=sovereign-tools; sig=U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguJgpRTiImJsfFyTSFbZS+AiUYG5Vt7Dpui6ZfsMaJbcAAAAPc292ZXJlaWduLXRvb2xzAAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQCMmieQpLPCbizvN/4t919Lv9S/Hq1ZV40sWPySFnai/z0BdWiF0yI7D1oqYurwGA2befxaGyT7okIUulaI/QQE=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob: https://academicfreedom.github.io http://127.0.0.1:* http://localhost:* http://*:8971 http://*:8972; worker-src 'self'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Booth Light · BUILD 178</title>
+<title>Booth Light · BUILD 180</title>
 <script id="bl133-tabs">(function(){
  /* BUILD 135: one working tab per device, and the person chooses which. A second tab pauses itself; "Use this tab instead"
     hands Booth Light to that tab, and the tab that had it pauses itself (it first stops and saves a recording in progress).
@@ -41,7 +41,7 @@
 })();
 </script>
 <script id="bl-phone">window.BL_PHONE_URL="https://academicfreedom.github.io/booth-light/";</script>
-<!-- BOOTH LIGHT BUILD 178 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
+<!-- BOOTH LIGHT BUILD 180 · 2026-11-28 · one file · network: asks GitHub for the withdrawn list only when this device holds a class episode; the New Season archive buttons contact the archive address typed there · sound is written to this browser's storage on disk as it arrives · nonce: booth-light-02-2026-10-22-a -->
 <style>
 :root{--cream:#F6F0E2;--paper:#FFFFFF;--ink:#14110E;--grey:#5E5951;--rule:#CFC6B2;--verm:#C4402E;--verm2:#F7DED8;--amber:#E8A33D;--amber2:#FBEBCE;--teal:#1F6F63;--teal2:#D6EAE6;--violet:#6A4C93;--violet2:#E7DFF1;--green:#3B7A4B;--green2:#DDEBDF;--blue:#2B4A7A;--blue2:#DEE5F0;--yellow:#F6C76A}
 *{box-sizing:border-box}
@@ -1745,7 +1745,7 @@ html.night:not(.ez) body .bl128-ttl .bl128-tag .bl154-c{color:#FF4DDB}
 <text x="568.0" y="387.6" textLength="430" lengthAdjust="spacing" style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; fill: #E8362A">RECORDER · ROOM · ARCHIVE</text>
 </svg><div class="f75"><!-- FACTS v75 --><span class="f75-i"><b class="f75-r">Records</b> up to 2 hours, saved to this device every 5 seconds</span><span class="f75-i"><b class="f75-c">Cuts</b> you edit a copy; your original file never changes</span><span class="f75-i"><b class="f75-k">Keeps</b> on this device, only if Keep my work is ON</span><span class="f75-i"><b class="f75-s">Sends</b> nothing over the internet</span></div></div><div class="bl-facts"><!-- FACTS v34 -->
 
-<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 178</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
+<div class="mono topline tl-chips"><!-- TOPLINE CHIPS v41 --><span class="tl-c c1">BOOTH LIGHT</span><span class="tl-c c2">BUILD 180</span><span class="tl-c c3">FOR THE LISTENING ROOM</span><span id="hostline"></span></div>
 </div><!-- EYES v6 -->
   <div class="perf"></div>
   <div class="band" style="padding-top:14px;padding-bottom:22px">
@@ -2957,7 +2957,7 @@ VM.prototype.run=function(d,mode){var R={deeper:0.78,higher:1.26,synthetic:0.7};
   this.ph+=(1-r)/W;if(this.ph>=1)this.ph-=1;if(this.ph<0)this.ph+=1;
   if(mode==='synthetic'){this.rp+=2*Math.PI*50/this.sr;if(this.rp>2*Math.PI)this.rp-=2*Math.PI;y=y*Math.sin(this.rp)*2;y=Math.round(y*128)/128;y=y<-1?-1:y>1?1:y;}
   out[i]=y;this.w=(this.w+1)%N;}return out;};
-/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 178 voices UI */
+/* nonce: bl102-ui-2026-11-02-v3t8 · BOOTH LIGHT BUILD 180 voices UI */
 (function(){
 var vmLive=null;
 window.blMaskReset=function(){vmLive=null;};
@@ -14889,7 +14889,7 @@ function saveRecord(){var e=epn(),now=new Date(),rows='',who='',tech='',S=B.S;
   +'<h2>The 8 steps</h2><table><tr><th>Step</th><th>What was asked</th><th>Answer, date and time</th></tr>'+rows+'</table>'
   +'<h2>Who may hear it</h2>'+(who?'<ul>'+who+'</ul>':'<p>No one is listed yet.</p>')
   +'<h2>Technical record</h2><pre>Recording fingerprint (SHA-256): '+esc(S.fp||'no recording on this device')+'\n'+(S.editedFp?'Edited interview fingerprint (SHA-256): '+esc(S.editedFp)+'\n':'')+tech+esc(st)+'</pre>'
-  +'<p class="k">BOOTH LIGHT BUILD 178 \u00b7 Process Consent record</p></body></html>';
+  +'<p class="k">BOOTH LIGHT BUILD 180 \u00b7 Process Consent record</p></body></html>';
  var name='process-consent-record-'+(e?'episode-'+e.replace(/[^0-9A-Za-z-]/g,'')+'-':'')+today()+'.html';
  var a=document.createElement('a'),u=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);
  say2('Saved '+name+' to this device\u2019s Downloads. It holds codenames, answers, dates and fingerprints; no audio and no real names.');tick();}
@@ -16179,6 +16179,115 @@ setInterval(tick,400);tick();
 #st-page .bl178-nav button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:52px;padding:.5em 1.5em;border-radius:999px;font:900 19px Helvetica,Arial,sans-serif;background:#F2C443;color:#0B1030;box-shadow:inset 0 0 0 3px #0B1030}
 #st-page .bl178-nav .bl178-next{margin-left:auto;background:#0B1030;color:#FFFFFF}
 #st-page .bl178-nav button:focus-visible{outline:4px solid #B4471B;outline-offset:3px}
+</style>
+<script id="bl-179">/* BUILD 179: on wide screens the Process Consent steps are drawn at a smaller size than the rest of the app, and use more of the page width. */
+(function(){
+var T=1.35;
+function fit(){var P=document.getElementById('bl-path'),h=document.getElementById('bl126-host');if(!P||!h)return;
+ var hz=parseFloat(h.style.zoom)||1,R=document.documentElement;
+ if(hz>T){var z=T/hz,v=z.toFixed(3);if(P.style.zoom!==v)P.style.zoom=v;var w=Math.round(Math.min(innerWidth*.9,2600)/T)+'px';if(R.style.getPropertyValue('--bl179-w')!==w)R.style.setProperty('--bl179-w',w);R.classList.add('bl179-wide');}
+ else{if(P.style.zoom)P.style.zoom='';R.classList.remove('bl179-wide');}}
+addEventListener('resize',function(){setTimeout(fit,60);});
+setInterval(fit,700);fit();
+})();</script>
+<style id="bl-179-css">/* BUILD 179 */
+/* top bar: one row, pills grow with the screen */
+@media (min-width:901px){
+.bl151-r{display:flex !important;max-width:none !important;gap:clamp(6px,.45vw,14px) !important}
+.bl151-r > .bl151-p{flex:1 1 0;min-width:0}
+.bl151-p{font-size:clamp(13px,.95vw,30px) !important;min-height:clamp(44px,3.4vw,96px) !important;padding:.35em .55em !important;box-shadow:inset 0 0 0 clamp(2px,.14vw,4px) var(--k,#FFD60A) !important}
+.bl151-p.on{box-shadow:none !important}
+}
+/* front page: the message pill fills its half of the row, in its own green */
+#bl126-nav.bl128-in .bl128-row2 .bl178-msg{grid-column:span 2;flex-basis:auto}
+#bl126-nav .bl128-row2 .bl178-msg{color:#7CF2A0 !important;box-shadow:inset 0 0 0 2px #7CF2A0 !important}
+/* wide screens: step pages use the page width */
+html.bl179-wide #bl-path .pt-in{max-width:var(--bl179-w,1040px) !important}
+/* Before we start: smaller text, columns of equal length */
+#bl-path .bl173-bws details.bl172-d{padding:14px 22px 16px}
+#bl-path .bl173-bws details.bl172-d summary{font-size:.92em}
+#bl-path .bl173-bws .bl172-b{font-size:.8em;column-fill:balance}
+#bl-path .bl173-bws .bl172-b p{break-inside:auto;line-height:1.42;margin:0 0 .6em}
+#bl-path .bl173-bws .bl172-b p:first-child{margin-top:8px}
+@media (min-width:1300px){#bl-path .bl173-bws .bl172-b{column-count:4 !important;column-gap:30px}}
+/* Ask the storyteller: label as a chip */
+#bl-path .pt-ask > .pt-tag{display:inline-block;justify-self:start;background:#0B1030;color:#FFD60A;padding:.4em 1em;border-radius:999px;font-size:.7em}
+/* the sentence to say: a speech bubble */
+#bl-path .pt-ask .pt-say{position:relative;background:#FFFFFF;border:3px solid #0B1030;border-radius:22px;padding:.6em .9em;margin:4px 0 22px;box-shadow:6px 6px 0 #0B1030;font-size:1.12em}
+#bl-path .pt-ask .pt-say::after{content:"";position:absolute;left:28px;bottom:-17px;width:24px;height:24px;background:#FFFFFF;border-right:3px solid #0B1030;border-bottom:3px solid #0B1030;transform:skewX(30deg) rotate(45deg);transform-origin:center;clip-path:polygon(100% 0,100% 100%,0 100%)}
+/* yes and no in their own colours */
+#bl-path .pt-ask .pt-b[data-a="yes"]:not(:disabled),#bl-path .pt-ask .pt-b[data-a="yes"].on{background:#1E9E5A;color:#FFFFFF}
+#bl-path .pt-ask .pt-b[data-a="no"]:not(:disabled),#bl-path .pt-ask .pt-b[data-a="no"].on{background:#FFFFFF;color:#0B1030;box-shadow:inset 0 0 0 3px #0B1030}
+#bl-path .pt-ask .pt-b:not(:disabled):hover{transform:translateY(-2px)}
+#bl-path .pt-ask .pt-b{transition:transform .12s}
+/* the read-aloud note */
+#bl-path .bl172-path .bl172-note{background:rgba(255,255,255,.5);border-radius:14px;padding:.6em .8em .6em 2.4em;position:relative;font-size:.86em}
+#bl-path .bl172-path .bl172-note::before{content:"\1F5E3";position:absolute;left:.6em;top:.45em;font-size:1.25em}
+#bl-path .bl172-path .bl172-age{font-size:.9em}
+#bl-path .bl172-path .bl172-tl{font-size:.9em}
+/* Invite on a laptop or larger: two columns inside the yellow card, Then do beside it */
+@media (min-width:1500px){
+#bl-path .pt-cols:has(.bl172-path){grid-template-columns:minmax(0,2fr) minmax(0,1fr) !important}
+#bl-path .pt-ask:has(> .bl172-path){grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto !important;column-gap:24px !important;grid-auto-flow:row !important}
+#bl-path .pt-ask:has(> .bl172-path) > .pt-tag{grid-column:1/-1 !important;grid-row:1}
+#bl-path .pt-ask:has(> .bl172-path) > .bl172-path{grid-column:1 !important;grid-row:2/span 4}
+#bl-path .pt-ask:has(> .bl172-path) > .pt-say{grid-column:2/-1 !important;grid-row:2}
+#bl-path .pt-ask:has(> .bl172-path) > .pt-btns{grid-column:2 !important;grid-row:3}
+#bl-path .pt-ask:has(> .bl172-path) > button.pt-outside:not(.pt-notes7){grid-column:3 !important;grid-row:3;justify-self:stretch}
+#bl-path .pt-ask:has(> .bl172-path) > .pt-st{grid-column:2/-1 !important;grid-row:4}
+#bl-path .pt-ask:has(> .bl172-path) > .b132-s1{grid-column:2/-1 !important;grid-row:5;margin-top:10px}
+}
+</style>
+<script id="bl-180">/* BUILD 180: the Keep my work pill opens a box that explains what is kept, where, for how long, and has the switch inside it. */
+(function(){
+var HTML="\u003cdiv class=\"k180-card\" role=\"document\"\u003e\n\u003cdiv class=\"k180-top\"\u003e\u003cbutton type=\"button\" class=\"k180-home\"\u003e\u2302 Home\u003c/button\u003e\u003cbutton type=\"button\" class=\"k180-x\" aria-label=\"Close\"\u003e\u2715 Close\u003c/button\u003e\u003c/div\u003e\n\u003ch2 class=\"k180-h\"\u003eKeep my work\u003c/h2\u003e\n\u003cp class=\"k180-now\"\u003e\u003c/p\u003e\n\u003cdiv class=\"k180-rows\"\u003e\n\u003cdiv class=\"k180-r\"\u003e\u003cdiv class=\"k180-q\"\u003eWhat does it keep?\u003c/div\u003e\u003cdiv class=\"k180-a\"\u003eYour recording, your cuts, your notes and the consent answers.\u003c/div\u003e\u003c/div\u003e\n\u003cdiv class=\"k180-r\"\u003e\u003cdiv class=\"k180-q\"\u003eWhere is it kept?\u003c/div\u003e\u003cdiv class=\"k180-a\"\u003eIn this browser, on this device only (browser storage). It is not sent to a server, to GitHub or to the university. One exception: in the classroom room mode, listening notes also go to the class computer over the room Wi-Fi.\u003c/div\u003e\u003c/div\u003e\n\u003cdiv class=\"k180-r\"\u003e\u003cdiv class=\"k180-q\"\u003eWhat happens while I record?\u003c/div\u003e\u003cdiv class=\"k180-a\"\u003eBooth Light saves the recording to this device every 5 seconds, ON or OFF, so a crash does not lose it. The switch decides what happens to it after you close the page.\u003c/div\u003e\u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\"k180-two\"\u003e\n\u003cdiv class=\"k180-p k180-on\"\u003e\u003cdiv class=\"k180-pt\"\u003eON\u003c/div\u003e\u003cul\u003e\n\u003cli\u003eYour work stays until you press \u003cb\u003eErase everything kept\u003c/b\u003e. There is no time limit.\u003c/li\u003e\n\u003cli\u003eAnyone who uses this browser on this device can open it.\u003c/li\u003e\n\u003cli\u003eUse ON on your own phone or laptop.\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e\n\u003cdiv class=\"k180-p k180-off\"\u003e\u003cdiv class=\"k180-pt\"\u003eOFF\u003c/div\u003e\u003cul\u003e\n\u003cli\u003eThe next time you open Booth Light, it asks once whether to recover your last session. If you say no, it is erased.\u003c/li\u003e\n\u003cli\u003eUse OFF on a shared or lab computer.\u003c/li\u003e\n\u003cli\u003eBefore you leave: export your files to a USB stick, then press \u003cb\u003eErase everything kept\u003c/b\u003e.\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\"k180-r k180-warn\"\u003e\u003cdiv class=\"k180-q\"\u003eWhat it does not do\u003c/div\u003e\u003cdiv class=\"k180-a\"\u003eIt makes no backup anywhere else. If you clear this browser\u2019s history and site data, your kept work is erased with it. Erase everything kept does not touch files you exported, class episodes in the New Season room, your settings or your podcast list.\u003c/div\u003e\u003c/div\u003e\n\u003cdiv class=\"k180-btns\"\u003e\u003cbutton type=\"button\" class=\"k180-t\"\u003e\u003c/button\u003e\u003cbutton type=\"button\" class=\"k180-e\"\u003eErase everything kept\u003c/button\u003e\u003c/div\u003e\n\u003c/div\u003e";
+var box=null;
+function on(){var t=document.getElementById('keep-toggle');if(t&&/is (ON|OFF)/.test(t.textContent))return /is ON/.test(t.textContent);try{return localStorage.getItem('boothlight.keep')==='on';}catch(e){return false;}}
+function render(){if(!box)return;var o=on();box.classList.toggle('k180-is-on',o);
+ box.querySelector('.k180-now').innerHTML=o?'Now: <b>ON</b>. Your work stays in this browser until you erase it.':'Now: <b>OFF</b>. Your work is erased the next time this page opens, after one chance to recover it.';
+ box.querySelector('.k180-t').textContent=o?'Turn it OFF':'Turn it ON';}
+function make(){if(box)return box;box=document.createElement('div');box.id='bl180-keep';box.setAttribute('role','dialog');box.setAttribute('aria-label','Keep my work');box.hidden=true;box.innerHTML=HTML;document.body.appendChild(box);
+ box.querySelector('.k180-x').onclick=close;
+ box.querySelector('.k180-home').onclick=function(){close();if(window.blGoHome)window.blGoHome();};
+ box.querySelector('.k180-t').onclick=function(){var t=document.getElementById('keep-toggle');if(t)t.click();setTimeout(render,40);};
+ box.querySelector('.k180-e').onclick=function(){var e=document.getElementById('erase');if(e)e.click();setTimeout(render,80);};
+ box.addEventListener('click',function(e){if(e.target===box)close();});
+ return box;}
+function open(){make();render();box.hidden=false;box.scrollTop=0;var x=box.querySelector('.k180-x');if(x)x.focus();}
+function close(){if(box)box.hidden=true;}
+window.blKeepInfo=open;
+document.addEventListener('click',function(e){var k=e.target.closest&&e.target.closest('.bl158-k');if(!k)return;e.preventDefault();e.stopImmediatePropagation();open();},true);
+addEventListener('keydown',function(e){if(e.key==='Escape'&&box&&!box.hidden){e.stopImmediatePropagation();e.preventDefault();close();}},true);
+var gh=window.blGoHome;if(gh&&!gh._k180){var w=function(){close();return gh.apply(this,arguments);};w._k180=1;window.blGoHome=w;}
+})();</script>
+<style id="bl-180-css">/* BUILD 180 */
+#bl180-keep{position:fixed;inset:0;z-index:2147483600;overflow:auto;background:rgba(7,12,34,.78);padding:clamp(12px,3vw,60px) 12px;font-family:Helvetica,Arial,sans-serif;color:#0B1030}
+#bl180-keep[hidden]{display:none}
+#bl180-keep .k180-card{max-width:1100px;margin:0 auto;background:#FFF8E7;border-radius:28px;padding:clamp(18px,2.4vw,40px);font-size:clamp(17px,1.15vw,22px);line-height:1.45;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+#bl180-keep .k180-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:6px}
+#bl180-keep button{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;font-weight:900;text-align:center;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.5em 1.3em}
+#bl180-keep button:focus-visible{outline:3px solid #2C6BED;outline-offset:3px}
+#bl180-keep .k180-home,#bl180-keep .k180-x{background:#FFFFFF;box-shadow:inset 0 0 0 3px #0B1030;color:#0B1030}
+#bl180-keep .k180-h{font:900 clamp(30px,2.6vw,52px)/1.1 Georgia,"Times New Roman",serif;margin:10px 0 6px}
+#bl180-keep .k180-now{display:inline-block;margin:0 0 16px;padding:.45em 1em;border-radius:999px;background:#F5A742;font-weight:700}
+#bl180-keep.k180-is-on .k180-now{background:#5AB16E;color:#FFFFFF}
+#bl180-keep .k180-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;margin-bottom:14px}
+#bl180-keep .k180-r{background:#FFFFFF;border-radius:18px;padding:14px 18px;border-top:6px solid #2C6BED}
+#bl180-keep .k180-q{font-weight:900;margin-bottom:4px}
+#bl180-keep .k180-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;margin-bottom:14px}
+#bl180-keep .k180-p{border-radius:20px;padding:16px 20px;border:4px solid transparent}
+#bl180-keep .k180-on{background:#DDF3E2}
+#bl180-keep .k180-off{background:#FDE7CC}
+#bl180-keep.k180-is-on .k180-on,#bl180-keep:not(.k180-is-on) .k180-off{border-color:#0B1030}
+#bl180-keep .k180-pt{display:inline-block;font-weight:900;font-size:1.1em;padding:.2em .9em;border-radius:999px;color:#FFFFFF;margin-bottom:6px}
+#bl180-keep .k180-on .k180-pt{background:#2E8B4A}
+#bl180-keep .k180-off .k180-pt{background:#C9731A}
+#bl180-keep ul{margin:0;padding-left:1.1em}
+#bl180-keep li{margin:.3em 0}
+#bl180-keep .k180-warn{border-top-color:#E0453A;margin-bottom:16px}
+#bl180-keep .k180-btns{display:flex;flex-wrap:wrap;gap:12px}
+#bl180-keep .k180-t{background:#0B1030;color:#FFD60A;font-size:1.05em;min-width:12em}
+#bl180-keep .k180-e{background:#FFFFFF;color:#B3261E;box-shadow:inset 0 0 0 3px #B3261E}
 </style>
 </body>
 </html>
